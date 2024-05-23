@@ -17,7 +17,7 @@
   import { Footer, FooterCopyright } from "flowbite-svelte";
   import { Listgroup, ListgroupItem } from 'flowbite-svelte';
   let links = [
-    { name: 'Hacker News (YCombinator', href: 'https://news.ycombinator.com/', attrs: {target: '_blank'}},
+    { name: 'Hacker News (YCombinator)', href: 'https://news.ycombinator.com/', attrs: {target: '_blank'}},
     { name: 'Dev.to', href: 'https://dev.to/', attrs: {target: '_blank'} },
     { name: 'Paul Graham\'s Articles', href: 'https://www.paulgraham.com/articles.html', attrs: {target: '_blank'} },
     { name: 'Scott Hanselman\'s Blog', href: 'https://www.hanselman.com/blog/', attrs: {target: '_blank'}},
@@ -307,7 +307,7 @@
       utilizing both internal onshore and development partner offshore resources.
       Skilled at bridging the communication gap between technical and non-technical
       personnel. Able to balance the leadership, technical, and financial management
-      requirements of being a director of software development. Proponent of servant
+      requirements of being a Director of Software Development. Proponent of servant
       leadership and continuous improvement. Have been in management since 2017 and
       was a developer from 2007 to 2017.
     </Card>
