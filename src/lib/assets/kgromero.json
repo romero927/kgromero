@@ -1,0 +1,164 @@
+{
+  "basics": {
+    "name": "Kyle Romero",
+    "label": "Director of Software Development",
+    "email": "kgromero@gmail.com",
+    "phone": "(281) 857-9006",
+    "website": "https://kgromero.com",
+    "summary": "Hello! My name is Kyle Romero. I am a director of software development, with 4 years of management experience and 10 years of full-stack development, technical lead, and architecture experience, living in Jersey City, NJ. I have a Bachelor's Degree in Computer Engineering from Texas Tech University, and have worked in the IT field since 2007 focused on internal software development. Currently, I am a director of operations technology (software solutions for field work), and previously was a team lead and senior developer at Worldwide Machinery, and a technical lead at HP. I have extensive knowledge of all aspects of a successful software development organization, and have used many different technologies and methodologies over the years.",
+    "location": {
+      "address": "1 Harborside Pl Apt 752",
+      "postalCode": "07311",
+      "city": "Jersey City",
+      "countryCode": "US",
+      "region": "New Jersey"
+    },
+    "profiles": [
+      {
+        "network": "Linkedin",
+        "username": "kyleromero",
+        "url": "https://www.linkedin.com/in/kyleromero/"
+      },
+      {
+        "network": "Github",
+        "username": "romero927",
+        "url": "https://github.com/romero927"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "InfraSource, A Quanta Services Company (part of MEARS Group)",
+      "positionCurrent": "Director of Operations Technology: 2021 to Current",
+      "positionPrevious1": "Senior Operations Technology Manager: 2020 to 2021",
+      "positionPrevious2": "Operations Technology Manager: 2017 to 2020",
+      "website": "http://www.infrasourceus.com",
+      "startDate": "2017-10-16",
+      "summary": "Construction and Professional Services (Natural Gas, Oil, and Electric Power Industry)",
+      "highlights": [
+        "Direct-Report to CIO of MEARS Group, helping to define and drive software development strategy",
+        "Head of Software Development for InfraSource",
+        "Manage teams of internal and external developers and project managers",
+        "Coordinate external and internal teams using Agile processes",
+        "Travel as needed to various sites around US to deploy new software solutions and manage IT relationship with other groups",
+        "Interface between technical and non-technical personnel; help to bridge the communication gap",
+        "Provide consultation on software development initiatives across MEARS Group",
+        "Explore and architect new technology solutions (focused on digital transformation)",
+        "Led team through process of making internal tools SOX-Compliant",
+        "Worked to develop high availability infrastructure architecture for apps",
+        "Create learning curriculum for new developers and provide training / KT sessions",
+        "Develop and implement strategy to build out company's internal tools using appropriate technologies",
+        "Help team manage DevOps, Agile, GitFlow, CICD, and PM processes",
+        "Help team administer various systems",
+        "Help team with prototyping / hands-on exploration of new technologies"
+      ],
+      "achievements": [
+        "2021:Promoted to Director of Operations Technology after 1 year as Senior Manager",
+        "2021: Nominated to MEARS Group Disruptor Team (Company Think-Tank)",
+        "2021: Nominated to Quanta Leadership Academy",
+        "2020: Promoted to Senior Manager of Operations Technology after 2.5 years of successful innovation"
+      ]
+    },
+    {
+      "company": "Worldwide Machinery",
+      "position": "Team Lead / Senior Software Developer",
+      "website": "https://wwmach.com",
+      "startDate": "2016-04-20",
+      "endDate": "2017-10-13",
+      "summary": "Heavy Machinery Rental and Sales Company",
+      "highlights": [
+        "Manage project workflow using Agile Scrum methodology",
+        "Manage junior developers' workloads",
+        "Develop modern ASP.NET MVC WebAPI",
+        "Develop modern Mobile-first Web Application using React, Redux, Typescript (ES6), Node.js + Express + NPM, Babel, Webpack, and SASS",
+        "Maintain legacy ERP application using .NET Winforms (C#, MS SQL)",
+        "Implement and Maintain Project and DevOps Processes using: JIRA, Bitbucket (GIT), TeamCity, Trello, Slack, Lucidcharts",
+        "Proactively identify process improvements, as well as project opportunities",
+        "Maintain / troubleshoot hardware infrastructure as needed (Windows / Ubuntu Servers)"
+      ]
+    },
+    {
+      "company": "HP Inc.",
+      "position": "Technical Lead (IT Developer / Engineer III)",
+      "website": "https://hp.com",
+      "startDate": "2013-12-15",
+      "endDate": "2016-02-12",
+      "summary": "Consumer IT Products",
+      "highlights": [
+        "Led development team working on enterprise level product quality / escalation management tool.",
+        "Helped manage both onshore and offshore, full time and contingent developers.",
+        "Helped to define and improve processes used on project, including development of a customized disciplined agile methodology and setting project timelines.",
+        "Administered Team Foundation Server (source and requirements).",
+        "Managed quality control and workloads for developers on project.",
+        "Managed release process for tool.",
+        "Worked with business to define requirements and develop architecture for project.",
+        "Familiar with all aspects of project, from both technical and business standpoints.",
+        "While working on .NET Applications, received exposure to Big Data technologies, such as Hadoop and HP Vertica, as well as Dashboarding Technologies, such as Qlikview and Tableau.",
+        "During the year 2015, led team to successfully complete clone of our systems to be used on both sides of HP after the company split into two."
+      ]
+    },
+    {
+      "company": "HP",
+      "position": "Software Developer (IT Developer / Engineer II)",
+      "website": "https://hp.com",
+      "startDate": "2011-12-01",
+      "endDate": "2013-12-15",
+      "highlights": [
+        "Worked on ASP.NET Web applications incorporating a 3-Tier approach.",
+        "Did work on all three tiers (MS SQL Database, VB.NET Middle tier object libraries, and ASP.NET + jQueryUI frontend).",
+        "Project was managed using Agile Scrum methodology (Received Certified Scrum Master certification 2012).",
+        "Source control system was Team Foundation Server."
+      ]
+    },
+    {
+      "company": "X-Fab Texas, Inc.",
+      "position": "Software / Systems Engineer",
+      "website": "https://www.xfab.com/en/about-x-fab/corporate-overview/locations/usa-texas-single/",
+      "startDate": "2010-01-01",
+      "endDate": "2011-11-30",
+      "summary": "Pure-play Semiconductor Foundry",
+      "highlights": [
+        "Development of ASP.NET/C# Web applications to serve as frontends for MSSQL databases.",
+        "Developed .NET Web / Console / Winforms Applications.",
+        "Involved in Database Design. Administered Windows and Linux servers.",
+        "Designed Shell / Batch scripts. Developed C++ console applications.",
+        "Deployed machine monitoring system. Developed Inventory tracking system.",
+        "Deployed Documentation system to sites globally."
+      ]
+    },
+    {
+      "company": "X-Fab Texas, Inc.",
+      "position": "IT Intern",
+      "website": "https://www.xfab.com/en/about-x-fab/corporate-overview/locations/usa-texas-single/",
+      "startDate": "2007-05-15",
+      "endDate": "2009-12-31",
+      "summary": "Internship between TTU EE Department and X-Fab, Texas",
+      "highlights": [
+        "Developed various internal software projects, including statistical analysis programs, format conversion software, and .NET web applications."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Texas Tech University",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor of Science",
+      "startDate": "2005-08-20",
+      "endDate": "2009-12-19",
+      "gpa": "2.944",
+      "courses": [
+        "Project Lab Projects:",
+        "1a: 60 Hz Notch Filter ",
+        "1b: Line Following Robot",
+        "2: Tech-SAL Robotics Programming Language",
+        "3: Remote Event Timer",
+        "4/5: F.P.G.A. based Waveform Generator."
+      ]
+    }
+  ],
+  "references": [
+    {
+      "name": "Available Upon Request"
+    }
+  ]
+}

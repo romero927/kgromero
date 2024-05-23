@@ -1,0 +1,56 @@
+==================================================================
+https://keybase.io/kgromero
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://kgromero.com
+  * I am kgromero (https://keybase.io/kgromero) on keybase.
+  * I have a public key ASCqVUOYOTtdqSakRVUXjOtsp1s1gbbSyeRIJ4Q6be5qJQo
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120409fa5400e4c80fbc2ce536dd2c521eeadd0c8cca11a309c5b8a9379110a05b60a",
+      "host": "keybase.io",
+      "kid": "0120aa554398393b5da926a44555178ceb6ca75b3581b6d2c9e44827843a6dee6a250a",
+      "uid": "e287304c6e46301db1e7ae1394fcfc19",
+      "username": "kgromero"
+    },
+    "merkle_root": {
+      "ctime": 1593898405,
+      "hash": "8fc2049e0321dc465628bbae393bba33193effff7966f54549ac34415477ec8c2e513d9354c3024981e1277b3c430f4731fbe03041b326908c0c9e5c42ed6502",
+      "hash_meta": "3d4dfba6cec3f927b484653fb96ef47887952c50e6046afbb0094b812252706d",
+      "seqno": 16869099
+    },
+    "service": {
+      "entropy": "GTJ68SOHJwwixEqnxIqGRmz6",
+      "hostname": "kgromero.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 2
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "5.5.0"
+  },
+  "ctime": 1593898440,
+  "expire_in": 504576000,
+  "prev": "09c0c30eeab7a9d65936565620c3f989c98b3c66a80861ee9cb86f84c3706b60",
+  "seqno": 26,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgqlVDmDk7XakmpEVVF4zrbKdbNYG20snkSCeEOm3uaiUKp3BheWxvYWTESpcCGsQgCcDDDuq3qdZZNlZWIMP5icmLPGaoCGHunLhvhMNwa2DEILzUFWheMl/kgQV1R9KhEor5jI/9No4EfSUbx7Pd4RRCAgHCo3NpZ8RASyXxopDLVwMZAFtxEwD/DQDdmUkgpxPke8U1DvQFGFcpD7lbA8AQc+tDIdU+c8sByp+TBS9YfTXN6NBzN3NPD6hzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEINPARi5tpwOw8i2oTxghgUd8jmiZdpzowHyFv/9GjQqIo3RhZ80CAqd2ZXJzaW9uAQ==
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/kgromero
+
+==================================================================

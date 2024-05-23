@@ -1,0 +1,421 @@
+<script>
+  import {
+    Navbar,
+    NavBrand,
+    NavLi,
+    NavUl,
+    NavHamburger,
+    Dropdown,
+    DropdownItem,
+    DropdownDivider,
+  } from "flowbite-svelte";
+
+  import { ChevronDownOutline } from "flowbite-svelte-icons";
+  import { DarkMode } from "flowbite-svelte";
+  import { Timeline, TimelineItem, Button } from "flowbite-svelte";
+  import { Card } from "flowbite-svelte";
+  import { Footer, FooterCopyright } from "flowbite-svelte";
+
+  import Fa from "svelte-fa";
+  import {
+    faPhone,
+    faEnvelope,
+  } from "@fortawesome/free-solid-svg-icons/index.js";
+  import {
+    faGithub,
+    faLinkedin,
+    faKeybase,
+    faGoodreads,
+  } from "@fortawesome/free-brands-svg-icons/index.js";
+
+  import { Heading, P, A, Mark, Secondary, Hr } from "flowbite-svelte";
+
+  let startDate = new Date("July 15, 2007");
+
+  let diff = Math.abs(new Date() - startDate);
+  let yearsExperience = Math.floor(diff / 31536000000);
+
+  let startDateMgr = new Date("October 16, 2017");
+
+  let diffMgr = Math.abs(new Date() - startDateMgr);
+  let yearsExperienceMgr = Math.round(diffMgr / 31536000000);
+
+  import QR from "$lib/assets/QR.png";
+  import Profile from "$lib/assets/kgromero.png";
+  import ResumeDocX from "$lib/assets/kgromero.docx";
+  import ResumePDF from "$lib/assets/kgromero.pdf";
+  import ResumeTXT from "$lib/assets/kgromero.txt";
+  import ResumePDFShort from "$lib/assets/kgromero-short.pdf";
+  import OrgStructure from "$lib/assets/OrgStructure.png";
+  import SDLC from "$lib/assets/SDLC Items Flows.png";
+  import Release from "$lib/assets/Release Process.png";
+  import Path from "$lib/assets/Development Path.pdf";
+  import Landscape from "$lib/assets/IT Landscape.png";
+  import Process from "$lib/assets/Development Process.png";
+  import Electron from "$lib/assets/Electron Architecture.png";
+  import Workflow from "$lib/assets/Workflow.pdf";
+  import WWMMobile from "$lib/assets/WWMMobile.png";
+  import WWMLandscape from "$lib/assets/WWMLandscape.png";
+  import SIOverview from "$lib/assets/SIOverview.pdf";
+  import SIAL from "$lib/assets/SIAL.png";
+  import Internship from "$lib/assets/Internship.pdf";
+  import PlasmaTraceSystem from "$lib/assets/PlasmaTraceSystem.pdf";
+  import ChemicalTracking from "$lib/assets/ChemicalTracking.pdf";
+  import MaskToolingManual from "$lib/assets/MaskToolingManual.pdf";
+  import DeviceMTM from "$lib/assets/DeviceMTM.pdf";
+  import MiscProjects from "$lib/assets/MiscProjects.pdf";
+  import OtherInformationAboutMe from "$lib/assets/OtherInformationAboutMe.pdf";
+  import Lab1Project1 from "$lib/assets/Lab1Project1.pdf";
+  import Lab1Project2Presentation from "$lib/assets/Lab1Project2Presentation.pdf";
+  import Lab1Project2 from "$lib/assets/Lab1Project2.pdf";
+  import Lab2FinalPresentation from "$lib/assets/Lab2FinalPresentation.pdf";
+  import Lab2FinalReport from "$lib/assets/Lab2FinalReport.pdf";
+  import Lab2TrialVideo from "$lib/assets/Lab2TrialVideo.webm";
+  import Lab3FinalPresentation from "$lib/assets/Lab3FinalPresentation.pdf";
+  import Lab3FinalReport from "$lib/assets/Lab3FinalReport.pdf";
+  import ProjectLabVFinalReport from "$lib/assets/ProjectLabVFinalReport.pdf";
+  import MicroprocessorArchitectureFinalProjectR from "$lib/assets/MicroprocessorArchitectureFinalProject.pdf";
+  import TrellisDesignforLHUCA from "$lib/assets/TrellisDesignforLHUCA.pdf";
+  import Transcript_Kromero from "$lib/assets/Transcript_Kromero.pdf";
+  import Sentiment from "$lib/assets/Twitter Sentiment Analysis.png";
+  import RPi from "$lib/assets/RPi LED Display.webm";
+</script>
+
+<div class="min-h-screen dark:bg-gray-900">
+  <Navbar let:NavContainer>
+    <NavContainer
+      class="border px-2 mx-0 rounded-lg bg-white bg-gray-100 dark:bg-gray-800"
+    >
+      <NavBrand>
+        <span class="whitespace-nowrap text-xl font-semibold">kgromero.com</span
+        >
+      </NavBrand>
+      <NavHamburger />
+      <NavUl>
+        <NavLi class="my-2 cursor-pointer">
+          Resume<ChevronDownOutline
+            class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+          />
+        </NavLi>
+        <Dropdown class="w-44 z-20">
+          <DropdownItem href={ResumePDF} target="_blank"
+            >Kyle Romero Resume - PDF</DropdownItem
+          >
+          <DropdownDivider />
+          <DropdownItem href={ResumeDocX} target="_blank"
+            >Kyle Romero Resume - DOCX</DropdownItem
+          >
+          <DropdownDivider />
+          <DropdownItem href={ResumeTXT} target="_blank"
+            >Kyle Romero Resume - TXT</DropdownItem
+          >
+          <DropdownDivider />
+          <DropdownItem href={ResumePDFShort} target="_blank"
+            >Kyle Romero Resume - PDF (1 Page)
+          </DropdownItem>
+        </Dropdown>
+        <NavLi class="my-2 cursor-pointer ">
+          Portfolio<ChevronDownOutline
+            class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+          />
+        </NavLi>
+        <Dropdown class="w-60 z-20 text-center">
+          <NavLi class="my-2 align-center cursor-pointer">
+            Raymour & Flanigan<ChevronDownOutline
+              class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+            />
+          </NavLi>
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+            <DropdownItem href={OrgStructure} target="_blank"
+              >Matrix Organization Structure</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={SDLC} target="_blank"
+              >SDLC Item Flows</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Release} target="_blank"
+              >Release Process</DropdownItem
+            >
+          </Dropdown>
+          <DropdownDivider />
+          <NavLi class="my-2 cursor-pointer">
+            InfraSource<ChevronDownOutline
+              class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+            />
+          </NavLi>
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+            <DropdownItem href={Path} target="_blank"
+              >Developer Progression</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Landscape} target="_blank"
+              >IT Landscape</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Process} target="_blank"
+              >Development Process</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Electron} target="_blank"
+              >Electron Architecture</DropdownItem
+            >
+          </Dropdown>
+          <DropdownDivider />
+          <NavLi class="my-2 cursor-pointer">
+            Worldwide Machinery<ChevronDownOutline
+              class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+            />
+          </NavLi>
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+            <DropdownItem href={Workflow} target="_blank"
+              >Team Workflow</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={WWMMobile} target="_blank"
+              >Mobile Architecture</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={WWMLandscape} target="_blank"
+              >App Landscape</DropdownItem
+            >
+          </Dropdown>
+          <DropdownDivider />
+          <NavLi class="my-2 cursor-pointer">
+            HP<ChevronDownOutline
+              class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+            />
+          </NavLi>
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+            <DropdownItem href={SIOverview} target="_blank"
+              >Sudden Impact Overview</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={SIAL} target="_blank"
+              >Sudden Impact Architecture</DropdownItem
+            >
+          </Dropdown>
+          <DropdownDivider />
+          <NavLi class="my-2 cursor-pointer">
+            X-Fab<ChevronDownOutline
+              class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+            />
+          </NavLi>
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+            <DropdownItem href={Internship} target="_blank"
+              >Internship Projects Overview</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={PlasmaTraceSystem} target="_blank"
+              >Plasma Trace</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={ChemicalTracking} target="_blank"
+              >Chemical Tracking</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={MaskToolingManual} target="_blank"
+              >Mask Tooling Manual</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={DeviceMTM} target="_blank"
+              >Device MTM</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={MiscProjects} target="_blank"
+              >Misc. Projects</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={OtherInformationAboutMe} target="_blank"
+              >Other Information</DropdownItem
+            >
+          </Dropdown>
+          <DropdownDivider />
+          <NavLi class="my-2 cursor-pointer">
+            Texas Tech<ChevronDownOutline
+              class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+            />
+          </NavLi>
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+            <DropdownItem href={Lab1Project1} target="_blank"
+              >Lab 1 Project 1 PPT</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Lab1Project2Presentation} target="_blank"
+              >Lab 1 Project 2 PPT</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Lab1Project2} target="_blank"
+              >Lab 1 Project 2 DOC</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Lab2FinalPresentation} target="_blank"
+              >Lab 2 PPT</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Lab2FinalReport} target="_blank"
+              >Lab 2 DOC</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Lab2TrialVideo} target="_blank"
+              >Lab 2 Trial Video</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Lab3FinalPresentation} target="_blank"
+              >Lab 3 PPT</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Lab3FinalReport} target="_blank"
+              >Lab 3 DOC</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={ProjectLabVFinalReport} target="_blank"
+              >Lab 4/5 DOC</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem
+              href={MicroprocessorArchitectureFinalProjectR}
+              target="_blank"
+              >Microprocessor Architecture Final Project</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={TrellisDesignforLHUCA} target="_blank"
+              >Misc. Engineering Project DOC</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={Transcript_Kromero} target="_blank"
+              >Transcript</DropdownItem
+            >
+          </Dropdown>
+          <DropdownDivider />
+          <NavLi class="my-2 cursor-pointer">
+            Other<ChevronDownOutline
+              class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
+            />
+          </NavLi>
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+            <DropdownItem href={Sentiment} target="_blank"
+              >Twitter Sentiment Analysis</DropdownItem
+            ><DropdownDivider />
+            <DropdownItem href={RPi} target="_blank"
+              >RPi LED Display</DropdownItem
+            >
+          </Dropdown>
+        </Dropdown>
+        <DarkMode />
+      </NavUl>
+    </NavContainer>
+  </Navbar>
+  <div
+    class="container mx-auto text-center border py-2 rounded-lg bg-gray-50 dark:bg-gray-800"
+  >
+    <Heading color="dark:text-neutral-300">Kyle Romero</Heading>
+    <br />
+    <P class="text-center"
+      >Director of Software Development with {yearsExperience} years experience in
+      IT. Currently living in Jersey City, NJ.</P
+    >
+  </div>
+  <div class="container mx-auto my-2 lg:grid grid-cols-4">
+    <Card class="items-center max-w-full bg-gray-50 ">
+      <b class="py-1">About Me</b>
+      <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} />
+      Highly experienced Director of Software Development with 16 years of experience
+      in IT. Adept at building and managing a successful software development organization
+      utilizing both internal onshore and development partner offshore resources.
+      Skilled at bridging the communication gap between technical and non-technical
+      personnel. Able to balance the leadership, technical, and financial management
+      requirements of being a director of software development. Proponent of servant
+      leadership and continuous improvement. Have been in management since 2017 and
+      was a developer from 2007 to 2017.
+    </Card>
+    <Card class="items-center mx-auto max-w-full bg-gray-50">
+      <b class="py-1">Contact Info</b>
+      <img
+        alt="vCard (Scan on Phone to add to Contacts)"
+        src={QR}
+        class="justify-center w-1/2"
+      />
+      <ul class="my-7 space-y-4">
+        <li class="flex space-x-2">
+          <Fa icon={faPhone} />
+          <span
+            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+            ><a href="tel://+12818579006">(281) 857-9006</a></span
+          >
+        </li>
+        <li class="flex space-x-2">
+          <Fa icon={faEnvelope} />
+          <span
+            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+            ><a href="mailto:kgromero@gmail.com" target="_top"
+              >kgromero@gmail.com</a
+            ></span
+          >
+        </li>
+        <li class="flex space-x-2">
+          <Fa icon={faLinkedin} />
+          <span
+            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+            ><a href="https://www.linkedin.com/in/kyleromero/">LinkedIn</a
+            ></span
+          >
+        </li>
+        <li class="flex space-x-2">
+          <Fa icon={faGithub} />
+          <a href="https://github.com/romero927">Github</a>
+        </li>
+        <li class="flex space-x-2">
+          <Fa icon={faKeybase} />
+          <span
+            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+            ><a href="https://keybase.io/kgromero">Keybase</a></span
+          >
+        </li>
+        <li class="flex space-x-2">
+          <Fa icon={faGoodreads} />
+          <span
+            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+          >
+            <a href="https://www.goodreads.com/kgromero">Goodreads</a></span
+          >
+        </li>
+      </ul>
+    </Card>
+    <Card class="items-center mx-auto max-w-full bg-gray-50">
+      <b class="py-1">Interests</b>
+      <ul class="space-y-4">
+        <li class="flex space-x-2">
+          My wife and I love to travel. We have travelled extensively throughout
+          the U.S., as well as to several other countries.
+        </li>
+        <Hr />
+        <li class="flex space-x-2">
+          Being an engineer at heart, I am constantly trying to find new
+          side-projects to do. Some of my favorite have been implemented using a
+          Raspberry Pi, such as a digital LED Sign, Pi-hole DNS blocker, E-Ink
+          Nametag, and RTL-SDR.
+        </li>
+        <Hr />
+        <li class="flex space-x-2">
+          Other Interests: SpinClass, PC Gaming, Reading (SFF), Nature,
+          Broadway, Theme Parks
+        </li>
+        <Hr />
+      </ul>
+    </Card>
+    <Card class="items-center mx-auto max-w-full bg-gray-50">
+      <b class="py-1">Experience</b>
+      <Timeline class="text-xs ">
+        <TimelineItem date="Mar 2023 - May 2024" classLi="text-xs"
+          ><br /><b>Director of Software Development, Raymour & Flanigan</b
+          ></TimelineItem
+        >
+        <TimelineItem date="Oct 2017 - Mar 2023"
+          ><br /><b>Director of Operations Technology, MEARS Group</b
+          ></TimelineItem
+        >
+        <TimelineItem date="Apr 2016 — Oct 2017"
+          ><br /><b
+            >Team Lead / Senior Software Developer, Worldwide Machinery</b
+          ></TimelineItem
+        >
+        <TimelineItem date="Dec 2011 — Feb 2016"
+          ><br /><b>Technical Lead (IT Developer / Engineer III), HP Inc.</b
+          ></TimelineItem
+        >
+        <TimelineItem date="May 2007 — Dec 2011"
+          ><br /><b>Software / Systems Engineer, X-Fab, Texas</b></TimelineItem
+        >
+        <TimelineItem date="May 2005 — Dec 2009"
+          ><br /><b
+            >Bachelor of Science in Computer Engineering, Texas Tech University</b
+          ></TimelineItem
+        >
+      </Timeline>
+    </Card>
+  </div>
+  <Footer>
+    <FooterCopyright
+      href="/"
+      by="Kyle Romero"
+      year={2024}
+      copyrightMessage="- Site built in SvelteKit, utilizing TailwindCSS, FontAwesome, and Flowbite. Hosted on Netlify."
+    />
+  </Footer>
+</div>
