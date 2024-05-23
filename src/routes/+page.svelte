@@ -374,7 +374,7 @@
         </li>
         <Hr />
         <li class="flex space-x-2">
-          Other Interests: SpinClass, PC Gaming, Reading (SFF), Nature,
+          Other Interests: Spin Class, PC Gaming, Reading (SFF), Nature,
           Broadway, Theme Parks
         </li>
         <Hr />
