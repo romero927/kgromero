@@ -80,7 +80,7 @@
   import Sentiment from "$lib/assets/Twitter Sentiment Analysis.png";
   import RPi from "$lib/assets/RPi LED Display.webm";
 </script>
-
+<html class="dark" lang="en"></html>
 <div class="min-h-screen dark:bg-gray-900">
   <Navbar let:NavContainer>
     <NavContainer
@@ -277,6 +277,7 @@
             >
           </Dropdown>
         </Dropdown>
+        <NavLi href="https://kgromero-react.netlify.app/" class="my-2">Old Site (React)</NavLi>
         <DarkMode />
       </NavUl>
     </NavContainer>
