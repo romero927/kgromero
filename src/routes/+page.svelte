@@ -82,7 +82,8 @@
 </script>
 <html class="dark" lang="en"></html>
 <div class="min-h-screen dark:bg-gray-900">
-  <Navbar class="sm:container sm:mx-auto border dark:border-white/10 px-2 py-0 mb-2 mx-2bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-neutral-400 ">
+  <br class="hidden md:block"/>
+  <Navbar class="sm:container sm:mx-auto border xs:rounded-none sm:rounded-lg dark:border-white/10 px-2 py-0 mb-2 mx-2bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-neutral-400 ">
     <!-- <NavContainer
       class="border dark:border-white/10 px-2 mx-0 rounded-lg bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-neutral-400" fluid=true
     > -->
