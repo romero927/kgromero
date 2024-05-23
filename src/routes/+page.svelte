@@ -275,7 +275,7 @@
             >
           </Dropdown>
         </Dropdown>
-        <NavLi href="https://kgromero-react.netlify.app/" class="my-2 text-black/60 dark:text-neutral-400">Old Site (React)</NavLi>
+        <NavLi href="https://kgromero-react.netlify.app/" class="my-2 text-black/60 dark:text-gray-400">Old Site (React)</NavLi>
         <DarkMode />
       </NavUl>
     <!-- </NavContainer> -->
