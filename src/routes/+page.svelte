@@ -82,10 +82,10 @@
 </script>
 <html class="dark" lang="en"></html>
 <div class="min-h-screen dark:bg-gray-900">
-  <Navbar let:NavContainer>
-    <NavContainer
-      class="border dark:border-white/10 px-2 mx-0 rounded-lg bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-neutral-400"
-    >
+  <Navbar class="sm:container sm:mx-auto border dark:border-white/10 px-2 py-0 mb-2 mx-2bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-neutral-400 ">
+    <!-- <NavContainer
+      class="border dark:border-white/10 px-2 mx-0 rounded-lg bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-neutral-400" fluid=true
+    > -->
       <NavBrand>
         <span class="whitespace-nowrap text-xl font-semibold">kgromero.com</span
         >
@@ -280,10 +280,10 @@
         <NavLi href="https://kgromero-react.netlify.app/" class="my-2 text-black/60 dark:text-neutral-400">Old Site (React)</NavLi>
         <DarkMode />
       </NavUl>
-    </NavContainer>
+    <!-- </NavContainer> -->
   </Navbar>
   <div
-    class="container mx-auto text-center border dark:border-white/10 py-2 rounded-lg bg-gray-50 dark:bg-gray-800"
+    class="container mx-auto rounded-lg text-center border dark:border-white/10 py-2  bg-gray-50 dark:bg-gray-800"
   >
     <Heading color="text-black/60 dark:text-neutral-400">Kyle Romero</Heading>
     <br />
@@ -292,8 +292,8 @@
       IT. Currently living in Jersey City, NJ.</P
     >
   </div>
-  <div class="container mx-auto my-2 lg:grid grid-cols-4">
-    <Card class="items-center max-w-full bg-gray-50 ">
+  <div class="container mx-auto my-2 lg:grid grid-cols-4 ">
+    <Card class="items-center max-w-full bg-gray-50  ">
       <b class="py-1">About Me</b>
       <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} />
       Highly experienced Director of Software Development with 16 years of experience
