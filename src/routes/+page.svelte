@@ -371,11 +371,11 @@
           ><br /><b>Director of Software Development, Raymour & Flanigan</b
           ></TimelineItem
         >
-        <TimelineItem date="Mar 2021 - Mar 2023" classLi="mb-5"
+        <TimelineItem date="Apr 2021 - Mar 2023" classLi="mb-5"
           ><br /><b>Director of Operations Technology, MEARS Group</b
           ></TimelineItem
         >
-        <TimelineItem date="Mar 2020 - Mar 2021" classLi="mb-5"
+        <TimelineItem date="Mar 2020 - Apr 2021" classLi="mb-5"
           ><br /><b>Senior Manager of Operations Technology, MEARS Group</b
           ></TimelineItem
         >
@@ -392,7 +392,7 @@
           ><br /><b>Technical Lead (IT Developer / Engineer III), HP</b
           ></TimelineItem
         >
-        <TimelineItem date="Oct 2017 - Dec 2013" classLi="mb-5"
+        <TimelineItem date="Dec 2011 - Dec 2013" classLi="mb-5"
           ><br /><b>Senior Developer (IT Developer / Engineer II), HP</b
           ></TimelineItem
         > 
