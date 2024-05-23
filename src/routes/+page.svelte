@@ -357,6 +357,51 @@
       </ul>
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50">
+      <b class="py-1">Experience</b>
+      <Timeline class="text-xs p-0 m-0" >
+        <TimelineItem date="Mar 2023 - May 2024" classLi="mb-5"
+          ><br /><b>Director of Software Development, Raymour & Flanigan</b
+          ></TimelineItem
+        >
+        <TimelineItem date="Mar 2021 - Mar 2023" classLi="mb-5"
+          ><br /><b>Director of Operations Technology, MEARS Group</b
+          ></TimelineItem
+        >
+        <TimelineItem date="Mar 2020 - Mar 2021" classLi="mb-5"
+          ><br /><b>Senior Manager of Operations Technology, MEARS Group</b
+          ></TimelineItem
+        >
+        <TimelineItem date="Oct 2017 - Mar 2020" classLi="mb-5"
+          ><br /><b>Manager of Operations Technology, MEARS Group</b
+          ></TimelineItem
+        >
+        <TimelineItem date="Apr 2016 — Oct 2017" classLi="mb-5"
+          ><br /><b
+            >Team Lead / Senior Software Developer, Worldwide Machinery</b
+          ></TimelineItem
+        >
+        <TimelineItem date="Dec 2013 — Feb 2016" classLi="mb-5"
+          ><br /><b>Technical Lead (IT Developer / Engineer III), HP</b
+          ></TimelineItem
+        >
+        <TimelineItem date="Oct 2017 - Dec 2013" classLi="mb-5"
+          ><br /><b>Senior Developer (IT Developer / Engineer II), HP</b
+          ></TimelineItem
+        > 
+        <TimelineItem date="July 2007 — Dec 2011" classLi="mb-5"
+          ><br /><b>Software / Systems Engineer, X-Fab, Texas</b></TimelineItem
+        >
+        <TimelineItem date="May 2007 — July 2007" classLi="mb-5"
+          ><br /><b>Software Development Intern, X-Fab, Texas</b></TimelineItem
+        >
+        <TimelineItem date="May 2005 — Dec 2009" classLi="mb-5"
+          ><br /><b
+            >Bachelor of Science in Computer Engineering, Texas Tech University</b
+          ></TimelineItem
+        >
+      </Timeline>
+    </Card>
+    <Card class="items-center mx-auto max-w-full bg-gray-50">
       <b class="py-1">Interests</b>
       <ul class="space-y-4">
         <li class="flex space-x-2">
@@ -377,36 +422,6 @@
         </li>
         <Hr />
       </ul>
-    </Card>
-    <Card class="items-center mx-auto max-w-full bg-gray-50">
-      <b class="py-1">Experience</b>
-      <Timeline class="text-xs ">
-        <TimelineItem date="Mar 2023 - May 2024" classLi="text-xs"
-          ><br /><b>Director of Software Development, Raymour & Flanigan</b
-          ></TimelineItem
-        >
-        <TimelineItem date="Oct 2017 - Mar 2023"
-          ><br /><b>Director of Operations Technology, MEARS Group</b
-          ></TimelineItem
-        >
-        <TimelineItem date="Apr 2016 — Oct 2017"
-          ><br /><b
-            >Team Lead / Senior Software Developer, Worldwide Machinery</b
-          ></TimelineItem
-        >
-        <TimelineItem date="Dec 2011 — Feb 2016"
-          ><br /><b>Technical Lead (IT Developer / Engineer III), HP Inc.</b
-          ></TimelineItem
-        >
-        <TimelineItem date="May 2007 — Dec 2011"
-          ><br /><b>Software / Systems Engineer, X-Fab, Texas</b></TimelineItem
-        >
-        <TimelineItem date="May 2005 — Dec 2009"
-          ><br /><b
-            >Bachelor of Science in Computer Engineering, Texas Tech University</b
-          ></TimelineItem
-        >
-      </Timeline>
     </Card>
   </div>
   <Footer>
