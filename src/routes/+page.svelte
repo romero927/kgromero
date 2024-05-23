@@ -83,17 +83,14 @@
 <html class="dark" lang="en"></html>
 <div class="min-h-screen dark:bg-gray-900">
   <br class="hidden md:block"/>
-  <Navbar class="sm:container sm:mx-auto border xs:rounded-none sm:rounded-lg dark:border-white/10 px-2 py-0 mb-2 mx-2bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-neutral-400 ">
-    <!-- <NavContainer
-      class="border dark:border-white/10 px-2 mx-0 rounded-lg bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-neutral-400" fluid=true
-    > -->
+  <Navbar class="sm:container sm:mx-auto border xs:rounded-none sm:rounded-lg dark:border-white/10 px-2 py-0 mb-2 mx-2bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-gray-400 ">
       <NavBrand>
         <span class="whitespace-nowrap text-xl font-semibold">kgromero.com</span
         >
       </NavBrand>
       <NavHamburger />
       <NavUl>
-        <NavLi class="my-2 cursor-pointer text-black/60 dark:text-neutral-400">
+        <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
           Resume<ChevronDownOutline
             class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
           />
@@ -115,7 +112,7 @@
             >Kyle Romero Resume - PDF (1 Page)
           </DropdownItem>
         </Dropdown>
-        <NavLi class="my-2 cursor-pointer text-black/60 dark:text-neutral-400">
+        <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
           Portfolio<ChevronDownOutline
             class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
           />
@@ -286,9 +283,9 @@
   <div
     class="container mx-auto rounded-lg text-center border dark:border-white/10 py-2  bg-gray-50 dark:bg-gray-800"
   >
-    <Heading color="text-black/60 dark:text-neutral-400">Kyle Romero</Heading>
+    <Heading color="text-black/60 dark:text-gray-400">Kyle Romero</Heading>
     <br />
-    <P class="text-center text-black/60 dark:text-neutral-400"
+    <P class="text-center text-black/60 dark:text-gray-400"
       >Director of Software Development with {yearsExperience} years experience in
       IT. Currently living in Jersey City, NJ.</P
     >
