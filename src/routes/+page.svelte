@@ -15,6 +15,14 @@
   import { Timeline, TimelineItem, Button } from "flowbite-svelte";
   import { Card } from "flowbite-svelte";
   import { Footer, FooterCopyright } from "flowbite-svelte";
+  import { Listgroup, ListgroupItem } from 'flowbite-svelte';
+  let links = [
+    { name: 'Hacker News (YCombinator', href: 'https://news.ycombinator.com/', attrs: {target: '_blank'}},
+    { name: 'Dev.to', href: 'https://dev.to/', attrs: {target: '_blank'} },
+    { name: 'Paul Graham\'s Articles', href: 'https://www.paulgraham.com/articles.html', attrs: {target: '_blank'} },
+    { name: 'Scott Hanselman\'s Blog', href: 'https://www.hanselman.com/blog/', attrs: {target: '_blank'}},
+    { name: 'CIO.com', href: 'https://www.cio.com', attrs: {target: '_blank'} }
+  ];
 
   import Fa from "svelte-fa";
   import {
@@ -404,23 +412,29 @@
     <Card class="items-center mx-auto max-w-full bg-gray-50">
       <b class="py-1">Interests</b>
       <ul class="space-y-4">
-        <li class="flex space-x-2">
+        <li >
           My wife and I love to travel. We have travelled extensively throughout
           the U.S., as well as to several other countries.
         </li>
         <Hr />
-        <li class="flex space-x-2">
+        <li >
           Being an engineer at heart, I am constantly trying to find new
           side-projects to do. Some of my favorite have been implemented using a
           Raspberry Pi, such as a digital LED Sign, Pi-hole DNS blocker, E-Ink
           Nametag, and RTL-SDR.
         </li>
         <Hr />
-        <li class="flex space-x-2">
+        <li >
           Other Interests: Spin Class, PC Gaming, Reading (SFF), Nature,
           Broadway, Theme Parks
         </li>
         <Hr />
+        <li>
+          <div class="text-center"><b>Favorite Blogs and Tech Resources:</b></div>
+          <Listgroup active items={links} let:item class="w-48 text-center w-full">
+            {item.name}
+          </Listgroup>
+        </li>
       </ul>
     </Card>
   </div>
