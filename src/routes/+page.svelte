@@ -84,7 +84,7 @@
 <div class="min-h-screen dark:bg-gray-900">
   <Navbar let:NavContainer>
     <NavContainer
-      class="border px-2 mx-0 rounded-lg bg-white bg-gray-100 dark:bg-gray-800"
+      class="border dark:border-white/10 px-2 mx-0 rounded-lg bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-neutral-400"
     >
       <NavBrand>
         <span class="whitespace-nowrap text-xl font-semibold">kgromero.com</span
@@ -92,7 +92,7 @@
       </NavBrand>
       <NavHamburger />
       <NavUl>
-        <NavLi class="my-2 cursor-pointer">
+        <NavLi class="my-2 cursor-pointer text-black/60 dark:text-neutral-400">
           Resume<ChevronDownOutline
             class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
           />
@@ -114,7 +114,7 @@
             >Kyle Romero Resume - PDF (1 Page)
           </DropdownItem>
         </Dropdown>
-        <NavLi class="my-2 cursor-pointer ">
+        <NavLi class="my-2 cursor-pointer text-black/60 dark:text-neutral-400">
           Portfolio<ChevronDownOutline
             class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
           />
@@ -277,17 +277,17 @@
             >
           </Dropdown>
         </Dropdown>
-        <NavLi href="https://kgromero-react.netlify.app/" class="my-2">Old Site (React)</NavLi>
+        <NavLi href="https://kgromero-react.netlify.app/" class="my-2 text-black/60 dark:text-neutral-400">Old Site (React)</NavLi>
         <DarkMode />
       </NavUl>
     </NavContainer>
   </Navbar>
   <div
-    class="container mx-auto text-center border py-2 rounded-lg bg-gray-50 dark:bg-gray-800"
+    class="container mx-auto text-center border dark:border-white/10 py-2 rounded-lg bg-gray-50 dark:bg-gray-800"
   >
-    <Heading color="dark:text-neutral-300">Kyle Romero</Heading>
+    <Heading color="text-black/60 dark:text-neutral-400">Kyle Romero</Heading>
     <br />
-    <P class="text-center"
+    <P class="text-center text-black/60 dark:text-neutral-400"
       >Director of Software Development with {yearsExperience} years experience in
       IT. Currently living in Jersey City, NJ.</P
     >
