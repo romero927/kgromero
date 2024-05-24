@@ -54,6 +54,7 @@
   import ResumePDF from "$lib/assets/kgromero.pdf";
   import ResumeTXT from "$lib/assets/kgromero.txt";
   import ResumePDFShort from "$lib/assets/kgromero-short.pdf";
+  import ResumePDFDetailed from "$lib/assets/kgromero-detailed.pdf";
   import OrgStructure from "$lib/assets/OrgStructure.png";
   import SDLC from "$lib/assets/SDLC Items Flows.png";
   import Release from "$lib/assets/Release Process.png";
@@ -105,19 +106,22 @@
         </NavLi>
         <Dropdown class="w-44 z-20">
           <DropdownItem href={ResumePDF} target="_blank"
-            >Kyle Romero Resume - PDF</DropdownItem
+            >Resume - PDF</DropdownItem
           >
           <DropdownDivider />
           <DropdownItem href={ResumeDocX} target="_blank"
-            >Kyle Romero Resume - DOCX</DropdownItem
+            >Resume - DOCX</DropdownItem
           >
           <DropdownDivider />
           <DropdownItem href={ResumeTXT} target="_blank"
-            >Kyle Romero Resume - TXT</DropdownItem
+            >Resume - TXT</DropdownItem
           >
           <DropdownDivider />
           <DropdownItem href={ResumePDFShort} target="_blank"
-            >Kyle Romero Resume - PDF (1 Page)
+            >Resume - 1 Page
+          </DropdownItem>
+          <DropdownItem href={ResumePDFDetailed} target="_blank"
+            >Resume - Detailed
           </DropdownItem>
         </Dropdown>
         <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
@@ -238,14 +242,14 @@
             <DropdownItem href={Lab1Project2} target="_blank"
               >Lab 1 Project 2 DOC</DropdownItem
             ><DropdownDivider />
+            <DropdownItem href={Lab2TrialVideo} target="_blank"
+              >Lab 1 Project 2 Trial Video</DropdownItem
+            ><DropdownDivider />
             <DropdownItem href={Lab2FinalPresentation} target="_blank"
               >Lab 2 PPT</DropdownItem
             ><DropdownDivider />
             <DropdownItem href={Lab2FinalReport} target="_blank"
               >Lab 2 DOC</DropdownItem
-            ><DropdownDivider />
-            <DropdownItem href={Lab2TrialVideo} target="_blank"
-              >Lab 2 Trial Video</DropdownItem
             ><DropdownDivider />
             <DropdownItem href={Lab3FinalPresentation} target="_blank"
               >Lab 3 PPT</DropdownItem
