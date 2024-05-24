@@ -120,6 +120,7 @@
           <DropdownItem href={ResumePDFShort} target="_blank"
             >Resume - 1 Page
           </DropdownItem>
+          <DropdownDivider />
           <DropdownItem href={ResumePDFDetailed} target="_blank"
             >Resume - Detailed
           </DropdownItem>
