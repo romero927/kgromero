@@ -131,6 +131,11 @@ EDUCATION
   * May 2005 – December 2009
     Texas Tech University, Lubbock, TX Bachelor of Science in Computer Engineering
 
+    
+  Trained in Computer Science and Electrical Engineering
+  Engineering Projects: 60 Hz Notch Filter, Line Following Robot, Tech-SAL Robotics Programming Language, Remote Event Timer, F.P.G.A. based Waveform Generator.
+
+
 ACHIEVEMENTS
   * , , 
 
