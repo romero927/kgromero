@@ -27,7 +27,7 @@ SKILLS
 WORK EXPERIENCE
   * March 2023 – May 2024
     Director of Software Development at Raymour & Flanigan, Jersey City, NJ (remote)
-      Led the Application Development Organization of Raymour &amp; Flanigan, which handled all internal software development company wide. This role was heavily focused on organizational transformation and modernization, both from a software and process perspective. Fully remote position.
+      Led the Application Development Organization, which handled all internal software development company wide. This role was heavily focused on organizational transformation and modernization, both from a software and process perspective. Fully remote position.
 
   Leadership
     
@@ -36,7 +36,7 @@ WORK EXPERIENCE
       Defined and Executed Organizational Strategy, including 5 year vision.
       Recruited and maintained skilled resources for organization.
       Held weekly 1:1's and annual reviews with Direct Reports and Bi-Annual Skip-Level 1:1's with Indirect Reports.
-      Traveled to various Northeast U.S. locations as needed (5% of time)
+      Traveled to various Northeast U.S. locations (5% of time)
     
   
   Technical
@@ -50,17 +50,17 @@ WORK EXPERIENCE
   
   Financial
     
-      Forecasted and Managed Organizational Budget. Managed IT Organization Credit Card
+      Forecasted and Managed Organizational Budget and IT Organization Credit Card
       Managed Invoice Review and Approval Process for Organization.
       Negotiated, Reviewed, and Managed Development Partner (Near-Shore / On-Shore) and Vendor Contracts / Resources
-      Worked with Systems Team to monitor and control cloud and on-prem costs
+      Worked with Infrastructure Team to monitor and control cloud and on-prem costs
     
   
 
 
   * October 2017 – March 2023
     Director of Operations Technologies at MEARS Group, Jersey City, NJ (remote)
-      Managed the Operations Technology Organization of MEARS Group (part of Quanta Services), which delivered internally developed software solutions for field operations employees, with a special emphasis on digital transformation and field capture. This position was a direct report to the CIO.
+      Managed the Operations Technology Organization, which delivered internally developed software solutions for field operations employees, with an emphasis on digital transformation and field capture. This position was a direct report to the CIO and Fully remote.
 
   Leadership
     
@@ -95,7 +95,7 @@ WORK EXPERIENCE
     Team Lead / Senior Developer at Worldwide Machinery, Houston, TX
       
   Led Internal Software Development Team
-  Full-Stack Senior Developer focused on .NET, MS SQL, and React development
+  Focused on full-stack development using .NET, MS SQL, and React.
   Delivered Mission-critical Asset Management Software (desktop, mobile, and web)
   Reported to Co-Owner of Company
 
@@ -103,17 +103,17 @@ WORK EXPERIENCE
   * December 2011 – February 2016
     Technical Lead (IT Developer / Engineer III) at HP Inc., Houston, TX
       
-  Technical Lead over mission-critical third level support tool (10k+ users)
-  Full-Stack Development focused on .NET, MS SQL, and JavaScript
-  Part of Analytics and Reporting organization, received exposure to Big Data (Hadoop / HP Vertica) and BI/Analytics (PowerBI / Tableau) concepts.
+  Designated as Technical Lead over mission-critical third level support tool (10k+ users)
+  Focused on Full-Stack Development using .NET, MS SQL, and JavaScript
+  Gained exposure to Big Data (Hadoop / HP Vertica) and BI/Analytics (PowerBI / Tableau)
 
 
-  * May 2007 – December 2011
+  * August 2007 – December 2011
     Software / Systems Engineer at X-Fab, Texas, Lubbock, TX
       
   Full-Stack developer focused on .NET, MS SQL, C++, and Perle development.
   Acted as Red Hat Linux administrator
-  Heavy focus on 3-tier web application and hardware monitoring development
+  Focused on 3-tier web application and hardware monitoring development
   Introduced Subversion source control to company
 
 
@@ -130,14 +130,6 @@ WORK EXPERIENCE
 EDUCATION
   * May 2005 – December 2009
     Texas Tech University, Lubbock, TX Bachelor of Science in Computer Engineering
-
-REFERENCES
-  * Venu Madduri from Smith & Wesson (CIO)
-    VMadduri@smith-wesson.com
-    865-223-2382
-  * Tim Burrows from Raymour & Flanigan (Sr. Director of IT)
-    tburrows@raymourflanigan.com
-    315-708-4803
 
 ACHIEVEMENTS
   * , , 
