@@ -53,8 +53,6 @@
   import ResumeDocX from "$lib/assets/kgromero.docx";
   import ResumePDF from "$lib/assets/kgromero.pdf";
   import ResumeTXT from "$lib/assets/kgromero.txt";
-  import ResumePDFShort from "$lib/assets/kgromero-short.pdf";
-  import ResumePDFDetailed from "$lib/assets/kgromero-detailed.pdf";
   import OrgStructure from "$lib/assets/OrgStructure.png";
   import SDLC from "$lib/assets/SDLC Items Flows.png";
   import Release from "$lib/assets/Release Process.png";
@@ -117,13 +115,6 @@
             >Resume - TXT</DropdownItem
           >
           <DropdownDivider />
-          <DropdownItem href={ResumePDFShort} target="_blank"
-            >Resume - 1 Page
-          </DropdownItem>
-          <DropdownDivider />
-          <DropdownItem href={ResumePDFDetailed} target="_blank"
-            >Resume - Detailed
-          </DropdownItem>
         </Dropdown>
         <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
           Portfolio<ChevronDownOutline
