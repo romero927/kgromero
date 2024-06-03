@@ -4,10 +4,10 @@ Director of Software Development
 Jersey City, NJ
 (281) 857-9006
 
-Highly experienced Director of Software Development with 16 years of experience in IT. Adept at building and managing a successful software development organization utilizing both internal onshore and development partner offshore resources. Skilled at bridging the communication gap between technical and non-technical personnel. Able to balance the leadership, technical, and financial management requirements of being a director of software development. Proponent of servant leadership and continuous improvement. Have been in management since 2017 and was a developer from 2007 to 2017.
+Highly experienced Director of Software Development with 16 years of experience in IT. Adept at building and managing a successful software development organization utilizing both internal onshore and development partner offshore resources. Skilled at bridging the communication gap between technical and non-technical personnel. Able to balance the leadership, technical, and financial management requirements of being a Director of Software Development. Proponent of servant leadership and continuous improvement. Have been in management since 2017 and was a developer from 2007 to 2017.
 
 PERSONAL INFORMATION
-  Address: 1 Harborside Pl Apt 752, Jersey City, NJ, 07311
+  Address: , Jersey City, NJ, 07311
   Nationality: 
   Driving License: 
   Hobbies: 
@@ -15,176 +15,121 @@ PERSONAL INFORMATION
 SOCIAL PROFILES
   * kgromero.com: https://kgromero.com
   * linkedin.com/in/kyleromero/: https://www.linkedin.com/in/kyleromero/
-  * github.com/romero927: 
 
 SKILLS
   Organizational Leadership
   People Management
   System Architecture
-  Software Engineering
-  Digital Transformation
-  DevOps / Agile
+  Software Development
+  Agile Scrum
+  DevOps
 
 WORK EXPERIENCE
-* March 2023 – May 2024
-Director of Software Development at Raymour & Flanigan, Jersey City, NJ (remote)
+  * March 2023 – May 2024
+    Director of Software Development at Raymour & Flanigan, Jersey City, NJ (remote)
+      Led the Application Development Organization of Raymour &amp; Flanigan, which handled all internal software development company wide. This role was heavily focused on organizational transformation and modernization, both from a software and process perspective. Fully remote position.
 
-Led the Application Development Organization of Raymour &amp; Flanigan, which handled all internal software development company wide. This role was heavily focused on organizational transformation and modernization, both from a software and process perspective. Fully remote position but did travel occasionally (5%).
-
-Industry: Retail (Furniture and Mattresses)
-
-Reason for Leaving: Cost-Cutting Measures resulted in Layoff (Not Performance Based).
-
-Responsibilities:
   Leadership
-  - Team Size: 3 Managers (.NET Team, Oracle Team, Integrations Team), 4 Architects, 30 Developers (Primarily internal employees, with a few contractors from development partners).
-  - Managed Internal Relationships within internal matrixed organization.  - Defined and Executed Organizational Strategy, including 5 year vision.  - Recruited and maintained skilled resources for organization.
-  - Held weekly 1:1's and annual reviews with Direct Reports and Bi-Annual Skip-Level 1:1's with Indirect Reports.
-  - Traveled to various Northeast U.S. locations as needed (5% of time)
     
-  Technical Management
-  - Acted as Technical Expert on Tech Stack and helped explore and implement new technologies
-  - Directly Managed Change Control and Release Management Processes
-  - Worked as SME alongside Architects (direct reports) to define and executive organizational architecture strategy.
-  - Was On-Call alongside architects on a rotating basis.
-  - Largest Initiatives: Order Management Tool Upgrade (UWP App), ERP Migration to NetSuite, WMS Migration to Körber, Omnichannel Sales Experience, 3rd Party Integrations (ChargeAfter, Bringg), Data Domain API and Boomi Standup.
+      Team Size: 3 Managers (.NET Team, Oracle Team, Integrations Team), 4 Architects, 30 Developers (Primarily internal employees, with a few contractors from development partners).
+      Managed Internal Relationships within internal matrixed organization (QA / Product Teams).
+      Defined and Executed Organizational Strategy, including 5 year vision.
+      Recruited and maintained skilled resources for organization.
+      Held weekly 1:1's and annual reviews with Direct Reports and Bi-Annual Skip-Level 1:1's with Indirect Reports.
+      Traveled to various Northeast U.S. locations as needed (5% of time)
     
-  Financial Management
-  - Forecasted and Managed Organizational Budget. Managed IT Organization Credit Card
-  - Managed Invoice Review and Approval Process for Organization.
-  - Negotiated, Reviewed, and Managed Development Partner (Near-Shore / On-Shore) and Vendor Contracts / Resources
-  - Worked with Systems Team to monitor and control cloud and on-prem costs
+  
+  Technical
     
-Technologies
-  - Data Integrations: Boomi
-  - .NET: C#, ASP.NET API/MVC, UWP
-  - Scripting: Python
-  - JavaScript: React, Node.js + NPM
-  - Web: HTML, CSS
-  - DB: MS-SQL Server, Oracle
-  - BI: PowerBI, SSRS
-  - Cloud: Azure, AWS
-  - Development: Azure DevOps, Git, Visual Studio, VS Code
-  - AI Tooling (Experimental): ChatGPT 4.0, Microsoft Copilot
-  - Servers: Windows
+      Largest Initiatives: Order Management Tool Upgrade (UWP App), ERP Migration to NetSuite, WMS Migration to Körber, Omnichannel Sales Experience, 3rd Party Integrations (ChargeAfter, Bringg), Data Domain API and Boomi Standup.
+      Acted as Technical Expert on Tech Stack and helped explore and implement new technologies
+      Directly Managed Change Control and Release Management Processes
+      Worked as SME alongside Architects (direct reports) to define and executive organizational architecture strategy.
+      Was On-Call alongside architects on a rotating basis.
+    
+  
+  Financial
+    
+      Forecasted and Managed Organizational Budget. Managed IT Organization Credit Card
+      Managed Invoice Review and Approval Process for Organization.
+      Negotiated, Reviewed, and Managed Development Partner (Near-Shore / On-Shore) and Vendor Contracts / Resources
+      Worked with Systems Team to monitor and control cloud and on-prem costs
+    
+  
 
-* October 2017 – March 2023
-Director of Operations Technologies at MEARS Group, Jersey City, NJ (remote)
 
-Managed the Operations Technology Organization of MEARS Group (part of Quanta Services), which delivered internally developed software solutions for field operations employees, with a special emphasis on digital transformation and field capture. Was hired as Manager of Operations Technology and promoted twice. This position was a direct report to the CIO.
+  * October 2017 – March 2023
+    Director of Operations Technologies at MEARS Group, Jersey City, NJ (remote)
+      Managed the Operations Technology Organization of MEARS Group (part of Quanta Services), which delivered internally developed software solutions for field operations employees, with a special emphasis on digital transformation and field capture. This position was a direct report to the CIO.
 
-Industry: Construction (Natural Gas Distribution)
-
-Responsibilities: 
   Leadership
-  - Team Size: 4 Developers, 1 PM, 7 Offshore. All team members are remote.
-  - Managed Executive and Customer Relationships
-  - Defined and Executed Organizational Strategy
-  - Recruited and maintained skilled resources for organization.
-  - Managed yearly software development internship program
-  - Traveled to various U.S. locations as needed (25% of time)
     
-  Technical Management
-  - Acted as Technical Expert on Tech Stack and helped explore and implement new technologies
-  - Implemented DevOps/CICD, Agile Scrum, GitFlow, and QA Processes.
-  - Defined and documented all architecture and SDLC for the organization
-  - Administered various systems such as Azure DevOps, Sharepoint Online, Power Automate, PowerBI, and Azure.
-  - Largest Application: Mission Critical SOX-compliant internally developed Field Capture solution, used by over 700 field construction crews across the U.S.
+      Team Size: 4 Developers, 1 PM, 7 Offshore. All team members are remote.
+      Managed Executive and Customer Relationships
+      Defined and Executed Organizational Strategy
+      Recruited and maintained skilled resources for organization.
+      Managed yearly software development internship program
+      Traveled to various U.S. locations as needed (25% of time)
     
-  Financial Management
-  - Forecasted and Managed Organizational Budget
-  - Onboarded Managed Offshore Development Partner
-  - Monitored and controlled cloud and on-prem infrastructure costs
+  
+  Technical
     
-Technologies
-  - .NET: C#, ASP.NET MVC, ASP.NET MVC API, Blazor
-  - Scripting: Python
-  - Javascript: Angular, React, Electron, Node, NPM, Webpack, Bootstrap
-  - Web: HTML, CSS
-  - DB: MS-SQL, SQLite
-  - BI: PowerBI, SSRS
-  - Cloud: Azure
-  - Machine Learning: Sentiment Analysis via Azure Cognitive Services + Logic App
-  - Development: Azure DevOps, Github, Visual Studio, VS Code
-  - IoT: RPi + Raspbian + Adafruit Accessories (Python)
-  - Servers: Windows, Ubuntu
-  - Containerization (Experimental): Docker, MicroK8s
-  - Other: Sharepoint Online, Twilio, Slack, Trello, Lucidcharts
-
-Achievements: 
-  - 2021: Promoted to Director of Operations Technology
-  - 2021: Nominated to MEARS Group Innovator Team (Company Think-Tank)
-  - 2021: Nominated to Quanta Services Leadership Academy
-  - 2020: Promoted to Senior Manager of Operations Technology
-
-* April 2016 – October 2017
-Team Lead / Senior Software Developer at Worldwide Machinery, Houston, TX
-
-This position reported to one of the co-owners of the company and was responsible for leading the internal software development team as well as acting as a senior developer. This team delivered mission-critical asset management software used in heavy machinery rental and sales operations.
-
-Industry: Construction (Heavy Machinery Rentals)
-
-Technologies
-  - .NET: C#, ASP.NET MVC API, WinForms
-  - Javascript: React, Redux, Typescript (ES6), Node.js + Express + NPM + PM2, Babel, Webpack, SASS, NGINX Reverse Proxy
-  - DB: MS-SQL
-  - Cloud: DigitalOcean
-  - Containerization: Docker
-  - Development: JIRA, TeamCity, Bitbucket (GIT), Visual Studio, VS Code, Trello, Lucidcharts
-  - Processes: DevOps, Agile, GitFlow, CICD
-  - Servers: Windows, Ubuntu
+      Largest Application: Mission Critical SOX-compliant internally developed Field Capture solution, used by over 700 field construction crews across the U.S.
+      Acted as Technical Expert on Tech Stack and helped explore and implement new technologies
+      Led Change Management process while rolling out Applications
+      Implemented DevOps/CICD, Agile Scrum, GitFlow, and QA Processes.
+      Defined and documented all architecture and SDLC for the organization
+      Administered various systems such as Azure DevOps, Sharepoint Online, Power Automate, PowerBI, and Azure.
+    
+  
+  Financial
+    
+      Forecasted and Managed Organizational Budget
+      Onboarded and Managed Offshore Development Partner
+      Monitored and controlled cloud and on-prem infrastructure costs
+    
+  
 
 
-* December 2011 – February 2016
-Technical Lead (IT Developer / Engineer III) at HP Inc., Houston, TX
+  * April 2016 – October 2017
+    Team Lead / Senior Developer at Worldwide Machinery, Houston, TX
       
-This position acted as technical lead for the software development operations for HP's mission-critical third level support tool (10k+ users) and was part of the Analytics and Reporting organization. While acting as a developer, worked on the entire technology stack for the third level support tool and received exposure to Big Data and BI/Analytics concepts. Led the logical cloning and separation of this system when HP split into HP Inc. and HPE (This tool was deemed mission-critical for both companies).
-
-Industry: Technology (Computers / Printers)
-
-Technologies
-  - .NET: VB.NET, C#, ASP.NET
-  - Javascript: jQueryUI, jQuery
-  - DB: MS-SQL
-  - BI: Tableau, Qlickview, OLAP Cubes
-  - Big Data: Hadoop, Hive, HP Vertica,
-  - Development: TFS, Subversion, Visual Studio
-  - Processes: Agile
-  - Servers: Windows
-
-Achievements
-  - Promoted from Software Developer (IT Developer/Engineer II) in December of 2013.
+  Led Internal Software Development Team
+  Full-Stack Senior Developer focused on .NET, MS SQL, and React development
+  Delivered Mission-critical Asset Management Software (desktop, mobile, and web)
+  Reported to Co-Owner of Company
 
 
-* May 2007 – December 2011
-Software / Systems Engineer at X-Fab, Texas, Lubbock, TX
+  * December 2011 – February 2016
+    Technical Lead (IT Developer / Engineer III) at HP Inc., Houston, TX
+      
+  Technical Lead over mission-critical third level support tool (10k+ users)
+  Full-Stack Development focused on .NET, MS SQL, and JavaScript
+  Part of Analytics and Reporting organization, received exposure to Big Data (Hadoop / HP Vertica) and BI/Analytics (PowerBI / Tableau) concepts.
 
-Worked as an intern from May 2007 to July 2007 and then hired on as Software / Systems Engineer doing general software development, with an emphasis on 3-tier .NET development of internal tooling for internal semiconductor engineers.
 
-Industry: Semiconductor Fabrication (Pure-Play)
+  * May 2007 – December 2011
+    Software / Systems Engineer at X-Fab, Texas, Lubbock, TX
+      
+  Full-Stack developer focused on .NET, MS SQL, C++, and Perle development.
+  Acted as Red Hat Linux administrator
+  Heavy focus on 3-tier web application and hardware monitoring development
+  Introduced Subversion source control to company
 
-Technologies
-  - .NET: C#, ASP.NET, Console, Winforms
-  - General Purpose: C++, Perl
-  - DB: MS-SQL
-  - Development: Subversion, Visual Studio
-  - Servers: Windows, Redhat
-  - IoT: Perle IOLAN
+
+
+  * May 2007 – July 2007
+    Software Development Intern at Texas Tech / X-Fab, Texas, Lubbock, TX
+      
+  Full-stack development internship focused on C++ and .NET development.
+  Completed two projects during internship: A statistical analysis application and a file format conversion program..
+  Was sponsored by X-Fab in conjunction with Texas Tech University
+
+
 
 EDUCATION
-* May 2005 – December 2009
-Texas Tech University, Lubbock, TX Bachelor of Science in Computer Engineering
-
-Trained in Electrical Engineering and Computer Science
-
-Final GPA: 2.94
-
-Project Lab Projects (Semester Long Engineering Projects):
-  - 1a: 60 Hz Notch Filter
-  - 1b: Line Following Robot
-  - 2: Tech-SAL Robotics Programming Language
-  - 3: Remote Event Timer
-  - 4/5: F.P.G.A. based Waveform Generator.
+  * May 2005 – December 2009
+    Texas Tech University, Lubbock, TX Bachelor of Science in Computer Engineering
 
 REFERENCES
   * Venu Madduri from Smith & Wesson (CIO)
@@ -194,3 +139,27 @@ REFERENCES
     tburrows@raymourflanigan.com
     315-708-4803
 
+ACHIEVEMENTS
+  * , , 
+
+    2021: Promoted to Director of Operations Technology
+2021: Nominated to MEARS Group Innovator Team (Company Think-Tank)
+2021: Nominated to Quanta Services Leadership Academy
+2020: Promoted to Senior Manager of Operations Technology
+2013: Promoted to Technical Lead (IT Developer/Engineer III)
+TECHNOLOGIES
+  * , , 
+
+    Processes: DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrix Org 
+.NET: C#, VB.NET, ASP.NET API/MVC, Blazor, UWP 
+JavaScript: React, Node.js, NPM, Electron, Angular, TypeScript, SvelteKit
+Scripting: Python 
+Web: HTML, CSS, Tailwind
+DB: SQL Server, Sqlite3, Oracle 
+Reporting: SSRS, PowerBI 
+Cloud: Azure, AWS, Netlify 
+Servers: Windows Server, Linux (Ubuntu/Debian) 
+Tooling: Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver 
+Data: Boomi, SSIS 
+Other: Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger
+Novice: Docker, Kubernetes, Java, Spring Boot, C++, C, Django, Perle
