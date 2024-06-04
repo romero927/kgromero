@@ -4,7 +4,6 @@ Director of Software Development
 Jersey City, NJ
 (281) 857-9006
 
-Highly experienced Director of Software Development with 16 years of experience in IT. Adept at building and managing a successful software development organization utilizing both internal onshore and development partner offshore resources. Skilled at bridging the communication gap between technical and non-technical personnel. Able to balance the leadership, technical, and financial management requirements of being a Director of Software Development. Proponent of servant leadership and continuous improvement. Have been in management since 2017 and was a developer from 2007 to 2017.
 
 PERSONAL INFORMATION
   Address: , Jersey City, NJ, 07311
@@ -17,8 +16,8 @@ SOCIAL PROFILES
   * linkedin.com/in/kyleromero/: https://www.linkedin.com/in/kyleromero/
 
 SKILLS
-  Organizational Leadership
   People Management
+  Financial Management
   System Architecture
   Software Development
   Agile Scrum
@@ -27,123 +26,88 @@ SKILLS
 WORK EXPERIENCE
   * March 2023 – May 2024
     Director of Software Development at Raymour & Flanigan, Jersey City, NJ (remote)
-      Led the Application Development Organization, which handled all internal software development company wide. This role was heavily focused on organizational transformation and modernization, both from a software and process perspective. Fully remote position.
+      Leadership
 
-  Leadership
-    
-      Team Size: 3 Managers (.NET Team, Oracle Team, Integrations Team), 4 Architects, 30 Developers (Primarily internal employees, with a few contractors from development partners).
-      Managed Internal Relationships within internal matrixed organization (QA / Product Teams).
-      Defined and Executed Organizational Strategy, including 5 year vision.
-      Recruited and maintained skilled resources for organization.
-      Held weekly 1:1's and annual reviews with Direct Reports and Bi-Annual Skip-Level 1:1's with Indirect Reports.
-      Traveled to various Northeast U.S. locations (5% of time)
-    
-  
-  Technical
-    
-      Largest Initiatives: Order Management Tool Upgrade (UWP App), ERP Migration to NetSuite, WMS Migration to Körber, Omnichannel Sales Experience, 3rd Party Integrations (ChargeAfter, Bringg), Data Domain API and Boomi Standup.
-      Acted as Technical Expert on Tech Stack and helped explore and implement new technologies
-      Directly Managed Change Control and Release Management Processes
-      Worked as SME alongside Architects (direct reports) to define and executive organizational architecture strategy.
-      Was On-Call alongside architects on a rotating basis.
-    
-  
-  Financial
-    
-      Forecasted and Managed Organizational Budget and IT Organization Credit Card
-      Managed Invoice Review and Approval Process for Organization.
-      Negotiated, Reviewed, and Managed Development Partner (Near-Shore / On-Shore) and Vendor Contracts / Resources
-      Worked with Infrastructure Team to monitor and control cloud and on-prem costs
-    
-  
+  Team Size: 3 Managers (.NET Team, Oracle Team, Boomi Team), 4 Architects, 30 Developers (mix of internal and near/off shore resources)
+  Aligned teams within internal matrixed organization (QA / Product Teams)
+  Defined and executed organizational strategy, including transformational 5 year vision
+  Recruited and retained skilled resources for organization, growing headcount by 10%
+  Held weekly 1:1's and annual reviews with direct reports and bi-annual skip-level 1:1's with indirect reports
+  Visited northeast US locations to check-in with user base (5% of time)
+
+Technical
+
+  Largest Initiatives: Order Management Tool Upgrade (UWP App), ERP Migration to NetSuite, WMS Migration to Korber, Omnichannel Sales Experience, 3rd Party Integrations (ChargeAfter, Bringg), Data Domain API and Boomi Standup
+  Directly led change control and release management processes, leading to 50% decrease in production defect rate
+  Acted as SME alongside architects (direct reports) to define and executive organizational architecture strategy. On-Call alongside architects on a rotating basis with 100% coverage
+
+Financial
+
+  Forecasted and controlled organizational budget and credit card, reducing costs by 25%
+  Performed invoice review and approval process for organization, leading to 100% on-time payments
+  Negotiated, reviewed, and managed development partner (near-shore / on-shore) and vendor contracts / resources, which reduced contract costs by 40%
+  Coordinated with infrastructure team to monitor and control cloud and on-premises costs
 
 
   * October 2017 – March 2023
-    Director of Operations Technologies at MEARS Group, Jersey City, NJ (remote)
-      Managed the Operations Technology Organization, which delivered internally developed software solutions for field operations employees, with an emphasis on digital transformation and field capture. This position was a direct report to the CIO and Fully remote.
+    Director of Operations Technology at MEARS Group, Jersey City, NJ (remote)
+      Leadership
 
-  Leadership
-    
-      Team Size: 4 Developers, 1 PM, 7 Offshore. All team members are remote.
-      Managed Executive and Customer Relationships
-      Defined and Executed Organizational Strategy
-      Recruited and maintained skilled resources for organization.
-      Managed yearly software development internship program
-      Traveled to various U.S. locations as needed (25% of time)
-    
-  
-  Technical
-    
-      Largest Application: Mission Critical SOX-compliant internally developed Field Capture solution, used by over 700 field construction crews across the U.S.
-      Acted as Technical Expert on Tech Stack and helped explore and implement new technologies
-      Led Change Management process while rolling out Applications
-      Implemented DevOps/CICD, Agile Scrum, GitFlow, and QA Processes.
-      Defined and documented all architecture and SDLC for the organization
-      Administered various systems such as Azure DevOps, Sharepoint Online, Power Automate, PowerBI, and Azure.
-    
-  
-  Financial
-    
-      Forecasted and Managed Organizational Budget
-      Onboarded and Managed Offshore Development Partner
-      Monitored and controlled cloud and on-prem infrastructure costs
-    
-  
+  Team Size: 4 Developers, 1 PM, 7 Offshore. 100% remote team.
+  Executed organizational strategy and maintained executive and customer relationships
+  Managed yearly software development internship programs on 5 separate occasions
+  Traveled to U.S. locations to roll out applications (25% of time)
+  Directly reported to CIO
+
+Technical
+
+  Largest Application: Mission Critical SOX-compliant internally developed Field Capture solution, used by over 700 field construction crews across the US. This solution sped up the closing process by 75%
+  Acted as technical expert on tech stack and helped explore and implement new technologies
+  Implemented and trained organization on DevOps/CICD, Agile Scrum, GitFlow, and QA processes, which increased delivery speed by 50%
+  Designated and documented all architecture and SDLC for the organization and led change management process while rolling out applications
+  Administered systems such as Azure DevOps, Sharepoint Online, Power Automate, PowerBI, and Azure
+
+Financial
+
+  Forecasted and maintained organizational budget, coming out on-budget every year
+  Onboarded and coordinated offshore development partner based out of India
 
 
   * April 2016 – October 2017
     Team Lead / Senior Developer at Worldwide Machinery, Houston, TX
       
-  Led Internal Software Development Team
-  Focused on full-stack development using .NET, MS SQL, and React.
-  Delivered Mission-critical Asset Management Software (desktop, mobile, and web)
-  Reported to Co-Owner of Company
+  Led internal software development team and reported to co-owner of company
+  Full-stack development using .NET, MS SQL, and React which delivered mission-critical asset management software (desktop, mobile, and web)
 
 
   * December 2011 – February 2016
     Technical Lead (IT Developer / Engineer III) at HP Inc., Houston, TX
       
-  Designated as Technical Lead over mission-critical third level support tool (10k+ users)
-  Focused on Full-Stack Development using .NET, MS SQL, and JavaScript
-  Gained exposure to Big Data (Hadoop / HP Vertica) and BI/Analytics (PowerBI / Tableau)
+  Designated as technical lead over mission-critical third level support tool with 10k+ users
+  Full-stack development delivering 3-tier web applications using .NET, MS SQL, and JavaScript
+  Gained exposure to big data (Hadoop / HP Vertica) and BI/analytics (PowerBI / Tableau)
 
 
   * August 2007 – December 2011
     Software / Systems Engineer at X-Fab, Texas, Lubbock, TX
       
-  Full-Stack developer focused on .NET, MS SQL, C++, and Perle development.
-  Acted as Red Hat Linux administrator
-  Focused on 3-tier web application and hardware monitoring development
-  Introduced Subversion source control to company
+  Full-Stack developer specializing in .NET, MS SQL, C++, and Perle development
+  Built 3-tier web applications and hardware monitoring solutions and introduced Subversion source control to company
 
 
 
   * May 2007 – July 2007
     Software Development Intern at Texas Tech / X-Fab, Texas, Lubbock, TX
       
-  Full-stack development internship focused on C++ and .NET development.
-  Completed two projects during internship: A statistical analysis application and a file format conversion program..
-  Was sponsored by X-Fab in conjunction with Texas Tech University
+  Full-stack development internship with emphasis on C++ and .NET development
+  Completed a statistical analysis application and a file format conversion program
 
 
 
 EDUCATION
-  * May 2005 – December 2009
-    Texas Tech University, Lubbock, TX Bachelor of Science in Computer Engineering
+  * 
+    Texas Tech University,  Bachelor of Science in Computer Engineering
 
-    
-  Trained in Computer Science and Electrical Engineering
-  Engineering Projects: 60 Hz Notch Filter, Line Following Robot, Tech-SAL Robotics Programming Language, Remote Event Timer, F.P.G.A. based Waveform Generator.
-
-
-ACHIEVEMENTS
-  * , , 
-
-    2021: Promoted to Director of Operations Technology
-2021: Nominated to MEARS Group Innovator Team (Company Think-Tank)
-2021: Nominated to Quanta Services Leadership Academy
-2020: Promoted to Senior Manager of Operations Technology
-2013: Promoted to Technical Lead (IT Developer/Engineer III)
 TECHNOLOGIES
   * , , 
 
@@ -152,11 +116,19 @@ TECHNOLOGIES
 JavaScript: React, Node.js, NPM, Electron, Angular, TypeScript, SvelteKit
 Scripting: Python 
 Web: HTML, CSS, Tailwind
+Containerization (Novice): Docker, Kubernetes
 DB: SQL Server, Sqlite3, Oracle 
 Reporting: SSRS, PowerBI 
 Cloud: Azure, AWS, Netlify 
 Servers: Windows Server, Linux (Ubuntu/Debian) 
 Tooling: Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver 
 Data: Boomi, SSIS 
-Other: Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger
-Novice: Docker, Kubernetes, Java, Spring Boot, C++, C, Django, Perle
+Other: Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++
+ACHIEVEMENTS
+  * , , 
+
+    2021: Promoted to Director of Operations Technology
+2021: Nominated to MEARS Group Innovator Team (Company Think-Tank)
+2021: Nominated to Quanta Services Leadership Academy
+2020: Promoted to Senior Manager of Operations Technology
+2013: Promoted to Technical Lead (IT Developer/Engineer III)
