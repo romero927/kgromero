@@ -4,7 +4,7 @@ Director of Software Development
 Jersey City, NJ
 (281) 857-9006
 
-IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide a great user experience.
+IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide a great user experience. Adherent to servant leadership and continuous improvement.
 
 PERSONAL INFORMATION
   Address: , Jersey City, NJ, 07311
@@ -116,14 +116,15 @@ TECHNOLOGIES
 .NET: C#, VB.NET, ASP.NET API/MVC, Blazor, UWP 
 JavaScript: React, Node.js, NPM, Electron, Angular, TypeScript, SvelteKit
 Scripting: Python 
-Web: HTML, CSS, Tailwind
+Web: HTML, CSS, Tailwind, Bootstrap
 Containerization (Novice): Docker, Kubernetes
 DB: SQL Server, Sqlite3, Oracle 
 Reporting: SSRS, PowerBI 
 Cloud: Azure, AWS, Netlify 
 Servers: Windows Server, Linux (Ubuntu/Debian) 
 Tooling: Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver 
-Data: Boomi, SSIS 
+ETL: Boomi, SSIS 
+Data Warehouse: Snowflake
 Other: Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++
 ACHIEVEMENTS
   * , , 
