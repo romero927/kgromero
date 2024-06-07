@@ -113,18 +113,21 @@ TECHNOLOGIES
   * , , 
 
     Processes: DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrixed Organization
+Architectures: N-Tier, REST API, PWA, SPA, Microservices (Novice), Serverless, MVC, Event Driven, Containerized/Orchestrated (Novice), Offline-First, Distributed
 .NET: C#, VB.NET, ASP.NET API/MVC, Blazor, UWP 
 JavaScript: React, Node.js, NPM, Electron, Angular, TypeScript, SvelteKit
 Scripting: Python 
 Web: HTML, CSS, Tailwind, Bootstrap
 Containerization (Novice): Docker, Kubernetes
-DB: SQL Server, Sqlite3, Oracle 
-Reporting: SSRS, PowerBI 
+DB: SQL Server, Sqlite3, Oracle  
 Cloud: Azure, AWS, Netlify 
 Servers: Windows Server, Linux (Ubuntu/Debian) 
 Tooling: Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver 
 ETL: Boomi, SSIS 
+Message Queue: Azure Service Bus, MSMQ
+AI: ChatGPT, Microsoft CoPilot
 Data Warehouse: Snowflake
+Reporting: SSRS, PowerBI
 Other: Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++
 ACHIEVEMENTS
   * , , 
