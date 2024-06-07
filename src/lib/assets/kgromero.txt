@@ -4,6 +4,7 @@ Director of Software Development
 Jersey City, NJ
 (281) 857-9006
 
+IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide a great user experience.
 
 PERSONAL INFORMATION
   Address: , Jersey City, NJ, 07311
@@ -111,7 +112,7 @@ EDUCATION
 TECHNOLOGIES
   * , , 
 
-    Processes: DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrix Org 
+    Processes: DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrixed Organization
 .NET: C#, VB.NET, ASP.NET API/MVC, Blazor, UWP 
 JavaScript: React, Node.js, NPM, Electron, Angular, TypeScript, SvelteKit
 Scripting: Python 
