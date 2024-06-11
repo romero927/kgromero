@@ -140,7 +140,7 @@
           </Dropdown>
           <DropdownDivider />
           <NavLi class="my-2 cursor-pointer">
-            InfraSource<ChevronDownOutline
+            MEARS Group<ChevronDownOutline
               class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
             />
           </NavLi>
