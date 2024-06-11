@@ -298,14 +298,10 @@
     <Card class="items-center max-w-full bg-gray-50  ">
       <b class="py-1">About Me</b>
       <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} />
-      Highly experienced Director of Software Development with 16 years of experience
-      in IT. Adept at building and managing a successful software development organization
-      utilizing both internal onshore and development partner offshore resources.
-      Skilled at bridging the communication gap between technical and non-technical
-      personnel. Able to balance the leadership, technical, and financial management
-      requirements of being a Director of Software Development. Proponent of servant
-      leadership and continuous improvement. Have been in management since 2017 and
-      was a developer from 2007 to 2017.
+      IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for
+      the next opportunity to lead a development organization to success, maximize business value, and provide a great
+      user experience. Adherent to servant leadership and continuous improvement. Skilled at bridging the communication gap between technical and non-technical personnel.
+      Texas born Cajun living in New Jersey.
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50">
       <b class="py-1">Contact Info</b>
@@ -410,18 +406,16 @@
       <ul class="space-y-4">
         <li >
           My wife and I love to travel. We have travelled extensively throughout
-          the U.S., as well as to several other countries.
+          the U.S., as well as internationally.
         </li>
         <Hr />
         <li >
           Being an engineer at heart, I am constantly trying to find new
-          side-projects to do. Some of my favorite have been implemented using a
-          Raspberry Pi, such as a digital LED Sign, Pi-hole DNS blocker, E-Ink
-          Nametag, and RTL-SDR.
+          side-projects to do. Currently tinking with a Raspberry Pi and RTL-SDR.
         </li>
         <Hr />
         <li >
-          Other Interests: Spin Class, PC Gaming, Reading (SFF), Nature,
+          Other Interests: Spin Class, PC Gaming, Reading (SFF), Nature / National Parks,
           Broadway, Theme Parks
         </li>
         <Hr />
