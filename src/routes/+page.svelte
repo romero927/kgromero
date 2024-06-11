@@ -301,7 +301,7 @@
       IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for
       the next opportunity to lead a development organization to success, maximize business value, and provide a great
       user experience. Adherent to servant leadership and continuous improvement. Skilled at bridging the communication gap between technical and non-technical personnel.
-      Texas born Cajun living in New Jersey.
+      Texas born Cajun living in the NYC Metro Area.
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50">
       <b class="py-1">Contact Info</b>
