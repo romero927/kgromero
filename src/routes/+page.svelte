@@ -300,9 +300,10 @@
     >
   </div>
   <div class="container mx-auto my-2 lg:grid grid-cols-4 ">
-    <Card class="items-center max-w-full bg-gray-50  ">
+    <Card class="text-center items-center max-w-full bg-gray-50  ">
       <b class="py-1">About Me</b>
-      <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} />
+      <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} /><br/>
+      <hr class="border w-full" /><br/>
       IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for
       the next opportunity to lead a development organization to success, maximize business value, and provide a great
       user experience. Adherent to servant leadership and continuous improvement. Skilled at bridging the communication gap between technical and non-technical personnel.
@@ -333,7 +334,7 @@
             ></span
           >
         </li>
-        <hr />
+        <hr class="border border-gray-200 dark:border-gray-700" />
         <li class="flex space-x-2">
           <Fa icon={faLinkedin} />
           <span
@@ -353,7 +354,7 @@
             ><a href="https://keybase.io/kgromero" target="_blank">Keybase</a></span
           >
         </li>
-        <hr />
+        <hr class="border border-gray-200 dark:border-gray-700" />
         <!-- <li class="flex space-x-2">
           <Fa icon={faInstagram} />
           <span
