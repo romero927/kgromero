@@ -100,7 +100,7 @@
   <br class="hidden md:block"/>
   <Navbar class="sm:container sm:mx-auto border xs:rounded-none sm:rounded-lg dark:border-white/10 px-2 py-0 mb-2 mx-2bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-gray-400 ">
       <NavBrand>
-        <img class="w-14 mr-2" alt="logo" src={logo} />
+        <img class="w-11 mr-2" alt="logo" src={logo} />
       </NavBrand>
       <NavHamburger />
       <NavUl>
