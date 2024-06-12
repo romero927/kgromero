@@ -28,6 +28,7 @@
   import {
     faPhone,
     faEnvelope,
+    faLink
   } from "@fortawesome/free-solid-svg-icons/index.js";
   import {
     faGithub,
@@ -37,7 +38,7 @@
     faInstagram,
     faFacebook,
     faReddit,
-    faTwitter,
+    faTwitter
   } from "@fortawesome/free-brands-svg-icons/index.js";
 
   import { Heading, P, A, Mark, Secondary, Hr } from "flowbite-svelte";
@@ -353,7 +354,7 @@
           >
         </li>
         <hr />
-        <li class="flex space-x-2">
+        <!-- <li class="flex space-x-2">
           <Fa icon={faInstagram} />
           <span
             class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
@@ -368,7 +369,14 @@
           >
             <a href="https://www.facebook.com/kgromero/" target="_blank">Facebook</a></span
           >
-        </li>
+        </li> -->
+        <li class="flex space-x-2">
+          <Fa icon={faLink} />
+          <span
+            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+          >
+            <a href="https://linktr.ee/kgromero" target="_blank">Linktree</a></span
+          >
         <li class="flex space-x-2">
           <Fa icon={faGoodreads} />
           <span
