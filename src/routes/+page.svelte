@@ -317,6 +317,7 @@
         src={QR}
         class="justify-center w-1/2"
       />
+      <hr class="border border-gray-200 dark:border-gray-700" />
       <ul class="my-7 space-y-4">
         <li class="flex space-x-2">
           <Fa icon={faPhone} />
@@ -347,13 +348,13 @@
           <Fa icon={faGithub} />
           <a href="https://github.com/romero927" target="_blank">Github</a>
         </li>
-        <li class="flex space-x-2">
+        <!-- <li class="flex space-x-2">
           <Fa icon={faKeybase} />
           <span
             class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
             ><a href="https://keybase.io/kgromero" target="_blank">Keybase</a></span
           >
-        </li>
+        </li> -->
         <hr class="border border-gray-200 dark:border-gray-700" />
         <!-- <li class="flex space-x-2">
           <Fa icon={faInstagram} />
