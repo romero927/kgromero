@@ -365,7 +365,7 @@
     <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
       <b class="pt-1 pb-3">Experience</b>
       <hr class="border w-full" /><br/>
-      <Timeline class="text-xs p-0 m-0" >
+      <Timeline class="text-xs p-0 m-0 ml-3 mr-3">
         <TimelineItem date="Mar 2023 - May 2024" classLi="mb-5"
           ><br /><b>Director of Software Development, Raymour & Flanigan</b
           ></TimelineItem
