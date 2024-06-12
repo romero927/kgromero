@@ -21,8 +21,8 @@
     { name: 'Dev.to', href: 'https://dev.to/', attrs: {target: '_blank'} },
     { name: 'Paul Graham\'s Articles', href: 'https://www.paulgraham.com/articles.html', attrs: {target: '_blank'} },
     { name: 'Scott Hanselman\'s Blog', href: 'https://www.hanselman.com/blog/', attrs: {target: '_blank'}},
-    { name: 'CIO.com', href: 'https://www.cio.com', attrs: {target: '_blank'},
-    { name: 'Pluralsight', href: 'https://www.pluralsigh.com', attrs: {target: '_blank'} }
+    { name: 'CIO.com', href: 'https://www.cio.com', attrs: {target: '_blank'}},
+    { name: 'Pluralsight', href: 'https://www.pluralsight.com', attrs: {target: '_blank'} }
   ];
 
   import Fa from "svelte-fa";
