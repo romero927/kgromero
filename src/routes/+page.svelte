@@ -292,8 +292,7 @@
   <div
     class="container mx-auto rounded-lg text-center border dark:border-white/10 py-2  bg-gray-50 dark:bg-gray-800"
   >
-    <Heading color="text-black/60 dark:text-gray-400">Kyle Romero</Heading>
-    <br />
+    <Heading color="text-black/60 mb-2 dark:text-gray-400">Kyle Romero</Heading>
     <P class="text-center text-black/60 dark:text-gray-400"
       >Director of Software Development with {yearsExperience} years experience in
       IT. Currently living in Jersey City, NJ.</P
