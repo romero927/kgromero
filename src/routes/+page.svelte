@@ -317,8 +317,9 @@
         src={QR}
         class="justify-center w-1/2"
       />
-      <hr class="border border-gray-200 dark:border-gray-700" />
-      <ul class="my-7 space-y-4">
+      <br/>
+      <hr class="border w-44" />
+      <ul class="my-4 space-y-4">
         <li class="flex space-x-2">
           <Fa icon={faPhone} />
           <span
@@ -335,7 +336,7 @@
             ></span
           >
         </li>
-        <hr class="border border-gray-200 dark:border-gray-700" />
+        <hr class="border w-44 border-gray-200 dark:border-gray-700" />
         <li class="flex space-x-2">
           <Fa icon={faLinkedin} />
           <span
@@ -348,30 +349,7 @@
           <Fa icon={faGithub} />
           <a href="https://github.com/romero927" target="_blank">Github</a>
         </li>
-        <!-- <li class="flex space-x-2">
-          <Fa icon={faKeybase} />
-          <span
-            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
-            ><a href="https://keybase.io/kgromero" target="_blank">Keybase</a></span
-          >
-        </li> -->
-        <hr class="border border-gray-200 dark:border-gray-700" />
-        <!-- <li class="flex space-x-2">
-          <Fa icon={faInstagram} />
-          <span
-            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
-          >
-            <a href="https://www.instagram.com/mrchilakyle/" target="_blank">Instagram</a></span
-          >
-        </li>
-        <li class="flex space-x-2">
-          <Fa icon={faFacebook} />
-          <span
-            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
-          >
-            <a href="https://www.facebook.com/kgromero/" target="_blank">Facebook</a></span
-          >
-        </li> -->
+        <hr class="border w-44 border-gray-200 dark:border-gray-700" />
         <li class="flex space-x-2">
           <Fa icon={faLink} />
           <span
@@ -379,21 +357,8 @@
           >
             <a href="https://linktr.ee/kgromero" target="_blank">Linktree</a></span
           >
-        <!-- <li class="flex space-x-2">
-          <Fa icon={faGoodreads} />
-          <span
-            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
-          >
-            <a href="https://www.goodreads.com/kgromero" target="_blank">Goodreads</a></span
-          >
-          <li class="flex space-x-2">
-            <Fa icon={faReddit} />
-            <span
-              class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
-            >
-              <a href="https://www.reddit.com/user/kgromero/" target="_blank">Reddit</a></span
-            > -->
-        <!-- </li> -->
+        </li>
+        <hr class="border w-44 border-gray-200 dark:border-gray-700" />
       </ul>
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50">
