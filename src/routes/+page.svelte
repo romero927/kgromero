@@ -378,7 +378,7 @@
           >
             <a href="https://linktr.ee/kgromero" target="_blank">Linktree</a></span
           >
-        <li class="flex space-x-2">
+        <!-- <li class="flex space-x-2">
           <Fa icon={faGoodreads} />
           <span
             class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
@@ -391,10 +391,8 @@
               class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
             >
               <a href="https://www.reddit.com/user/kgromero/" target="_blank">Reddit</a></span
-            >
-            
-          
-        </li>
+            > -->
+        <!-- </li> -->
       </ul>
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50">
