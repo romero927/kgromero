@@ -302,6 +302,7 @@
   <div class="container mx-auto my-2 lg:grid grid-cols-4 ">
     <Card class="text-center items-center max-w-full bg-gray-50  ">
       <b class="py-1">About Me</b>
+      <hr class="border w-full" /><br/>
       <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} /><br/>
       <hr class="border w-full" /><br/>
       IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for
@@ -311,6 +312,7 @@
     </Card>
     <Card class="items-center text-center mx-auto max-w-full bg-gray-50">
       <b class="py-1">Contact Info</b>
+      <hr class="border w-full" /><br/>
       <img
         alt="vCard (Scan on Phone to add to Contacts)"
         title="vCard (Scan on Phone to add to Contacts)"
@@ -363,6 +365,7 @@
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50">
       <b class="py-1">Experience</b>
+      <hr class="border w-full" /><br/>
       <Timeline class="text-xs p-0 m-0" >
         <TimelineItem date="Mar 2023 - May 2024" classLi="mb-5"
           ><br /><b>Director of Software Development, Raymour & Flanigan</b
@@ -408,6 +411,7 @@
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50">
       <b class="py-1">Interests</b>
+      <hr class="border w-full" /><br/>
       <ul class="space-y-4">
         <li >
           <b>Want To Learn:</b> Django, Vue, Phoenix, Java, Spring Boot, Rust, Scala, GoLang, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
