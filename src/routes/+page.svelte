@@ -300,7 +300,7 @@
   </div>
   <div class="container mx-auto my-2 lg:grid grid-cols-4">
     <Card class="text-center items-center max-w-full bg-gray-50" padding="xs">
-      <b class="py-1">About Me</b>
+      <b class="pt-1 pb-3">About Me</b>
       <hr class="border w-full" /><br/>
       <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} /><br/>
       <hr class="border w-full" /><br/>
@@ -310,7 +310,7 @@
       Texas born Cajun living in the NYC Metro Area.
     </Card>
     <Card class="items-center text-center mx-auto max-w-full bg-gray-50" padding="xs">
-      <b class="py-1">Contact Info</b>
+      <b class="pt-1 pb-3">Contact Info</b>
       <hr class="border w-full" /><br/>
       <img
         alt="vCard (Scan on Phone to add to Contacts)"
@@ -363,7 +363,7 @@
       </ul>
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
-      <b class="py-1">Experience</b>
+      <b class="pt-1 pb-3">Experience</b>
       <hr class="border w-full" /><br/>
       <Timeline class="text-xs p-0 m-0" >
         <TimelineItem date="Mar 2023 - May 2024" classLi="mb-5"
@@ -409,7 +409,7 @@
       </Timeline>
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
-      <b class="py-1">Interests</b>
+      <b class="pt-1 pb-3">Interests</b>
       <hr class="border w-full" /><br/>
       <ul class="space-y-4">
         <li >
