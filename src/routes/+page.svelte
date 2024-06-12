@@ -405,18 +405,16 @@
       <b class="py-1">Interests</b>
       <ul class="space-y-4">
         <li >
-          My wife and I love to travel. We have travelled extensively throughout
-          the U.S., as well as internationally.
+          <b>Want To Learn:</b> Django, Vue, Phoenix, Java, Spring Boot, Rust, Scala, GoLang, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
         </li>
         <Hr />
         <li >
-          Being an engineer at heart, I am constantly trying to find new
-          side-projects to do. Currently tinking with a Raspberry Pi and RTL-SDR.
+         Currently tinking with a Raspberry Pi and RTL-SDR.
         </li>
         <Hr />
         <li >
           Other Interests: Spin Class, PC Gaming, Reading (SFF), Nature / National Parks,
-          Broadway, Theme Parks
+          Broadway, Theme Parks, Travel
         </li>
         <Hr />
         <li>
