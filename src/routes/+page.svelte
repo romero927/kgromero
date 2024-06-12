@@ -31,6 +31,7 @@
     faEnvelope,
     faLink
   } from "@fortawesome/free-solid-svg-icons/index.js";
+
   import {
     faGithub,
     faLinkedin,
@@ -92,12 +93,14 @@
   import Transcript_Kromero from "$lib/assets/Transcript_Kromero.pdf";
   import Sentiment from "$lib/assets/Twitter Sentiment Analysis.png";
   import RPi from "$lib/assets/RPi LED Display.webm";
+  import icon from "$lib/assets/icon.png";
 </script>
 <html class="dark" lang="en"></html>
 <div class="min-h-screen dark:bg-gray-900">
   <br class="hidden md:block"/>
   <Navbar class="sm:container sm:mx-auto border xs:rounded-none sm:rounded-lg dark:border-white/10 px-2 py-0 mb-2 mx-2bg-white bg-gray-100 dark:bg-gray-800 text-black/60 dark:text-gray-400 ">
       <NavBrand>
+        <img class="w-5 mr-2" alt="icon" src={icon} />
         <span class="whitespace-nowrap text-xl font-semibold">kgromero.com</span
         >
       </NavBrand>
