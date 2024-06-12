@@ -427,7 +427,7 @@
         </li>
         <Hr />
         <li>
-          <div class="text-center"><b>Favorite Blogs and Tech Resources:</b></div>
+          <div class="text-center pb-5"><b>Favorite Blogs and Tech Resources</b></div>
           <Listgroup active items={links} let:item class="w-48 text-center w-full">
             {item.name}
           </Listgroup>
