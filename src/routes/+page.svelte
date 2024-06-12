@@ -409,11 +409,11 @@
         </li>
         <Hr />
         <li >
-         Currently tinking with a Raspberry Pi and RTL-SDR.
+         <b>Current Project:</b> Raspberry Pi and RTL-SDR.
         </li>
         <Hr />
         <li >
-          Other Interests: Spin Class, PC Gaming, Reading (SFF), Nature / National Parks,
+          <b>Other Interests:</b> Spin Class, PC Gaming, Reading (SFF), Nature / National Parks,
           Broadway, Theme Parks, Travel
         </li>
         <Hr />
