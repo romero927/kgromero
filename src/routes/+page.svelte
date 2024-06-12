@@ -298,8 +298,8 @@
       IT. Currently living in Jersey City, NJ.</P
     >
   </div>
-  <div class="container mx-auto my-2 lg:grid grid-cols-4 ">
-    <Card class="text-center items-center max-w-full bg-gray-50  ">
+  <div class="container mx-auto my-2 lg:grid grid-cols-4">
+    <Card class="text-center items-center max-w-full bg-gray-50" padding="xs">
       <b class="py-1">About Me</b>
       <hr class="border w-full" /><br/>
       <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} /><br/>
@@ -309,7 +309,7 @@
       user experience. Adherent to servant leadership and continuous improvement. Skilled at bridging the communication gap between technical and non-technical personnel.
       Texas born Cajun living in the NYC Metro Area.
     </Card>
-    <Card class="items-center text-center mx-auto max-w-full bg-gray-50">
+    <Card class="items-center text-center mx-auto max-w-full bg-gray-50" padding="xs">
       <b class="py-1">Contact Info</b>
       <hr class="border w-full" /><br/>
       <img
@@ -362,7 +362,7 @@
         <hr class="border w-44 border-gray-200 dark:border-gray-700" />
       </ul>
     </Card>
-    <Card class="items-center mx-auto max-w-full bg-gray-50">
+    <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
       <b class="py-1">Experience</b>
       <hr class="border w-full" /><br/>
       <Timeline class="text-xs p-0 m-0" >
@@ -408,7 +408,7 @@
         >
       </Timeline>
     </Card>
-    <Card class="items-center mx-auto max-w-full bg-gray-50">
+    <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
       <b class="py-1">Interests</b>
       <hr class="border w-full" /><br/>
       <ul class="space-y-4">
