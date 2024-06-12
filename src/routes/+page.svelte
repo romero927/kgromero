@@ -34,6 +34,10 @@
     faLinkedin,
     faKeybase,
     faGoodreads,
+    faInstagram,
+    faFacebook,
+    faReddit,
+    faTwitter,
   } from "@fortawesome/free-brands-svg-icons/index.js";
 
   import { Heading, P, A, Mark, Secondary, Hr } from "flowbite-svelte";
@@ -303,10 +307,11 @@
       user experience. Adherent to servant leadership and continuous improvement. Skilled at bridging the communication gap between technical and non-technical personnel.
       Texas born Cajun living in the NYC Metro Area.
     </Card>
-    <Card class="items-center mx-auto max-w-full bg-gray-50">
+    <Card class="items-center text-center mx-auto max-w-full bg-gray-50">
       <b class="py-1">Contact Info</b>
       <img
         alt="vCard (Scan on Phone to add to Contacts)"
+        title="vCard (Scan on Phone to add to Contacts)"
         src={QR}
         class="justify-center w-1/2"
       />
@@ -327,23 +332,41 @@
             ></span
           >
         </li>
+        <hr />
         <li class="flex space-x-2">
           <Fa icon={faLinkedin} />
           <span
             class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
-            ><a href="https://www.linkedin.com/in/kyleromero/">LinkedIn</a
+            ><a href="https://www.linkedin.com/in/kyleromero/" target="_blank">LinkedIn</a
             ></span
           >
         </li>
         <li class="flex space-x-2">
           <Fa icon={faGithub} />
-          <a href="https://github.com/romero927">Github</a>
+          <a href="https://github.com/romero927" target="_blank">Github</a>
         </li>
         <li class="flex space-x-2">
           <Fa icon={faKeybase} />
           <span
             class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
-            ><a href="https://keybase.io/kgromero">Keybase</a></span
+            ><a href="https://keybase.io/kgromero" target="_blank">Keybase</a></span
+          >
+        </li>
+        <hr />
+        <li class="flex space-x-2">
+          <Fa icon={faInstagram} />
+          <span
+            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+          >
+            <a href="https://www.instagram.com/mrchilakyle/" target="_blank">Instagram</a></span
+          >
+        </li>
+        <li class="flex space-x-2">
+          <Fa icon={faFacebook} />
+          <span
+            class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+          >
+            <a href="https://www.facebook.com/kgromero/" target="_blank">Facebook</a></span
           >
         </li>
         <li class="flex space-x-2">
@@ -351,8 +374,17 @@
           <span
             class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
           >
-            <a href="https://www.goodreads.com/kgromero">Goodreads</a></span
+            <a href="https://www.goodreads.com/kgromero" target="_blank">Goodreads</a></span
           >
+          <li class="flex space-x-2">
+            <Fa icon={faReddit} />
+            <span
+              class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400"
+            >
+              <a href="https://www.reddit.com/user/kgromero/" target="_blank">Reddit</a></span
+            >
+            
+          
         </li>
       </ul>
     </Card>
