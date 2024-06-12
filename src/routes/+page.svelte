@@ -317,7 +317,7 @@
         alt="vCard (Scan on Phone to add to Contacts)"
         title="vCard (Scan on Phone to add to Contacts)"
         src={QR}
-        class="justify-center w-1/2"
+        class="justify-center w-60"
       />
       <br/>
       <hr class="border w-44" />
