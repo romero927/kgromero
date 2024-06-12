@@ -320,7 +320,7 @@
         class="justify-center w-60"
       />
       <br/>
-      <hr class="border w-44" />
+      <hr class="border w-60" />
       <ul class="my-4 space-y-4">
         <li class="flex space-x-2">
           <Fa icon={faPhone} />
@@ -338,7 +338,7 @@
             ></span
           >
         </li>
-        <hr class="border w-44 border-gray-200 dark:border-gray-700" />
+        <hr class="border w-60 border-gray-200 dark:border-gray-700" />
         <li class="flex space-x-2">
           <Fa icon={faLinkedin} />
           <span
@@ -351,7 +351,7 @@
           <Fa icon={faGithub} />
           <a href="https://github.com/romero927" target="_blank">Github</a>
         </li>
-        <hr class="border w-44 border-gray-200 dark:border-gray-700" />
+        <hr class="border w-60 border-gray-200 dark:border-gray-700" />
         <li class="flex space-x-2">
           <Fa icon={faLink} />
           <span
@@ -360,7 +360,7 @@
             <a href="https://linktr.ee/kgromero" target="_blank">Linktree</a></span
           >
         </li>
-        <hr class="border w-44 border-gray-200 dark:border-gray-700" />
+        <hr class="border w-60 border-gray-200 dark:border-gray-700" />
       </ul>
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
