@@ -4,7 +4,8 @@ Software Development Leader
 Jersey City, NJ
 (281) 857-9006
 
-IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide a great user experience. Adherent to servant leadership and continuous improvement. Open to Manager, Senior Manager, or Director roles.
+IT Leader with 10 years as a full-stack developer and 6 years in software development management, living in the NYC Metro Area. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide great user experiences. Adherent to servant leadership and continuous improvement. 
+Open to: Manager, Senior Manager, and Director roles (In-Office, Hybrid, or Remote).
 
 PERSONAL INFORMATION
   Address: , Jersey City, NJ, 07311
@@ -20,7 +21,7 @@ SKILLS
   People Management
   Financial Management
   System Architecture
-  Software Development
+  Full-Stack Development
   Agile Scrum
   DevOps
 
@@ -29,18 +30,19 @@ WORK EXPERIENCE
     Director of Software Development at Raymour & Flanigan, Jersey City, NJ (remote)
       Leadership
 
-  Team Size: 3 Managers (.NET Team, Oracle Team, Boomi Team), 4 Architects, 30 Developers (mix of internal and near/off shore resources)
+  Team Size: 3 Managers (.NET Team, Oracle Team, Boomi Team), 4 Architects, 30 Developers (mix of internal and near/off shore resources).
   Aligned teams within internal matrixed organization (QA / Product Teams)
   Defined and executed organizational strategy, including transformational 5 year vision
   Recruited and retained skilled resources for organization, growing headcount by 10%
   Held weekly 1:1's and annual reviews with direct reports and bi-annual skip-level 1:1's with indirect reports
-  Visited northeast US locations to check-in with user base (5% of time)
+  Visited northeast US locations to check-in with user base (5% travel)
 
 Technical
 
-  Largest Initiatives: Order Management Tool Upgrade (UWP App), ERP Migration to NetSuite, WMS Migration to Korber, Omnichannel Sales Experience, 3rd Party Integrations (ChargeAfter, Bringg), Data Domain API and Boomi Standup
+  Largest Initiatives: ERP Migration to NetSuite, WMS Migration to Korber, Omnichannel Sales Experience via E-Commerce Site, 3rd Party API Integrations (ChargeAfter, Bringg)
+  Primary Tech Stack: .NET (C#, UWP, MVC API), SQL Server, Oracle DB, Azure, AWS, React, Git, PowerBI, Windows Server, Boomi, Snowflake
   Directly led change control and release management processes, leading to 50% decrease in production defect rate
-  Acted as SME alongside architects (direct reports) to define and executive organizational architecture strategy. On-Call alongside architects on a rotating basis with 100% coverage
+  Operated as SME alongside architects (direct reports) to define and executive organizational architecture strategy. On-Call alongside architects on a rotating basis with 100% coverage
 
 Financial
 
@@ -54,17 +56,22 @@ Financial
     Director of Operations Technology at MEARS Group, Jersey City, NJ (remote)
       Leadership
 
-  Team Size: 4 Developers, 1 PM, 7 Offshore. 100% remote team.
-  Executed organizational strategy and maintained executive and customer relationships
+  Team Size: 4 Developers, 1 PM, 7 Offshore. 100% remote team
+  Reported directly to CIO and focused on digital transformation and continuous improvement, including participating in Six Sigma and Kaizen initiatives
   Managed yearly software development internship programs on 5 separate occasions
-  Traveled to U.S. locations to roll out applications (25% of time)
-  Directly reported to CIO
+  Traveled to U.S. locations to roll out applications (25% travel)
 
 Technical
 
-  Largest Application: Mission Critical SOX-compliant internally developed Field Capture solution, used by over 700 field construction crews across the US. This solution sped up the closing process by 75%
-  Acted as technical expert on tech stack and helped explore and implement new technologies
-  Implemented and trained organization on DevOps/CICD, Agile Scrum, GitFlow, and QA processes, which increased delivery speed by 50%
+  Mission-Critical Projects: 
+    
+      Mission Critical SOX-compliant internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews across the US. This solution sped up the closing process by 75%
+      Electron based Field Safety Capture application with online/offline capability that digitized all safety documentation field crews must capture
+    
+  
+  Primary Tech Stack: .NET (C#, MVC API), SQL Server, Sqlite3, Azure / Windows Server, Javascript (React / Node / Electron), Git, PowerBI, PowerAutomate
+  Functioned as technical expert on tech stack and explored and implemented new technologies such as DocuSign, 2FA, and ESRI (GIS), while ensuring all compliance and security standards are met
+  Implemented and trained organization on DevOps/CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%
   Designated and documented all architecture and SDLC for the organization and led change management process while rolling out applications
   Administered systems such as Azure DevOps, Sharepoint Online, Power Automate, PowerBI, and Azure
 
@@ -79,14 +86,16 @@ Financial
       
   Led internal software development team and reported to co-owner of company
   Full-stack development using .NET, MS SQL, and React which delivered mission-critical asset management software (desktop, mobile, and web)
+  Built mobile-first SPA to enable employees to see real-time telemetrics on machinery assets
 
 
   * December 2011 – February 2016
     Technical Lead (IT Developer / Engineer III) at HP Inc., Houston, TX
       
-  Designated as technical lead over mission-critical third level support tool with 10k+ users
+  Designated as technical lead over mission-critical third level support tool with 10k+ global users
   Full-stack development delivering 3-tier web applications using .NET, MS SQL, and JavaScript
   Gained exposure to big data (Hadoop / HP Vertica) and BI/analytics (PowerBI / Tableau)
+  Led logical split and cloning of system during HP's split into HPE and HP Inc.
 
 
   * August 2007 – December 2011
@@ -94,6 +103,7 @@ Financial
       
   Full-Stack developer specializing in .NET, MS SQL, C++, and Perle development
   Built 3-tier web applications and hardware monitoring solutions and introduced Subversion source control to company
+  Deployed distributed databases and web applications in the U.S., Germany, and Malaysia.
 
 
 
@@ -109,6 +119,14 @@ EDUCATION
   * 
     Texas Tech University,  Bachelor of Science in Computer Engineering
 
+ACHIEVEMENTS
+  * , , 
+
+    2021: Promoted to Director of Operations Technology
+2021: Nominated to MEARS Group Innovator Team (Company Think-Tank)
+2021: Nominated to Quanta Services Leadership Academy
+2020: Promoted to Senior Manager of Operations Technology
+2013: Promoted to Technical Lead (IT Developer/Engineer III)
 TECHNOLOGIES
   * , , 
 
@@ -129,11 +147,3 @@ AI: ChatGPT, Microsoft CoPilot
 Data Warehouse: Snowflake
 Reporting: SSRS, PowerBI
 Other: Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++
-ACHIEVEMENTS
-  * , , 
-
-    2021: Promoted to Director of Operations Technology
-2021: Nominated to MEARS Group Innovator Team (Company Think-Tank)
-2021: Nominated to Quanta Services Leadership Academy
-2020: Promoted to Senior Manager of Operations Technology
-2013: Promoted to Technical Lead (IT Developer/Engineer III)
