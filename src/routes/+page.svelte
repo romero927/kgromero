@@ -301,15 +301,16 @@
     >
   </div>
   <div class="container mx-auto my-2 lg:grid grid-cols-4">
-    <Card class="text-center items-center max-w-full bg-gray-50" padding="xs">
+    <Card class="items-center  max-w-full bg-gray-50" padding="xs">
       <b class="pt-1 pb-3">About Me</b>
       <hr class="border w-full" /><br/>
       <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} /><br/>
       <hr class="border w-full" /><br/>
-      IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for
-      the next opportunity to lead a development organization to success, maximize business value, and provide a great
-      user experience. Adherent to servant leadership and continuous improvement. Skilled at bridging the communication gap between technical and non-technical personnel.
-      Texas born Cajun living in the NYC Metro Area.
+      IT Leader with 10 years as a full-stack developer and 6 years in software development management, living in the NYC Metro Area. 
+      Looking for the next opportunity to lead a development organization to success, maximize business value, and provide great user experiences.
+      Adherent to servant leadership and continuous improvement.
+      <br/><br/><hr class="border w-full" /><br/>
+      Open To: Manager, Senior Manager, and Director roles (In-Office, Hybrid, or Remote)
     </Card>
     <Card class="items-center text-center mx-auto max-w-full bg-gray-50" padding="xs">
       <b class="pt-1 pb-3">Contact Info</b>
