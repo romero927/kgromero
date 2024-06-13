@@ -1,10 +1,10 @@
 Kyle Romero
-Director of Software Development
+Software Development Leader
 
 Jersey City, NJ
 (281) 857-9006
 
-IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide a great user experience. Adherent to servant leadership and continuous improvement.
+IT Leader with 10 years as a full-stack developer and 6 years in software development management. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide a great user experience. Adherent to servant leadership and continuous improvement. Open to Manager, Senior Manager, or Director roles.
 
 PERSONAL INFORMATION
   Address: , Jersey City, NJ, 07311
@@ -90,7 +90,7 @@ Financial
 
 
   * August 2007 – December 2011
-    Software / Systems Engineer at X-Fab, Texas, Lubbock, TX
+    Software / Systems Engineer at X-Fab Texas, Lubbock, TX
       
   Full-Stack developer specializing in .NET, MS SQL, C++, and Perle development
   Built 3-tier web applications and hardware monitoring solutions and introduced Subversion source control to company
@@ -98,7 +98,7 @@ Financial
 
 
   * May 2007 – July 2007
-    Software Development Intern at Texas Tech / X-Fab, Texas, Lubbock, TX
+    Software Development Intern at Texas Tech / X-Fab Texas, Lubbock, TX
       
   Full-stack development internship with emphasis on C++ and .NET development
   Completed a statistical analysis application and a file format conversion program
