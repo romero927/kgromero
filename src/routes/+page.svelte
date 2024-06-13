@@ -296,7 +296,7 @@
   >
     <Heading color="text-black/60 mb-2 dark:text-gray-400">Kyle Romero</Heading>
     <P class="text-center text-black/60 dark:text-gray-400"
-      >Director of Software Development with {yearsExperience} years experience in
+      >Software Development Leader with {yearsExperience} years experience in
       IT based out of Jersey City, NJ.</P
     >
   </div>
