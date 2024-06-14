@@ -109,7 +109,7 @@
             class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
           />
         </NavLi>
-        <Dropdown class="w-44 z-20">
+        <Dropdown class="z-20 pl-5 pr-5 w-full">
           <DropdownItem href={ResumePDF} target="_blank"
             >Resume - PDF</DropdownItem
           >
@@ -128,13 +128,13 @@
             class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
           />
         </NavLi>
-        <Dropdown class="w-60 z-20 text-center">
+        <Dropdown class="w-60 z-20 pl-5 pr-5 w-full">
           <NavLi class="my-2 align-center cursor-pointer">
             Raymour & Flanigan<ChevronDownOutline
               class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
             />
           </NavLi>
-          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500 rounded-md overflow-y-auto h-full max-h-48">
             <DropdownItem href={OrgStructure} target="_blank"
               >Matrix Organization Structure</DropdownItem
             ><DropdownDivider />
@@ -151,7 +151,7 @@
               class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
             />
           </NavLi>
-          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500 rounded-md overflow-y-auto h-full max-h-48">
             <DropdownItem href={Path} target="_blank"
               >Developer Progression</DropdownItem
             ><DropdownDivider />
@@ -171,7 +171,7 @@
               class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
             />
           </NavLi>
-          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500 rounded-md overflow-y-auto h-full max-h-48">
             <DropdownItem href={Workflow} target="_blank"
               >Team Workflow</DropdownItem
             ><DropdownDivider />
@@ -188,7 +188,7 @@
               class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
             />
           </NavLi>
-          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500 rounded-md overflow-y-auto h-full max-h-48">
             <DropdownItem href={SIOverview} target="_blank"
               >Sudden Impact Overview</DropdownItem
             ><DropdownDivider />
@@ -202,7 +202,7 @@
               class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
             />
           </NavLi>
-          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500 rounded-md overflow-y-auto h-full max-h-48">
             <DropdownItem href={Internship} target="_blank"
               >Internship Projects Overview</DropdownItem
             ><DropdownDivider />
@@ -231,7 +231,7 @@
               class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
             />
           </NavLi>
-          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500 rounded-md overflow-y-auto h-full max-h-48">
             <DropdownItem href={Lab1Project1} target="_blank"
               >Lab 1 Project 1 PPT</DropdownItem
             ><DropdownDivider />
@@ -277,7 +277,7 @@
               class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
             />
           </NavLi>
-          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500">
+          <Dropdown class="w-44 z-20 bg-gray-150 dark:bg-gray-500 rounded-md overflow-y-auto h-full max-h-48">
             <DropdownItem href={Sentiment} target="_blank"
               >Twitter Sentiment Analysis</DropdownItem
             ><DropdownDivider />
