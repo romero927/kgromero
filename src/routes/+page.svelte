@@ -283,10 +283,10 @@
             ><DropdownDivider />
             <DropdownItem href={RPi} target="_blank"
               >RPi LED Display</DropdownItem
-            >
+            ><DropdownDivider />
+            <DropdownItem href="https://kgromero-react.netlify.app/" target="_blank">Old Site (React)</DropdownItem>
           </Dropdown>
         </Dropdown>
-        <NavLi href="https://kgromero-react.netlify.app/" class="my-2 text-black/60 dark:text-gray-400">Old Site (React)</NavLi>
         <DarkMode />
       </NavUl>
     <!-- </NavContainer> -->
