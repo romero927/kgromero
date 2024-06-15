@@ -124,7 +124,7 @@
           <DropdownDivider />
         </Dropdown>
         <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
-          Portfolio<ChevronDownOutline
+          Additional Documents<ChevronDownOutline
             class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
           />
         </NavLi>
