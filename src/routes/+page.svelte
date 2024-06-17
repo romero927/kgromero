@@ -60,6 +60,7 @@
   import ResumeDocX from "$lib/assets/kgromero.docx";
   import ResumePDF from "$lib/assets/kgromero.pdf";
   import ResumeTXT from "$lib/assets/kgromero.txt";
+  import ResumeMD from "$lib/assets/kgromero.md";
   import OrgStructure from "$lib/assets/OrgStructure.png";
   import SDLC from "$lib/assets/SDLC Items Flows.png";
   import Release from "$lib/assets/Release Process.png";
@@ -118,6 +119,9 @@
             >Resume - DOCX</DropdownItem
           >
           <DropdownDivider />
+          <DropdownItem href={ResumeMD} target="_blank"
+            >Resume - MARKDOWN</DropdownItem
+          >
           <DropdownItem href={ResumeTXT} target="_blank"
             >Resume - TXT</DropdownItem
           >
