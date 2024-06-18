@@ -16,6 +16,47 @@
   import { Card } from "flowbite-svelte";
   import { Footer, FooterCopyright } from "flowbite-svelte";
   import { Listgroup, ListgroupItem } from 'flowbite-svelte';
+
+  import { Modal } from 'flowbite-svelte';
+  let clickOutsideModal = false;
+  let size;
+
+  import { Carousel, Thumbnails  } from 'flowbite-svelte';
+  let index = 0;
+  let forward = true; // sync animation direction between Thumbnails and Carousel
+  import Family from "$lib/assets/family.png";
+  import WifeAndI from "$lib/assets/wife and me.png";
+  import WifeAndDogs from "$lib/assets/wife dogs.png";
+  import Wife from "$lib/assets/wife.png";
+  import Dogs from "$lib/assets/Dogs.png";
+  export const images = [
+    {
+      alt: 'My Family',
+      src: Family,
+      title: 'My Family'
+    },
+    {
+      alt: 'Wife and I',
+      src: WifeAndI,
+      title: 'Wife And I'
+    },
+    {
+      alt: 'Ashley',
+      src: Wife,
+      title: 'Ashley'
+    },
+    {
+      alt: 'Wife and Dogs',
+      src: WifeAndDogs,
+      title: 'Wife And Dogs'
+    },
+    {
+      alt: 'Charlotte and Ollie',
+      src: Dogs,
+      title: 'Charlotte and Ollie'
+    }
+  ];
+
   let links = [
     { name: 'Hacker News (YCombinator)', href: 'https://news.ycombinator.com/', attrs: {target: '_blank'}},
     { name: 'Dev.to', href: 'https://dev.to/', attrs: {target: '_blank'} },
@@ -122,6 +163,7 @@
           <DropdownItem href={ResumeMD} target="_blank"
             >Resume - MARKDOWN</DropdownItem
           >
+          <DropdownDivider />
           <DropdownItem href={ResumeTXT} target="_blank"
             >Resume - TXT</DropdownItem
           >
@@ -429,7 +471,14 @@
         <Hr />
         <li >
           <b>Other Interests:</b> Spin Class, PC Gaming, Reading (SFF), Nature / National Parks,
-          Broadway, Theme Parks, Travel
+          Broadway, Theme Parks, Travel, <button on:click={() => { size='sm'; clickOutsideModal = true}}>My Family</button>
+          <Modal title="My Family" bind:open={clickOutsideModal} autoclose outsideclose {size} >
+              <Carousel {images} {forward} let:Indicators let:Controls bind:index imgClass="object-contain h-full w-fit rounded-sm" >
+                <Controls />
+                <Indicators />
+              </Carousel>
+              <Thumbnails {images} {forward} bind:index />
+          </Modal>
         </li>
         <Hr />
         <li>
