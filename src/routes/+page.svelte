@@ -473,10 +473,7 @@
           <b>Other Interests:</b> <button on:click={() => { size='sm'; clickOutsideModal = true}}>My Family</button>, Spin Class, PC Gaming, Reading (SFF), Nature / National Parks,
           Broadway, Theme Parks, Travel
           <Modal title="My Family" bind:open={clickOutsideModal} autoclose outsideclose {size} >
-              <Carousel {images} {forward} let:Indicators let:Controls bind:index imgClass="object-contain h-full w-fit rounded-sm" >
-                <Controls />
-                <Indicators />
-              </Carousel>
+              <Carousel {images} {forward} let:Indicators let:Controls bind:index imgClass="object-contain h-full w-fit rounded-sm"/>
               <Thumbnails {images} {forward} bind:index />
           </Modal>
         </li>
