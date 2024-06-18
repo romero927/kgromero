@@ -28,7 +28,7 @@
   import WifeAndI from "$lib/assets/wife and me.png";
   import WifeAndDogs from "$lib/assets/wife dogs.png";
   import Wife from "$lib/assets/wife.png";
-  import Dogs from "$lib/assets/Dogs.png";
+  import Dogs from "$lib/assets/dogs.png";
   export const images = [
     {
       alt: 'My Family',
