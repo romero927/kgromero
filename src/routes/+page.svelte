@@ -26,7 +26,6 @@
   let forward = true; // sync animation direction between Thumbnails and Carousel
   import Family from "$lib/assets/family.png";
   import WifeAndI from "$lib/assets/wife and me.png";
-  import WifeAndDogs from "$lib/assets/wife dogs.png";
   import Wife from "$lib/assets/wife.png";
   import Dogs from "$lib/assets/dogs.png";
   export const images = [
@@ -44,11 +43,6 @@
       alt: 'Ashley',
       src: Wife,
       title: 'Ashley'
-    },
-    {
-      alt: 'Wife and Dogs',
-      src: WifeAndDogs,
-      title: 'Wife And Dogs'
     },
     {
       alt: 'Charlotte and Ollie',
@@ -75,13 +69,7 @@
 
   import {
     faGithub,
-    faLinkedin,
-    faKeybase,
-    faGoodreads,
-    faInstagram,
-    faFacebook,
-    faReddit,
-    faTwitter
+    faLinkedin
   } from "@fortawesome/free-brands-svg-icons/index.js";
 
   import { Heading, P, A, Mark, Secondary, Hr } from "flowbite-svelte";
