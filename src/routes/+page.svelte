@@ -334,8 +334,8 @@
       IT based out of Jersey City, NJ.</P
     >
   </div>
-  <div class="container mx-auto my-2 lg:grid grid-cols-4">
-    <Card class="items-center  max-w-full bg-gray-50" padding="xs">
+  <div class="container mx-auto my-2 lg:grid grid-cols-5">
+    <Card class="items-center max-w-full bg-gray-50" padding="xs">
       <b class="pt-1 pb-3">About Me</b>
       <hr class="border w-full" /><br/>
       <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} /><br/>
@@ -444,6 +444,67 @@
           ></TimelineItem
         >
       </Timeline>
+    </Card>
+    <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
+      <b class="pt-1 pb-3">Skills</b>
+      <hr class="border w-full" /><br/>
+      <ul class="space-y-2.5 text-xs p-0 m-0 ml-3 mr-3">
+        <li >
+          <b>General: </b>People Management, Financial Management, System Architecture, Full-Stack Development
+        </li>
+        <li >
+          <b>Processes: </b>DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrixed Organization
+        </li>
+        <li >
+          <b>Architectures: </b>N-Tier, REST API, PWA, SPA, , Serverless, MVC, Event Driven, Offline-First, Distributed, Microservices (Novice), Containerized/Orchestrated (Novice)
+        </li>
+        <li >
+          <b>.NET: </b>C#, VB.NET, ASP.NET API/MVC, Blazor, UWP, SignalR
+        </li>
+        <li >
+          <b>JavaScript: </b>React, Node.js, NPM, Electron, Angular, TypeScript, SvelteKit
+        </li>
+        <li >
+          <b>Scripting: </b>Python
+        </li>
+        <li >
+          <b>Web: </b>HTML, CSS, Tailwind, Bootstrap
+        </li>
+        <li >
+          <b>Containerization (Novice): </b>Docker, Kubernetes
+        </li>
+        <li >
+          <b>DB: </b>SQL Server, Sqlite3, Oracle
+        </li>
+        <li >
+          <b>Cloud: </b>Azure, AWS, Netlify
+        </li>
+        <li >
+          <b>Servers: </b>Windows Server, Linux (Ubuntu/Debian)
+        </li>
+        <li >
+          <b>Tooling: </b>Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver
+        </li>
+        <li >
+          <b>ETL: </b>Boomi, SSIS
+        </li>
+        <li >
+          <b>Message Queue: </b>Azure Service Bus
+        </li>
+        <li >
+          <b>AI: </b>ChatGPT, Microsoft CoPilot
+        </li>
+        <li >
+          <b>Data Warehouse: </b>Snowflake
+        </li>
+        <li >
+          <b>Reporting: </b>SSRS, PowerBI
+        </li>
+        <li >
+          <b>Other: </b>Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger,
+          C++
+        </li>
+      </ul>
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
       <b class="pt-1 pb-3">Interests</b>
