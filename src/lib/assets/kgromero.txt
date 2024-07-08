@@ -38,7 +38,7 @@ Technical
 • Mission-Critical Projects:    
 • Mission Critical SOX-compliant internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews across the US. This solution sped up the closing process by 75%
 • Electron based Field Safety Capture application with online/offline capability that digitized all safety documentation field crews must capture
-• Primary Tech Stack: .NET (C#, MVC API), SQL Server, Sqlite3, Azure / Windows Server, Javascript (React / Node / Electron), Git, PowerBI, PowerAutomate
+• Primary Tech Stack: .NET (C#, MVC API), SQL Server, Sqlite3, Azure / Windows Server, Javascript (Angular / React / Node / Electron), Git, PowerBI, PowerAutomate
 • Functioned as technical expert on tech stack and explored and implemented new technologies such as DocuSign, 2FA, and ESRI (GIS), while ensuring all compliance and security standards are met
 • Implemented and trained organization on DevOps/CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%
 • Designated and documented all architecture and SDLC for the organization and led change management process while rolling out applications
@@ -90,15 +90,19 @@ DevOps
 TECHNOLOGIES 
 Processes: DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrixed Organization
 Architectures: N-Tier, REST API, PWA, SPA, , Serverless, MVC, Event Driven, Offline-First, Distributed, Microservices (Novice), Containerized/Orchestrated (Novice)
-.NET: C#, VB.NET, ASP.NET API/MVC, Blazor, UWP, SignalR JavaScript: React, Node.js, NPM, Electron, Angular, TypeScript, SvelteKit Scripting: Python
+.NET: C#, VB.NET, ASP.NET API/MVC, Blazor, UWP, SignalR
+JavaScript: React, Node.js, NPM, Electron, Angular, TypeScript, SvelteKit
+Scripting: Python
 Web: HTML, CSS, Tailwind, Bootstrap
 Containerization (Novice): Docker, Kubernetes
 DB: SQL Server, Sqlite3, Oracle
 Cloud: Azure, AWS, Netlify
 Servers: Windows Server, Linux (Ubuntu/Debian)
-Tooling: Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver ETL: Boomi, SSIS
+Tooling: Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver
+ETL: Boomi, SSIS
 Message Queue: Azure Service Bus
 AI: ChatGPT, Microsoft CoPilot
 Data Warehouse: Snowflake
 Reporting: SSRS, PowerBI
-Other: Sharepoint Online, PowerApps, PowerAutomate, Twilio,JWT, Swagger, C++
+Other: Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++, Java (Spring Boot)
+
