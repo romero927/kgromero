@@ -88,6 +88,7 @@
   import Profile from "$lib/assets/kgromero.png";
   import ResumeDocX from "$lib/assets/kgromero.docx";
   import ResumePDF from "$lib/assets/kgromero.pdf";
+  import ResumeSmallPDF from "$lib/assets/kgromero_1page.pdf";
   import ResumeTXT from "$lib/assets/kgromero.txt";
   import ResumeMD from "$lib/assets/kgromero.md";
   import OrgStructure from "$lib/assets/OrgStructure.png";
@@ -142,6 +143,10 @@
         <Dropdown class="z-20 pl-5 pr-5 w-full">
           <DropdownItem href={ResumePDF} target="_blank"
             >Resume - PDF</DropdownItem
+          >
+          <DropdownDivider />
+          <DropdownItem href={ResumeSmallPDF} target="_blank"
+            >Resume - PDF (1-Page)</DropdownItem
           >
           <DropdownDivider />
           <DropdownItem href={ResumeDocX} target="_blank"
@@ -502,7 +507,7 @@
         </li>
         <li >
           <b>Other: </b>Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger,
-          C++
+          C++, Java (Spring Boot)
         </li>
       </ul>
     </Card>
