@@ -455,7 +455,7 @@
       <hr class="border w-full" /><br/>
       <ul class="space-y-2.5 text-xs p-0 m-0 ml-3 mr-3">
         <li >
-          <b>General: </b>People Management, Financial Management, System Architecture, Full-Stack Development
+          <b>General: </b>People Management, Project Management, Financial Management, System Architecture, Full-Stack Development, Entire SDLC, Continuous Improvement, Legacy Systems
         </li>
         <li >
           <b>Processes: </b>DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrixed Organization
