@@ -516,7 +516,7 @@
       <hr class="border w-full" /><br/>
       <ul class="space-y-4">
         <li >
-          <b>Want To Learn:</b> Django, Vue, Phoenix, Rust, Scala, GoLang, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
+          <b>Want To Learn:</b> Go, Django, Vue, Phoenix, Rust, Scala, GoLang, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
         </li>
         <Hr />
         <li >
