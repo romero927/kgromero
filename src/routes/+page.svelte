@@ -86,11 +86,11 @@
 
   import QR from "$lib/assets/QR.png";
   import Profile from "$lib/assets/kgromero.png";
-  import ResumeDocX from "$lib/assets/kgromero.docx";
-  import ResumePDF from "$lib/assets/kgromero.pdf";
-  import ResumeSmallPDF from "$lib/assets/kgromero_resume.pdf";
-  import ResumeTXT from "$lib/assets/kgromero.txt";
-  import ResumeMD from "$lib/assets/kgromero.md";
+  import ResumeDocX from "$lib/assets/kgromero_resume.docx";
+  import ResumePDF from "$lib/assets/kgromero_resume.pdf";
+  import ResumeDetailedPDF from "$lib/assets/kgromero.pdf";
+  import ResumeTXT from "$lib/assets/kgromero_resume.txt";
+  import ResumeMD from "$lib/assets/kgromero_resume.md";
   import OrgStructure from "$lib/assets/OrgStructure.png";
   import SDLC from "$lib/assets/SDLC Items Flows.png";
   import Release from "$lib/assets/Release Process.png";
@@ -141,10 +141,6 @@
           />
         </NavLi>
         <Dropdown class="z-20 pl-5 pr-5 w-full">
-          <DropdownItem href={ResumeSmallPDF} target="_blank"
-            >Resume - PDF (1-Page)</DropdownItem
-          >
-          <DropdownDivider />
           <DropdownItem href={ResumePDF} target="_blank"
             >Resume - PDF</DropdownItem
           >
@@ -159,6 +155,10 @@
           <DropdownDivider />
           <DropdownItem href={ResumeTXT} target="_blank"
             >Resume - TXT</DropdownItem
+          >
+          <DropdownDivider />
+          <DropdownItem href={ResumeDetailedPDF} target="_blank"
+            >Resume - PDF (Detailed)</DropdownItem
           >
           <DropdownDivider />
         </Dropdown>
