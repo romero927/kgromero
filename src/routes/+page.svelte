@@ -345,7 +345,7 @@
       <hr class="border w-full" /><br/>
       <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} /><br/>
       <hr class="border w-full" /><br/>
-      IT Leader with 10 years as a full-stack developer and 6 years in software development management, living in the NYC Metro Area. 
+      IT Leader with 10 years as a full-stack developer and 7 years in software development management, living in the NYC Metro Area. 
       Looking for the next opportunity to lead a development organization to success, maximize business value, and provide great user experiences.
       Adherent to servant leadership and continuous improvement.
       <br/><br/><hr class="border w-full" /><br/>
