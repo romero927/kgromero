@@ -366,7 +366,7 @@
           >
         </Dropdown>
       </Dropdown>
-      <NavLi href="https://github.com/romero927/kgromero" target="_blank" ><div class="p-3 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-700"><Fa icon={faCode}/></div></NavLi>
+      <NavLi href="https://github.com/romero927/kgromero" target="_blank" ><div class="p-3 rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700"><Fa icon={faCode}/></div></NavLi>
       <DarkMode btnClass="text-gray-500 dark:text-gray-400 hover:text-red-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white focus:outline-none rounded-lg text-sm p-2.5"/>
     </NavUl>
     <!-- </NavContainer> -->

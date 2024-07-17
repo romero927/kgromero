@@ -1,6 +1,8 @@
 # Source Code for https://kgromero.com
 
-Hosted in GitHub at: https://github.com/romero927/kgromero/tree/main
+Hosted in GitHub at: https://github.com/romero927/kgromero
+
+Developed using [SvelteKit](https://kit.svelte.dev/), utilizing [TailwindCSS](https://tailwindcss.com/), [FontAwesome](https://fontawesome.com/), and [Flowbite](https://flowbite.com/).
 
 Deployed and hosted via [Netlify](https://www.netlify.com/)
 
@@ -11,9 +13,7 @@ NPM commands:
 
 Main Page Code at: src\routes\+page.svelte
 
-Analytics captured by Google Analytics
-
-Developed using SvelteKit, utilizing TailwindCSS, FontAwesome, and Flowbite
+Analytics captured by [Google Analytics](https://marketingplatform.google.com/about/analytics/)
 
 ## Built by:
 Kyle Romero
