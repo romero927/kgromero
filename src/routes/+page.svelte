@@ -184,7 +184,6 @@
         <DropdownItem href={ResumeDetailedPDF} target="_blank"
           >Resume - PDF (Detailed)</DropdownItem
         >
-        <DropdownDivider />
       </Dropdown>
       <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
         Additional Documents<ChevronDownOutline
