@@ -158,7 +158,7 @@
       <img class="w-11 mr-2" alt="logo" src={logo} />
     </NavBrand>
     <NavHamburger />
-    <NavUl ulClass="border-none flex flex-col p-4 mt-4 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:text-sm md:font-medium">
+    <NavUl ulClass="border-none flex flex-col p-4 mt-4 bg-gray-100 dark:bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:text-sm md:font-medium">
       <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
         Resume<ChevronDownOutline
           class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
@@ -366,7 +366,7 @@
           >
         </Dropdown>
       </Dropdown>
-      <NavLi href="https://github.com/romero927/kgromero" target="_blank" ><div class="rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white sm:ml-0 sm:pl-0 sm:pt-1 sm:pb-1 md:p-3"><Fa class="p-0 m-0" icon={faCode}/></div></NavLi>
+      <NavLi href="https://github.com/romero927/kgromero" target="_blank" ><div class="rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-100 hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white sm:ml-0 sm:pl-0 sm:pt-1 sm:pb-1 sm:mb-1 md:p-3"><Fa class="p-0 m-0" icon={faCode}/></div></NavLi>
       <DarkMode btnClass="text-gray-500 dark:text-gray-400 hover:text-red-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:hover:text-white focus:outline-none rounded-lg sm:rounded-md text-sm p-2.5"/>
     </NavUl>
     <!-- </NavContainer> -->
