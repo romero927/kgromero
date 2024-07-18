@@ -180,10 +180,6 @@
         <DropdownItem href={ResumeTXT} target="_blank"
           >Resume - TXT</DropdownItem
         >
-        <DropdownDivider />
-        <DropdownItem href={ResumeDetailedPDF} target="_blank"
-          >Resume - PDF (Detailed)</DropdownItem
-        >
       </Dropdown>
       <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
         Supporting Documents<ChevronDownOutline
