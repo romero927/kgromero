@@ -1,9 +1,11 @@
-﻿Kyle Romero, Software Development Leader
+﻿Kyle Romero, Software Engineering Leader
 Jersey City, NJ, 07311, (281) 857-9006, kgromero@gmail.com
 
-LINKS kgromero.com, linkedin.com/in/kyleromero/
+LINKS 
+kgromero.com, linkedin.com/in/kyleromero/
 
-SUMMARY IT Leader with 10 years as a full-stack developer and 6 years in software development management, living in the 
+SUMMARY 
+IT Leader with 10 years as a full-stack developer and 7 years in software development management, living in the 
 NYC Metro Area. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide great user experiences. Adherent to servant leadership and continuous improvement.
 Open to: Manager, Senior Manager, and Director roles (In-Office, Hybrid, or Remote).
 
