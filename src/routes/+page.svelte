@@ -361,10 +361,13 @@
           >
         </Dropdown>
       </Dropdown>
-      <NavLi href="https://github.com/romero927/kgromero" target="_blank" ><div class="rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-50 hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white sm:ml-0 sm:pl-0 sm:pt-1 sm:pb-1 sm:mb-1 md:p-3"><Fa class="p-0 m-0" icon={faCode}/></div></NavLi>
-      <DarkMode btnClass="text-gray-500 dark:text-gray-400 hover:text-red-500 hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white focus:outline-none rounded-lg sm:rounded-md text-sm p-2.5"/>
+      <NavLi href="https://github.com/romero927/kgromero" target="_blank" class="sm:my-2 md:my-0 cursor-pointer">
+        <div class="rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-50 hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white sm:ml-0 sm:pl-0 sm:pt-1 sm:pb-1 sm:mb-1 md:p-3">
+          <Fa class="p-0 m-0" icon={faCode}/>
+        </div>
+      </NavLi>
+        <DarkMode btnClass="text-gray-500 sm:my-2 md:my-0 dark:text-gray-400 hover:text-red-500 hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white focus:outline-none rounded-lg sm:rounded-md text-sm p-2.5 "/>
     </NavUl>
-    <!-- </NavContainer> -->
   </Navbar>
   <div
     class="container mx-auto rounded-lg text-center border dark:border-white/10 py-2 bg-gray-50 dark:bg-gray-800"
