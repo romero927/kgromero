@@ -385,10 +385,10 @@
   <div class="container mx-auto my-2 lg:grid grid-cols-5">
     <Card class="items-center max-w-full bg-gray-50" padding="xs">
       <b class="pt-1 pb-3">About Me</b>
-      <hr class="border w-full" />
+      <Hr classHr="border w-full m-1" />
       <br />
-      <img class="w-1/2 rounded-full" alt="Kyle Romero" src={Profile} /><br />
-      <hr class="border w-full" />
+      <img class="w-1/2 rounded-full m-1" alt="Kyle Romero" src={Profile} /><br />
+      <Hr classHr="border w-full m-1" />
       <br />
       IT Leader with 10 years as a full-stack developer and 7 years in software development
       management, living in the NYC Metro Area. Looking for the next opportunity
@@ -396,7 +396,7 @@
       provide great user experiences. Adherent to servant leadership and continuous
       improvement.
       <br /><br />
-      <hr class="border w-full" />
+      <Hr classHr="border w-full m-1" />
       <br />
       Open To: Manager, Senior Manager, and Director roles (In-Office, Hybrid, or
       Remote)
@@ -406,16 +406,16 @@
       padding="xs"
     >
       <b class="pt-1 pb-3">Contact Info</b>
-      <hr class="border w-full" />
+      <Hr classHr="border w-full m-1" />
       <br />
       <img
         alt="vCard (Scan on Phone to add to Contacts)"
         title="vCard (Scan on Phone to add to Contacts)"
         src={QR}
-        class="justify-center w-60"
+        class="justify-center w-60 m-1"
       />
       <br />
-      <hr class="border w-60" />
+      <Hr classHr="border w-60 m-1" />
       <ul class="my-4 space-y-4">
         <li class="flex space-x-2">
           <Fa icon={faPhone} />
@@ -433,7 +433,7 @@
             ></span
           >
         </li>
-        <hr class="border w-60 border-gray-200 dark:border-gray-700" />
+        <Hr classHr="border w-60 border-gray-200 dark:border-gray-700" />
         <li class="flex space-x-2">
           <Fa icon={faLinkedin} />
           <span
@@ -447,7 +447,7 @@
           <Fa icon={faGithub} />
           <a href="https://github.com/romero927" target="_blank">Github</a>
         </li>
-        <hr class="border w-60 border-gray-200 dark:border-gray-700" />
+        <Hr classHr="border w-60 border-gray-200 dark:border-gray-700" />
         <li class="flex space-x-2">
           <Fa icon={faLink} />
           <span
@@ -457,12 +457,12 @@
             ></span
           >
         </li>
-        <hr class="border w-60 border-gray-200 dark:border-gray-700" />
+        <Hr classHr="border w-60 border-gray-200 dark:border-gray-700" />
       </ul>
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
       <b class="pt-1 pb-3">Experience</b>
-      <hr class="border w-full" />
+      <Hr classHr="border w-full m-1" />
       <br />
       <Timeline class="text-xs p-0 m-0 ml-3 mr-3">
         <TimelineItem date="Mar 2023 - May 2024" classLi="mb-5"
@@ -509,7 +509,7 @@
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
       <b class="pt-1 pb-3">Skills</b>
-      <hr class="border w-full" />
+      <Hr classHr="border w-full m-1" />
       <br />
       <ul class="space-y-2.5 text-xs p-0 m-0 ml-3 mr-3">
         <li>
@@ -578,7 +578,7 @@
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
       <b class="pt-1 pb-3">Interests</b>
-      <hr class="border w-full" />
+      <Hr classHr="border w-full m-1" />
       <br />
       <ul class="space-y-4">
         <li>
