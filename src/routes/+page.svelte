@@ -182,7 +182,7 @@
         >
         <DropdownDivider />
         <DropdownItem href={ResumeDetailedPDF} target="_blank"
-          >Resume - Detailed PDF</DropdownItem
+          >Detailed Resume - PDF</DropdownItem
         >
       </Dropdown>
       <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
