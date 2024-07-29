@@ -127,6 +127,7 @@
   import WWMLandscape from "$lib/assets/WWMLandscape.png";
   import SIOverview from "$lib/assets/SIOverview.pdf";
   import SIAL from "$lib/assets/SIAL.png";
+  import CSM from "$lib/assets/CSM.pdf";
   import Internship from "$lib/assets/Internship.pdf";
   import PlasmaTraceSystem from "$lib/assets/PlasmaTraceSystem.pdf";
   import ChemicalTracking from "$lib/assets/ChemicalTracking.pdf";
@@ -281,6 +282,10 @@
           ><DropdownDivider />
           <DropdownItem href={SIAL} target="_blank"
             >Sudden Impact Architecture</DropdownItem
+          >
+          <DropdownDivider />
+          <DropdownItem href={CSM} target="_blank"
+            >Certified Scrum Master Certificate</DropdownItem
           >
         </Dropdown>
         <DropdownDivider />
