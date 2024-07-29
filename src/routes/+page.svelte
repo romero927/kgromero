@@ -112,6 +112,8 @@
   import ResumeDetailedPDF from "$lib/assets/kgromero.pdf";
   import ResumeTXT from "$lib/assets/kgromero_resume.txt";
   import ResumeMD from "$lib/assets/kgromero_resume.md";
+  import BusinessCard from "$lib/assets/kgromero_businesscard.png";
+  import CoverLetter from "$lib/assets/kgromero_coverletter.pdf";
   import OrgStructure from "$lib/assets/OrgStructure.png";
   import SDLC from "$lib/assets/SDLC Items Flows.png";
   import Release from "$lib/assets/Release Process.png";
@@ -159,6 +161,9 @@
     </NavBrand>
     <NavHamburger />
     <NavUl ulClass="border-none flex flex-col p-4 mt-4 bg-gray-50 dark:bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:text-sm md:font-medium">
+      <NavLi href={BusinessCard} class="my-2 cursor-pointer text-black/60 dark:text-gray-400" target="_blank"
+          >Business Card</NavLi
+        >
       <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
         Resume<ChevronDownOutline
           class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline"
@@ -184,6 +189,10 @@
         <DropdownItem href={ResumeDetailedPDF} target="_blank"
           >Detailed Resume - PDF</DropdownItem
         >
+        <DropdownDivider />
+        <DropdownItem href={CoverLetter} target="_blank"
+          >Cover Letter</DropdownItem
+        >        
       </Dropdown>
       <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
         Supporting Documents<ChevronDownOutline
