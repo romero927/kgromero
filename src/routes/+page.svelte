@@ -58,16 +58,7 @@
       attrs: { target: "_blank" },
     },
     { name: "Dev.to", href: "https://dev.to/", attrs: { target: "_blank" } },
-    {
-      name: "Paul Graham's Articles",
-      href: "https://www.paulgraham.com/articles.html",
-      attrs: { target: "_blank" },
-    },
-    {
-      name: "Scott Hanselman's Blog",
-      href: "https://www.hanselman.com/blog/",
-      attrs: { target: "_blank" },
-    },
+    { name: "/r/Programming", href: "https://www.reddit.com/r/programming/", attrs: { target: "_blank" } },
     {
       name: "CIO.com",
       href: "https://www.cio.com",
@@ -78,6 +69,16 @@
       href: "https://www.pluralsight.com",
       attrs: { target: "_blank" },
     },
+    {
+      name: "Paul Graham's Articles",
+      href: "https://www.paulgraham.com/articles.html",
+      attrs: { target: "_blank" },
+    },
+    {
+      name: "Scott Hanselman's Blog",
+      href: "https://www.hanselman.com/blog/",
+      attrs: { target: "_blank" },
+    }
   ];
 
   import Fa from "svelte-fa";
