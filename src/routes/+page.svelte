@@ -86,7 +86,7 @@
     faPhone,
     faEnvelope,
     faLink,
-    faCode,
+    faCode
   } from "@fortawesome/free-solid-svg-icons/index.js";
 
   import {
@@ -627,7 +627,12 @@
         </li>
         <Hr />
         <li>
-          <b>Current Project:</b> Raspberry Pi and RTL-SDR.
+          <b>Current Projects:</b> 
+          <ul class=" ml-5 list-disc">
+            
+            <li>Raspberry Pi and RTL-SDR. </li>
+            <li><a href="https://github.com/romero927/RedditListener" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/>RedditListener</a></li>
+          </ul>
         </li>
         <Hr />
         <li>
