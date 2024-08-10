@@ -73,11 +73,6 @@
       name: "Paul Graham's Articles",
       href: "https://www.paulgraham.com/articles.html",
       attrs: { target: "_blank" },
-    },
-    {
-      name: "Scott Hanselman's Blog",
-      href: "https://www.hanselman.com/blog/",
-      attrs: { target: "_blank" },
     }
   ];
 
