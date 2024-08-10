@@ -624,9 +624,8 @@
         <li>
           <b>Current Projects:</b> 
           <ul class=" ml-5 list-disc">
-            
-            <li>Raspberry Pi and RTL-SDR. </li>
-            <li><a href="https://github.com/romero927/RedditListener" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/>RedditListener</a></li>
+            <li><a href="https://github.com/romero927/RedditListener" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>RedditListener</li>
+            <li><a href="https://airspy.com/" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>RTL-SDR (Analog / Digital FM, ADS-B, AIS, POCSAG, HD Radio)</li>
           </ul>
         </li>
         <Hr />
