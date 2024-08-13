@@ -146,6 +146,7 @@
   import RPi from "$lib/assets/RPi LED Display.webm";
   import RTL from "$lib/assets/RTL-SDR.pdf";
   import logo from "$lib/assets/logo.png";
+  import RedditListener from "$lib/assets/KyleRomero_RedditListener_Walkthrough.pdf"
 </script>
 
 <html class="dark" lang="en"></html>
@@ -377,14 +378,14 @@
           ><DropdownDivider />
           <DropdownItem href={RTL} target="_blank">RTL-SDR</DropdownItem>
           <DropdownDivider />
+          <DropdownItem href={RedditListener} target="_blank">RedditListener</DropdownItem>
+          <DropdownDivider />
           <DropdownItem href={RPi} target="_blank">RPi LED Display</DropdownItem
           ><DropdownDivider />
           <DropdownItem
             href="https://kgromero-react.netlify.app/"
             target="_blank">Old Site (React)</DropdownItem
           >
-          
-         
         </Dropdown>
       </Dropdown>
       <DropdownDivider
