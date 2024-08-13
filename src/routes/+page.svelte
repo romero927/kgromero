@@ -144,6 +144,7 @@
   import Transcript_Kromero from "$lib/assets/Transcript_Kromero.pdf";
   import Sentiment from "$lib/assets/Twitter Sentiment Analysis.png";
   import RPi from "$lib/assets/RPi LED Display.webm";
+  import RTL from "$lib/assets/RTL-SDR.pdf";
   import logo from "$lib/assets/logo.png";
 </script>
 
@@ -374,12 +375,16 @@
           <DropdownItem href={Sentiment} target="_blank"
             >Twitter Sentiment Analysis</DropdownItem
           ><DropdownDivider />
+          <DropdownItem href={RTL} target="_blank">RTL-SDR</DropdownItem>
+          <DropdownDivider />
           <DropdownItem href={RPi} target="_blank">RPi LED Display</DropdownItem
           ><DropdownDivider />
           <DropdownItem
             href="https://kgromero-react.netlify.app/"
             target="_blank">Old Site (React)</DropdownItem
           >
+          
+         
         </Dropdown>
       </Dropdown>
       <DropdownDivider
@@ -622,10 +627,9 @@
         </li>
         <Hr />
         <li>
-          <b>Current Projects:</b> 
+          <b>Recent Projects:</b> 
           <ul class=" ml-5 list-disc">
             <li><a href="https://github.com/romero927/RedditListener" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>RedditListener</li>
-            <li><a href="https://airspy.com/" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>RTL-SDR (Analog / Digital FM, ADS-B, AIS, POCSAG, HD Radio)</li>
           </ul>
         </li>
         <Hr />
