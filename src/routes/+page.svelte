@@ -623,16 +623,16 @@
       <br />
       <ul class="space-y-4">
         <li>
-          <b>Want To Learn:</b> Go, Django, Vue, Phoenix, Rust, Scala, K8s,
-          Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
-        </li>
-        <Hr />
-        <li>
           <b>Recent Projects:</b> 
           <ul class=" ml-5 list-disc">
             <li><a href="https://github.com/romero927/RedditListener" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(C#) RedditListener</li>
             <li><a href="https://github.com/romero927/LuhnVerifier" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Go) CCN Luhn Verifier</li>
           </ul>
+        </li>
+        <Hr />
+        <li>
+          <b>Want To Learn:</b> Go, Django, Vue, Phoenix, Rust, Scala, K8s,
+          Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
         </li>
         <Hr />
         <li>
