@@ -632,7 +632,7 @@
         </li>
         <Hr />
         <li>
-          <b>Want To Learn:</b> Go, Django, Vue, Phoenix, Rust, Scala, K8s,
+          <b>Want To Learn:</b> .NET MAUI, Apache Kafka, Go, Django, Vue, Phoenix, Rust, Scala, Clojure, K8s,
           Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
         </li>
         <Hr />
