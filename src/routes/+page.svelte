@@ -623,7 +623,7 @@
       <br />
       <ul class="space-y-4">
         <li>
-          <b>Want To Learn:</b> Go, Django, Vue, Phoenix, Rust, Scala, GoLang, K8s,
+          <b>Want To Learn:</b> Go, Django, Vue, Phoenix, Rust, Scala, K8s,
           Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
         </li>
         <Hr />
