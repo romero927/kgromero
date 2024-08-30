@@ -608,7 +608,7 @@
       </ul>
     </Card>
     <Card class="items-center mx-auto max-w-full bg-gray-50" padding="xs">
-      <b class="pt-1 pb-3">Interests</b>
+      <b class="pt-1 pb-3">Other</b>
       <Hr classHr="border w-full m-1" />
       <br />
       <ul class="space-y-4">
@@ -629,7 +629,7 @@
         </li>
         <Hr />
         <li>
-          <b>Other Interests:</b>
+          <b>Interests:</b>
           <button
             on:click={() => {
               size = "sm";
