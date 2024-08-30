@@ -624,6 +624,8 @@
             <li><a href="https://github.com/romero927/rust-simple_blockchain" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Rust) Simple Blockchain</li>
             <li><a href="https://github.com/romero927/Scala-Game-of-Life" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Scala) Game of Life</li>
             <li><a href="https://github.com/romero927/Java-Sudoku" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Java / Spring Boot) Sudoku</li>
+            <li><a href="https://github.com/romero927/FizzBuzz-Library" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(txt) FizzBuzz Library</li>
+            
           </ul>
         </li>
         <Hr />
