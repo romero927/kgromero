@@ -626,8 +626,9 @@
           <b>Recent Projects:</b> 
           <ul class=" ml-5 list-disc">
             <li><a href="https://github.com/romero927/RedditListener" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(C#) Reddit Listener</li>
-            <li><a href="https://github.com/romero927/LuhnVerifier" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Go) CCN Luhn Verifier</li>
+            <li><a href="https://github.com/romero927/LuhnVerifier" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Go) CCN Luhn Verifier Microservice</li>
             <li><a href="https://github.com/romero927/Wurdle" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Python) Wordle Clone</li>
+            <li><a href="https://github.com/romero927/rust-simple_blockchain" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Rust) Simple Blockchain</li>
           </ul>
         </li>
         <Hr />
