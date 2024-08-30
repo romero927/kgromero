@@ -81,6 +81,8 @@
 
   import { Heading, P, A, Mark, Secondary, Hr } from "flowbite-svelte";
 
+  import ResumeShellWrapper from './ResumeShellWrapper.svelte';
+
   let startDate = new Date("July 15, 2007");
 
   let diff = Math.abs(new Date() - startDate);
@@ -391,7 +393,7 @@
         >
           <Fa class="p-0 m-0" icon={faCode} />
         </div>
-      </NavLi>
+      </NavLi>      
       <DropdownDivider
         divClass="my-1 h-px bg-gray-100 dark:bg-gray-600 lg:display-none"
       />
@@ -615,6 +617,7 @@
         <li>
           <b>Recent Projects:</b> 
           <ul class=" ml-5 list-disc">
+            <li><ResumeShellWrapper />(Claude 3.5 Sonnet) Terminal</li>
             <li><a href="https://github.com/romero927/RedditListener" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(C#) Reddit Listener</li>
             <li><a href="https://github.com/romero927/LuhnVerifier" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Go) Luhn Veri Microservice</li>
             <li><a href="https://github.com/romero927/Wurdle" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Python) Wordle Clone</li>
