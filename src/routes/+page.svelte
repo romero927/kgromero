@@ -576,7 +576,7 @@
           <b>Web: </b>HTML, CSS, Tailwind, Bootstrap
         </li>
         <li>
-          <b>Containerization (Novice): </b>Docker, Kubernetes
+          <b>Containerization (Novice): </b>Docker, MicroK8s
         </li>
         <li>
           <b>DB: </b>SQL Server, Sqlite3, Oracle
@@ -608,7 +608,7 @@
         </li>
         <li>
           <b>Other: </b>Sharepoint Online, PowerApps, PowerAutomate, Twilio,
-          JWT, Swagger, C++, Java (Spring Boot)
+          JWT, Swagger, C++, Java (Spring Boot), Raspberry Pi
         </li>
       </ul>
     </Card>
