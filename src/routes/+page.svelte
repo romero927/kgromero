@@ -60,11 +60,6 @@
     { name: "Dev.to", href: "https://dev.to/", attrs: { target: "_blank" } },
     { name: "/r/Programming", href: "https://www.reddit.com/r/programming/", attrs: { target: "_blank" } },
     {
-      name: "CIO.com",
-      href: "https://www.cio.com",
-      attrs: { target: "_blank" },
-    },
-    {
       name: "Pluralsight",
       href: "https://www.pluralsight.com",
       attrs: { target: "_blank" },
