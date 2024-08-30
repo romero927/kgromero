@@ -628,7 +628,7 @@
         </li>
         <Hr />
         <li>
-          <b>Want To Learn:</b>.NET MAUI, Apache Kafka, Django, Next.js, Vue, Phoenix, Clojure, K8s,
+          <b>Want To Learn:</b>Flutter, .NET MAUI, Apache Kafka, Django, Next.js, Vue, Phoenix, Clojure, K8s,
           Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
         </li>
         <Hr />
