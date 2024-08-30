@@ -624,6 +624,7 @@
             <li><a href="https://github.com/romero927/LuhnVerifier" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Go) Luhn Veri Microservice</li>
             <li><a href="https://github.com/romero927/Wurdle" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Python) Wordle Clone</li>
             <li><a href="https://github.com/romero927/rust-simple_blockchain" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Rust) Simple Blockchain</li>
+            <li><a href="https://github.com/romero927/Scala-Game-of-Life" target="_blank"><Fa icon={faLink} pull=left class="mr-1 mt-1"/></a>(Scala) Game of Life</li>
           </ul>
         </li>
         <Hr />
