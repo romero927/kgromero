@@ -555,7 +555,7 @@
           Organization
         </li>
         <li>
-          <b>Architectures: </b>N-Tier, REST API, PWA, SPA, , Serverless, MVC,
+          <b>Architectures: </b>N-Tier, REST API, PWA, SPA, Serverless, MVC,
           Event Driven, Offline-First, Distributed, Microservices (Novice),
           Containerized/Orchestrated (Novice)
         </li>
@@ -628,7 +628,7 @@
         </li>
         <Hr />
         <li>
-          <b>Want To Learn:</b>Flutter, .NET MAUI, Apache Kafka, Django, Next.js, Vue, Phoenix, Clojure, K8s,
+          <b>Want To Learn: </b>Flutter, .NET MAUI, Apache Kafka, Django, Next.js, Vue, Phoenix, Clojure, K8s,
           Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs
         </li>
         <Hr />
