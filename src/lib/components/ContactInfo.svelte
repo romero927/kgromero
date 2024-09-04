@@ -14,7 +14,7 @@
     <img
       alt="vCard (Scan on Phone to add to Contacts)"
       title="vCard (Scan on Phone to add to Contacts)"
-      data-src="/images/QR.png"
+      data-src="/images/QR.webp"
       data-placeholder="/images/QR-lowresolution.png"
       class="justify-center w-60 m-1"
       use:lazyLoad

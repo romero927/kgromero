@@ -12,10 +12,10 @@
     let forward = true;
   
     const images = [
-      { alt: "My Family", src: "/images/family.png", title: "My Family" },
-      { alt: "Wife and I", src: "/images/wife-and-me.png", title: "Wife And I" },
-      { alt: "Ashley", src: "/images/wife.png", title: "Ashley" },
-      { alt: "Charlotte and Ollie", src: "/images/dogs.png", title: "Charlotte and Ollie" },
+      { alt: "My Family", src: "/images/family.webp", title: "My Family" },
+      { alt: "Wife and I", src: "/images/wife-and-me.webp", title: "Wife And I" },
+      { alt: "Ashley", src: "/images/wife.webp", title: "Ashley" },
+      { alt: "Charlotte and Ollie", src: "/images/dogs.webp", title: "Charlotte and Ollie" },
     ];
   </script>
   
