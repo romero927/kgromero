@@ -11,9 +11,7 @@
   <img 
     class="w-1/2 rounded-full m-1 lazy-image" 
     alt="Kyle Romero" 
-    data-src="/images/kgromero.webp"
-    data-placeholder="/images/kgromero-lowresolution.png"
-    use:lazyLoad
+    src="/images/kgromero.webp"
   />
   <br />
   <Hr classHr="border w-full m-1" />
