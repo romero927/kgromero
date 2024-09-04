@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* You can add any global styles here */
+.lazy-image {
+    background-color: #f0f0f0; /* Light grey background */
+    transition: filter 0.3s ease-out;
+  }
