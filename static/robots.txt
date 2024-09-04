@@ -1,0 +1,22 @@
+# robots.txt for https://kgromero.com
+
+User-agent: *
+Allow: /
+
+# Disallow any potential admin or private areas
+Disallow: /admin/
+Disallow: /private/
+
+# Disallow any temporary or test pages
+Disallow: /temp/
+Disallow: /test/
+
+# Optional: Disallow specific file types
+Disallow: /*.pdf$
+Disallow: /*.doc$
+
+# Sitemap location
+Sitemap: https://kgromero.com/sitemap.xml
+
+# Crawl-delay directive (optional, use if you want to limit crawl rate)
+# Crawl-delay: 10
