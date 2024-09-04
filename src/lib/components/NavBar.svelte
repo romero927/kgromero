@@ -16,7 +16,7 @@
   import { faCode } from "@fortawesome/free-solid-svg-icons";
 
   // Import your logo
-  import logo from "$lib/assets/logo.png";
+  import logo from "$lib/assets/logo.webp";
 
   // Import your document assets
   import ResumeDocX from "$lib/assets/kgromero_resume.docx";
