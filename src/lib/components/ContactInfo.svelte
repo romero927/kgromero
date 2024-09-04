@@ -3,7 +3,7 @@
     import { t } from '$lib/content';
     import { lazyLoad } from '$lib/utils';
     import Fa from 'svelte-fa';
-    import { faPhone, faEnvelope, faLink } from '@fortawesome/free-solid-svg-icons';
+    import { faPhone, faEnvelope, faLink, faChartLine } from '@fortawesome/free-solid-svg-icons';
     import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   </script>
   
@@ -47,6 +47,13 @@
         <Fa icon={faLink} />
         <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
           <a href="https://linktr.ee/kgromero" target="_blank">{$t.contactInfo.linktree}</a>
+        </span>
+      </li>
+      <Hr classHr="border w-60 border-gray-200 dark:border-gray-700" />
+      <li class="flex space-x-2">
+        <Fa icon={faChartLine} />
+        <span class="text-base font-normal leading-tight text-gray-500 dark:text-gray-400">
+          <a href="https://pagespeed.web.dev/analysis/https-kgromero-com/tm28614li4?form_factor=desktop" target="_blank">Site PageSpeed</a>
         </span>
       </li>
       <Hr classHr="border w-60 border-gray-200 dark:border-gray-700" />
