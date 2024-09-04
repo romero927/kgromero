@@ -19,25 +19,6 @@
     yearsExperience = Math.floor(diff / 31536000000);
   });
 
-  export function load() {
-  return {
-    title: "About Kyle Romero | Software Engineering Leader",
-    description: "Learn about Kyle Romero's experience as a Software Engineering Leader, his skills, and his approach to leadership and technology.",
-    image: "https://www.kgromero.com/images/kgromero.png", // Replace with actual image
-    structuredData: {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
-      "name": "About Kyle Romero",
-      "description": "Information about Kyle Romero's professional background and skills.",
-      "mainEntity": {
-        "@type": "Person",
-        "name": "Kyle Romero",
-        "jobTitle": "Software Engineering Leader",
-        "url": "https://www.kgromero.com"
-      }
-    }
-  };
-}
 </script>
 
 <div class="min-h-screen dark:bg-gray-900">

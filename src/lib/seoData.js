@@ -1,6 +1,6 @@
 // src/lib/seoData.js
 export const seoData = {
-    defaultTitle: "Kyle Romero | Software Engineering Leader",
+    defaultTitle: "Kyle Romero",
     defaultDescription: "Kyle Romero is a Software Engineering Leader with extensive experience in IT, based in Jersey City, NJ. Specializing in full-stack development and team management.",
     defaultImage: "https://www.kgromero.com/images/kgromero.png", // Replace with your actual image URL
     siteUrl: "https://www.kgromero.com", // Replace with your actual site URL
