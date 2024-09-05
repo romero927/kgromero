@@ -64,7 +64,8 @@ const translations = {
         { name: "(C#) Reddit Listener", link: "https://github.com/romero927/RedditListener" },
         { name: "(Go) Luhn Veri Microservice", link: "https://github.com/romero927/LuhnVerifier" },
         { name: "(Python) Wordle Clone", link: "https://github.com/romero927/Wurdle" },
-        { name: "(Flutter) Generator Utility", link: " https://github.com/romero927/Flutter_Generator-Utility" },
+        { name: "(Flutter) Generator Utility", link: "https://github.com/romero927/Flutter_Generator-Utility" },
+        { name: "(OpenCV) Face / Object Detection", link: "https://github.com/romero927/OpenCV_Face-Object-Detect" },
         { name: "(Rust) Simple Blockchain", link: "https://github.com/romero927/rust-simple_blockchain" },
         { name: "(Scala) Game of Life", link: "https://github.com/romero927/Scala-Game-of-Life" },
         { name: "(Java / Spring Boot) Sudoku", link: "https://github.com/romero927/Java-Sudoku" }
@@ -78,7 +79,9 @@ const translations = {
       blogs: [
         { name: "Hacker News (YCombinator)", href: "https://news.ycombinator.com/", attrs: { target: "_blank" } },
         { name: "Dev.to", href: "https://dev.to/", attrs: { target: "_blank" } },
-        { name: "Pluralsight", href: "https://www.pluralsight.com", attrs: { target: "_blank" } }
+        { name: "Pluralsight", href: "https://www.pluralsight.com", attrs: { target: "_blank" } },
+        { name: "/r/programming", href: "https://www.reddit.com/r/programming/", attrs: { target: "_blank" } }
+        
       ]
     },
     footerMessage: '- Site built in SvelteKit, utilizing TailwindCSS, FontAwesome, and Flowbite. Hosted on Netlify.'

@@ -1,6 +1,6 @@
 <script>
     import { Card, Hr, Button, Modal, Carousel, Thumbnails, Listgroup } from 'flowbite-svelte';
-    import { t } from '$lib/content';
+    import { t } from '$lib/i18n';
     import { lazyLoad } from '$lib/utils';
     import Fa from 'svelte-fa';
     import { faLink } from '@fortawesome/free-solid-svg-icons';
@@ -23,7 +23,7 @@
     <b class="pt-1 pb-3">{$t.other.title}</b>
     <Hr classHr="border w-full m-1" />
     <br />
-    <ul class="space-y-4">
+    <ul class="space-y-4 text-sm">
       <li>
         <b>{$t.other.recentProjects}: </b> 
         <ul class="ml-5 list-disc">

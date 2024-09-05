@@ -1,7 +1,9 @@
 <script>
   import { Card, Hr } from 'flowbite-svelte';
-  import { t } from '$lib/content';
+  import { t } from '$lib/i18n';
   import { lazyLoad } from '$lib/utils';
+  import Fa from 'svelte-fa';
+  import { faChartLine } from '@fortawesome/free-solid-svg-icons';
 </script>
 
 <Card class="items-center max-w-full h-full bg-gray-50" padding="xs">
@@ -16,9 +18,18 @@
   <br />
   <Hr classHr="border w-full m-1" />
   <br />
-  {$t.aboutMe.content}
-  <br /><br />
+  <div class="text-base">{$t.aboutMe.content}</div>
+  <br />
   <Hr classHr="border w-full m-1" />
   <br />
-  {$t.aboutMe.openTo}
+  <div class="text-base ">{$t.aboutMe.openTo}</div>
+  <br />
+  <Hr classHr="border w-full m-1" />
+  <br />
+  <div class="text-base flex w-full">
+    <Fa icon={faChartLine} />
+    <span class="leading-tight ml-2 text-gray-500 dark:text-gray-400">
+      <a href="https://pagespeed.web.dev/analysis/https-kgromero-com/tm28614li4?form_factor=desktop" target="_blank">Site PageSpeed</a>
+    </span>
+  </div>
 </Card>

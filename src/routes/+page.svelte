@@ -8,7 +8,7 @@
   import Experience from '$lib/components/Experience.svelte';
   import Skills from '$lib/components/Skills.svelte';
   import Other from '$lib/components/Other.svelte';
-  import { locale, t } from '$lib/content';
+  import { locale, t } from '$lib/i18n';
   import { Heading, P, A, Mark, Secondary, Hr } from "flowbite-svelte";
 
   let yearsExperience;

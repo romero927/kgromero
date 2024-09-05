@@ -1,6 +1,6 @@
 <script>
     import { Card, Hr, Timeline, TimelineItem } from 'flowbite-svelte';
-    import { t } from '$lib/content';
+    import { t } from '$lib/i18n';
   </script>
   
   <Card class="items-center mx-auto max-w-full h-full bg-gray-50" padding="xs">
