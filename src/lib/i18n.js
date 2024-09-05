@@ -71,7 +71,7 @@ const translations = {
         { name: "(Java / Spring Boot) Sudoku", link: "https://github.com/romero927/Java-Sudoku" }
       ],
       wantToLearn: "Want To Learn",
-      learningList: ".NET MAUI, Apache Kafka, Django, Next.js, Vue, Phoenix, Clojure, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB, RabbitMQ, LLMs",
+      learningList: ".NET MAUI, Apache Kafka, RabbitMQ, Terraform, Django, Next.js, Vue, Phoenix, Erlang, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB,  LLMs,  Numpy, Pandas, Redis, Jupyter, Anaconda",
       interests: "Interests",
       family: "My Family",
       interestList: "Spin Class, PC Gaming, Reading (SFF), Nature / National Parks, Broadway, Theme Parks, Travel",
