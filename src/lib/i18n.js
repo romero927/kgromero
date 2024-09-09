@@ -64,7 +64,7 @@ const translations = {
         { name: "(C#) Reddit Listener", link: "https://github.com/romero927/RedditListener" },
         { name: "(Go) Luhn Veri Microservice", link: "https://github.com/romero927/LuhnVerifier" },
         { name: "(Python) Wordle Clone", link: "https://github.com/romero927/Wurdle" },
-        { name: "(Flutter) Generator Utility", link: "https://github.com/romero927/Flutter_Generator-Utility" },
+        { name: "(Flutter) UUID / PWD Utility", link: "https://github.com/romero927/Flutter_Generator-Utility" },
         { name: "(C++) JSON to Model Generator", link: "https://github.com/romero927/CPP_JSON-to-Model-Generator" },
         { name: "(Rust) Simple Blockchain", link: "https://github.com/romero927/rust-simple_blockchain" },
         { name: "(Scala) Game of Life", link: "https://github.com/romero927/Scala-Game-of-Life" },
