@@ -50,12 +50,5 @@
         </span>
       </li>
       <Hr classHr="border w-60 border-gray-200 dark:border-gray-700" />
-      <li class="flex space-x-2">
-        <Fa icon={faComments} />
-        <span class="font-normal leading-tight text-gray-500 dark:text-gray-400">
-          <a href="https://kgromero-chat-room.fly.dev/" target="_blank">{$t.contactInfo.chat}</a>
-        </span>
-      </li>
-      <Hr classHr="border w-60 border-gray-200 dark:border-gray-700" />
     </ul>
   </Card>

@@ -3,7 +3,7 @@
     import { t } from '$lib/i18n';
     import { lazyLoad } from '$lib/utils';
     import Fa from 'svelte-fa';
-    import { faLink } from '@fortawesome/free-solid-svg-icons';
+    import { faLink, faComments } from '@fortawesome/free-solid-svg-icons';
     import ResumeShellWrapper from './ResumeShellWrapper.svelte';
   
     let clickOutsideModal = false;
@@ -28,6 +28,12 @@
         <b>{$t.other.recentProjects}: </b> 
         <ul class="ml-5 list-disc">
           <li><ResumeShellWrapper />(Claude 3.5 Sonnet) Terminal</li>
+          <li class="flex space-x-2">
+            <Fa icon={faComments} />
+            <span class="font-normal leading-tight text-gray-500 dark:text-gray-400">
+              <a href="https://kgromero-chat-room.fly.dev/" target="_blank">Chat (Phoenix + Fly.io)</a>
+            </span>
+          </li>
           {#each $t.other.projects as project}
             <li>
               {#if project.link}
