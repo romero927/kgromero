@@ -66,6 +66,7 @@ const translations = {
         { name: "(Python) Wordle Clone", link: "https://github.com/romero927/Wurdle" },
         { name: "(Flutter) UUID / PWD Utility", link: "https://github.com/romero927/Flutter_Generator-Utility" },
         { name: "(C++) JSON to Model Generator", link: "https://github.com/romero927/CPP_JSON-to-Model-Generator" },
+        { name: "(Phoenix / Elixir) Chat Room", link: "https://github.com/romero927/Phoenix_Chat-Room" }
         { name: "(Rust) Simple Blockchain", link: "https://github.com/romero927/rust-simple_blockchain" },
         { name: "(Scala) Game of Life", link: "https://github.com/romero927/Scala-Game-of-Life" },
         { name: "(Java / Spring Boot) Sudoku", link: "https://github.com/romero927/Java-Sudoku" }
