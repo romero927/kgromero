@@ -17,7 +17,8 @@ const translations = {
       email: 'kgromero@gmail.com',
       linkedin: 'LinkedIn',
       github: 'Github',
-      linktree: 'Linktree'
+      linktree: 'Linktree',
+      chat: 'Chat (Phoenix + Fly.io)'
     },
     experience: {
       title: 'Experience',
