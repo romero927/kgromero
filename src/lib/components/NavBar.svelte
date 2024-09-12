@@ -84,10 +84,6 @@
       <DropdownDivider />
       <DropdownItem href={ResumeDocX} target="_blank">Resume - DOCX</DropdownItem>
       <DropdownDivider />
-      <DropdownItem href={ResumeMD} target="_blank">Resume - MARKDOWN</DropdownItem>
-      <DropdownDivider />
-      <DropdownItem href={ResumeTXT} target="_blank">Resume - TXT</DropdownItem>
-      <DropdownDivider />
       <DropdownItem href={CoverLetter} target="_blank">Cover Letter</DropdownItem>
     </Dropdown>
     <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
