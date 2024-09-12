@@ -27,7 +27,6 @@
       <li>
         <b>{$t.other.recentProjects}: </b> 
         <ul class="ml-5 list-disc">
-          <li><ResumeShellWrapper />(Claude 3.5 Sonnet) Terminal</li>
           {#each $t.other.projects as project}
             <li>
               {#if project.link}

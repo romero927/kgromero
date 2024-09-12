@@ -15,6 +15,8 @@
   import Fa from "svelte-fa";
   import { faCode } from "@fortawesome/free-solid-svg-icons";
 
+  import ResumeShellWrapper from './ResumeShellWrapper.svelte';
+
   // Import your logo
   import logo from "$lib/assets/logo.webp";
 
@@ -208,7 +210,9 @@
       <div class="rounded-lg text-gray-500 dark:text-gray-400 hover:bg-gray-50 hover:text-red-500 dark:hover:bg-gray-700 dark:hover:text-white sm:ml-0 sm:pl-0 sm:pt-1 sm:pb-1 sm:mb-1 md:p-3">
         <Fa class="p-0 m-0" icon={faCode} />
       </div>
-    </NavLi>      
+    </NavLi>
+    <DropdownDivider divClass="my-1 h-px bg-gray-100 dark:bg-gray-600 lg:display-none" />
+    <ResumeShellWrapper />      
     <DropdownDivider divClass="my-1 h-px bg-gray-100 dark:bg-gray-600 lg:display-none" />
     <DarkMode btnClass="text-gray-500 sm:my-2 md:my-0 dark:text-gray-400 hover:text-red-500 hover:bg-gray-50 dark:hover:bg-gray-700 dark:hover:text-white focus:outline-none rounded-lg sm:rounded-md text-sm p-2.5" />
     <DropdownDivider divClass="my-1 h-px bg-gray-100 dark:bg-gray-600 lg:display-none" />

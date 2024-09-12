@@ -13,5 +13,5 @@
   }
 </script>
 
-<TerminalButton onClick={openModal} />
+<TerminalButton onClick={openModal}/>
 <ResumeShellModal isOpen={isModalOpen} onClose={closeModal} />
