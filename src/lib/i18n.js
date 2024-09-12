@@ -61,6 +61,8 @@ const translations = {
       title: 'Other',
       recentProjects: 'Recent Projects',
       projects: [
+        
+        { name: "(Next.js) Algo/DataStruct Visualizer", link: "https://github.com/romero927/NextJS-AlgoAndDataStructVisualizer/" },
         { name: "(C#) Reddit Listener", link: "https://github.com/romero927/RedditListener" },
         { name: "(Go) Luhn Veri Microservice", link: "https://github.com/romero927/LuhnVerifier" },
         { name: "(Python) Wordle Clone", link: "https://github.com/romero927/Wurdle" },
