@@ -74,7 +74,7 @@ const translations = {
         { name: "(Phoenix) Chat Room", link: "https://github.com/romero927/Phoenix_Chat-Room" }
       ],
       wantToLearn: "Want To Learn",
-      learningList: ".NET MAUI, Apache Kafka, RabbitMQ, Terraform, Django, Next.js, Vue, Kotlin, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB,  LLMs,  Numpy, Pandas, Redis, Jupyter, Anaconda",
+      learningList: ".NET MAUI, Apache Kafka, RabbitMQ, Terraform, Django, Vue, Kotlin, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB,  LLMs,  Numpy, Pandas, Redis, Jupyter, Anaconda",
       interests: "Interests",
       family: "My Family",
       interestList: "Spin Class, PC Gaming, Reading (SFF), Nature / National Parks, Broadway, Theme Parks, Travel",
