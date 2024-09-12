@@ -51,7 +51,7 @@ const translations = {
         "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver",
         "ETL": "Boomi, SSIS",
         "Message Queue": "Azure Service Bus",
-        "AI": "ChatGPT, Microsoft CoPilot",
+        "AI": "ChatGPT, Microsoft CoPilot, Claude",
         "Data Warehouse": "Snowflake",
         "Reporting": "SSRS, PowerBI",
         "Other": "Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++, Raspberry Pi"
