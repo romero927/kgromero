@@ -5,6 +5,8 @@
     import Fa from 'svelte-fa';
     import { faLink, faComments } from '@fortawesome/free-solid-svg-icons';
     import ResumeShellWrapper from './ResumeShellWrapper.svelte';
+    import TravelGlobe from './TravelGlobe.svelte';
+
   
     let clickOutsideModal = false;
     let size = "sm";
@@ -50,6 +52,7 @@
           {$t.other.family}
         </button>
         , {$t.other.interestList}
+        , <TravelGlobe />Travel
         <Modal title={$t.other.family} bind:open={clickOutsideModal} autoclose outsideclose {size}>
           <Carousel {images} {forward} let:Indicators let:Controls bind:index imgClass="object-contain h-full w-fit rounded-sm" />
           <Thumbnails {images} {forward} bind:index />

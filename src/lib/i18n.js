@@ -77,7 +77,7 @@ const translations = {
       learningList: ".NET MAUI, Apache Kafka, RabbitMQ, Terraform, Django, Vue, Kotlin, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB,  LLMs,  Numpy, Pandas, Redis, Jupyter, Anaconda",
       interests: "Interests",
       family: "My Family",
-      interestList: "Spin Class, PC Gaming, Reading (SFF), Nature / National Parks, Broadway, Theme Parks, Travel",
+      interestList: "Spin Class, PC Gaming, Reading (SFF), Nature / National Parks, Broadway, Theme Parks",
       favoriteBlogs: "Favorite Blogs and Tech Resources",
       blogs: [
         { name: "Hacker News (YCombinator)", href: "https://news.ycombinator.com/", attrs: { target: "_blank" } },
