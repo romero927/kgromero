@@ -40,7 +40,7 @@
   { lat: 43.0962, lng: -79.0377, label: 'Niagara Falls', lived: false },
   { lat: 43.6532, lng: -79.3832, label: 'Toronto', lived: false },
   { lat: 39.9526, lng: -75.1652, label: 'Philadelphia', lived: false },
-  { lat: 44.3876, lng: -68.2039, label: 'Bar Harbor', lived: false },
+  { lat: 44.3876, lng: -68.2039, label: 'Acadia N.P.', lived: false },
   { lat: 32.3078, lng: -64.7505, label: 'Bermuda', lived: false },
   { lat: 19.7934, lng: -70.6884, label: 'Puerto Plata', lived: false },
   { lat: 13.9094, lng: -60.9789, label: 'Saint Lucia', lived: false },
@@ -68,6 +68,9 @@
   { lat: 34.8697, lng: -111.7610, label: 'Sedona', lived: false },
   { lat: 36.9981, lng: -110.0953, label: 'Monument Valley', lived: false },
   { lat: 39.6433, lng: -106.3781, label: 'Vail', lived: false },
+  { lat: 20.7984, lng: -156.3319, label: 'Maui', lived: false },
+  { lat: 40.3428, lng: -105.6836, label: 'Rocky Mountain N.P.', lived: false },
+  { lat: 29.1275, lng: -103.2425, label: 'Big Bend N.P.', lived: false },
 ];
   
     let cleanupGlobe = () => {};
