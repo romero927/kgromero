@@ -21,13 +21,7 @@
   import logo from "$lib/assets/logo.webp";
 
   // Import your document assets
-  import ResumeDocX from "$lib/assets/kgromero_resume.docx";
-  import ResumePDF from "$lib/assets/kgromero_resume.pdf";
-  import ResumeDetailedPDF from "$lib/assets/kgromero.pdf";
-  import ResumeTXT from "$lib/assets/kgromero_resume.txt";
-  import ResumeMD from "$lib/assets/kgromero_resume.md";
   import BusinessCard from "$lib/assets/kgromero_businesscard.png";
-  import CoverLetter from "$lib/assets/kgromero_coverletter.pdf";
 
   // Import your other document assets
   import OrgStructure from "$lib/assets/OrgStructure.png";
@@ -80,11 +74,11 @@
       Resume<ChevronDownOutline class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline" />
     </NavLi>
     <Dropdown class="z-20 pl-5 pr-5 w-full">
-      <DropdownItem href={ResumePDF} target="_blank">Resume - PDF</DropdownItem>
+      <DropdownItem href="/Kyle_Romero-Resume.pdf" target="_blank">Resume - PDF</DropdownItem>
       <DropdownDivider />
-      <DropdownItem href={ResumeDocX} target="_blank">Resume - DOCX</DropdownItem>
+      <DropdownItem href="/Kyle_Romero-Resume.docx" target="_blank">Resume - DOCX</DropdownItem>
       <DropdownDivider />
-      <DropdownItem href={CoverLetter} target="_blank">Cover Letter</DropdownItem>
+      <DropdownItem href=/Kyle_Romero-Coverletter.pdf target="_blank">Cover Letter</DropdownItem>
     </Dropdown>
     <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
       Supporting Documents<ChevronDownOutline class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline" />
