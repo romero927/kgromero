@@ -166,20 +166,54 @@
 
         const pinPhi = ((90 - location.lat) * Math.PI) / 180;
         const pinTheta = ((location.lng + 180) * Math.PI) / 180;
-        pin.position.x = -(Math.sin(pinPhi) * Math.cos(pinTheta));
-        pin.position.z = Math.sin(pinPhi) * Math.sin(pinTheta);
-        pin.position.y = Math.cos(pinPhi);
+        const radius = 1 + 0.01; // Slightly above the globe surface
+        pin.position.x = -radius * Math.sin(pinPhi) * Math.cos(pinTheta);
+        pin.position.z = radius * Math.sin(pinPhi) * Math.sin(pinTheta);
+        pin.position.y = radius * Math.cos(pinPhi);
 
         pin.userData = { label: location.label };
         earth.add(pin);
         pins.push(pin);
       });
 
-      // Add country borders
-      fetch(
-        'https://unpkg.com/three-globe/example/datasets/ne_110m_admin_0_countries.geojson'
-      )
-        .then((response) => response.json())
+      // Function to create border lines
+      function createBorderLine(polygon, color = 0xffffff) {
+        const lineMaterial = new THREE.LineBasicMaterial({ color: color });
+        const lineGeometry = new THREE.BufferGeometry();
+        const points = [];
+
+        const globeRadius = 1; // Radius of the globe
+        const altitude = 0.001; // Slightly above the globe surface
+
+        polygon.forEach(([lng, lat]) => {
+          const phi = ((90 - lat) * Math.PI) / 180;
+          const theta = ((lng + 180) * Math.PI) / 180;
+
+          const x = -(globeRadius + altitude) * Math.sin(phi) * Math.cos(theta);
+          const y = (globeRadius + altitude) * Math.cos(phi);
+          const z = (globeRadius + altitude) * Math.sin(phi) * Math.sin(theta);
+
+          points.push(new THREE.Vector3(x, y, z));
+        });
+
+        // Close the loop
+        if (points.length > 0) {
+          points.push(points[0]);
+        }
+
+        lineGeometry.setFromPoints(points);
+        const line = new THREE.Line(lineGeometry, lineMaterial);
+        return line;
+      }
+
+      // Add Country Borders
+      fetch('/country_borders.json')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
         .then((data) => {
           const borderLines = new THREE.Group();
 
@@ -189,13 +223,13 @@
 
             if (type === 'Polygon') {
               coordinates.forEach((polygon) => {
-                const line = createBorderLine(polygon);
+                const line = createBorderLine(polygon, 0x414a4c); // White color
                 borderLines.add(line);
               });
             } else if (type === 'MultiPolygon') {
               coordinates.forEach((multiPolygon) => {
                 multiPolygon.forEach((polygon) => {
-                  const line = createBorderLine(polygon);
+                  const line = createBorderLine(polygon, 0x414a4c); // White color
                   borderLines.add(line);
                 });
               });
@@ -203,28 +237,46 @@
           });
 
           earth.add(borderLines);
+        })
+        .catch((error) => {
+          console.error('Error fetching country borders:', error);
         });
 
-      function createBorderLine(polygon) {
-        const lineMaterial = new THREE.LineBasicMaterial({ color: 0xffffff });
-        const lineGeometry = new THREE.BufferGeometry();
-        const points = [];
+      // Add State Borders
+      fetch('/state_borders.json')
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          return response.json();
+        })
+        .then((data) => {
+          const stateBorderLines = new THREE.Group();
 
-        polygon.forEach(([lng, lat]) => {
-          const phi = ((90 - lat) * Math.PI) / 180;
-          const theta = ((lng + 180) * Math.PI) / 180;
+          data.features.forEach((feature) => {
+            const coordinates = feature.geometry.coordinates;
+            const type = feature.geometry.type;
 
-          const x = Math.sin(phi) * Math.cos(theta);
-          const y = Math.cos(phi);
-          const z = Math.sin(phi) * Math.sin(theta);
+            if (type === 'Polygon') {
+              coordinates.forEach((polygon) => {
+                const line = createBorderLine(polygon, 0x414a4c); // Green color for states
+                stateBorderLines.add(line);
+              });
+            } else if (type === 'MultiPolygon') {
+              coordinates.forEach((multiPolygon) => {
+                multiPolygon.forEach((polygon) => {
+                  const line = createBorderLine(polygon, 0x414a4c); // Green color for states
+                  stateBorderLines.add(line);
+                });
+              });
+            }
+          });
 
-          points.push(new THREE.Vector3(-x, y, z));
+          earth.add(stateBorderLines);
+        })
+        .catch((error) => {
+          console.error('Error fetching state borders:', error);
         });
-
-        lineGeometry.setFromPoints(points);
-        const line = new THREE.Line(lineGeometry, lineMaterial);
-        return line;
-      }
 
       // Add OrbitControls
       controls = new OrbitControls(camera, renderer.domElement);
@@ -299,6 +351,7 @@
     } catch (error) {
       clearTimeout(timeoutId);
       fallbackMode = true;
+      console.error('Error creating globe:', error);
     }
   }
 
