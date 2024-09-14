@@ -60,9 +60,6 @@
       </li>
       <Hr />
       <li>
-        <div class="text-center pb-5">
-          <b>{$t.other.favoriteBlogs}</b>
-        </div>
         <Listgroup active items={$t.other.blogs} let:item class="w-48 text-center w-full bg-gray-50">
           {item.name}
         </Listgroup>

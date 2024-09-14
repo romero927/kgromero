@@ -78,12 +78,13 @@ const translations = {
       interests: "Interests",
       family: "My Family",
       interestList: "Spin Class, PC Gaming, Reading (SFF), Nature / National Parks, Broadway, Theme Parks",
-      favoriteBlogs: "Favorite Blogs and Tech Resources",
+      favoriteBlogs: "Favorite Tech Resources",
       blogs: [
         { name: "Hacker News (YCombinator)", href: "https://news.ycombinator.com/", attrs: { target: "_blank" } },
         { name: "Dev.to", href: "https://dev.to/", attrs: { target: "_blank" } },
         { name: "Pluralsight", href: "https://www.pluralsight.com", attrs: { target: "_blank" } },
-        { name: "/r/programming", href: "https://www.reddit.com/r/programming/", attrs: { target: "_blank" } }
+        { name: "/r/programming", href: "https://www.reddit.com/r/programming/", attrs: { target: "_blank" } },
+        { name: "Stack Overflow Survey '24", href: "https://survey.stackoverflow.co/2024/", attrs: { target: "_blank" } }
         
       ]
     },
