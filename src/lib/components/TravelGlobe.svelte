@@ -34,6 +34,7 @@
     { lat: 28.5383, lng: -81.3792, label: 'Orlando', lived: false },
     { lat: 35.2271, lng: -80.8431, label: 'Charlotte', lived: false },
     { lat: 36.8508, lng: -76.2859, label: 'Norfolk', lived: false },
+    { lat: 37.2707, lng: -76.7075, label: 'Colonial Williamsburg', lived: false },
     { lat: 38.9072, lng: -77.0369, label: 'Washington D.C.', lived: false },
     { lat: 42.3314, lng: -83.0458, label: 'Detroit', lived: false },
     { lat: 41.8781, lng: -87.6298, label: 'Chicago', lived: false },
