@@ -78,6 +78,8 @@
       <DropdownDivider />
       <DropdownItem href="/Kyle_Romero-Resume.docx" target="_blank">Resume - DOCX</DropdownItem>
       <DropdownDivider />
+      <DropdownItem href="/Kyle_Romero-Resume.md" target="_blank">Resume - MD</DropdownItem>
+      <DropdownDivider />
       <DropdownItem href=/Kyle_Romero-Coverletter.pdf target="_blank">Cover Letter</DropdownItem>
     </Dropdown>
     <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
