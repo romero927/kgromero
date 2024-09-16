@@ -5,7 +5,7 @@ export const locale = writable('en');
 const translations = {
   en: {
     name: 'Kyle Romero',
-    description: (years) => `Software Engineering Leader with ${years} years experience in IT based out of Jersey City, NJ.`,
+    description: (years) => `Software Engineering Leader with ${years} years experience in IT, living in Jersey City, NJ.`,
     aboutMe: {
       title: 'About Me',
       content: 'IT Leader with 10 years as a full-stack developer and 7 years in software development management, living in the NYC Metro Area. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide great user experiences. Adherent to servant leadership and continuous improvement.',
