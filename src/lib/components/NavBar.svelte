@@ -69,7 +69,6 @@
   <NavHamburger />
   <NavUl ulClass="border-none flex flex-col p-4 mt-4 bg-gray-50 dark:bg-gray-800 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:text-sm md:font-medium">
     <DropdownDivider divClass="my-1 h-px bg-gray-100 dark:bg-gray-600 lg:display-none" />
-    <NavLi href={BusinessCard} class="my-2 cursor-pointer text-black/60 dark:text-gray-400" target="_blank">Business Card</NavLi>
     <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
       Resume<ChevronDownOutline class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline" />
     </NavLi>
@@ -85,6 +84,7 @@
     <NavLi class="my-2 cursor-pointer text-black/60 dark:text-gray-400">
       Supporting Documents<ChevronDownOutline class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline" />
     </NavLi>
+    <NavLi href={BusinessCard} class="my-2 cursor-pointer text-black/60 dark:text-gray-400" target="_blank">Business Card</NavLi>
     <Dropdown class="w-60 z-20 pl-5 pr-5 w-full">
       <NavLi class="my-2 align-center cursor-pointer">
         Raymour & Flanigan<ChevronDownOutline class="w-6 h-6 ms-2 text-primary-800 dark:text-white inline" />
