@@ -42,6 +42,7 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 - Traveled to U.S. locations to roll out applications and lead Change Management (25% travel).
 - Implemented and trained organization on DevOps/CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%.
 - Onboarded and coordinated offshore development partner based out of India.
+- Nominated to Innovator Group and Quanta Leadership Academy 2.
 
 ---
 
