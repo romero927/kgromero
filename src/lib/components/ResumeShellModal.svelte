@@ -31,51 +31,37 @@
         location: "Jersey City, NJ (remote)"
       },
       {
-        startDate: "2021-04",
-        endDate: "2023-03",
-        title: "Director of Operations Technology",
-        company: "MEARS Group",
-        location: "Jersey City, NJ (remote)"
-      },
-      {
-        startDate: "2020-03",
-        endDate: "2021-04",
-        title: "Senior Manager of Operations Technology",
-        company: "MEARS Group",
-        location: "Jersey City, NJ (remote)"
-      },
-      {
         startDate: "2017-10",
-        endDate: "2020-03",
-        title: "Manager of Operations Technology",
+        endDate: "2023-03",
+        title: "Manager of Software Development",
         company: "MEARS Group",
         location: "Jersey City, NJ (remote)"
       },
       {
         startDate: "2016-04",
         endDate: "2017-10",
-        title: "Team Lead / Senior Software Developer",
+        title: "Team Lead",
         company: "Worldwide Machinery",
         location: "Houston, TX"
       },
       {
         startDate: "2013-12",
         endDate: "2016-02",
-        title: "Technical Lead (IT Developer / Engineer III)",
+        title: "Technical Lead",
         company: "HP",
         location: "Houston, TX"
       },
       {
         startDate: "2011-12",
         endDate: "2013-12",
-        title: "Senior Developer (IT Developer / Engineer II)",
+        title: "Senior Developer",
         company: "HP",
         location: "Houston, TX"
       },
       {
         startDate: "2007-07",
         endDate: "2011-12",
-        title: "Software / Systems Engineer",
+        title: "Software Developer",
         company: "X-Fab, Texas",
         location: "Lubbock, TX"
       },

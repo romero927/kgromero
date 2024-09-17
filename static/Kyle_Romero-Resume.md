@@ -32,7 +32,7 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 
 ---
 
-### Director of Operations Technology
+### Manager of Software Development
 **MEARS Group** | October 2017 - March 2023 | Jersey City, NJ (remote)
 
 - **Mission-Critical Projects:** SOX-compliant internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews across the US. This solution sped up the closing process by 75%. Electron based Field Safety Capture application with online/offline capability that digitized all safety documentation field crews must capture.
@@ -42,11 +42,10 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 - Traveled to U.S. locations to roll out applications and lead Change Management (25% travel).
 - Implemented and trained organization on DevOps/CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%.
 - Onboarded and coordinated offshore development partner based out of India.
-- Promoted Twice (Manager → Senior Manager → Director). Nominated to Innovator Group and Quanta Leadership Academy 2.
 
 ---
 
-### Team Lead / Senior Developer
+### Team Lead
 **Worldwide Machinery** | April 2016 - October 2017 | Houston, TX
 
 - Led internal software development team and reported to co-owner of company.
@@ -55,7 +54,7 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 
 ---
 
-### Technical Lead (IT Developer / Engineer III)
+### Technical Lead
 **HP Inc.** | December 2011 - February 2016 | Houston, TX
 
 - Designated as technical lead over mission-critical third level support tool with 10k+ global users.
@@ -66,7 +65,7 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 
 ---
 
-### Software / Systems Engineer
+### Software Developer
 **X-Fab Texas** | August 2007 - December 2011 | Lubbock, TX
 
 - Full-Stack developer specializing in .NET, MS SQL, C++, and Perl development (Windows and Linux).

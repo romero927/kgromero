@@ -23,13 +23,11 @@ const translations = {
       title: 'Experience',
       timeline: [
         { date: "Mar 2023 - May 2024", title: "Director of Software Development, Raymour & Flanigan" },
-        { date: "Apr 2021 - Mar 2023", title: "Director of Operations Technology, MEARS Group" },
-        { date: "Mar 2020 - Apr 2021", title: "Senior Manager of Operations Technology, MEARS Group" },
-        { date: "Oct 2017 - Mar 2020", title: "Manager of Operations Technology, MEARS Group" },
-        { date: "Apr 2016 — Oct 2017", title: "Team Lead / Senior Software Developer, Worldwide Machinery" },
-        { date: "Dec 2013 — Feb 2016", title: "Technical Lead (IT Developer / Engineer III), HP" },
-        { date: "Dec 2011 - Dec 2013", title: "Senior Developer (IT Developer / Engineer II), HP" },
-        { date: "July 2007 — Dec 2011", title: "Software / Systems Engineer, X-Fab, Texas" },
+        { date: "Oct 2017 - Mar 2023", title: "Manager of Software Development, MEARS Group" },
+        { date: "Apr 2016 — Oct 2017", title: "Team Lead, Worldwide Machinery" },
+        { date: "Dec 2013 — Feb 2016", title: "Technical Lead, HP" },
+        { date: "Dec 2011 - Dec 2013", title: "Senior Developer, HP" },
+        { date: "July 2007 — Dec 2011", title: "Software Developer, X-Fab, Texas" },
         { date: "May 2007 — July 2007", title: "Software Development Intern, X-Fab, Texas" },
         { date: "May 2005 — Dec 2009", title: "Bachelor of Science in Computer Engineering, Texas Tech University" }
       ]
