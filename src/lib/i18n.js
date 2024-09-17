@@ -9,7 +9,7 @@ const translations = {
     aboutMe: {
       title: 'About Me',
       content: 'IT Leader with 10 years as a full-stack developer and 7 years in software development management, living in the NYC Metro Area. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide great user experiences. Adherent to servant leadership and continuous improvement.',
-      openTo: 'Open To: Manager, Senior Manager, and Director roles (In-Office, Hybrid, or Remote)'
+      openTo: 'Open To: Developer, Manager, Senior Manager, Director, and VP roles (In-Office, Hybrid, or Remote)'
     },
     contactInfo: {
       title: 'Contact Info',
