@@ -59,13 +59,13 @@ const translations = {
       title: 'Other',
       recentProjects: 'Recent Projects',
       projects: [
-        
         { name: "(Next.js / React) Algo Visualizer", link: "https://github.com/romero927/NextJS-AlgoAndDataStructVisualizer/" },
         { name: "(Angular) Markdown Wiki", link: "https://github.com/romero927/Angular_Markdown-Wiki" },
         { name: "(Flutter) UUID / PWD Utility", link: "https://github.com/romero927/Flutter_Generator-Utility" },
         { name: "(Django) Wordle Clone", link: "https://github.com/romero927/Django_Wurdle" },
         { name: "(C#) Reddit Listener", link: "https://github.com/romero927/RedditListener" },
         { name: "(Go) Luhn Veri Microservice", link: "https://github.com/romero927/LuhnVerifier" },
+        { name: "(C++) AI Prompt Context Generator", link: "https://github.com/romero927/CPP_AIIFY" },
         { name: "(C++) JSON to Model Generator", link: "https://github.com/romero927/CPP_JSON-to-Model-Generator" },
         { name: "(Rust) Simple Blockchain", link: "https://github.com/romero927/rust-simple_blockchain" },
         { name: "(Java / Spring Boot) Sudoku", link: "https://github.com/romero927/Java-Sudoku" },
