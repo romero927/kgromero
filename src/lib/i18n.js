@@ -49,7 +49,7 @@ const translations = {
         "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver, Jira",
         "ETL": "Boomi, SSIS",
         "Message Queue": "Azure Service Bus",
-        "AI": "ChatGPT, Microsoft CoPilot, Claude",
+        "AI": "ChatGPT, Microsoft CoPilot, Claude, Cursor",
         "Data Warehouse": "Snowflake",
         "Reporting": "SSRS, PowerBI",
         "Other": "Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++, Raspberry Pi"
@@ -72,7 +72,7 @@ const translations = {
         { name: "(Phoenix) Chat Room", link: "https://github.com/romero927/Phoenix_Chat-Room" }
       ],
       wantToLearn: "Want To Learn",
-      learningList: ".NET MAUI, Apache Kafka, RabbitMQ, Terraform, Django, Vue, Kotlin, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB,  LLMs,  Numpy, Pandas, Redis, Jupyter, Anaconda",
+      learningList: ".NET MAUI, Apache Kafka, RabbitMQ, Redis, Terraform, Vue, Kotlin, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB, LLMs, Numpy, Pandas, Jupyter, Anaconda",
       interests: "Interests",
       family: "My Family",
       interestList: "Spin Class, PC Gaming, Reading (SFF), Nature / National Parks, Broadway, Theme Parks",
