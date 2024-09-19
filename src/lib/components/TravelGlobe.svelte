@@ -208,7 +208,7 @@
       }
 
       // Add Country Borders
-      fetch('/country_borders.json')
+      fetch('/country_borders.geojson')
         .then((response) => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
@@ -244,7 +244,7 @@
         });
 
       // Add State Borders
-      fetch('/state_borders.json')
+      fetch('/state_borders.geojson')
         .then((response) => {
           if (!response.ok) {
             throw new Error(`HTTP error! status: ${response.status}`);
