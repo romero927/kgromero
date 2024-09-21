@@ -10,7 +10,7 @@ const config = {
       assets: 'static'
     },
     prerender: {
-      default: true
+      entries: ['*']
     }
   }
   
