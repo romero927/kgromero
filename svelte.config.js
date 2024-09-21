@@ -8,6 +8,9 @@ const config = {
     adapter: adapter(),
     files: {
       assets: 'static'
+    },
+    prerender: {
+      default: true
     }
   }
   
