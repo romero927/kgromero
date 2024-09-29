@@ -38,7 +38,7 @@ const translations = {
         "General": "People Management, Project Management, Financial Management, System Architecture, Full-Stack Development, Entire SDLC, Continuous Improvement, Legacy Systems",
         "Processes": "DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrixed Organization",
         "Architectures": "N-Tier, REST API, PWA, SPA, SSR, Serverless, MVC, Event Driven, Offline-First, Distributed, Microservices (Novice), Containerized/Orchestrated (Novice)",
-        ".NET": "C#, VB.NET, ASP.NET API/MVC, Blazor, UWP, SignalR, Webforms",
+        ".NET": "C#, VB.NET, ASP.NET Core, Blazor, UWP, SignalR, Webforms",
         "JavaScript": "React, Node.js, NPM, Electron, Angular, TypeScript, SvelteKit",
         "Scripting": "Python",
         "Web": "HTML, CSS, Tailwind, Bootstrap",
