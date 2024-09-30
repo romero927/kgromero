@@ -22,7 +22,7 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 
 - **Largest Initiatives:** ERP Migration to NetSuite, WMS Migration to Korber, Omnichannel Sales Experience via E-Commerce Site, 3rd Party API Integrations (ChargeAfter, Bringg).
 - **Team Size:** 3 Managers (.NET Team, Oracle Team, Boomi Team), 4 Architects, 30 Developers (mix of internal and near/off shore resources).
-- **Primary Tech Stack:** .NET (C#, UWP, MVC API), SQL Server, Oracle DB, Azure, AWS, React, Git, PowerBI, Windows Server, Boomi, Snowflake.
+- **Primary Tech Stack:** .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, React, Git, PowerBI, Windows Server, Boomi, Snowflake.
 - Defined and executed organizational strategy, including transformational 5 year vision.
 - Negotiated, reviewed, and managed development partner (near-shore / on-shore) and vendor contracts / resources, which reduced contract costs by 40%.
 - Forecasted and controlled organizational budget and credit card, reducing costs by 25%.
@@ -37,7 +37,7 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 
 - **Mission-Critical Projects:** SOX-compliant internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews across the US. This solution sped up the closing process by 75%. Electron based Field Safety Capture application with online/offline capability that digitized all safety documentation field crews must capture.
 - **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team).
-- **Primary Tech Stack:** .NET (C#, MVC API), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / React / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).
+- **Primary Tech Stack:** .NET (C#, ASP.NET Core), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / React / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).
 - Reported directly to CIO and focused on digital transformation and continuous improvement, including participating in Six Sigma and Kaizen initiatives.
 - Traveled to U.S. locations to roll out applications and lead Change Management (25% travel).
 - Implemented and trained organization on DevOps/CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%.
