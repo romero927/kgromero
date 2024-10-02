@@ -62,7 +62,7 @@ const translations = {
         { name: "(Next.js / React) Algo Visualizer", link: "https://github.com/romero927/NextJS-AlgoAndDataStructVisualizer/" },
         { name: "(Angular) Markdown Wiki", link: "https://github.com/romero927/Angular_Markdown-Wiki" },
         { name: "(Flutter) UUID / PWD Utility", link: "https://github.com/romero927/Flutter_Generator-Utility" },
-        { name: "(Django) Wordle Clone", link: "https://github.com/romero927/Django_Wurdle" },
+        { name: "(Django) Scored Wordle", link: "https://github.com/romero927/Django_Wurdle" },
         { name: "(C#) Reddit Listener", link: "https://github.com/romero927/RedditListener" },
         { name: "(Go) Luhn Veri Microservice", link: "https://github.com/romero927/LuhnVerifier" },
         { name: "(C++) AI Prompt Context Generator", link: "https://github.com/romero927/CPP_AIIFY" },
