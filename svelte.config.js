@@ -11,10 +11,10 @@ const config = {
     },
     prerender: {
       entries: ['*']
-    },
-    serviceWorker: {
-      register: true
     }
+    // serviceWorker: {
+    //   register: true
+    // }
   }
   
 };
