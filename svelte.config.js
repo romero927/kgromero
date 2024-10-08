@@ -12,9 +12,6 @@ const config = {
     prerender: {
       entries: ['*']
     }
-    // serviceWorker: {
-    //   register: true
-    // }
   }
   
 };
