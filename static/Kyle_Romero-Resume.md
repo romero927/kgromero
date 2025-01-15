@@ -29,21 +29,20 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 - Directly led change control and release management processes, leading to 50% decrease in production defect rate.
 - Aligned cross-functional teams within internal matrixed organization and operated as SME alongside architects (direct reports) to define and executive organizational architecture strategy.
 - Coordinated with infrastructure team to monitor and control cloud and on-premises costs.
-
 ---
 
-### Manager of Software Development
+### Director of Software Development
 **MEARS Group** | October 2017 - March 2023 | Jersey City, NJ (remote)
 
 - **Mission-Critical Projects:** SOX-compliant internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews across the US. This solution sped up the closing process by 75%. Electron based Field Safety Capture application with online/offline capability that digitized all safety documentation field crews must capture.
 - **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team).
 - **Primary Tech Stack:** .NET (C#, ASP.NET Core), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / React / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).
+- **Titles:** Manager (2017 - 2020), Senior Manager (2020 - 2021), Director (2021 - 2023).
 - Reported directly to CIO and focused on digital transformation and continuous improvement, including participating in Six Sigma and Kaizen initiatives.
 - Traveled to U.S. locations to roll out applications and lead Change Management (25% travel).
 - Implemented and trained organization on DevOps/CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%.
 - Onboarded and coordinated offshore development partner based out of India.
 - Nominated to Innovator Group and Quanta Leadership Academy 2.
-
 ---
 
 ### Team Lead
@@ -72,15 +71,7 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 - Full-Stack developer specializing in .NET, MS SQL, C++, and Perl development (Windows and Linux).
 - Built 3-tier web applications and hardware monitoring solutions and introduced Subversion source control to company.
 - Deployed distributed databases and web applications in the U.S., Germany, and Malaysia.
-
----
-
-### Software Development Intern
-**Texas Tech / X-Fab Texas** | May 2007 - July 2007 | Lubbock, TX
-
-- Full-stack development internship with emphasis on C++ and .NET development.
-- Completed a statistical analysis application and a file format conversion program.
-- Successfully presented internship results to Texas Tech University internship board.
+- Interned as developer the summer before being hired full time.
 
 ---
 

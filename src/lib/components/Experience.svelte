@@ -7,7 +7,7 @@
     <b class="pt-1 pb-3">{$t.experience.title}</b>
     <Hr classHr="border w-full m-1" />
     <br />
-    <Timeline class="text-sm p-0 m-0 ml-3 mr-3">
+    <Timeline class="text-xs p-0 m-0 ml-3 mr-3">
       {#each $t.experience.timeline as item}
         <TimelineItem date={item.date} classLi="mb-5">
           <br /><b>{item.title}</b>
