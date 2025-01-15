@@ -49,7 +49,7 @@
     <FooterCopyright
       href="/"
       by="Kyle Romero"
-      year={2024}
+      year={2025}
       copyrightMessage={$t.footerMessage}
     />
   </Footer>
