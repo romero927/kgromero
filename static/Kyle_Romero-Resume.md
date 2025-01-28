@@ -1,4 +1,4 @@
-Kyle Romero
+# **Kyle Romero**
 
 Jersey City, NJ | kgromero@gmail.com | (281) 857-9006 | [LinkedIn](https://www.linkedin.com/in/kyleromero) | [kgromero.com](https://kgromero.com)
 # **SUMMARY**
