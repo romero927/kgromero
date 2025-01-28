@@ -54,7 +54,7 @@ const translations = {
         "AI": "ChatGPT, Microsoft CoPilot, Claude, Cursor",
         "Data Warehouse": "Snowflake",
         "Reporting": "SSRS, PowerBI",
-        "Other": "Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++, Raspberry Pi"
+        "Other": "Java Spring, Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++, Raspberry Pi"
       }
     },
     other: {

@@ -75,6 +75,8 @@
     <Dropdown class="z-20 pl-5 pr-5 w-full">
       <DropdownItem href="/Kyle_Romero-Resume.pdf" target="_blank">Resume - PDF</DropdownItem>
       <DropdownDivider />
+      <DropdownItem href="/Kyle_Romero-Resume.docx" target="_blank">Resume - DOCX</DropdownItem>
+      <DropdownDivider />
       <DropdownItem href="/Kyle_Romero-Resume.md" target="_blank">Resume - MD</DropdownItem>
       <DropdownDivider />
       <DropdownItem href=/Kyle_Romero-Coverletter.pdf target="_blank">Cover Letter</DropdownItem>
