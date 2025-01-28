@@ -14,7 +14,7 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 - **Initiatives:** ERP Migration to NetSuite, WMS Migration to Korber, Omnichannel Sales Experience via E-Commerce Site, 3rd Party API Integrations (ChargeAfter, Bringg).
 - **Org. Size:** 3 Managers (AppDev Team, Oracle Team, Data Integrations / API Team), 4 Architects, 30 Developers (mix of internal and near/off shore resources).
 - **Primary Tech Stack:** React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake.
-- Defined and implemented organizational strategy (1 and 5 year), processes (Agile, DevOps) and coding/review standards.
+- Defined and implemented organizational strategy (1 and 5 year), goals (OKRs), processes (Agile, DevOps), and coding/review standards.
 - Directly led change control and release management processes, leading to 50% decrease in production defect rate.
 - Introduced Microsoft CoPilot and ChatGPT AI into development process, leading to significant increase in developer output.
 - Aligned cross-functional teams within matrix IT organization and coordinated with infrastructure, product management, BI, design, and e-commerce organizations.
@@ -29,7 +29,7 @@ Software Engineering Leader with 10 years as a full-stack developer and 7 years 
 - **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team).
 - **Primary Tech Stack:** .NET (C#, ASP.NET Core), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / React / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).
 - **Titles:** Manager (2017 - 2020), Senior Manager (2020 - 2021), Director (2021 - 2023).
-- Reported directly to CIO and tasked with digital transformation and continuous improvement, including participating in Six Sigma and Kaizen initiatives.
+- Reported directly to CIO and tasked with digital transformation and continuous improvement, including participating in Six Sigma and Kaizen initiatives and development and reporting of KPIs.
 - Traveled to various U.S. locations to roll out applications and lead Change Management (25% travel).
 - Implemented and trained organization on DevOps/CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%.
 - Onboarded and coordinated offshore development partner based out of India.
