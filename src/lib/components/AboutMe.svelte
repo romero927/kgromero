@@ -29,7 +29,7 @@
   <div class="text-base flex w-full">
     <Fa icon={faChartLine} />
     <span class="leading-tight ml-2 text-gray-500 dark:text-gray-400">
-      <a href="https://pagespeed.web.dev/analysis/https-kgromero-com/uktoq90tav?form_factor=desktop" target="_blank">Site PageSpeed</a>
+      <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank">Site PageSpeed</a>
     </span>
   </div>
 </Card>
