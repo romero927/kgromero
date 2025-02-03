@@ -30,7 +30,7 @@
     </p>
   </div>
 
- <div class="container mx-auto my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2">
+ <div class="container mx-auto my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
   {#each ['AboutMe', 'ContactInfo', 'Experience', 'Skills', 'Other'] as component}
     <div class="h-full" in:fade="{{ duration: 300, delay: 300 }}">
       <svelte:component this={{ AboutMe, ContactInfo, Experience, Skills, Other }[component]} />
