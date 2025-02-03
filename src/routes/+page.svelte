@@ -16,7 +16,7 @@
   <NavBar />
 
   <div class="container mx-auto neo-bold-card my-4 text-center">
-    <h1 class="text-3xl font-bold mb-2">{$t.name}</h1>
+    <h1 class="text-3xl font-bold">{$t.name}</h1>
   </div>
 
   <div class="container mx-auto my-4 grid grid-cols-1 gap-4">
