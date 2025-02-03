@@ -9,7 +9,7 @@
   
   <div class="neo-card items-center flex flex-col max-w-full h-full bg-white " padding="xs">
     <b class="pt-1 pb-3">{$t.contactInfo.title}</b>
-  <Hr classHr="border w-full m-4" />
+  <Hr classHr="border w-full m-2" />
     <br />
     <img 
         alt="vCard (Scan on Phone to add to Contacts)" 
