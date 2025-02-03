@@ -21,7 +21,7 @@
     phone: "(281) 857-9006",
     linkedin: "in/kyleromero",
     website: "kgromero.com",
-    summary: "Software Engineering Leader with 10 years as a full-stack developer and 7 years in management, living in the NYC Metro Area. Looking for the next opportunity to lead a development organization to success, maximize business value, and provide great user experiences.",
+    summary: "Results-driven technology leader with 10+ years in software engineering and 7 years in management, specializing in digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions. Passionate about driving innovation, streamlining processes, and leading technology organizations to success.",
     experience: [
       {
         startDate: "2023-03",
@@ -197,35 +197,38 @@
 
 {#if isOpen}
   <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div transition:fade="{{ duration: 200 }}" class="z-50 fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4" on:keydown={handleKeydown}>
-    <div class="w-full max-w-3xl bg-gray-900 text-green-400 font-mono rounded-lg shadow-lg">
-      <div class="flex items-center justify-between p-4 border-b border-gray-800">
+  <div transition:fade="{{ duration: 200 }}" class="z-50 fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4" on:keydown={handleKeydown}>
+    <div class="w-full max-w-3xl bg-black bg-opacity-90 text-green-500 font-mono rounded-lg shadow-lg">
+      <div class="flex items-center justify-between p-4 border-b border-green-900">
         <div class="flex items-center">
-          <Terminal class="mr-2" size={20} />
-          <h2 class="text-xl font-bold">Kyle's Resume Bash Shell</h2>
+          <Terminal class="mr-2 text-green-500" size={20} />
+          <h2 class="text-xl font-bold text-green-500">Kyle's Resume Bash Shell</h2>
         </div>
-        <button on:click={onClose} class="text-gray-500 hover:text-gray-300 focus:outline-none">
+        <button 
+          on:click={onClose} 
+          class="text-green-500 hover:text-green-400 focus:outline-none"
+          aria-label="Close terminal">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
           </svg>
         </button>
       </div>
-      <div bind:this={outputElement} class="h-96 overflow-y-auto p-4 whitespace-pre-wrap">
+      <div bind:this={outputElement} class="h-96 overflow-y-auto p-4 whitespace-pre-wrap bg-black bg-opacity-90">
         {#each output as line}
           {#if line.type === 'command'}
-            <div class="mb-1">$ {line.content}</div>
+            <div class="mb-1 text-green-500">$ {line.content}</div>
           {:else}
-            <div class="mb-2">{line.content}</div>
+            <div class="mb-2 text-green-400">{line.content}</div>
           {/if}
         {/each}
       </div>
-      <form on:submit|preventDefault={handleSubmit} class="flex p-4 border-t border-gray-800">
-        <span class="mr-2">$</span>
+      <form on:submit|preventDefault={handleSubmit} class="flex p-4 border-t border-green-900">
+        <span class="mr-2 text-green-500">$</span>
         <input
           bind:this={inputElement}
           bind:value={input}
           type="text"
-          class="flex-grow bg-transparent focus:outline-none"
+          class="flex-grow bg-transparent text-green-500 focus:outline-none placeholder-green-700"
         />
       </form>
     </div>
@@ -233,5 +236,7 @@
 {/if}
 
 <style>
-  /* Add any additional styles here if needed */
+  input::placeholder {
+    color: rgb(21, 128, 61);
+  }
 </style>
