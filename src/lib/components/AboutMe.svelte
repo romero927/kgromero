@@ -18,8 +18,6 @@
       </div>
       <div class="text-base">{$t.aboutMe.content}</div>
     </div>
-    <br />
     <Hr classHr="border w-full m-2" />
-    <br />
     <div class="text-base "><b>{$t.aboutMe.openTo}</b></div>
 </div>
