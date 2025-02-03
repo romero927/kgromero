@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 const config = {
   content: [
     './src/**/*.{html,js,svelte,ts}',
@@ -7,24 +6,23 @@ const config = {
   theme: {
     extend: {
       colors: {
-        // flowbite-svelte
-        primary: {
-          50: '#FFF5F2',
-          100: '#FFF1EE',
-          200: '#FFE4DE',
-          300: '#FFD5CC',
-          400: '#FFBCAD',
-          500: '#FE795D',
-          600: '#EF562F',
-          700: '#EB4F27',
-          800: '#CC4522',
-          900: '#A5371B'
-        }
+        'neo-orange': '#FF9664',
+        'neo-black': '#1A1A1A',
+        'neo-cream': '#FFF5E9',
+        // Add dark mode specific colors
+        'dark-bg': '#1C1E21',      // Main background
+        'dark-card': '#25272A',    // Card background
+        'dark-hover': '#2D2F33',   // Hover states
+        'dark-border': '#393B3F'   // Border colors
+      },
+      boxShadow: {
+        'neo': '4px 4px 0 0 #1A1A1A',
+        'neo-dark': '4px 4px 0 0 #FF9664'
       }
     }
   },
   plugins: [require('flowbite/plugin')],
-  darkMode: 'class',
+  darkMode: 'class'
 };
 
 module.exports = config;

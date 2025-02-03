@@ -21,19 +21,19 @@
     ];
   </script>
   
-  <Card class="items-center mx-auto max-w-full h-full bg-gray-50" padding="xs">
+  <div class="neo-card items-center flex flex-col max-w-full h-full bg-white " padding="xs">
     <b class="pt-1 pb-3">{$t.other.title}</b>
-    <Hr classHr="border w-full m-1" />
+  <Hr classHr="border w-full m-4" />
     <br />
     <ul class="space-y-4 text-sm">
       <li>
         <b>{$t.other.recentProjects}: </b> 
         <ul class="ml-5 list-disc">
           {#each $t.other.projects as project}
-            <li>
+            <li class="block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
               {#if project.link}
                 <a href={project.link} target="_blank">
-                  <Fa icon={faLink} pull="left" class="mr-1 mt-1"/>
+                  <Fa icon={faLink} pull="left" class="mr-1 mt-1 group-hover:text-neo-orange"/>
                 </a>
               {/if}
               {project.name}
@@ -60,9 +60,16 @@
       </li>
       <Hr />
       <li>
-        <Listgroup active items={$t.other.blogs} let:item class="w-48 text-center w-full bg-gray-50">
-          {item.name}
-        </Listgroup>
-      </li>
+          <div class="flex flex-col gap-2">
+            {#each $t.other.blogs as blog}
+              <a 
+                href={blog.href} 
+                target="_blank" 
+                class="neo-button text-center text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+              >
+                {blog.name}
+              </a>
+            {/each}
+          </div>
     </ul>
-  </Card>
+  </div>
