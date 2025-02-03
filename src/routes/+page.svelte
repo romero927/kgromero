@@ -16,16 +16,21 @@
   <NavBar />
 
   <div class="container mx-auto neo-bold-card my-4 text-center">
-    <h1 class="text-2xl font-bold mb-2">{$t.name}</h1>
-    <p>
-      {$t.description}
-    </p>
+    <h1 class="text-3xl font-bold mb-2">{$t.name}</h1>
   </div>
 
- <div class="container mx-auto my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-  {#each ['AboutMe', 'ContactInfo', 'Experience', 'Skills', 'Other'] as component}
+  <div class="container mx-auto my-4 grid grid-cols-1 gap-4">
+    {#each ['AboutMe'] as component}
+      <div class="h-full" in:fade="{{ duration: 300, delay: 300 }}">
+        <svelte:component this={{ AboutMe}[component]} />
+      </div>
+    {/each}
+  </div>
+
+ <div class="container mx-auto my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+  {#each ['ContactInfo', 'Experience', 'Skills', 'Other'] as component}
     <div class="h-full" in:fade="{{ duration: 300, delay: 300 }}">
-      <svelte:component this={{ AboutMe, ContactInfo, Experience, Skills, Other }[component]} />
+      <svelte:component this={{ ContactInfo, Experience, Skills, Other }[component]} />
     </div>
   {/each}
 </div>
