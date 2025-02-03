@@ -25,7 +25,7 @@ const translations = {
         { date: "Mar 2023 - May 2024", title: "Director of Software Development, Raymour & Flanigan" },
         { date: "Apr 2021 - Mar 2023", title: "Director of Software Development, MEARS Group" },
         { date: "Mar 2020 - Apr 2021", title: "Senior Manager of Software Development, MEARS Group" },
-        { date: "Oct 2017 - Mar 2023", title: "Manager of Software Development, MEARS Group" },
+        { date: "Oct 2017 - Mar 2020", title: "Manager of Software Development, MEARS Group" },
         { date: "Apr 2016 — Oct 2017", title: "Team Lead, Worldwide Machinery" },
         { date: "Dec 2013 — Feb 2016", title: "Technical Lead, HP" },
         { date: "Dec 2011 - Dec 2013", title: "Senior Developer, HP" },

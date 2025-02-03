@@ -31,8 +31,22 @@
         location: "Jersey City, NJ (remote)"
       },
       {
-        startDate: "2017-10",
+        startDate: "2021-04",
         endDate: "2023-03",
+        title: "Director of Software Development",
+        company: "MEARS Group",
+        location: "Jersey City, NJ (remote)"
+      },
+      {
+        startDate: "2020-03",
+        endDate: "2021-04",
+        title: "Senior Manager of Software Development",
+        company: "MEARS Group",
+        location: "Jersey City, NJ (remote)"
+      },
+      {
+        startDate: "2017-10",
+        endDate: "2020-03",
         title: "Manager of Software Development",
         company: "MEARS Group",
         location: "Jersey City, NJ (remote)"
