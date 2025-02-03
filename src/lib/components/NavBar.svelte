@@ -576,7 +576,7 @@
         target="_blank"
         class="neo-button block text-center"
       >
-        <Fa icon={faCode} class="mr-2" /> View Source
+        <Fa icon={faCode} class="mr-2" />
       </a>
       <ThemeToggle />
     </div>
