@@ -8,6 +8,8 @@
   import Skills from '$lib/components/Skills.svelte';
   import Other from '$lib/components/Other.svelte';
   import { t } from '$lib/i18n';
+  import { faChartLine } from '@fortawesome/free-solid-svg-icons';
+  import Fa from 'svelte-fa';
 
   let yearsExperience;
 
@@ -36,9 +38,10 @@
   {/each}
 </div>
 
-  <footer class="container mx-auto neo-bold-card p-0">
-    <p class="text-center">
-      <b>© {new Date().getFullYear()} Kyle Romero </b> {$t.footerMessage}
-    </p>
-  </footer>
+<footer class="container mx-auto neo-bold-card p-0" >
+  <div class="text-center justify-center items-center flex w-full gap-2">
+    <b>© {new Date().getFullYear()} Kyle Romero </b> {$t.footerMessage}
+    <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" class="ml-2"><Fa icon={faChartLine} /></a>
+  </div>
+</footer>
 </div>
