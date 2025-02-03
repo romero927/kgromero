@@ -10,14 +10,6 @@
   import { t } from '$lib/i18n';
   import { faChartLine } from '@fortawesome/free-solid-svg-icons';
   import Fa from 'svelte-fa';
-
-  let yearsExperience;
-
-  onMount(() => {
-    const startDate = new Date("July 15, 2007");
-    const diff = Math.abs(new Date() - startDate);
-    yearsExperience = Math.floor(diff / 31536000000);
-  });
 </script>
 
 <div class="min-h-screen bg-neo-cream dark:bg-gray-900">
@@ -26,7 +18,7 @@
   <div class="container mx-auto neo-bold-card my-4 text-center">
     <h1 class="text-2xl font-bold mb-2">{$t.name}</h1>
     <p>
-      {$t.description(yearsExperience)}
+      {$t.description}
     </p>
   </div>
 
