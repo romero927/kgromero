@@ -389,9 +389,24 @@
   
     <!-- Mobile Menu -->
     {#if isOpen}
-  <div class="lg:hidden p-4 space-y-4">
+  <div class="lg:hidden p-4 space-y-4 pl-0">
+    <!-- Top Mobile Actions -->
+    <div class="flex space-x-3 block">
+      <a href={BusinessCard} target="_blank" class="neo-button block text-center">
+        Business Card
+      </a>
+      <a
+        href="https://github.com/romero927/kgromero"
+        target="_blank"
+        class="neo-button p-2 flex items-center justify-center"
+      >
+        <Fa icon={faCode} class="mr-2 pl-2" />
+      </a>
+      <ThemeToggle class="mr-2 pl-2"/>
+    </div>
+  </div>
     <!-- Resume Links -->
-    <div class="neo-card">
+    <div class="neo-card mb-4">
       <h3 class="font-bold mb-2">Resume</h3>
       <div class="space-y-2">
         <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline">Resume - PDF</a>
@@ -405,13 +420,13 @@
     </div>
 
     <!-- Supporting Documents -->
-    <div class="neo-card">
+    <div class="neo-card mb-4">
       <h3 class="font-bold mb-4">Supporting Documents</h3>
       <div class="space-y-6">
         <!-- Raymour & Flanigan -->
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
-            class="w-full text-left font-bold mb-2 flex items-center justify-between"
+            class="w-full text-left mb-2 flex items-center justify-between"
             on:click={() => toggleDropdown('raymourMobile')}
           >
             Raymour & Flanigan
@@ -431,7 +446,7 @@
         <!-- MEARS Group -->
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
-            class="w-full text-left font-bold mb-2 flex items-center justify-between"
+            class="w-full text-left mb-2 flex items-center justify-between"
             on:click={() => toggleDropdown('mearsMobile')}
           >
             MEARS Group
@@ -452,7 +467,7 @@
         <!-- Worldwide Machinery -->
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
-            class="w-full text-left font-bold mb-2 flex items-center justify-between"
+            class="w-full text-left mb-2 flex items-center justify-between"
             on:click={() => toggleDropdown('worldwideMobile')}
           >
             Worldwide Machinery
@@ -472,7 +487,7 @@
         <!-- HP -->
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
-            class="w-full text-left font-bold mb-2 flex items-center justify-between"
+            class="w-full text-left mb-2 flex items-center justify-between"
             on:click={() => toggleDropdown('hpMobile')}
           >
             HP
@@ -492,7 +507,7 @@
         <!-- X-Fab -->
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
-            class="w-full text-left font-bold mb-2 flex items-center justify-between"
+            class="w-full text-left mb-2 flex items-center justify-between"
             on:click={() => toggleDropdown('xfabMobile')}
           >
             X-Fab
@@ -516,7 +531,7 @@
         <!-- Texas Tech -->
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
-            class="w-full text-left font-bold mb-2 flex items-center justify-between"
+            class="w-full text-left mb-2 flex items-center justify-between"
             on:click={() => toggleDropdown('texastechMobile')}
           >
             Texas Tech
@@ -545,7 +560,7 @@
         <!-- Other -->
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
-            class="w-full text-left font-bold mb-2 flex items-center justify-between"
+            class="w-full text-left mb-2 flex items-center justify-between"
             on:click={() => toggleDropdown('otherMobile')}
           >
             Other
@@ -566,21 +581,6 @@
       </div>
     </div>
 
-    <!-- Bottom Mobile Actions -->
-    <div class="space-y-2">
-      <a href={BusinessCard} target="_blank" class="neo-button block text-center">
-        Business Card
-      </a>
-      <a
-        href="https://github.com/romero927/kgromero"
-        target="_blank"
-        class="neo-button block text-center"
-      >
-        <Fa icon={faCode} class="mr-2" />
-      </a>
-      <ThemeToggle />
-    </div>
-  </div>
 {/if}
   </nav>
   
