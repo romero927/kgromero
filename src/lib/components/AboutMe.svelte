@@ -22,7 +22,4 @@
     <Hr classHr="border w-full m-2" />
     <br />
     <div class="text-base "><b>{$t.aboutMe.openTo}</b></div>
-    <br />
-    <Hr classHr="border w-full m-2" />
-    <br />
 </div>

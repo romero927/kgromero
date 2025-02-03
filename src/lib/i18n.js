@@ -88,7 +88,7 @@ const translations = {
         
       ]
     },
-    footerMessage: ' | Site built in SvelteKit, utilizing TailwindCSS, FontAwesome, and Flowbite. Hosted on Netlify. | '
+    footerMessage: ' | Site built in SvelteKit, utilizing TailwindCSS, FontAwesome, and Flowbite | Hosted on Netlify | '
   },
   // Add other languages here as needed
 };
