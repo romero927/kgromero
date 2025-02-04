@@ -41,4 +41,4 @@
     <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" class="ml-2 mr-2"><Fa icon={faChartLine} /></a>
   </div>
 </footer>
-</div>
+</div> 
