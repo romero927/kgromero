@@ -74,7 +74,7 @@ const translations = {
         { name: "(Phoenix) Chat Room", link: "https://github.com/romero927/Phoenix_Chat-Room" }
       ],
       wantToLearn: "Want To Learn",
-      learningList: ".NET MAUI, Apache Kafka, RabbitMQ, Redis, Terraform, Vue, Kotlin, K8s, Blockchain, GraphQL, PostgreSQL, MongoDB, LLMs, Numpy, Pandas, Jupyter, Anaconda",
+      learningList: " Apache Kafka, RabbitMQ, Redis, Terraform, Vue, Kotlin, Blockchain, GraphQL, PostgreSQL, MongoDB, LLMs, Numpy, Pandas, Jupyter, Anaconda",
       interests: "Interests",
       family: "My Family",
       interestList: "Spin Class, PC Gaming, Reading (SFF), Nature / National Parks, Broadway, Theme Parks",
@@ -82,13 +82,11 @@ const translations = {
       blogs: [
         { name: "Hacker News (YCombinator)", href: "https://news.ycombinator.com/", attrs: { target: "_blank" } },
         { name: "Dev.to", href: "https://dev.to/", attrs: { target: "_blank" } },
-        { name: "Pluralsight", href: "https://www.pluralsight.com", attrs: { target: "_blank" } },
         { name: "/r/programming", href: "https://www.reddit.com/r/programming/", attrs: { target: "_blank" } },
-        { name: "Stack Overflow Survey '24", href: "https://survey.stackoverflow.co/2024/", attrs: { target: "_blank" } }
         
       ]
     },
-    footerMessage: ' | Site built in SvelteKit, utilizing TailwindCSS, FontAwesome, and Flowbite | Hosted on Netlify | '
+    footerMessage: ' | Site built in SvelteKit | '
   },
   // Add other languages here as needed
 };

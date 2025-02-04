@@ -8,7 +8,7 @@
    
     <!-- Timeline items -->
     {#each items as item}
-      <div class="relative mb-5 last:mb-0 group">
+      <div class="relative mb-3 last:mb-0 group">
         <!-- Dot -->
         <div class="absolute left-[-22px] top-[6px] h-3 w-3 rounded-full border border-neo-white 
                     dark:border-gray-500 bg-dark-card transition-transform duration-200 

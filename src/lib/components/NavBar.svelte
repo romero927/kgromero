@@ -98,7 +98,7 @@
   
   <svelte:window on:click={handleClickOutside}/>
   
-  <nav bind:this={navRef} class="container mx-auto neo-card mb-4">
+  <nav bind:this={navRef} class="mx-2 neo-card mb-4">
     <div class="flex items-center justify-between p-1">
       <!-- Logo and Terminal -->
       <div class="flex items-center space-x-4">

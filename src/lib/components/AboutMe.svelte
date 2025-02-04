@@ -6,12 +6,10 @@
 </script>
 
 <div class="neo-bold-card items-center flex flex-col max-w-full h-full bg-white " padding="xs">
-  <b class="pt-1 pb-3">{$t.aboutMe.title}</b>
-  <Hr classHr="border w-full m-2" />
     <div class="lg:flex lg:space-x-2">
       <div class="">
         <img 
-          class="w-full max-w-[200px] mx-auto rounded-full m-1 lazy-image" 
+          class="w-full max-w-[100px] mx-auto rounded-full m-1 lazy-image" 
           alt="Kyle Romero" 
           src="/images/kgromero.webp"
         />

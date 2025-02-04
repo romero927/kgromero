@@ -8,7 +8,7 @@
   </script>
   
   <div class="neo-card items-center flex flex-col max-w-full h-full bg-white " padding="xs">
-    <b class="pt-1 pb-3">{$t.contactInfo.title}</b>
+    <b class="pt-1 pb-1">{$t.contactInfo.title}</b>
   <Hr classHr="border w-full m-2" />
     <br />
     <img 
@@ -18,7 +18,7 @@
         class="w-full max-w-[200px] mx-auto block transition-all duration-200 origin-left hover:scale-105 cursor-default group" 
       />
     <br />
-  <Hr classHr="border w-full m-4" />
+  <Hr classHr="border w-full m-2" />
     <ul class="my-4 space-y-4 text-base mt-5">
       <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
         <Fa icon={faPhone} class="group-hover:text-neo-orange" />
