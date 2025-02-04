@@ -1,4 +1,3 @@
-<!-- src/lib/components/NavBar.svelte -->
 <script>
   import { Terminal } from 'lucide-svelte';
   import Fa from "svelte-fa";
