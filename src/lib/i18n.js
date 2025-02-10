@@ -48,13 +48,13 @@ const translations = {
         "DB": "SQL Server, Sqlite3, Oracle",
         "Cloud": "Azure, AWS, Netlify, DigitalOcean, Fly.io",
         "Servers": "Windows Server, Linux (Ubuntu/Debian)",
-        "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver, Jira",
+        "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, Jetbrains, SSMS, DBeaver, Jira, Trello, Lucid, Figma, Selenium, xUnit, Postman, AppDynamics, Jenkins",
         "ETL": "Boomi, SSIS",
         "Message Queue": "Azure Service Bus",
         "AI": "ChatGPT, Microsoft CoPilot, Claude, Cursor",
         "Data Warehouse": "Snowflake",
         "Reporting": "SSRS, PowerBI",
-        "Other": "Java Spring, Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++, Raspberry Pi"
+        "Other": "Java Spring, Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, C++, Raspberry Pi "
       }
     },
     other: {
@@ -66,6 +66,7 @@ const translations = {
         { name: "(Go) Luhn Veri Microservice", link: "https://github.com/romero927/LuhnVerifier" },
         { name: "(Django) Scored Wordle", link: "https://github.com/romero927/Django_Wurdle" },
         { name: "(Next.js / React) Algo Visualizer", link: "https://github.com/romero927/NextJS-AlgoAndDataStructVisualizer/" },
+        { name: "(Ruby on Rails) Desktop Simulator", link: "https://github.com/romero927/RoR_DesktopSimulator" },
         { name: "(Angular) Markdown Wiki", link: "https://github.com/romero927/Angular_Markdown-Wiki" },
         { name: "(Flutter) UUID / PWD Utility", link: "https://github.com/romero927/Flutter_Generator-Utility" },
         { name: "(C++) JSON to Model Generator", link: "https://github.com/romero927/CPP_JSON-to-Model-Generator" },
