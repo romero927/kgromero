@@ -46,7 +46,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
       </li>
       <Hr classHr="border w-full m-1" />
       <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-        <img src="/src/lib/assets/leetcode.svg" alt="LeetCode" class="w-4 h-4 group-hover:text-neo-orange" />
+        <img src="/images/leetcode.svg" alt="LeetCode" class="w-4 h-4 group-hover:text-neo-orange" />
         <a href="https://leetcode.com/u/romero927/" target="_blank">{$t.contactInfo.leetcode}</a>
       </li>
       <Hr classHr="border w-full m-1" />
