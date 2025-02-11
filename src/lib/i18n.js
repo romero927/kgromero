@@ -39,22 +39,23 @@ const translations = {
       categories: {
         "General": "People Management, Project Management, Financial Management, System Architecture, Full-Stack Development, Entire SDLC, Continuous Improvement, Legacy Systems",
         "Processes": "DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrixed Organization",
-        "Architectures": "N-Tier, REST API, PWA, SPA, SSR, Serverless, MVC, Event Driven, Offline-First, Distributed, Microservices (Novice), Containerized/Orchestrated (Novice)",
-        "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, JetBrains, SSMS, DBeaver, Jira",
+        "Architectures": "N-Tier, REST API, PWA, SPA, SSR, Serverless, MVC, Event Driven, Offline-First, Distributed, Microservices, Containerized",
+        "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver, Jira, Lucid, Trello, Postman, AppDynamics",
         "Cloud": "Azure, AWS, Netlify, DigitalOcean, Fly.io",
-        "AI": "ChatGPT, Microsoft CoPilot, Claude, Cursor",
+        "AI": "ChatGPT, Microsoft CoPilot, Claude, Cursor, Cline",
         "Servers": "Windows Server, Linux (Ubuntu/Debian)",
-        "DB": "SQL Server, Sqlite3, Oracle, PostgreSQL",
+        "DB": "SQL Server, Sqlite3, Oracle",
         "JavaScript": "React, Node.js, Electron, Angular, TypeScript, SvelteKit",
         ".NET": "C#, VB.NET, ASP.NET Core, Blazor, UWP, SignalR, Webforms",
         "Scripting": "Python",
         "Web": "HTML, CSS, Tailwind, Bootstrap",
-        "Containerization": "Docker, MicroK8s",
+        "Containerization": "Docker",
         "ETL": "Boomi, SSIS",
         "Message Queue": "Azure Service Bus",
         "Data Warehouse": "Snowflake",
         "Reporting": "SSRS, PowerBI",
-        "Other": "C++, Java Spring, Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, Raspberry Pi"
+        "Other": "C++, xUnit, Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, Raspberry Pi",
+        "Novice:": "Ruby on Rails, Phoenix, Java Spring, Flutter, Django, Go, PostgreSQL, Figma, Selenium, JetBrains, K8s, Jenkins"
       }
     },
     other: {
@@ -75,7 +76,7 @@ const translations = {
         { name: "(Phoenix) Chat Room", link: "https://github.com/romero927/Phoenix_Chat-Room" }
       ],
       wantToLearn: "Want To Learn",
-      learningList: " Apache Kafka, RabbitMQ, Redis, Terraform, Vue, Kotlin, Blockchain, GraphQL, PostgreSQL, MongoDB, LLMs, Numpy, Pandas, Jupyter, Anaconda",
+      learningList: " Apache Kafka, RabbitMQ, Redis, Terraform, Vue, Kotlin, Blockchain, GraphQL, MongoDB, Numpy, Pandas, Jupyter, Anaconda",
       interests: "Interests",
       family: "My Family",
       interestList: "Spin Class, PC Gaming, Reading (SFF), Nature / National Parks, Broadway, Theme Parks",
