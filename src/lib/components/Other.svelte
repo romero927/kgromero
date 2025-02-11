@@ -3,7 +3,7 @@
     import { t } from '$lib/i18n';
     import { lazyLoad } from '$lib/utils';
     import Fa from 'svelte-fa';
-    import { faLink, faComments,  } from '@fortawesome/free-solid-svg-icons';
+    import { faLink, faComments } from '@fortawesome/free-solid-svg-icons';
     import ResumeShellWrapper from './ResumeShellWrapper.svelte';
     import TravelGlobe from './TravelGlobe.svelte';
 
@@ -45,6 +45,7 @@
       <li>
         <b>{$t.other.wantToLearn}: </b>{$t.other.learningList}
       </li>
+      <Hr />
       <li>
         <b>{$t.other.interests}:</b>
         <button on:click={() => { clickOutsideModal = true; }}>

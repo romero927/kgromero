@@ -64,6 +64,8 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
       >
         <Fa icon={faQrcode} class="m-2" />Contact QR Code
       </button>
+      <Hr classHr="border w-full m-1" />
+      <div class="text-base "><b>{$t.aboutMe.openTo}</b></div>
     </ul>
   </div>
   

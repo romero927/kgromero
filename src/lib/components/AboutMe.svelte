@@ -9,13 +9,11 @@
     <div class="lg:flex lg:space-x-2">
       <div class="">
         <img 
-          class="w-full max-w-[100px] mx-auto rounded-full m-1 lazy-image" 
+          class="w-full max-w-[75px] mx-auto rounded-full m-1 lazy-image" 
           alt="Kyle Romero" 
           src="/images/kgromero.webp"
         />
       </div>
       <div class="text-base">{$t.aboutMe.content}</div>
     </div>
-    <Hr classHr="border w-full m-2" />
-    <div class="text-base "><b>{$t.aboutMe.openTo}</b></div>
 </div>
