@@ -4,7 +4,7 @@
   import { lazyLoad } from '$lib/utils';
   import Fa from 'svelte-fa';
   import { faPhone, faEnvelope, faLink, faChartLine, faTerminal, faWalkieTalkie, faComments, faQrcode } from '@fortawesome/free-solid-svg-icons';
-  import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   
   let showQRModal = false;
   
@@ -43,6 +43,11 @@
       <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
         <Fa icon={faGithub} class="group-hover:text-neo-orange" />
         <a href="https://github.com/romero927" target="_blank">{$t.contactInfo.github}</a>
+      </li>
+      <Hr classHr="border w-full m-1" />
+      <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
+        <img src="/src/lib/assets/leetcode.svg" alt="LeetCode" class="w-4 h-4 group-hover:text-neo-orange" />
+        <a href="https://leetcode.com/u/romero927/" target="_blank">{$t.contactInfo.leetcode}</a>
       </li>
       <Hr classHr="border w-full m-1" />
       <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">

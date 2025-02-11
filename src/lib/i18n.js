@@ -13,10 +13,11 @@ const translations = {
     },
     contactInfo: {
       title: 'Contact Info',
-      phone: '(281) 857-9006',
+      phone: '+1 (281) 857-9006',
       email: 'kgromero@gmail.com',
-      linkedin: 'LinkedIn',
-      github: 'Github',
+      linkedin: 'https://www.linkedin.com/in/kyleromero/',
+      github: 'https://github.com/romero927',
+      leetcode: 'https://leetcode.com/u/romero927/',
       linktree: 'Linktree'
     },
     experience: {
