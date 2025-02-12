@@ -53,7 +53,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
       </li>
       <Hr classHr="border w-full m-1" />
       <button 
-        class="neo-button p-2 flex items-center justify-center" 
+        class="neo-button p-2 flex items-center w-full justify-center" 
         on:click={() => showQRModal = true}
         aria-label="Show QR Code"
       >
