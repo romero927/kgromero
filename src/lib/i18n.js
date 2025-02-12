@@ -39,7 +39,7 @@ const translations = {
       title: 'Skills',
       categories: {
         "General": "People Management, Project Management, Financial Management, System Architecture, Full-Stack Development, Entire SDLC, Continuous Improvement, Legacy Systems",
-        "Processes": "DevOps, CICD, Agile Scrum, Kanban, GitFlow, Matrixed Organization",
+        "Processes": "DevOps, CICD, Agile Scrum, Waterfall, Kanban, GitFlow, Matrixed Organization",
         "Architectures": "N-Tier, REST API, PWA, SPA, SSR, Serverless, MVC, Event Driven, Offline-First, Distributed, Microservices, Containerized",
         "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver, Jira, Lucid, Trello, Postman, AppDynamics",
         "Cloud": "Azure, AWS, Netlify, DigitalOcean, Fly.io",
@@ -56,7 +56,7 @@ const translations = {
         "Data Warehouse": "Snowflake",
         "Reporting": "SSRS, PowerBI",
         "Other": "C++, xUnit, Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, Raspberry Pi",
-        "Novice:": "Ruby on Rails, Phoenix, Java Spring, Flutter, Django, Go, PostgreSQL, Figma, Selenium, JetBrains, K8s, Jenkins"
+        "Novice": "Ruby on Rails, Phoenix, Java Spring, Flutter, Django, Go, PostgreSQL, Figma, Selenium, JetBrains, K8s, Jenkins"
       }
     },
     other: {
