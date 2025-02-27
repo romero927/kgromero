@@ -91,7 +91,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
         src="/images/QR.webp"
         class="w-full max-w-[200px] mx-auto"
       />
-      <h3 class="text-lg font-bold mb-4 text-center">Scan QR to Add Contact to Phone</h3>
+      <h3 class="text-lg font-bold mb-4 text-center">Scan (or long press) QR to Add Contact to Phone</h3>
     </div>
   </div>
   {/if}
