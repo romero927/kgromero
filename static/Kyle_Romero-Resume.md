@@ -18,7 +18,7 @@ Passionate about driving innovation, streamlining processes, and leading technol
 - Directly led change control and release management processes, leading to 50% decrease in production defect rate.
 - Introduced Microsoft CoPilot and ChatGPT AI into development process, leading to significant increase in developer output.
 - Aligned cross-functional teams within matrixed IT organization and coordinated with infrastructure, product management, BI, design, and e-commerce organizations.
-- Negotiated and managed development partner (near-shore / on-shore), vendor contracts/resources, and organizational budget, which resulted in YoY costg reduction of 40%.
+- Negotiated and managed development partner (near-shore / on-shore), vendor contracts/resources, and organizational budget, which resulted in YoY cost reduction of 40%.
 
 ### Director of Software Development
 **MEARS Group, A Quanta Services Company (Energy Industry | 2.5k Employees) October 2017 - March 2023,Jersey City, NJ (remote)**
