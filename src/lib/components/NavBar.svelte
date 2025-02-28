@@ -191,9 +191,9 @@
                         <hr/>
                         <a href={Landscape} target="_blank" class="block hover:underline">IT Landscape</a>
                         <hr/>
-                        <a href={Process}} target="_blank" class="block hover:underline">Development Process</a>
+                        <a href={Process} target="_blank" class="block hover:underline">Development Process</a>
                         <hr/>
-                        <a href={Electron}} target="_blank" class="block hover:underline">Electron Architecture</a>
+                        <a href={Electron} target="_blank" class="block hover:underline">Electron Architecture</a>
                       </div>
                     {/if}
                   </div>
