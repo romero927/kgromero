@@ -1,0 +1,85 @@
+# Cline Rules for Kyle Romero's Personal Website
+
+## Project Patterns
+
+### File Organization
+- Component files use PascalCase naming (e.g., `AboutMe.svelte`, `NavBar.svelte`)
+- Utility files use camelCase naming (e.g., `store.js`, `utils.js`)
+- Assets are organized by type in the `src/lib/assets/` directory
+- Static files for direct serving are in the `static/` directory
+
+### Coding Style
+- Svelte components follow standard Svelte syntax and structure
+- JavaScript follows modern ES6+ syntax
+- Tailwind CSS is used for styling with utility classes
+
+### Component Structure
+- Components are modular and focused on specific functionality
+- Larger page sections are composed of smaller components
+- State management is handled through Svelte stores
+
+## Workflow Preferences
+
+### Development Process
+- Use `npm run dev` to start the development server
+- Changes should be tested across different screen sizes
+- Consider both light and dark mode when making UI changes
+
+### Documentation
+- Update memory bank files when making significant changes
+- Document complex components or functionality
+- Keep track of progress in the progress.md file
+
+## Critical Implementation Paths
+
+### Theme Switching
+- Theme toggle functionality is implemented in the ThemeToggle component
+- Theme state is likely stored in a Svelte store
+- Both light and dark themes should be tested when making UI changes
+
+### Resume Display
+- Resume is available in multiple formats (PDF, Markdown, etc.)
+- ResumeShellModal and ResumeShellWrapper components handle the terminal-style display
+
+### Navigation
+- NavBar component handles site navigation
+- SvelteKit routing is used for page navigation
+
+## Known Challenges
+
+### Performance
+- Three.js components (like TravelGlobe) may have performance implications
+- Large assets should be optimized for web delivery
+- Consider lazy loading for heavy components
+
+### Responsive Design
+- The site must work well on devices of all sizes
+- Test changes on mobile, tablet, and desktop viewports
+
+## Project Evolution
+
+### Version History
+- Initial memory bank setup: March 19, 2025
+
+### Future Directions
+- Consider adding automated testing
+- Evaluate performance optimizations
+- Explore adding a blog or more detailed project showcase
+
+## Tool Usage Patterns
+
+### Preferred Tools
+- Svelte and SvelteKit for component development
+- Tailwind CSS for styling
+- Vite for building and development
+- NPM for package management
+
+### Deployment
+- Deployment process not yet documented
+- Likely uses a static site hosting platform
+
+## User Preferences
+- Professional but personable presentation style
+- Clean, modern UI design
+- Terminal-inspired elements for technical appeal
+- Responsive design for all device sizes
