@@ -11,8 +11,8 @@ Passionate about driving innovation, streamlining processes, and leading technol
 
 ### Contract Consultant
 **Dexian (Staffing, IT Services, and Workforce Solutions | 12k Employees) March 2025 - Present, Jersey City, NJ (remote)**
-- **Client:** Deloitte Consulting | **Contract: 3/24/2025** - Current | **Title:** Technical Lead
-- **Description:** Lead engineering strategy, coach team members, and accountable for performance, quality, and delivery within a development team at a major Energy Industry company.
+- **Client:** Deloitte Consulting | **Contract:** 3/24/2025- 6/28/2025  | **Title:** Technical Lead
+- **Description:** Lead engineering strategy, coach team members, and accountable for performance, quality, and delivery within a development team at a major Energy Industry company headquartered in Chicago.
 
 ### Director of Software Development
 **Raymour & Flanigan (Retail Industry | 5k Employees) March 2023 - May 2024,Jersey City, NJ (remote)**
