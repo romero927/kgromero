@@ -127,11 +127,11 @@
               <div class="neo-card space-y-2 bg-white">
                 <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline p-2">Resume - PDF</a>
                 <hr/>
-                <!-- <a href="/Kyle_Romero-Resume.docx" target="_blank" class="block hover:underline p-2">Resume - DOCX</a>
+                <a href="/Kyle_Romero-Resume.docx" target="_blank" class="block hover:underline p-2">Resume - DOCX</a>
                 <hr/>
                 <a href="/Kyle_Romero-Resume.md" target="_blank" class="block hover:underline p-2">Resume - MD</a>
                 <hr/>
-                <a href="/Kyle_Romero-Coverletter.pdf" target="_blank" class="block hover:underline p-2">Cover Letter</a> -->
+                <a href="/Kyle_Romero-Coverletter.pdf" target="_blank" class="block hover:underline p-2">Cover Letter</a>
               </div>
             </div>
           {/if}

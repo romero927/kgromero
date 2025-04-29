@@ -3,43 +3,41 @@
 Jersey City,NJ (NYC Metro Area) | kgromero@gmail.com | +1 (281) 857-9006 | https://www.linkedin.com/in/kyleromero/ | https://kgromero.com
 
 ## SUMMARY
-Results-driven technology leader with 10+ years in software engineering and 7 years in management, specializing in digital transformation, software architecture, DevOps, and
-Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.
-Passionate about driving innovation, streamlining processes, and leading technology organizations to success.
+Hands-on and results-driven technology leader with 17+ years in software engineering, specializing in full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions. Passionate about producing high-quality technical implementations, driving innovation, streamlining processes, and leading software development organizations to success.
 
 ## EXPERIENCE
 
 ### Contract Consultant
 **Dexian (Staffing, IT Services, and Workforce Solutions | 12k Employees) March 2025 - Present, Jersey City, NJ (remote)**
 - **Client:** Deloitte Consulting | **Contract:** 3/24/2025- 6/28/2025  | **Title:** Technical Lead
-- **Description:** Lead engineering strategy, coach team members, and accountable for performance, quality, and delivery within a development team at a major Energy Industry company headquartered in Chicago.
+- **Description:** Short-term contract with focus on Node.js and .NET API development and integration with Angular UI, Azure Functions and App Services management, process improvement, and
+documentation for a major customer-facing product at a major Energy Industry company headquartered in Chicago.
 
 ### Director of Software Development
 **Raymour & Flanigan (Retail Industry | 5k Employees) March 2023 - May 2024,Jersey City, NJ (remote)**
-- **Initiatives:** ERP Migration to NetSuite, WMS Migration to Korber, Omnichannel Sales Experience via E-Commerce Site, 3rd Party API Integrations (ChargeAfter, Bringg).
-- **Org. Size:** 3 Managers (AppDev Team, Oracle Team, Data Integrations / API Team), 4 Architects, 30 Developers (mix of internal and near/off shore resources).
-- **Primary Tech Stack:** React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake.
-- Defined and implemented organizational strategy (1 and 5 year), goals (OKRs), processes (Agile, DevOps), 24/7 support strategy, and coding/review standards.
-- Directly led change control and release management processes, leading to 50% decrease in production defect rate.
-- Introduced Microsoft CoPilot and ChatGPT AI into development process, leading to significant increase in developer output.
-- Aligned cross-functional teams within matrixed IT organization and coordinated with infrastructure, product management, BI, design, and e-commerce organizations.
-- Negotiated and managed development partner (near-shore / on-shore), vendor contracts/resources, and organizational budget, which resulted in YoY cost reduction of 40%.
+ - **Role:** Led Software Development Organization. Responsible for architectural strategy + decisions and designed / implemented modern UI, API, and Data Integration architecture.
+ - **Org. Size:** 3 Managers (AppDev Team, Oracle Team, Data Integrations / API Team), 4 Architects, 30 Developers (internal, near, and off shore resources. Direct Reports = Managers / Architects).
+ - **Primary Tech Stack:** React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake.
+ - **Initiatives:** ERP Migration to NetSuite, WMS Migration to Korber, Omnichannel Sales Experience via E-Commerce Site, 3rd Party API Integrations (ChargeAfter, Bringg).
+ - Directly led change control and release management processes, leading to 50% decrease in production defect rate.
+ - Defined and implemented organizational strategy (1 and 5 year), goals (OKRs), processes (Agile, DevOps), 24/7 support strategy, and coding/review standards.
+ - Introduced Microsoft CoPilot and ChatGPT AI into development process, leading to significant increase in developer output.
+ - Aligned cross-functional teams within matrixed IT organization and coordinated with infrastructure, product management, BI, design, and e-commerce organizations.
+ - Negotiated and managed development partner (near-shore / on-shore), vendor contracts/resources, and organizational budget, which resulted in YoY cost reduction of 40%.
 
 ### Director of Software Development
 **MEARS Group, A Quanta Services Company (Energy Industry | 2.5k Employees) October 2017 - March 2023,Jersey City, NJ (remote)**
-Projects: Mission Critical SOX-compliant and high-availability internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews
-across the US and which sped up the closing process by 75%. Electron based Field Safety Capture application with online/offline capability that digitized all safety
-documentation field crews must capture.
-- **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team).
-    **Primary Tech Stack:** .NET (C#, ASP.NET Core), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / React / Node / Electron), Git, PowerBI, PowerAutomate, Java
-    (Spring Boot).
-- **Titles:** Manager (2017 - 2020), Senior Manager (2020 - 2021), Director (2021 - 2023).
-    Reported directly to CIO and tasked with digital transformation and continuous improvement, including participating in Six Sigma and Kaizen initiatives and development and
-    reporting of KPIs.
-- Implemented and trained organization on DevOps, CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%.
-- Traveled to various U.S. locations to roll out applications and lead Change Management (25% travel).
-- Onboarded and coordinated offshore development partner based out of India.
-- Nominated and invited to Innovator Group and Quanta Leadership Academy 2.
+ - **Role:** Managed Software Development Team. Acted as Hands-on Technical Lead, responsible for Requirements Discovery (in conjunction with PM), Architecture, Design, Development (Full-
+Stack Coding), QA, DevOps, and Production Support. Also administered various systems such as On-Prem Windows Servers, Azure DevOps, and Azure subscription.
+ - **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team, all direct reports to me).
+ - **Primary Tech Stack:** .NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).
+ - **Projects:** Mission Critical SOX-compliant and high-availability internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews across the US and which sped up the closing process by 75%. Electron based Field Safety Capture application with online/offline capability that digitized all safety documentation field crews must capture.
+ - **Titles:** Manager (2017 - 2020), Senior Manager (2020 - 2021), Director (2021 - 2023).
+ - Traveled to various U.S. locations to roll out applications and lead Change Management (25% travel).
+ - Reported directly to CIO and tasked with digital transformation and continuous improvement, including participating in Six Sigma and Kaizen initiatives and development and reporting of KPIs.
+ - Implemented and trained organization on DevOps, CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%.
+ - Onboarded and coordinated offshore development partner based out of India.
+ - Nominated and invited to Innovator Group and Quanta Leadership Academy 2.
 
 ### Team Lead
 **Worldwide Machinery (Construction Industry | 60 Employees) April 2016 - October 2017,Houston, TX**
