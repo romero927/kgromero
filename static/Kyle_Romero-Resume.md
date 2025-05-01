@@ -9,9 +9,9 @@ Hands-on and results-driven technology leader with 17+ years in software enginee
 
 ### Contract Consultant
 **Dexian (Staffing, IT Services, and Workforce Solutions | 12k Employees) March 2025 - Present, Jersey City, NJ (remote)**
-- **Client:** Deloitte Consulting | **Contract:** 3/24/2025- 6/28/2025  | **Title:** Technical Lead
-- **Description:** Short-term contract with focus on Node.js and .NET API development and integration with Angular UI, Azure Functions and App Services management, process improvement, and
-documentation for a major customer-facing product at a major Energy Industry company headquartered in Chicago.
+ - **Client:** Deloitte Consulting | Contract: 3/24/2025 - 6/28/2025 | Title: Technical Lead (Back End).
+ - **Role:** Short-term contract with focus on API (.NET + Node Express) development + integration with Angular F.E., Azure Functions / App Services management, and Confluence documentation.
+ - **Project:** A mission-critical customer-facing product with 1000's of daily users at a major Energy Industry company headquartered in Chicago.
 
 ### Director of Software Development
 **Raymour & Flanigan (Retail Industry | 5k Employees) March 2023 - May 2024,Jersey City, NJ (remote)**
@@ -27,17 +27,18 @@ documentation for a major customer-facing product at a major Energy Industry com
 
 ### Director of Software Development
 **MEARS Group, A Quanta Services Company (Energy Industry | 2.5k Employees) October 2017 - March 2023,Jersey City, NJ (remote)**
- - **Role:** Managed Software Development Team. Acted as Hands-on Technical Lead, responsible for Requirements Discovery (in conjunction with PM), Architecture, Design, Development (Full-
-Stack Coding), QA, DevOps, and Production Support. Also administered various systems such as On-Prem Windows Servers, Azure DevOps, and Azure subscription.
- - **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team, all direct reports to me).
+ - **Role:** Managed Software Development Team. Acted as Hands-on Technical Lead, performing Requirements Discovery (in conjunction with PM), Architecture, Design, Development (Full-Stack
+Coding), QA, DevOps, and Production Support. Also administered various systems such as On-Prem Windows Servers, Azure DevOps, and Azure subscription.
+ - **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team, Direct Reports = FTE Developers and PM).
  - **Primary Tech Stack:** .NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).
- - **Projects:** Mission Critical SOX-compliant and high-availability internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews across the US and which sped up the closing process by 75%. Electron based Field Safety Capture application with online/offline capability that digitized all safety documentation field crews must capture.
+ - **Projects:** Mission Critical SOX-compliant and high-availability internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews across the U.S.
+and which sped up the closing process by 75%. Electron based Field Safety Capture application with online/offline capability that digitized all safety documentation field crews must capture.
  - **Titles:** Manager (2017 - 2020), Senior Manager (2020 - 2021), Director (2021 - 2023).
  - Traveled to various U.S. locations to roll out applications and lead Change Management (25% travel).
  - Reported directly to CIO and tasked with digital transformation and continuous improvement, including participating in Six Sigma and Kaizen initiatives and development and reporting of KPIs.
  - Implemented and trained organization on DevOps, CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%.
  - Onboarded and coordinated offshore development partner based out of India.
- - Nominated and invited to Innovator Group and Quanta Leadership Academy 2.
+ - Nominated and invited to Innovator Group and Quanta Leadership Academy 2, and asked to manage intern selection and project.
 
 ### Team Lead
 **Worldwide Machinery (Construction Industry | 60 Employees) April 2016 - October 2017,Houston, TX**
