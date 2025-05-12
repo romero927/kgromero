@@ -1,72 +1,82 @@
 # Kyle Romero
+Jersey City, NJ (NYC Metro Area)  
+kgromero@gmail.com • (281) 857-9006 • [LinkedIn](https://www.linkedin.com/in/kyleromero) • [kgromero.com](https://kgromero.com)
 
-Jersey City,NJ (NYC Metro Area) | kgromero@gmail.com | +1 (281) 857-9006 | https://www.linkedin.com/in/kyleromero/ | https://kgromero.com
-
-## SUMMARY
+## Summary
 Hands-on and results-driven technology leader with 17+ years in software engineering, specializing in full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions. Passionate about producing high-quality technical implementations, driving innovation, streamlining processes, and leading software development organizations to success.
 
-## EXPERIENCE
+## Experience
+### Contract Consultant — Dexian  
+**Technical Lead (Back End)** | March 2025 – Present | Jersey City, NJ (Remote)  
+- Client: Deloitte Consulting  
+- Short-term contract with focus on API (.NET deployed to Azure Functions + Node Express containerized in App Services) development and integration with Angular front‑end, along with Confluence documentation.  
+- Project: Mission‑critical customer‑facing product with thousands of daily users at a major energy company headquartered in Chicago.  
 
-### Contract Consultant
-**Dexian (Staffing, IT Services, and Workforce Solutions | 12k Employees) March 2025 - Present, Jersey City, NJ (remote)**
- - **Client:** Deloitte Consulting | Contract: 3/24/2025 - 6/28/2025 | Title: Technical Lead (Back End).
- - **Role:** Short-term contract with focus on API (.NET + Node Express) development + integration with Angular F.E., Azure Functions / App Services management, and Confluence documentation.
- - **Project:** A mission-critical customer-facing product with 1000's of daily users at a major Energy Industry company headquartered in Chicago.
+### Director of Software Development — Raymour & Flanigan  
+March 2023 – May 2024 | Jersey City, NJ (Remote)  
+- Led the Software Development organization and oversaw architectural strategy and decisions; designed and implemented modern UI, API, and data‑integration architecture.  
+- Organization size: 3 Managers (Application Development, Oracle, Data Integrations/API), 4 Architects, 30 Developers (internal, near‑ and off‑shore).  
+- Tech stack: React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Git (Azure DevOps), Boomi, Snowflake.  
+- Key initiatives: ERP migration to NetSuite, WMS migration to Körber, omnichannel e‑commerce experience, 3rd‑party API integrations (ChargeAfter, Bringg).  
+- Led change control and release management, cutting production defects by 50 %.  
+- Defined and implemented organizational strategy (1‑ and 5‑year), OKRs, Agile/DevOps processes, 24 × 7 support, and coding standards.  
+- Introduced Microsoft Copilot and ChatGPT into development workflow, significantly increasing developer output.  
+- Negotiated vendor contracts and managed budget, reducing year‑over‑year costs by 40 %.  
 
-### Director of Software Development
-**Raymour & Flanigan (Retail Industry | 5k Employees) March 2023 - May 2024,Jersey City, NJ (remote)**
- - **Role:** Led Software Development Organization. Responsible for architectural strategy + decisions and designed / implemented modern UI, API, and Data Integration architecture.
- - **Org. Size:** 3 Managers (AppDev Team, Oracle Team, Data Integrations / API Team), 4 Architects, 30 Developers (internal, near, and off shore resources. Direct Reports = Managers / Architects).
- - **Primary Tech Stack:** React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake.
- - **Initiatives:** ERP Migration to NetSuite, WMS Migration to Korber, Omnichannel Sales Experience via E-Commerce Site, 3rd Party API Integrations (ChargeAfter, Bringg).
- - Directly led change control and release management processes, leading to 50% decrease in production defect rate.
- - Defined and implemented organizational strategy (1 and 5 year), goals (OKRs), processes (Agile, DevOps), 24/7 support strategy, and coding/review standards.
- - Introduced Microsoft CoPilot and ChatGPT AI into development process, leading to significant increase in developer output.
- - Aligned cross-functional teams within matrixed IT organization and coordinated with infrastructure, product management, BI, design, and e-commerce organizations.
- - Negotiated and managed development partner (near-shore / on-shore), vendor contracts/resources, and organizational budget, which resulted in YoY cost reduction of 40%.
+### Director of Software Development — MEARS Group / Quanta Services  
+October 2017 – March 2023 | Jersey City, NJ (Remote)  
+- Managed software development team as hands‑on technical lead across requirements discovery, architecture, development, QA, DevOps, and production support.  
+- Team size: 4 Developers, 1 PM, 7 Offshore.  
+- Tech stack: .NET (C#, ASP.NET Core, Blazor), SQL Server, SQLite, Azure, Windows Server, Angular, Node/Electron, Git, Power BI, Power Automate, Java (Spring Boot).  
+- Delivered SOX‑compliant revenue/time/equipment field‑capture solution used by 700+ field crews, accelerating month‑end close by 75 %.  
+- Built offline‑capable Electron field‑safety application digitizing safety documentation.  
+- Progressed through Manager → Senior Manager → Director; reported to CIO.  
+- Implemented DevOps, CI/CD, Agile Scrum, Kanban, and GitFlow, improving delivery speed by 50 %.  
+- Coordinated offshore development partner and led change‑management rollouts across U.S. sites.  
 
-### Director of Software Development
-**MEARS Group, A Quanta Services Company (Energy Industry | 2.5k Employees) October 2017 - March 2023,Jersey City, NJ (remote)**
- - **Role:** Managed Software Development Team. Acted as Hands-on Technical Lead, performing Requirements Discovery (in conjunction with PM), Architecture, Design, Development (Full-Stack
-Coding), QA, DevOps, and Production Support. Also administered various systems such as On-Prem Windows Servers, Azure DevOps, and Azure subscription.
- - **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team, Direct Reports = FTE Developers and PM).
- - **Primary Tech Stack:** .NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).
- - **Projects:** Mission Critical SOX-compliant and high-availability internally developed Revenue/Time/Equipment Field Capture solution, used by over 700 field construction crews across the U.S.
-and which sped up the closing process by 75%. Electron based Field Safety Capture application with online/offline capability that digitized all safety documentation field crews must capture.
- - **Titles:** Manager (2017 - 2020), Senior Manager (2020 - 2021), Director (2021 - 2023).
- - Traveled to various U.S. locations to roll out applications and lead Change Management (25% travel).
- - Reported directly to CIO and tasked with digital transformation and continuous improvement, including participating in Six Sigma and Kaizen initiatives and development and reporting of KPIs.
- - Implemented and trained organization on DevOps, CICD, Agile Scrum, Kanban, GitFlow, and QA processes, which increased delivery speed by 50%.
- - Onboarded and coordinated offshore development partner based out of India.
- - Nominated and invited to Innovator Group and Quanta Leadership Academy 2, and asked to manage intern selection and project.
+### Team Lead — Worldwide Machinery  
+April 2016 – October 2017 | Houston, TX  
+- Led 3 internal and 5 contract developers; reported to company co‑owner.  
+- Doubled developer headcount through recruitment and hiring.  
+- Led full‑stack development of asset‑management software overseeing $300 M in heavy‑machinery assets.  
+- Built mobile‑first SPA providing real‑time telemetry on machinery assets.  
 
-### Team Lead
-**Worldwide Machinery (Construction Industry | 60 Employees) April 2016 - October 2017,Houston, TX**
-- Led internal software development team (3 internal and 5 contract developers) and reported to co-owner of company.
-- Doubled developer headcount through recruitment and hiring to meet organizational needs as company grew.
-    Full-stack development using .NET, MS-SQL, and React which delivered mission-critical asset management software (desktop, mobile, and web) that managed $300mil worth of
-    heavy machinery assets.
-- Built mobile-first SPA to enable employees to utilize real-time telemetry on machinery assets.
+### Technical Lead — HP Inc.  
+December 2011 – February 2016 | Houston, TX  
+- Technical lead for mission‑critical third‑level support tool with 10 k+ global users.  
+- Full‑stack development of .NET / MS‑SQL / JavaScript web applications; exposure to Hadoop, Vertica, Power BI, Tableau.  
+- Managed system split during HP’s corporate separation into HP Inc. and HPE.  
 
-### Technical Lead
-**HP Inc. (Consumer Electronics Industry | 50k Employees) December 2011 - February 2016,Houston, TX**
-- Designated as technical lead over mission-critical third level support tool with 10k+ global users.
-- Full-stack development delivering 3-tier web applications using .NET, MS SQL, and JavaScript.
-- Gained exposure to big data (Hadoop / HP Vertica) and BI/analytics (PowerBI / Tableau).
-- Led logical split and cloning of system during HPʼs split into HPE and HP Inc..
-- **Titles:** Senior Developer (2011 - 2013), Technical Lead (2013 - 2016).
+### Software Developer — X‑Fab Texas  
+August 2007 – December 2011 | Lubbock, TX  
+- Full‑stack development in .NET, MS SQL, C++, and Perl on Windows and Linux.  
+- Introduced Subversion source control; built responsive 3‑tier web apps.  
+- Deployed plasma‑trace monitoring modules and custom reporting software across U.S., Germany, and Malaysia.  
+- Interned summer 2007 before full‑time hire.  
 
-### Software Developer
-**X-Fab Texas (Semiconductors Industry | 500 Employees) August 2007 - December 2011,Lubbock, TX**
-- Full-Stack developer specializing in .NET, MS SQL, C++, and Perl development (Windows and Linux).
-- Built responsive 3-tier web applications (utilizing HTML, CSS, and JavaScript) and introduced Subversion source control to company.
-- Deployed over 50 plasma trace machine monitoring Perle Modules that integrated with custom built monitoring and reporting software.
-- Deployed distributed databases and web applications in the U.S., Germany, and Malaysia.
-- Interned as developer the summer before being hired full time.
+## Skills
+- **General:** People/Project/Financial Management, System Architecture, Full‑Stack Development, Entire SDLC, Continuous Improvement, Legacy Systems  
+- **Processes:** DevOps, CI/CD, Agile Scrum, Waterfall, Kanban, GitFlow, Matrixed Organizations  
+- **Architectures:** N‑Tier, RESTful API, PWA, SPA, SSR, MVC, Serverless, Offline‑First, Event‑Driven, Distributed, Microservices, Containerized, SOA  
+- **Tooling:** Azure DevOps, GitHub, Visual Studio/VS Code, Postman, SSMS, DBeaver, Jira, Confluence, Lucid, Trello  
+- **Cloud:** Azure, AWS, Netlify, DigitalOcean, Fly.io  
+- **AI:** ChatGPT, Microsoft Copilot, Claude, DeepSeek, Ollama, Cursor, Cline, n8n, OpenRouter  
+- **Servers/OS:** Windows Server, Linux (Ubuntu/Debian)  
+- **Databases:** SQL Server, SQLite, Oracle  
+- **JavaScript:** React, Angular, SvelteKit, Node.js, Express, Electron, TypeScript, JWT  
+- **.NET:** C#, VB.NET, ASP.NET Core, Blazor, UWP, SignalR, WebForms  
+- **Scripting:** Python  
+- **Source Control:** Git, Subversion  
+- **QA/Testing:** xUnit, Jasmine  
+- **Web/UI:** HTML, CSS, Tailwind, Bootstrap  
+- **Containerization:** Docker  
+- **Data Integration:** Boomi, Tibco, SSIS  
+- **Message Queue:** Azure Service Bus  
+- **Caching:** Redis  
+- **Data Warehouse:** Snowflake  
+- **Reporting/BI:** SSRS, Power BI  
+- **Other:** C++, SharePoint Online, PowerApps, PowerAutomate, Twilio, Swagger, Raspberry Pi, OOP/SOLID  
 
-## EDUCATION
-
-**Bachelor of Science in Computer Engineering**
-Texas Tech University•Lubbock, TX•2005 - 2009
-
-
+## Education
+**Bachelor of Science in Computer Engineering**  
+Texas Tech University — Lubbock, TX (2005 – 2009)

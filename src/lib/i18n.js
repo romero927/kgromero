@@ -39,26 +39,27 @@ const translations = {
     skills: {
       title: 'Skills',
       categories: {
-        "General": "People Management, Project Management, Financial Management, System Architecture, Full-Stack Development, Entire SDLC, Continuous Improvement, Legacy Systems",
+        "General": "People/Project/Financial Management, System Architecture, Full-Stack Development, Entire SDLC, Continuous Improvement, Legacy Systems",
         "Processes": "DevOps, CICD, Agile Scrum, Waterfall, Kanban, GitFlow, Matrixed Organization",
-        "Architectures": "N-Tier, REST API, PWA, SPA, SSR, Serverless, MVC, Event Driven, Offline-First, Distributed, Microservices, Containerized",
-        "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, SSMS, DBeaver, Jira, Confluence, Lucid, Trello, Postman, AppDynamics",
+        "Architectures": "N-Tier, RESTful API, PWA, SPA, SSR, MVC, Serverless, Offline-First, Event-Driven, Distributed, Microservices, Containerized, Service Oriented",
+        "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, Postman, SSMS, DBeaver, Jira, Confluence, Lucid, Trello",
         "Cloud": "Azure, AWS, Netlify, DigitalOcean, Fly.io",
-        "AI": "ChatGPT, Microsoft CoPilot, Claude, Deepseek, Ollama, Cursor, Cline, Roo",
+        "AI": "ChatGPT, Microsoft CoPilot, Claude, Deepseek, Ollama, Cursor, Cline, N8N, OpenRouter",
         "Servers": "Windows Server, Linux (Ubuntu/Debian)",
         "DB": "SQL Server, Sqlite3, Oracle",
-        "JavaScript": "React, Angular, Express, Node.js, Electron, TypeScript, SvelteKit",
+        "JavaScript": "React, Angular, SvelteKit, Node.js, Express API, Electron, TypeScript, JWT",
         ".NET": "C#, VB.NET, ASP.NET Core, Blazor, UWP, SignalR, Webforms",
         "Scripting": "Python",
+        "Source Control": "Git, Subversion",
+        "QA": "xUnit, Jasmine",
         "Web": "HTML, CSS, Tailwind, Bootstrap",
         "Containerization": "Docker",
-        "ETL": "Boomi, SSIS",
+        "Data Integration": "Boomi, Tibco, SSIS",
         "Message Queue": "Azure Service Bus",
         "Caching": "Redis",
         "Data Warehouse": "Snowflake",
         "Reporting": "SSRS, PowerBI",
-        "Other": "C++, xUnit, Sharepoint Online, PowerApps, PowerAutomate, Twilio, JWT, Swagger, Raspberry Pi",
-        "Novice": "Ruby on Rails, Phoenix, Java Spring, Flutter, Django, Go, PostgreSQL, Figma, Selenium, JetBrains, K8s, Jenkins"
+        "Other": "C++, Sharepoint Online, PowerApps, PowerAutomate, Twilio, Swagger, Raspberry Pi, OOP/SOLID"
       }
     },
     other: {
