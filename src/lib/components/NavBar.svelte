@@ -49,6 +49,7 @@
   import RTL from "$lib/assets/RTL-SDR.pdf";
   import RedditListener from "$lib/assets/KyleRomero_RedditListener_Walkthrough.pdf";
   import Other from './Other.svelte';
+  import AISetup from "$lib/assets/AI_Setup.png";
   
   // State management for mobile menu and dropdowns
   let isOpen = false;
@@ -325,6 +326,7 @@
                     </button>
                     {#if activeSubDropdown === 'other'}
                       <div class="mt-2 ml-4 space-y-2 border-l-2 border-neo-black pl-4">
+                        <a href={AISetup} target="_blank" class="block hover:underline">AI Development Process</a>
                         <a href={Sentiment} target="_blank" class="block hover:underline">Twitter Sentiment Analysis</a>
                         <hr/>
                         <a href={RTL} target="_blank" class="block hover:underline">RTL-SDR</a>

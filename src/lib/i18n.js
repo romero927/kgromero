@@ -44,7 +44,7 @@ const translations = {
         "Architectures": "N-Tier, RESTful API, PWA, SPA, SSR, MVC, Serverless, Offline-First, Event-Driven, Distributed, Microservices, Containerized, Service Oriented",
         "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, Postman, SSMS, DBeaver, Jira, Confluence, Lucid, Trello",
         "Cloud": "Azure, AWS, Netlify, DigitalOcean, Fly.io",
-        "AI": "ChatGPT, Microsoft CoPilot, Claude, Deepseek, Ollama, Cursor, Cline, N8N, OpenRouter",
+        "AI": "ChatGPT, Microsoft CoPilot, Claude, Gemini, Ollama (Qwen, Gemma, Deepseek), Cursor, Cline, N8N, OpenRouter",
         "Servers": "Windows Server, Linux (Ubuntu/Debian)",
         "DB": "SQL Server, Sqlite3, Oracle",
         "JavaScript": "React, Angular, SvelteKit, Node.js, Express API, Electron, TypeScript, JWT",

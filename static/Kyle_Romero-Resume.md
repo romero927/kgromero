@@ -60,7 +60,7 @@ August 2007 – December 2011 | Lubbock, TX
 - **Architectures:** N‑Tier, RESTful API, PWA, SPA, SSR, MVC, Serverless, Offline‑First, Event‑Driven, Distributed, Microservices, Containerized, SOA  
 - **Tooling:** Azure DevOps, GitHub, Visual Studio/VS Code, Postman, SSMS, DBeaver, Jira, Confluence, Lucid, Trello  
 - **Cloud:** Azure, AWS, Netlify, DigitalOcean, Fly.io  
-- **AI:** ChatGPT, Microsoft Copilot, Claude, DeepSeek, Ollama, Cursor, Cline, n8n, OpenRouter  
+- **AI:** ChatGPT, Microsoft CoPilot, Claude, Gemini, Ollama (Qwen, Gemma, Deepseek), Cursor, Cline, N8N, OpenRouter 
 - **Servers/OS:** Windows Server, Linux (Ubuntu/Debian)  
 - **Databases:** SQL Server, SQLite, Oracle  
 - **JavaScript:** React, Angular, SvelteKit, Node.js, Express, Electron, TypeScript, JWT  
