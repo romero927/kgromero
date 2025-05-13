@@ -8,7 +8,7 @@ const translations = {
     description: `Software Engineering Leader with 17 years experience in IT, living in Jersey City, NJ.`,
     aboutMe: {
       title: 'About Me',
-      content: 'Hands-on and results-driven technology leader with 17+ years in software engineering, specializing in full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions. Passionate about producing high-quality technical implementations, driving innovation, streamlining processes, and leading software development organizations to success.',
+      content: 'Hands-on and results-driven technology leader with 17+ years in software engineering, specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.',
       openTo: 'Open To: Developer, Manager, Senior Manager, Director, and VP roles (In-Office, Hybrid, or Remote)'
     },
     contactInfo: {
