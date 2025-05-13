@@ -8,8 +8,10 @@ Hands-on and results-driven technology leader with 17+ years in software enginee
 ## Experience
 ### Contract Consultant — Dexian  
 **Technical Lead (Back End)** | March 2025 – Present | Jersey City, NJ (Remote)  
-- Client: Deloitte Consulting  
-- Short-term contract with focus on API (.NET deployed to Azure Functions + Node Express containerized in App Services) development and integration with Angular front‑end, along with Confluence documentation.  
+- Client: Deloitte Consulting
+- Contract: 3/24/2025 - 6/28/2025
+- Title: Technical Lead (Back End).
+- Role: Short-term contract with focus on development of .NET APIs (Azure Functions ) + containerized Node Express API (Azure App Services), integration with Angular F.E. and SAP / CC&B B.E. via Tibco + Boomi, requirements management in Azure DevOps, and documentation creation and management in Confluence.
 - Project: Mission‑critical customer‑facing product with thousands of daily users at a major energy company headquartered in Chicago.  
 
 ### Director of Software Development — Raymour & Flanigan  
