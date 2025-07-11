@@ -23,7 +23,7 @@ const translations = {
     experience: {
       title: 'Experience',
       timeline: [
-        { date: "Mar 2025 - Current", title: "Contract Consultant, Dexian (Client: Deloitte Consulting)" },
+        { date: "Mar 2025 - Current", title: "Consultant, Dexian (Client: Deloitte Consulting)" },
         { date: "Mar 2023 - May 2024", title: "Director of Software Development, Raymour & Flanigan" },
         { date: "Apr 2021 - Mar 2023", title: "Director of Software Development, MEARS Group" },
         { date: "Mar 2020 - Apr 2021", title: "Senior Manager of Software Development, MEARS Group" },
