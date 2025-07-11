@@ -20,47 +20,47 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   <div class="neo-card items-center flex flex-col max-w-full h-full bg-white" padding="xs">
     <b class="pt-1 pb-1">{$t.contactInfo.title}</b>
     <Hr classHr="border w-full m-2" />
-    <ul class="my-4 space-y-4 text-base mt-5">
-      <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-        <Fa icon={faPhone} class="group-hover:text-neo-orange" />
-        <span class="font-normal leading-tight">
-          <a href="tel://+12818579006">{$t.contactInfo.phone}</a>
+    <ul class="my-4 space-y-4 text-sm mt-5 w-full">
+      <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
+        <Fa icon={faPhone} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" />
+        <span class="font-normal leading-tight min-w-0 break-all">
+          <a href="tel://+12818579006" class="break-all">{$t.contactInfo.phone}</a>
         </span>
       </li>
-      <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-        <Fa icon={faEnvelope} class="group-hover:text-neo-orange" />
-        <span class="font-normal leading-tight">
-          <a href="mailto:kgromero@gmail.com" target="_top">{$t.contactInfo.email}</a>
+      <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
+        <Fa icon={faEnvelope} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" />
+        <span class="font-normal leading-tight min-w-0 break-all">
+          <a href="mailto:kgromero@gmail.com" target="_top" class="break-all">{$t.contactInfo.email}</a>
         </span>
       </li>
       <Hr classHr="border w-full m-1" />
-      <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-        <Fa icon={faLinkedin} class="group-hover:text-neo-orange"/>
-        <span class="font-normal leading-tight">
-          <a href="https://www.linkedin.com/in/kyleromero/" target="_blank">{$t.contactInfo.linkedin}</a>
+      <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
+        <Fa icon={faLinkedin} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5"/>
+        <span class="font-normal leading-tight min-w-0 break-all">
+          <a href="https://www.linkedin.com/in/kyleromero/" target="_blank" class="break-all">{$t.contactInfo.linkedin}</a>
         </span>
       </li>
-      <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-        <Fa icon={faGithub} class="group-hover:text-neo-orange" />
-        <a href="https://github.com/romero927" target="_blank">{$t.contactInfo.github}</a>
+      <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
+        <Fa icon={faGithub} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" />
+        <a href="https://github.com/romero927" target="_blank" class="min-w-0 break-all">{$t.contactInfo.github}</a>
       </li>
       <Hr classHr="border w-full m-1" />
-      <li class="flex space-x-2 block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-        <Fa icon={faLink} class="group-hover:text-neo-orange"/>
-        <span class="font-normal leading-tight">
-          <a href="https://linktr.ee/kgromero" target="_blank">{$t.contactInfo.linktree}</a>
+      <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
+        <Fa icon={faLink} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5"/>
+        <span class="font-normal leading-tight min-w-0 break-all">
+          <a href="https://linktr.ee/kgromero" target="_blank" class="break-all">{$t.contactInfo.linktree}</a>
         </span>
       </li>
       <Hr classHr="border w-full m-1" />
       <button 
-        class="neo-button p-2 flex items-center w-full justify-center" 
+        class="neo-button p-2 flex items-center w-full justify-center text-sm" 
         on:click={() => showQRModal = true}
         aria-label="Show QR Code"
       >
-        <Fa icon={faQrcode} class="m-2" />Contact QR Code
+        <Fa icon={faQrcode} class="mr-2" />Contact QR Code
       </button>
       <Hr classHr="border w-full m-1" />
-      <div class="text-base "><b>{$t.aboutMe.openTo}</b></div>
+      <div class="text-sm break-words"><b>{$t.aboutMe.openTo}</b></div>
     </ul>
   </div>
   

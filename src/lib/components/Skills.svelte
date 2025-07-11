@@ -9,10 +9,9 @@
     <br />
     <ul class="space-y-2.5 text-xs p-0 m-0 ml-3 mr-3">
       {#each Object.entries($t.skills.categories) as [category, skills]}
-        <li class="block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-          <b class="group-hover:text-neo-orange">{category}:</b> {skills}
+        <li class="block transition-all duration-200 origin-left hover:scale-105 cursor-default group break-words">
+          <b class="group-hover:text-neo-orange">{category}:</b> <span class="break-words">{skills}</span>
         </li>
       {/each}
     </ul>
   </div>
-  

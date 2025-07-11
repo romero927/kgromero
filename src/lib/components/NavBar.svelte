@@ -112,7 +112,7 @@
       </div>
   
       <!-- Desktop Navigation -->
-      <div class="hidden lg:flex items-center space-x-4">
+      <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
         <!-- Resume Button -->
         <div class="relative">
         <button class="neo-button dropdown-trigger flex items-center justify-center h-10"
@@ -368,7 +368,7 @@
   
       <!-- Mobile Menu Button -->
       <button
-        class="lg:hidden neo-button"
+        class="md:hidden neo-button"
         on:click={toggleMobileMenu}
       >
         <svg
@@ -388,7 +388,7 @@
   
     <!-- Mobile Menu -->
     {#if isOpen}
-  <div class="lg:hidden p-4 space-y-4 pl-0">
+  <div class="md:hidden p-4 space-y-4 pl-0">
     <!-- Top Mobile Actions -->
     <div class="flex space-x-3 block">
       <a href={BusinessCard} target="_blank" class="neo-button block text-center">

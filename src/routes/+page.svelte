@@ -27,9 +27,9 @@
     {/each}
   </div>
 
- <div class="mx-2 my-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+ <div class="mx-2 my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
   {#each ['ContactInfo', 'Experience', 'Skills', 'Other'] as component}
-    <div class="h-full" in:fade="{{ duration: 300, delay: 300 }}">
+    <div class="h-full min-w-0 overflow-hidden" in:fade="{{ duration: 300, delay: 300 }}">
       <svelte:component this={{ ContactInfo, Experience, Skills, Other }[component]} />
     </div>
   {/each}
@@ -41,4 +41,4 @@
     <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" class="ml-2 mr-2"><Fa icon={faChartLine} /></a>
   </div>
 </footer>
-</div> 
+</div>

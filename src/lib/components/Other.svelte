@@ -30,20 +30,20 @@
         <b>{$t.other.recentProjects}: </b> 
         <ul class="ml-5 list-disc">
           {#each $t.other.projects as project}
-            <li class="block transition-all duration-200 origin-left hover:scale-105 cursor-default group">
+            <li class="block transition-all duration-200 origin-left hover:scale-105 cursor-default group break-words">
               {#if project.link}
                 <a href={project.link} target="_blank">
                   <Fa icon={faLink} pull="left" class="mr-1 mt-1 group-hover:text-neo-orange"/>
                 </a>
               {/if}
-              {project.name}
+              <span class="break-words">{project.name}</span>
             </li>
           {/each}
         </ul>
       </li>
       <Hr />
-      <li>
-        <b>{$t.other.wantToLearn}: </b>{$t.other.learningList}
+      <li class="break-words">
+        <b>{$t.other.wantToLearn}: </b><span class="break-words">{$t.other.learningList}</span>
       </li>
       <Hr />
       <li>
