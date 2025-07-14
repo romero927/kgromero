@@ -60,6 +60,8 @@
     { lat: 30.2672, lng: -97.7431, label: 'Austin', lived: false },
     { lat: 31.5493, lng: -97.1467, label: 'Waco', lived: false },
     { lat: 35.1495, lng: -90.0490, label: 'Memphis', lived: false },
+    { lat: 39.2904, lng: -76.6122, label: 'Baltimore', lived: false },
+    { lat: 30.3322, lng: -81.6557, label: 'Jacksonville', lived: false },
     { lat: 30.3935, lng: -86.4958, label: 'Destin', lived: false },
     { lat: 55.3422, lng: -131.6461, label: 'Ketchikan', lived: false },
     { lat: 59.4583, lng: -135.3139, label: 'Skagway', lived: false },
