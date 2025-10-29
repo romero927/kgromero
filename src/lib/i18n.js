@@ -5,10 +5,10 @@ export const locale = writable('en');
 const translations = {
   en: {
     name: 'Kyle Romero',
-    description: `Software Engineering Leader with 17 years experience in IT, living in Jersey City, NJ.`,
+    description: `Software Engineering Leader with 18 years experience in IT, living in Jersey City, NJ.`,
     aboutMe: {
       title: 'About Me',
-      content: 'Hands-on and results-driven technology leader with 17+ years in software engineering, specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.',
+      content: 'Hands-on and results-driven technology leader with 18+ years in software engineering, specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.',
       openTo: 'Open To: Developer, Manager, Senior Manager, Director, and VP roles (In-Office, Hybrid, or Remote)'
     },
     contactInfo: {
@@ -23,7 +23,8 @@ const translations = {
     experience: {
       title: 'Experience',
       timeline: [
-        { date: "Mar 2025 - Current", title: "Contractor, Dexian (Client: Deloitte Consulting)" },
+        { date: "Oct 2025 - Current", title: "Team Lead, Tenna" },
+        { date: "Mar 2025 - Oct 2025", title: "Contractor, Dexian (Client: Deloitte Consulting)" },
         { date: "Mar 2023 - May 2024", title: "Director of Software Development, Raymour & Flanigan" },
         { date: "Apr 2021 - Mar 2023", title: "Director of Software Development, MEARS Group" },
         { date: "Mar 2020 - Apr 2021", title: "Senior Manager of Software Development, MEARS Group" },
