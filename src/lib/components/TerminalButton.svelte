@@ -1,10 +1,10 @@
 <script>
     import { Terminal } from 'lucide-svelte';
-    export let onClick;
+  let { onClick } = $props();
   </script>
   
   <button
-    on:click={onClick}
+    onclick={onClick}
     class="neo-button"
   >
   <Terminal class="mr-2 pb-1" size={20} />

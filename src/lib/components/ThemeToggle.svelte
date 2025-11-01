@@ -8,7 +8,7 @@
 </script>
 
 <button 
-  on:click={toggleTheme} 
+  onclick={toggleTheme} 
   class="neo-button p-2 flex items-center justify-center"
   aria-label="Toggle theme"
 >

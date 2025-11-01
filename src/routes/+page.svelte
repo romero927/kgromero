@@ -21,16 +21,18 @@
 
   <div class="mx-2 my-4 grid grid-cols-1 gap-4">
     {#each ['AboutMe'] as component}
+      {@const SvelteComponent = { AboutMe}[component]}
       <div class="h-full" in:fade="{{ duration: 300, delay: 300 }}">
-        <svelte:component this={{ AboutMe}[component]} />
+        <SvelteComponent />
       </div>
     {/each}
   </div>
 
  <div class="mx-2 my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
   {#each ['ContactInfo', 'Experience', 'Skills', 'Other'] as component}
+    {@const SvelteComponent_1 = { ContactInfo, Experience, Skills, Other }[component]}
     <div class="h-full min-w-0 overflow-hidden" in:fade="{{ duration: 300, delay: 300 }}">
-      <svelte:component this={{ ContactInfo, Experience, Skills, Other }[component]} />
+      <SvelteComponent_1 />
     </div>
   {/each}
 </div>

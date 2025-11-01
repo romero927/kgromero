@@ -1,3 +1,4 @@
+<!-- @migration-task Error while migrating Svelte code: Cannot read properties of undefined (reading 'end') -->
 <script>
     import { Card, Hr, Button, Modal, Carousel, Thumbnails, Listgroup } from 'flowbite-svelte';
     import { t } from '$lib/i18n';

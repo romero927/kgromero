@@ -1,17 +1,20 @@
 <script>
+  import { createBubbler, stopPropagation } from 'svelte/legacy';
+
+  const bubble = createBubbler();
   import { onMount } from 'svelte';
   import * as THREE from 'three';
   import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
   import { faGlobe } from '@fortawesome/free-solid-svg-icons';
   import Fa from 'svelte-fa';
 
-  let showModal = false;
-  let container;
-  let status = 'Loading...';
-  let fallbackMode = false;
-  let hoverLabel = '';
-  let mouseX = 0;
-  let mouseY = 0;
+  let showModal = $state(false);
+  let container = $state();
+  let status = $state('Loading...');
+  let fallbackMode = $state(false);
+  let hoverLabel = $state('');
+  let mouseX = $state(0);
+  let mouseY = $state(0);
 
   const travelLocations = [
     { lat: 29.7604, lng: -95.3698, label: 'Houston', lived: true },
@@ -78,7 +81,7 @@
 
   let cleanupGlobe = () => {};
   let controls;
-  let autoRotate = true;
+  let autoRotate = $state(true);
 
   function toggleModal() {
     if (showModal) {
@@ -365,20 +368,20 @@
   });
 </script>
 
-<button on:click={toggleModal}>
+<button onclick={toggleModal}>
   <Fa icon={faGlobe} />
 </button>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<!-- svelte-ignore a11y-click-events-have-key-events -->
+<!-- svelte-ignore a11y_no_static_element_interactions -->
+<!-- svelte-ignore a11y_click_events_have_key_events -->
 {#if showModal}
-  <div class="modal" on:click={toggleModal}>
-    <div class="modal-content" on:click|stopPropagation>
+  <div class="modal" onclick={toggleModal}>
+    <div class="modal-content" onclick={stopPropagation(bubble('click'))}>
       <h2 class="modal-title">My Travels</h2>
-      <button class="toggle-spin" on:click={toggleSpin}>
+      <button class="toggle-spin" onclick={toggleSpin}>
         {autoRotate ? 'Stop Spin' : 'Start Spin'}
       </button>
-      <span class="close" on:click={toggleModal}>&times;</span>
+      <span class="close" onclick={toggleModal}>&times;</span>
       <div bind:this={container} class="globe-container">
         {#if fallbackMode}
           <div class="fallback-map">

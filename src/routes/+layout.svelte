@@ -4,11 +4,18 @@
   import { onMount } from 'svelte';
   import { page } from '$app/stores';
   import { seoData } from '$lib/seoData';
+  /**
+   * @typedef {Object} Props
+   * @property {import('svelte').Snippet} [children]
+   */
 
-  $: title = $page.data.title || seoData.defaultTitle;
-  $: description = $page.data.description || seoData.defaultDescription;
-  $: image = $page.data.image || seoData.defaultImage;
-  $: structuredData = $page.data.structuredData || seoData.defaultStructuredData;
+  /** @type {Props} */
+  let { children } = $props();
+
+  let title = $derived($page.data.title || seoData.defaultTitle);
+  let description = $derived($page.data.description || seoData.defaultDescription);
+  let image = $derived($page.data.image || seoData.defaultImage);
+  let structuredData = $derived($page.data.structuredData || seoData.defaultStructuredData);
 
   // Initialize theme on mount
   onMount(() => {
@@ -47,5 +54,5 @@
 </svelte:head>
 
 <div class={$theme}>
-  <slot></slot>
+  {@render children?.()}
 </div>

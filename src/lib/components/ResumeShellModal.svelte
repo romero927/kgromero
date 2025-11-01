@@ -1,18 +1,26 @@
 <script>
+  import { run, preventDefault } from 'svelte/legacy';
+
   import { onMount } from 'svelte';
   import { Terminal } from 'lucide-svelte';
   import { fade } from 'svelte/transition';
 
-  export let isOpen = false;
-  export let onClose;
+  /**
+   * @typedef {Object} Props
+   * @property {boolean} [isOpen]
+   * @property {any} onClose
+   */
 
-  let input = '';
-  let output = [
+  /** @type {Props} */
+  let { isOpen = false, onClose } = $props();
+
+  let input = $state('');
+  let output = $state([
     { type: 'system', content: 'Welcome to Kyle Romero\'s bash shell! You can use this terminal to interactively explore my information. This functionality was completely built using Claude AI 3.5 Sonnet.' },
     { type: 'system', content: 'Type "help" for available commands.' }
-  ];
-  let inputElement;
-  let outputElement;
+  ]);
+  let inputElement = $state();
+  let outputElement = $state();
 
   const resumeData = {
     name: "Kyle Romero",
@@ -96,9 +104,11 @@
     }
   };
 
-  $: if (isOpen && inputElement) {
-    setTimeout(() => inputElement.focus(), 0);
-  }
+  run(() => {
+    if (isOpen && inputElement) {
+      setTimeout(() => inputElement.focus(), 0);
+    }
+  });
 
   function handleSubmit() {
     processCommand(input);
@@ -196,8 +206,8 @@
 </script>
 
 {#if isOpen}
-  <!-- svelte-ignore a11y-no-static-element-interactions -->
-  <div transition:fade="{{ duration: 200 }}" class="z-50 fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4" on:keydown={handleKeydown}>
+  <!-- svelte-ignore a11y_no_static_element_interactions -->
+  <div transition:fade="{{ duration: 200 }}" class="z-50 fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4" onkeydown={handleKeydown}>
     <div class="w-full max-w-3xl bg-black bg-opacity-90 text-green-500 font-mono rounded-lg shadow-lg">
       <div class="flex items-center justify-between p-4 border-b border-green-900">
         <div class="flex items-center">
@@ -205,7 +215,7 @@
           <h2 class="text-xl font-bold text-green-500">Kyle's Resume Bash Shell</h2>
         </div>
         <button 
-          on:click={onClose} 
+          onclick={onClose} 
           class="text-green-500 hover:text-green-400 focus:outline-none"
           aria-label="Close terminal">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -222,7 +232,7 @@
           {/if}
         {/each}
       </div>
-      <form on:submit|preventDefault={handleSubmit} class="flex p-4 border-t border-green-900">
+      <form onsubmit={preventDefault(handleSubmit)} class="flex p-4 border-t border-green-900">
         <span class="mr-2 text-green-500">$</span>
         <input
           bind:this={inputElement}

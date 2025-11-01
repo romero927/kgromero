@@ -2,7 +2,7 @@
   import TerminalButton from './TerminalButton.svelte';
   import ResumeShellModal from './ResumeShellModal.svelte';
 
-  let isModalOpen = false;
+  let isModalOpen = $state(false);
 
   function openModal() {
     isModalOpen = true;

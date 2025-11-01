@@ -52,9 +52,9 @@
   import AISetup from "$lib/assets/AI_Setup.png";
   
   // State management for mobile menu and dropdowns
-  let isOpen = false;
-  let activeDropdown = null;
-  let activeSubDropdown = null;
+  let isOpen = $state(false);
+  let activeDropdown = $state(null);
+  let activeSubDropdown = $state(null);
   
   // Function to toggle mobile menu
   const toggleMobileMenu = () => {
@@ -87,7 +87,7 @@
   };
   
   // Click outside handler
-  let navRef;
+  let navRef = $state();
   const handleClickOutside = (event) => {
     if (navRef && !navRef.contains(event.target)) {
       activeDropdown = null;
@@ -96,7 +96,7 @@
   };
   </script>
   
-  <svelte:window on:click={handleClickOutside}/>
+  <svelte:window onclick={handleClickOutside}/>
   
   <nav bind:this={navRef} class="mx-2 neo-card mb-4">
     <div class="flex items-center justify-between p-1">
@@ -116,7 +116,7 @@
         <!-- Resume Button -->
         <div class="relative">
         <button class="neo-button dropdown-trigger flex items-center justify-center h-10"
-            on:click={() => toggleDropdown('resume')}
+            onclick={() => toggleDropdown('resume')}
           >
             Resume
             <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -140,7 +140,7 @@
         <div class="relative">
           <button
             class="neo-button dropdown-trigger flex items-center h-10"
-            on:click={() => toggleDropdown('docs')}
+            onclick={() => toggleDropdown('docs')}
           >
             Supporting Documents
             <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -155,7 +155,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between "
-                      on:click={() => toggleSubDropdown('raymour')}
+                      onclick={() => toggleSubDropdown('raymour')}
                     >
                       Raymour & Flanigan
                       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -177,7 +177,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      on:click={() => toggleSubDropdown('mears')}
+                      onclick={() => toggleSubDropdown('mears')}
                     >
                       MEARS Group
                       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -201,7 +201,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      on:click={() => toggleSubDropdown('worldwide')}
+                      onclick={() => toggleSubDropdown('worldwide')}
                     >
                       Worldwide Machinery
                       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -223,7 +223,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      on:click={() => toggleSubDropdown('hp')}
+                      onclick={() => toggleSubDropdown('hp')}
                     >
                       HP
                       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -245,7 +245,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      on:click={() => toggleSubDropdown('xfab')}
+                      onclick={() => toggleSubDropdown('xfab')}
                     >
                       X-Fab
                       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -275,7 +275,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      on:click={() => toggleSubDropdown('texastech')}
+                      onclick={() => toggleSubDropdown('texastech')}
                     >
                       Texas Tech
                       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -315,7 +315,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      on:click={() => toggleSubDropdown('other')}
+                      onclick={() => toggleSubDropdown('other')}
                     >
                       Other
                       <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -369,7 +369,7 @@
       <!-- Mobile Menu Button -->
       <button
         class="md:hidden neo-button"
-        on:click={toggleMobileMenu}
+        onclick={toggleMobileMenu}
       >
         <svg
           class="w-6 h-6"
@@ -426,7 +426,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            on:click={() => toggleDropdown('raymourMobile')}
+            onclick={() => toggleDropdown('raymourMobile')}
           >
             Raymour & Flanigan
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -446,7 +446,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            on:click={() => toggleDropdown('mearsMobile')}
+            onclick={() => toggleDropdown('mearsMobile')}
           >
             MEARS Group
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -467,7 +467,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            on:click={() => toggleDropdown('worldwideMobile')}
+            onclick={() => toggleDropdown('worldwideMobile')}
           >
             Worldwide Machinery
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -487,7 +487,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            on:click={() => toggleDropdown('hpMobile')}
+            onclick={() => toggleDropdown('hpMobile')}
           >
             HP
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -507,7 +507,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            on:click={() => toggleDropdown('xfabMobile')}
+            onclick={() => toggleDropdown('xfabMobile')}
           >
             X-Fab
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -531,7 +531,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            on:click={() => toggleDropdown('texastechMobile')}
+            onclick={() => toggleDropdown('texastechMobile')}
           >
             Texas Tech
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -560,7 +560,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            on:click={() => toggleDropdown('otherMobile')}
+            onclick={() => toggleDropdown('otherMobile')}
           >
             Other
             <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">

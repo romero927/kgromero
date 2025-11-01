@@ -1,5 +1,5 @@
 <script>
-    export let items = [];
+  let { items = [] } = $props();
   </script>
   
   <div class="relative pl-6">

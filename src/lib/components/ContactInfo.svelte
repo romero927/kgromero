@@ -6,7 +6,7 @@
   import { faPhone, faEnvelope, faLink, faChartLine, faTerminal, faWalkieTalkie, faComments, faQrcode } from '@fortawesome/free-solid-svg-icons';
 import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   
-  let showQRModal = false;
+  let showQRModal = $state(false);
   
   function handleEscape(e) {
     if (e.key === 'Escape') {
@@ -15,7 +15,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   }
   </script>
   
-  <svelte:window on:keydown={handleEscape}/>
+  <svelte:window onkeydown={handleEscape}/>
   
   <div class="neo-card items-center flex flex-col max-w-full h-full bg-white" padding="xs">
     <b class="pt-1 pb-1">{$t.contactInfo.title}</b>
@@ -54,7 +54,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
       <Hr classHr="border w-full m-1" />
       <button 
         class="neo-button p-2 flex items-center w-full justify-center text-sm" 
-        on:click={() => showQRModal = true}
+        onclick={() => showQRModal = true}
         aria-label="Show QR Code"
       >
         <Fa icon={faQrcode} class="mr-2" />Contact QR Code
@@ -73,14 +73,14 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   >
     <button
       class="absolute inset-0 w-full h-full cursor-default"
-      on:click={() => showQRModal = false}
+      onclick={() => showQRModal = false}
       aria-label="Close modal"></button>
     <div 
       class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white p-4 rounded-lg max-w-sm w-full mx-4"
     >
     <button 
         class="absolute top-2 right-2 neo-button"
-        on:click={() => showQRModal = false}
+        onclick={() => showQRModal = false}
       >
         X
       </button>
