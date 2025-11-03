@@ -26,21 +26,22 @@
   >
     <!-- Modal Content -->
     <div 
-      class="neo-card bg-white dark:bg-dark-card max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col"
+      class="neo-card bg-white dark:bg-dark-card max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col rounded-lg"
       on:click|stopPropagation
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
     >
       <!-- Modal Header -->
-      <div class="flex justify-between items-center p-6 border-b border-gray-200 dark:border-gray-700">
-        <h2 id="modal-title" class="text-2xl font-bold text-gray-900 dark:text-white">
+      <div class="flex justify-between items-center p-4 sm:p-6 border-b border-gray-200 dark:border-gray-700">
+        <h2 id="modal-title" class="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 dark:text-white pr-2">
           {$t.skills.allSkills.title}
         </h2>
         <button
           on:click={closeModal}
           class="text-gray-500 hover:text-neo-orange dark:text-gray-400 dark:hover:text-neo-orange 
-                 text-3xl font-bold transition-colors duration-200 leading-none px-2"
+                 text-2xl sm:text-3xl font-bold transition-colors duration-200 leading-none p-2 min-w-[44px] min-h-[44px] 
+                 flex items-center justify-center flex-shrink-0"
           aria-label="Close modal"
         >
           ×
@@ -48,24 +49,24 @@
       </div>
       
       <!-- Modal Body -->
-      <div class="overflow-y-auto p-6 flex-1">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="overflow-y-auto p-4 sm:p-6 flex-1">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
           {#each $t.skills.allSkills.categories as category}
             <div class="relative group break-words">
               <div class="flex items-start">
                 <!-- Bullet dot -->
-                <div class="flex-shrink-0 mt-[6px] mr-3 h-3 w-3 rounded-full border border-neo-white 
+                <div class="flex-shrink-0 mt-[6px] mr-2 sm:mr-3 h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full border border-neo-white 
                             dark:border-gray-500 bg-dark-card transition-transform duration-200 
-                            group-hover:scale-150 group-hover:bg-neo-orange" aria-hidden="true">
+                            group-hover:scale-125 sm:group-hover:scale-150 group-hover:bg-neo-orange" aria-hidden="true">
                 </div>
                 
                 <div class="flex-1 min-w-0">
-                  <div class="mb-2">
-                    <strong class="group-hover:text-neo-orange text-base transition-colors duration-200">
+                  <div class="mb-1 sm:mb-2">
+                    <strong class="group-hover:text-neo-orange text-sm sm:text-base transition-colors duration-200 block">
                       {category.name}
                     </strong>
                   </div>
-                  <div class="text-sm text-gray-700 dark:text-gray-300 break-words">
+                  <div class="text-xs sm:text-sm text-gray-700 dark:text-gray-300 break-words leading-relaxed">
                     {category.skills}
                   </div>
                 </div>
