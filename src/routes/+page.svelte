@@ -45,10 +45,12 @@
     </section>
   </main>
 
-  <footer class="sticky bottom-0 z-50 neo-bold-card p-0">
-    <div class="text-center justify-center items-center flex w-full gap-2 py-0.5 px-2 text-sm">
-      <b>© {new Date().getFullYear()} Kyle Romero </b> {$t.footerMessage}
-      <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" class="ml-2 mr-2"><Fa icon={faChartLine} /></a>
+  <footer class="mt-auto neo-bold-card p-0">
+    <div class="text-center justify-center items-center flex flex-wrap w-full gap-1 sm:gap-2 py-1 px-2 text-xs sm:text-sm">
+      <span class="whitespace-nowrap"><b>© {new Date().getFullYear()} Kyle Romero</b></span>
+      <span class="hidden sm:inline">|</span>
+      <span class="whitespace-nowrap">{$t.footerMessage.replace(/\s*\|\s*/g, '').trim()}</span>
+      <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" rel="noopener noreferrer" aria-label="View PageSpeed Insights" class="ml-1"><Fa icon={faChartLine} /></a>
     </div>
   </footer>
 </div>
