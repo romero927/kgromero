@@ -107,12 +107,14 @@
             class="w-9 mr-2"
             alt="Kyle Romero Logo"
             src={logo}
+            width="63"
+            height="61"
           />
         </div>
       </div>
   
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-2 lg:space-x-4" role="menubar">
+      <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
         <!-- Resume Button -->
         <div class="relative">
         <button class="neo-button dropdown-trigger flex items-center justify-center h-8 py-0"
@@ -427,7 +429,9 @@
         <Fa icon={faCode} class="mr-2 pl-2" aria-hidden="true" />
         <span class="sr-only">View Source Code</span>
       </a>
-      <ThemeToggle class="mr-2 pl-2"/>
+      <div class="mr-2 pl-2">
+        <ThemeToggle />
+      </div>
     </div>
   </div>
     <!-- Resume Links -->

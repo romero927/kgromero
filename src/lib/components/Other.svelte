@@ -33,23 +33,29 @@
           {#each $t.other.projects as project}
             <li class="block transition-all duration-200 origin-left hover:scale-105 cursor-default group break-words">
               {#if project.link}
-                <a href={project.link} target="_blank">
-                  <Fa icon={faLink} pull="left" class="mr-1 mt-1 group-hover:text-neo-orange"/>
+                <a href={project.link} target="_blank" class="inline-flex items-center" aria-label={`View ${project.name} project`}>
+                  <Fa icon={faLink} pull="left" class="mr-1 mt-1 group-hover:text-neo-orange" aria-hidden="true"/>
+                  <span class="break-words">{project.name}</span>
                 </a>
+              {:else}
+                <span class="break-words">{project.name}</span>
               {/if}
-              <span class="break-words">{project.name}</span>
             </li>
           {/each}
         </ul>
       </li>
-      <Hr />
+    </ul>
+    <div class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" role="separator"></div>
+    <ul class="space-y-4 text-sm">
       <li class="break-words">
         <b>{$t.other.wantToLearn}: </b><span class="break-words">{$t.other.learningList}</span>
       </li>
-      <Hr />
+    </ul>
+    <div class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" role="separator"></div>
+    <ul class="space-y-4 text-sm">
       <li>
         <b>{$t.other.interests}:</b>
-        <button on:click={() => { clickOutsideModal = true; }}>
+        <button on:click={() => { clickOutsideModal = true; }} aria-label="View family photos">
           {$t.other.family}
         </button>
         , {$t.other.interestList}
@@ -59,7 +65,9 @@
           <Thumbnails {images} {forward} bind:index />
         </Modal>
       </li>
-      <Hr />
+    </ul>
+    <div class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" role="separator"></div>
+    <ul class="space-y-4 text-sm">
       <li>
           <div class="flex flex-col gap-2">
             {#each $t.other.blogs as blog}

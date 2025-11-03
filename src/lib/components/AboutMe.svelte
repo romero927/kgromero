@@ -12,6 +12,8 @@
           class="w-full max-w-[55px] mx-auto rounded-full m-1 lazy-image" 
           alt="Kyle Romero profile photo" 
           src="/images/kgromero.webp"
+          width="96"
+          height="96"
         />
       </div>
       <p class="text-sm text-pretty break-words leading-relaxed">{$t.aboutMe.content}</p>
