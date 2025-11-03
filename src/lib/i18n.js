@@ -54,7 +54,7 @@ const translations = {
         },
         {
           name: "MEARS Group (Energy Industry)",
-          techStack: ".NET (C#, ASP.NET Core), Blazor, SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot)."
+          techStack: ".NET (C#, ASP.NET Core), Blazor, SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot), Python, Raspberry Pi."
         },
         {
           name: "Worldwide Machinery (Construction Industry)",
@@ -66,7 +66,7 @@ const translations = {
         },
         {
           name: "X-Fab, Texas (Semiconductor Manufacturing Industry)",
-          techStack: ".NET (C#, ASP.NET MVC WebAPI), SQL Server, C++, Windows Server."
+          techStack: ".NET (C#, ASP.NET MVC WebAPI), SQL Server, C++, Windows Server, Linux."
         }
       ]
     },
