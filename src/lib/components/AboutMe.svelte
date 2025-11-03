@@ -5,15 +5,15 @@
 
 </script>
 
-<div class="neo-bold-card items-center flex flex-col max-w-full h-full bg-white rounded-lg" padding="xs">
+<div class="neo-bold-card items-center flex flex-col max-w-full h-full bg-white rounded-lg" padding="xs" role="region" aria-label="About Me">
     <div class="lg:flex lg:space-x-2">
       <div class="">
         <img 
           class="w-full max-w-[55px] mx-auto rounded-full m-1 lazy-image" 
-          alt="Kyle Romero" 
+          alt="Kyle Romero profile photo" 
           src="/images/kgromero.webp"
         />
       </div>
-      <div class="text-sm">{$t.aboutMe.content}</div>
+      <p class="text-sm">{$t.aboutMe.content}</p>
     </div>
 </div>

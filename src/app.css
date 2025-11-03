@@ -6,8 +6,9 @@
   .neo-button {
     @apply bg-neo-orange border-2 border-neo-black shadow-neo rounded-lg
     hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all px-4 py-2 font-bold
+    focus:outline-none focus:ring-2 focus:ring-neo-black focus:ring-offset-2
     dark:bg-dark-card dark:text-neo-orange dark:border-dark-border dark:shadow-neo-dark
-    dark:hover:bg-dark-hover dark:hover:shadow-none;
+    dark:hover:bg-dark-hover dark:hover:shadow-none dark:focus:ring-neo-orange;
   }
 
   .neo-card {
@@ -29,8 +30,21 @@
 
   .neo-input {
     @apply bg-white border-2 border-neo-black shadow-neo px-4 py-2 
-    focus:outline-none focus:shadow-none focus:translate-x-[2px] focus:translate-y-[2px] transition-all
-    dark:bg-dark-card dark:text-gray-100 dark:border-dark-border;
+    focus:outline-none focus:ring-2 focus:ring-neo-black focus:ring-offset-2 focus:shadow-none focus:translate-x-[2px] focus:translate-y-[2px] transition-all
+    dark:bg-dark-card dark:text-gray-100 dark:border-dark-border dark:focus:ring-neo-orange;
+  }
+
+  /* Screen reader only text */
+  .sr-only {
+    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
+    clip: rect(0, 0, 0, 0);
+  }
+
+  /* Skip to content link */
+  .skip-link {
+    @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50
+    focus:px-4 focus:py-2 focus:bg-neo-orange focus:border-2 focus:border-neo-black
+    focus:shadow-neo focus:rounded-lg focus:font-bold;
   }
 }
 

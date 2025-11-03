@@ -4,8 +4,8 @@
   import { Hr } from 'flowbite-svelte';
 </script>
 
-<div class="neo-card items-center flex flex-col max-w-full h-full bg-white dark:bg-dark-card" padding="xs">
-  <b class="pt-1 pb-1">{$t.experience.title}</b>
+<div class="neo-card items-center flex flex-col max-w-full h-full bg-white dark:bg-dark-card" padding="xs" role="region" aria-label="Experience">
+  <h2 class="pt-1 pb-1 text-base font-bold">{$t.experience.title}</h2>
 <Hr classHr="border w-full m-2" />
   
   <div class="w-full px-4">

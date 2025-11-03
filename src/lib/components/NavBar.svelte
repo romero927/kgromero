@@ -98,25 +98,28 @@
   
   <svelte:window onclick={handleClickOutside}/>
   
-  <nav bind:this={navRef} class="neo-card-square">
+  <nav bind:this={navRef} class="neo-card-square" aria-label="Main navigation">
     <div class="flex items-center justify-between py-0.5 px-1">
       <!-- Logo and Terminal -->
       <div class="flex items-center space-x-4">
         <div>
           <img
             class="w-9 mr-2"
-            alt="KR Logo"
+            alt="Kyle Romero Logo"
             src={logo}
           />
         </div>
       </div>
   
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
+      <div class="hidden md:flex items-center space-x-2 lg:space-x-4" role="menubar">
         <!-- Resume Button -->
         <div class="relative">
         <button class="neo-button dropdown-trigger flex items-center justify-center h-8"
             onclick={() => toggleDropdown('resume')}
+            aria-haspopup="true"
+            aria-expanded={activeDropdown === 'resume'}
+            aria-label="Resume menu"
           >
             Resume
             <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -124,13 +127,13 @@
             </svg>
           </button>
           {#if activeDropdown === 'resume'}
-            <div class="dropdown-menu absolute z-50 w-48 mt-2">
+            <div class="dropdown-menu absolute z-50 w-48 mt-2" role="menu" aria-label="Resume options">
               <div class="neo-card space-y-2 bg-white">
-                <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline p-2">Resume - PDF</a>
+                <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - PDF</a>
                 <hr/>
-                <a href="/Kyle_Romero-Resume.docx" target="_blank" class="block hover:underline p-2">Resume - DOCX</a>
+                <a href="/Kyle_Romero-Resume.docx" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - DOCX</a>
                 <hr/>
-                <a href="/Kyle_Romero-Coverletter.pdf" target="_blank" class="block hover:underline p-2">Cover Letter</a>
+                <a href="/Kyle_Romero-Coverletter.pdf" target="_blank" class="block hover:underline p-2" role="menuitem">Cover Letter</a>
               </div>
             </div>
           {/if}
@@ -141,6 +144,9 @@
           <button
             class="neo-button dropdown-trigger flex items-center h-8"
             onclick={() => toggleDropdown('docs')}
+            aria-haspopup="true"
+            aria-expanded={activeDropdown === 'docs'}
+            aria-label="Supporting documents menu"
           >
             Supporting Documents
             <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
@@ -148,7 +154,7 @@
             </svg>
           </button>
           {#if activeDropdown === 'docs'}
-            <div class="dropdown-menu absolute z-50 w-64 mt-2 right-0">
+            <div class="dropdown-menu absolute z-50 w-64 mt-2 right-0" role="menu" aria-label="Supporting documents">
               <div class="neo-card max-h-[80vh] overflow-y-auto bg-white">
                 <div class="space-y-4 p-4">
                   <!-- Raymour & Flanigan -->
@@ -344,18 +350,19 @@
         </div>
   
         <!-- Business Card -->
-        <a href={BusinessCard} target="_blank" class="neo-button flex items-center h-8">
+        <a href={BusinessCard} target="_blank" class="neo-button flex items-center h-8" aria-label="View business card">
           Business Card
         </a>
-  
+
         <!-- GitHub -->
         <a
           href="https://github.com/romero927/kgromero"
           target="_blank"
           class="neo-button flex items-center h-8"
-          title="View Source"
+          aria-label="View source code on GitHub"
         >
           <Fa icon={faCode} />
+          <span class="sr-only">View Source Code</span>
         </a>
   
         <ResumeShellWrapper class="neo-button flex items-center h-8">
@@ -370,6 +377,8 @@
       <button
         class="md:hidden neo-button"
         onclick={toggleMobileMenu}
+        aria-label="Toggle mobile menu"
+        aria-expanded={isOpen}
       >
         <svg
           class="w-6 h-6"
