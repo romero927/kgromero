@@ -68,7 +68,96 @@ const translations = {
           name: "X-Fab, Texas (Semiconductor Manufacturing Industry)",
           techStack: ".NET (C#, ASP.NET MVC WebAPI), SQL Server, C++, Windows Server, Linux."
         }
-      ]
+      ],
+      allSkills: {
+        title: 'All Skills',
+        categories: [
+          {
+            name: "General",
+            skills: "People/Project/Financial Management, System Architecture, Full-Stack Development, Entire SDLC, Continuous Improvement, Legacy Systems"
+          },
+          {
+            name: "Processes",
+            skills: "DevOps, CICD, Agile Scrum, Waterfall, Kanban, GitFlow, Matrixed Organization"
+          },
+          {
+            name: "Architectures",
+            skills: "N-Tier, RESTful API, PWA, SPA, SSR, MVC, Serverless, Offline-First, Event-Driven, Distributed, Microservices, Containerized, Service Oriented"
+          },
+          {
+            name: "Tooling",
+            skills: "Azure DevOps, GitHub, Visual Studio/VS Code, Postman, SSMS, DBeaver, Jira, Confluence, Lucid, Trello"
+          },
+          {
+            name: "Cloud",
+            skills: "Azure, AWS, Netlify, DigitalOcean, Fly.io"
+          },
+          {
+            name: "AI",
+            skills: "ChatGPT, Microsoft CoPilot, Claude, Gemini, Ollama (Qwen, Gemma, Deepseek), Cursor, Cline, N8N, OpenRouter"
+          },
+          {
+            name: "Servers",
+            skills: "Windows Server, Linux (Ubuntu/Debian)"
+          },
+          {
+            name: "DB",
+            skills: "SQL Server, Sqlite3, Oracle"
+          },
+          {
+            name: "JavaScript",
+            skills: "React, Angular, SvelteKit, Node.js, Express API, Electron, TypeScript, JWT"
+          },
+          {
+            name: ".NET",
+            skills: "C#, VB.NET, ASP.NET Core, Blazor, UWP, SignalR, Webforms"
+          },
+          {
+            name: "Scripting",
+            skills: "Python"
+          },
+          {
+            name: "Source Control",
+            skills: "Git, Subversion"
+          },
+          {
+            name: "QA",
+            skills: "xUnit, Jasmine"
+          },
+          {
+            name: "Web",
+            skills: "HTML, CSS, Tailwind, Bootstrap"
+          },
+          {
+            name: "Containerization",
+            skills: "Docker"
+          },
+          {
+            name: "Data Integration",
+            skills: "Boomi, Tibco, SSIS"
+          },
+          {
+            name: "Message Queue",
+            skills: "Azure Service Bus"
+          },
+          {
+            name: "Caching",
+            skills: "Redis"
+          },
+          {
+            name: "Data Warehouse",
+            skills: "Snowflake"
+          },
+          {
+            name: "Reporting",
+            skills: "SSRS, PowerBI"
+          },
+          {
+            name: "Other",
+            skills: "C++, Sharepoint Online, PowerApps, PowerAutomate, Twilio, Swagger, Raspberry Pi, OOP/SOLID"
+          }
+        ]
+      }
     },
     other: {
       title: 'Other',

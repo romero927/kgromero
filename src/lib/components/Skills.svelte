@@ -1,6 +1,13 @@
 <script>
   import { Hr } from 'flowbite-svelte';
   import { t } from '$lib/i18n';
+  import AllSkillsModal from './AllSkillsModal.svelte';
+  
+  let showModal = false;
+  
+  function openModal() {
+    showModal = true;
+  }
 </script>
 
 <div class="neo-card items-center flex flex-col max-w-full h-full bg-white" padding="xs" role="region" aria-label="Skills">
@@ -24,4 +31,16 @@
       </li>
     {/each}
   </ul>
+  
+  <div class="flex justify-center mt-6 mb-4">
+    <button
+      on:click={openModal}
+      class="neo-button"
+      aria-label="View all skills"
+    >
+      View All Skills
+    </button>
+  </div>
 </div>
+
+<AllSkillsModal bind:showModal />
