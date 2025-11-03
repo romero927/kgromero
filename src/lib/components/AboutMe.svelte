@@ -7,15 +7,6 @@
 
 <div class="neo-bold-card items-center flex flex-col max-w-full h-full bg-white rounded-lg" padding="xs" role="region" aria-label="About Me">
     <div class="lg:flex lg:space-x-2">
-      <div class="flex-shrink-0">
-        <img 
-          class="w-full max-w-[55px] mx-auto rounded-full m-1 lazy-image" 
-          alt="Kyle Romero" 
-          src="/images/kgromero.webp"
-          width="96"
-          height="96"
-        />
-      </div>
       <p class="text-sm text-pretty break-words leading-relaxed">{$t.aboutMe.content}</p>
     </div>
 </div>
