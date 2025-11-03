@@ -17,11 +17,11 @@
 </a>
 
 <div class="min-h-screen bg-neo-cream dark:bg-gray-900 flex flex-col">
-  <header class="sticky top-0 z-50">
+  <header class="sticky top-0 z-50 mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32">
     <NavBar />
   </header>
 
-  <main id="main-content" class="flex-grow">
+  <main id="main-content">
     <div class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 neo-bold-card my-2 text-center rounded-lg">
       <h1 class="text-3xl font-bold">{$t.name}</h1>
     </div>
@@ -45,7 +45,7 @@
     </section>
   </main>
 
-  <footer class="mt-auto neo-bold-card p-0">
+  <footer class="neo-bold-card p-0 mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 mb-2 rounded-lg">
     <div class="text-center justify-center items-center flex flex-wrap w-full gap-1 sm:gap-2 py-1 px-2 text-xs sm:text-sm">
       <span class="whitespace-nowrap"><b>© {new Date().getFullYear()} Kyle Romero</b></span>
       <span class="hidden sm:inline">|</span>

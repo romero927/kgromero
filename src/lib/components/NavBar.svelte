@@ -115,14 +115,14 @@
       <div class="hidden md:flex items-center space-x-2 lg:space-x-4" role="menubar">
         <!-- Resume Button -->
         <div class="relative">
-        <button class="neo-button dropdown-trigger flex items-center justify-center h-8"
+        <button class="neo-button dropdown-trigger flex items-center justify-center h-8 py-0"
             onclick={() => toggleDropdown('resume')}
             aria-haspopup="true"
             aria-expanded={activeDropdown === 'resume'}
             aria-label="Resume menu"
           >
             Resume
-            <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </button>
@@ -142,14 +142,14 @@
         <!-- Supporting Documents Button -->
         <div class="relative">
           <button
-            class="neo-button dropdown-trigger flex items-center h-8"
+            class="neo-button dropdown-trigger flex items-center h-8 py-0"
             onclick={() => toggleDropdown('docs')}
             aria-haspopup="true"
             aria-expanded={activeDropdown === 'docs'}
             aria-label="Supporting documents menu"
           >
             Supporting Documents
-            <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="w-4 h-4 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </button>
@@ -162,9 +162,11 @@
                     <button
                       class="w-full text-left font-bold flex items-center justify-between "
                       onclick={() => toggleSubDropdown('raymour')}
+                      aria-expanded={activeSubDropdown === 'raymour'}
+                      aria-label="Raymour & Flanigan documents"
                     >
                       Raymour & Flanigan
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
                     </button>
@@ -184,9 +186,11 @@
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
                       onclick={() => toggleSubDropdown('mears')}
+                      aria-expanded={activeSubDropdown === 'mears'}
+                      aria-label="MEARS Group documents"
                     >
                       MEARS Group
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
                     </button>
@@ -208,9 +212,11 @@
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
                       onclick={() => toggleSubDropdown('worldwide')}
+                      aria-expanded={activeSubDropdown === 'worldwide'}
+                      aria-label="Worldwide Machinery documents"
                     >
                       Worldwide Machinery
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
                     </button>
@@ -230,9 +236,11 @@
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
                       onclick={() => toggleSubDropdown('hp')}
+                      aria-expanded={activeSubDropdown === 'hp'}
+                      aria-label="HP documents"
                     >
                       HP
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
                     </button>
@@ -252,9 +260,11 @@
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
                       onclick={() => toggleSubDropdown('xfab')}
+                      aria-expanded={activeSubDropdown === 'xfab'}
+                      aria-label="X-Fab documents"
                     >
                       X-Fab
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
                     </button>
@@ -282,9 +292,11 @@
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
                       onclick={() => toggleSubDropdown('texastech')}
+                      aria-expanded={activeSubDropdown === 'texastech'}
+                      aria-label="Texas Tech documents"
                     >
                       Texas Tech
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
                     </button>
@@ -322,9 +334,11 @@
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
                       onclick={() => toggleSubDropdown('other')}
+                      aria-expanded={activeSubDropdown === 'other'}
+                      aria-label="Other documents"
                     >
                       Other
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
                     </button>
@@ -350,7 +364,7 @@
         </div>
   
         <!-- Business Card -->
-        <a href={BusinessCard} target="_blank" class="neo-button flex items-center h-8" aria-label="View business card">
+        <a href={BusinessCard} target="_blank" class="neo-button flex items-center h-8 py-0" aria-label="View business card">
           Business Card
         </a>
 
@@ -358,19 +372,20 @@
         <a
           href="https://github.com/romero927/kgromero"
           target="_blank"
-          class="neo-button flex items-center h-8"
+          class="neo-button flex items-center h-8 py-0"
           aria-label="View source code on GitHub"
         >
           <Fa icon={faCode} />
           <span class="sr-only">View Source Code</span>
         </a>
   
-        <ResumeShellWrapper class="neo-button flex items-center h-8">
-          <Terminal size={18} />
+        <ResumeShellWrapper class="neo-button flex items-center h-8 py-0" aria-label="Open resume in terminal">
+          <Terminal size={18} aria-hidden="true" />
+          <span class="sr-only">Open Resume Terminal</span>
         </ResumeShellWrapper>
 
         <!-- Dark Mode Toggle -->
-        <ThemeToggle class="neo-button flex items-center h-8" />
+        <ThemeToggle class="neo-button flex items-center h-8 py-0" />
       </div>
   
       <!-- Mobile Menu Button -->
@@ -407,8 +422,10 @@
         href="https://github.com/romero927/kgromero"
         target="_blank"
         class="neo-button p-2 flex items-center justify-center"
+        aria-label="View source code on GitHub"
       >
-        <Fa icon={faCode} class="mr-2 pl-2" />
+        <Fa icon={faCode} class="mr-2 pl-2" aria-hidden="true" />
+        <span class="sr-only">View Source Code</span>
       </a>
       <ThemeToggle class="mr-2 pl-2"/>
     </div>
@@ -436,9 +453,11 @@
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
             onclick={() => toggleDropdown('raymourMobile')}
+            aria-expanded={activeDropdown === 'raymourMobile'}
+            aria-label="Raymour & Flanigan documents"
           >
             Raymour & Flanigan
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </button>
@@ -456,9 +475,11 @@
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
             onclick={() => toggleDropdown('mearsMobile')}
+            aria-expanded={activeDropdown === 'mearsMobile'}
+            aria-label="MEARS Group documents"
           >
             MEARS Group
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </button>
@@ -477,9 +498,11 @@
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
             onclick={() => toggleDropdown('worldwideMobile')}
+            aria-expanded={activeDropdown === 'worldwideMobile'}
+            aria-label="Worldwide Machinery documents"
           >
             Worldwide Machinery
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </button>
@@ -497,9 +520,11 @@
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
             onclick={() => toggleDropdown('hpMobile')}
+            aria-expanded={activeDropdown === 'hpMobile'}
+            aria-label="HP documents"
           >
             HP
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </button>
@@ -517,9 +542,11 @@
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
             onclick={() => toggleDropdown('xfabMobile')}
+            aria-expanded={activeDropdown === 'xfabMobile'}
+            aria-label="X-Fab documents"
           >
             X-Fab
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </button>
@@ -541,9 +568,11 @@
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
             onclick={() => toggleDropdown('texastechMobile')}
+            aria-expanded={activeDropdown === 'texastechMobile'}
+            aria-label="Texas Tech documents"
           >
             Texas Tech
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </button>
@@ -570,9 +599,11 @@
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
             onclick={() => toggleDropdown('otherMobile')}
+            aria-expanded={activeDropdown === 'otherMobile'}
+            aria-label="Other documents"
           >
             Other
-            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
               <path d="M6 9l6 6 6-6"/>
             </svg>
           </button>
