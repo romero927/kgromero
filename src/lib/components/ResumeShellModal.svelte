@@ -16,7 +16,7 @@
 
   let input = $state('');
   let output = $state([
-    { type: 'system', content: 'Welcome to Kyle Romero\'s bash shell! You can use this terminal to interactively explore my information. This functionality was completely built using Claude AI 3.5 Sonnet.' },
+    { type: 'system', content: 'Welcome to Kyle Romero\'s interactive terminal! Explore my professional information using terminal commands.' },
     { type: 'system', content: 'Type "help" for available commands.' }
   ]);
   let inputElement = $state();
@@ -29,8 +29,22 @@
     phone: "(281) 857-9006",
     linkedin: "in/kyleromero",
     website: "kgromero.com",
-    summary: "Results-driven technology leader with 10+ years in software engineering and 7 years in management, specializing in digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions. Passionate about driving innovation, streamlining processes, and leading technology organizations to success.",
+    summary: "Hands-on and results-driven technology leader with 18+ years in software engineering, specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.\n\nOpen To: Developer, Manager, Senior Manager, Director, and VP roles (In-Office, Hybrid, or Remote)",
     experience: [
+      {
+        startDate: "2025-10",
+        endDate: "present",
+        title: "Team Lead",
+        company: "Tenna",
+        location: "Jersey City, NJ (remote)"
+      },
+      {
+        startDate: "2025-03",
+        endDate: "2025-10",
+        title: "Contractor",
+        company: "Dexian (Client: Deloitte Consulting)",
+        location: "Jersey City, NJ (remote)"
+      },
       {
         startDate: "2023-03",
         endDate: "2024-05",
@@ -96,7 +110,7 @@
       }
     ],
     education: {
-      startDate: "2005-05",
+      startDate: "2005-08",
       endDate: "2009-12",
       degree: "Bachelor of Science in Computer Engineering",
       school: "Texas Tech University",
