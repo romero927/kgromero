@@ -17,7 +17,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   
   <svelte:window onkeydown={handleEscape}/>
   
-  <div class="neo-card items-center flex flex-col max-w-full h-full bg-white" padding="xs">
+  <div class="neo-card items-center flex flex-col max-w-full h-full bg-white " padding="xs">
     <b class="pt-1 pb-1">{$t.contactInfo.title}</b>
     <Hr classHr="border w-full m-2" />
     <ul class="my-4 space-y-4 text-sm mt-5 w-full">

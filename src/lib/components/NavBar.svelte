@@ -98,13 +98,13 @@
   
   <svelte:window onclick={handleClickOutside}/>
   
-  <nav bind:this={navRef} class="mx-2 neo-card mb-4">
-    <div class="flex items-center justify-between p-1">
+  <nav bind:this={navRef} class="neo-card-square">
+    <div class="flex items-center justify-between py-0.5 px-1">
       <!-- Logo and Terminal -->
       <div class="flex items-center space-x-4">
         <div>
           <img
-            class="w-11 mr-2"
+            class="w-9 mr-2"
             alt="KR Logo"
             src={logo}
           />
@@ -115,7 +115,7 @@
       <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
         <!-- Resume Button -->
         <div class="relative">
-        <button class="neo-button dropdown-trigger flex items-center justify-center h-10"
+        <button class="neo-button dropdown-trigger flex items-center justify-center h-8"
             onclick={() => toggleDropdown('resume')}
           >
             Resume
@@ -139,7 +139,7 @@
         <!-- Supporting Documents Button -->
         <div class="relative">
           <button
-            class="neo-button dropdown-trigger flex items-center h-10"
+            class="neo-button dropdown-trigger flex items-center h-8"
             onclick={() => toggleDropdown('docs')}
           >
             Supporting Documents
@@ -344,7 +344,7 @@
         </div>
   
         <!-- Business Card -->
-        <a href={BusinessCard} target="_blank" class="neo-button flex items-center h-10">
+        <a href={BusinessCard} target="_blank" class="neo-button flex items-center h-8">
           Business Card
         </a>
   
@@ -352,18 +352,18 @@
         <a
           href="https://github.com/romero927/kgromero"
           target="_blank"
-          class="neo-button flex items-center h-10"
+          class="neo-button flex items-center h-8"
           title="View Source"
         >
           <Fa icon={faCode} />
         </a>
   
-        <ResumeShellWrapper class="neo-button flex items-center h-10">
-          <Terminal size={20} />
+        <ResumeShellWrapper class="neo-button flex items-center h-8">
+          <Terminal size={18} />
         </ResumeShellWrapper>
-  
+
         <!-- Dark Mode Toggle -->
-        <ThemeToggle class="neo-button flex items-center h-10" />
+        <ThemeToggle class="neo-button flex items-center h-8" />
       </div>
   
       <!-- Mobile Menu Button -->

@@ -39,29 +39,36 @@ const translations = {
     },
     skills: {
       title: 'Skills',
-      categories: {
-        "General": "People/Project/Financial Management, System Architecture, Full-Stack Development, Entire SDLC, Continuous Improvement, Legacy Systems",
-        "Processes": "DevOps, CICD, Agile Scrum, Waterfall, Kanban, GitFlow, Matrixed Organization",
-        "Architectures": "N-Tier, RESTful API, PWA, SPA, SSR, MVC, Serverless, Offline-First, Event-Driven, Distributed, Microservices, Containerized, Service Oriented",
-        "Tooling": "Azure DevOps, GitHub, Visual Studio/VS Code, Postman, SSMS, DBeaver, Jira, Confluence, Lucid, Trello",
-        "Cloud": "Azure, AWS, Netlify, DigitalOcean, Fly.io",
-        "AI": "ChatGPT, Microsoft CoPilot, Claude, Gemini, Ollama (Qwen, Gemma, Deepseek), Cursor, Cline, N8N, OpenRouter",
-        "Servers": "Windows Server, Linux (Ubuntu/Debian)",
-        "DB": "SQL Server, Sqlite3, Oracle",
-        "JavaScript": "React, Angular, SvelteKit, Node.js, Express API, Electron, TypeScript, JWT",
-        ".NET": "C#, VB.NET, ASP.NET Core, Blazor, UWP, SignalR, Webforms",
-        "Scripting": "Python",
-        "Source Control": "Git, Subversion",
-        "QA": "xUnit, Jasmine",
-        "Web": "HTML, CSS, Tailwind, Bootstrap",
-        "Containerization": "Docker",
-        "Data Integration": "Boomi, Tibco, SSIS",
-        "Message Queue": "Azure Service Bus",
-        "Caching": "Redis",
-        "Data Warehouse": "Snowflake",
-        "Reporting": "SSRS, PowerBI",
-        "Other": "C++, Sharepoint Online, PowerApps, PowerAutomate, Twilio, Swagger, Raspberry Pi, OOP/SOLID"
-      }
+      companies: [
+        {
+          name: "Tenna (Construction Technology Industry)",
+          techStack: "AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Grafana, Confluence."
+        },
+        {
+          name: "Dexian (Staffing, IT Services, and Workforce Solutions)",
+          techStack: "Azure Cloud, .NET (Azure Functions, WebAPI) [.NET Microservices (Azure Functions)], MS SQL DB (Azure), Azure DevOps, Confluence."
+        },
+        {
+          name: "Raymour & Flanigan (Retail Industry)",
+          techStack: "React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake."
+        },
+        {
+          name: "MEARS Group (Energy Industry)",
+          techStack: ".NET (C#, ASP.NET Core), Blazor, SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot)."
+        },
+        {
+          name: "Worldwide Machinery (Construction Industry)",
+          techStack: ".NET (C#, ASP.NET Core), SQL Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot)."
+        },
+        {
+          name: "HP Inc. (Consumer Electronics Industry)",
+          techStack: ".NET (C#, ASP.NET Core), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot)."
+        },
+        {
+          name: "X-Fab, Texas (Semiconductor Manufacturing Industry)",
+          techStack: ".NET (C#, ASP.NET MVC WebAPI), SQL Server, C++, Windows Server."
+        }
+      ]
     },
     other: {
       title: 'Other',

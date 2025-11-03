@@ -4,14 +4,20 @@
 
 @layer components {
   .neo-button {
-    @apply bg-neo-orange border-2 border-neo-black shadow-neo
+    @apply bg-neo-orange border-2 border-neo-black shadow-neo rounded-lg
     hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all px-4 py-2 font-bold
     dark:bg-dark-card dark:text-neo-orange dark:border-dark-border dark:shadow-neo-dark
-    dark:hover:bg-dark-hover;
+    dark:hover:bg-dark-hover dark:hover:shadow-none;
   }
 
   .neo-card {
-    @apply bg-white border-2 border-neo-black shadow-neo px-4 py-2 
+    @apply bg-white border-2 border-neo-black shadow-neo px-4 py-2 rounded-lg
+           flex flex-col h-auto min-h-0
+           dark:bg-dark-card dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
+  }
+
+  .neo-card-square {
+    @apply bg-white border-2 border-neo-black shadow-neo px-4 py-2
            flex flex-col h-auto min-h-0
            dark:bg-dark-card dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
   }
@@ -35,5 +41,5 @@
 
 body {
   @apply bg-neo-cream dark:bg-dark-bg;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Consolas', 'Courier New', monospace;
 }

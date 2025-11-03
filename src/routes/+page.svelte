@@ -13,13 +13,15 @@
 </script>
 
 <div class="min-h-screen bg-neo-cream dark:bg-gray-900">
-  <NavBar />
+  <div class="sticky top-0 z-50">
+    <NavBar />
+  </div>
 
-  <div class="mx-2 neo-bold-card my-4 text-center">
+  <div class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 neo-bold-card my-4 text-center rounded-lg">
     <h1 class="text-3xl font-bold">{$t.name}</h1>
   </div>
 
-  <div class="mx-2 my-4 grid grid-cols-1 gap-4">
+  <div class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 my-4 grid grid-cols-1 gap-4">
     {#each ['AboutMe'] as component}
       {@const SvelteComponent = { AboutMe}[component]}
       <div class="h-full" in:fade="{{ duration: 300, delay: 300 }}">
@@ -28,17 +30,17 @@
     {/each}
   </div>
 
- <div class="mx-2 my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
+ <div class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-4">
   {#each ['ContactInfo', 'Experience', 'Skills', 'Other'] as component}
     {@const SvelteComponent_1 = { ContactInfo, Experience, Skills, Other }[component]}
-    <div class="h-full min-w-0 overflow-hidden" in:fade="{{ duration: 300, delay: 300 }}">
+    <div class="h-full min-w-0" in:fade="{{ duration: 300, delay: 300 }}">
       <SvelteComponent_1 />
     </div>
   {/each}
 </div>
 
-<footer class="mx-2 neo-bold-card p-0" >
-  <div class="text-center justify-center items-center flex w-full gap-2">
+<footer class="sticky bottom-0 z-50 neo-bold-card p-0" >
+  <div class="text-center justify-center items-center flex w-full gap-2 py-1 px-2 text-sm">
     <b>© {new Date().getFullYear()} Kyle Romero </b> {$t.footerMessage}
     <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" class="ml-2 mr-2"><Fa icon={faChartLine} /></a>
   </div>
