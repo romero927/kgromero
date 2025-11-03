@@ -55,5 +55,5 @@
 
 body {
   @apply bg-neo-cream dark:bg-dark-bg;
-  font-family: 'Consolas', 'Courier New', monospace;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
