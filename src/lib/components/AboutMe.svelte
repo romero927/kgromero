@@ -10,7 +10,7 @@
       <div class="flex-shrink-0">
         <img 
           class="w-full max-w-[55px] mx-auto rounded-full m-1 lazy-image" 
-          alt="Kyle Romero profile photo" 
+          alt="Kyle Romero" 
           src="/images/kgromero.webp"
           width="96"
           height="96"

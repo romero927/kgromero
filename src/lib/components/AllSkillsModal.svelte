@@ -1,5 +1,4 @@
 <script>
-  import { Hr } from 'flowbite-svelte';
   import { t } from '$lib/i18n';
   
   export let showModal = false;
@@ -22,12 +21,17 @@
   <div 
     class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
     on:click={closeModal}
-    role="presentation"
+    on:keydown={(e) => e.key === 'Enter' && closeModal()}
+    role="button"
+    tabindex="-1"
+    aria-label="Close modal by clicking backdrop"
   >
     <!-- Modal Content -->
+    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
     <div 
       class="neo-card bg-white dark:bg-dark-card max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col rounded-lg"
       on:click|stopPropagation
+      on:keydown|stopPropagation
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"

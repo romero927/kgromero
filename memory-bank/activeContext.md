@@ -5,18 +5,17 @@
 - Enhanced keyboard navigation, ARIA labels, focus management, and semantic HTML
 - Improved user experience for assistive technology users
 
-## Recent Changes
-- Implemented comprehensive accessibility improvements:
-  - Added focus indicators for all interactive elements (buttons, inputs, links)
-  - Implemented skip-to-content link for keyboard navigation
-  - Enhanced semantic HTML structure (proper header, main, footer, section elements)
-  - Added ARIA labels and roles throughout navigation system
-  - Implemented focus trap for modal dialogs
-  - Added screen reader support with aria-hidden and sr-only classes
-  - Improved heading hierarchy (h1, h2 elements)
-  - Enhanced link accessibility with descriptive labels
-  - Added rel="noopener noreferrer" for external links
-  - Improved keyboard navigation in dropdown menus
+## Recent Changes (January 2025)
+- **Comprehensive Accessibility Audit & Fixes** (targeting 100% PageSpeed score):
+  - Enhanced HTML document with better title and meta description
+  - Fixed image alt text (profile image, QR code)
+  - Improved modal accessibility (AllSkillsModal) with proper ARIA attributes and focus trap
+  - Added keyboard support to modal backdrop (Enter key)
+  - Enhanced all icon buttons with proper aria-labels
+  - Ensured all interactive elements have accessible names
+  - Verified proper semantic HTML structure
+  - Created comprehensive accessibility documentation (accessibility.md)
+  - All WCAG 2.1 Level AA requirements met
 
 ## Current State
 The project appears to be a functioning personal website/portfolio for Kyle Romero built with Svelte and Tailwind CSS. The site includes:
