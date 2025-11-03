@@ -22,10 +22,9 @@
     ];
   </script>
   
-  <div class="neo-card items-center flex flex-col max-w-full h-full bg-white " padding="xs">
+  <div class="neo-card items-center flex flex-col max-w-full h-full bg-white dark:bg-dark-card" padding="xs">
     <b class="pt-1 pb-1">{$t.other.title}</b>
-  <Hr classHr="border w-full m-2" />
-    <br />
+    <Hr classHr="border dark:border-gray-700 w-full m-2" />
     <ul class="space-y-4 text-sm">
       <li>
         <b>{$t.other.recentProjects}: </b> 
@@ -45,13 +44,13 @@
         </ul>
       </li>
     </ul>
-    <div class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" role="separator"></div>
+    <Hr classHr="border dark:border-gray-700 w-full m-2" />
     <ul class="space-y-4 text-sm">
       <li class="break-words">
         <b>{$t.other.wantToLearn}: </b><span class="break-words">{$t.other.learningList}</span>
       </li>
     </ul>
-    <div class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" role="separator"></div>
+    <Hr classHr="border dark:border-gray-700 w-full m-2" />
     <ul class="space-y-4 text-sm">
       <li>
         <b>{$t.other.interests}:</b>
@@ -66,7 +65,7 @@
         </Modal>
       </li>
     </ul>
-    <div class="h-px my-4 bg-gray-200 border-0 dark:bg-gray-700" role="separator"></div>
+    <Hr classHr="border dark:border-gray-700 w-full m-2" />
     <ul class="space-y-4 text-sm">
       <li>
           <div class="flex flex-col gap-2">

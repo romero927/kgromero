@@ -12,10 +12,10 @@
 
 <div class="neo-card items-center flex flex-col max-w-full h-full bg-white" padding="xs" role="region" aria-label="Skills">
   <h2 class="pt-1 pb-1 text-base font-bold">{$t.skills.title}</h2>
-  <Hr classHr="border w-full m-2" />
-  <br />
+  <Hr classHr="border dark:border-gray-700 w-full m-2" />
+  
   <ul class="relative pl-6 space-y-4 text-xs p-0 m-0 ml-3 mr-3 w-full">
-    {#each $t.skills.companies as company}
+    {#each $t.skills.companies as company, index}
       <li class="relative block transition-all duration-200 origin-left hover:scale-[1.02] cursor-default group break-words mb-4">
         <!-- Bullet dot -->
         <div class="absolute left-[-22px] top-[6px] h-3 w-3 rounded-full border border-neo-white 
@@ -29,7 +29,11 @@
           <span class="break-words">{company.techStack}</span>
         </div>
       </li>
+      {#if index < $t.skills.companies.length - 1}
+        <Hr classHr="border dark:border-gray-700 w-full my-4" />
+      {/if}
     {/each}
+    <Hr classHr="border dark:border-gray-700 w-full my-4" />
   </ul>
   
   <div class="flex justify-center mt-6 mb-4">

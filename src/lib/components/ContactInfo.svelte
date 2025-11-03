@@ -52,9 +52,9 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   
   <div class="neo-card items-center flex flex-col max-w-full h-full bg-white " padding="xs" role="region" aria-label="Contact Information">
     <h2 class="pt-1 pb-1 text-base font-bold">{$t.contactInfo.title}</h2>
-    <Hr classHr="border w-full m-2" />
-    <div class="my-4 space-y-4 text-sm mt-5 w-full">
-      <ul class="space-y-4">
+    <Hr classHr="border dark:border-gray-700 w-full my-2" />
+    <div class="space-y-4 text-sm w-full">
+      <ul class="space-y-4 mt-4">
         <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
           <Fa icon={faPhone} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" aria-hidden="true" />
           <span class="font-normal leading-tight min-w-0 break-all">
@@ -68,7 +68,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
           </span>
         </li>
       </ul>
-      <Hr classHr="border w-full m-1" />
+      <Hr classHr="border dark:border-gray-700 w-full my-2" />
       <ul class="space-y-4">
         <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
           <Fa icon={faLinkedin} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" aria-hidden="true"/>
@@ -83,7 +83,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
           </span>
         </li>
       </ul>
-      <Hr classHr="border w-full m-1" />
+      <Hr classHr="border dark:border-gray-700 w-full my-2" />
       <ul class="space-y-4">
         <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
           <Fa icon={faLink} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" aria-hidden="true"/>
@@ -92,7 +92,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
           </span>
         </li>
       </ul>
-      <Hr classHr="border w-full m-1" />
+      <Hr classHr="border dark:border-gray-700 w-full my-2" />
       <button 
         class="neo-button p-2 flex items-center w-full justify-center text-sm" 
         onclick={() => showQRModal = true}
@@ -100,7 +100,6 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
       >
         <Fa icon={faQrcode} class="mr-2" aria-hidden="true" />Contact QR Code
       </button>
-      <Hr classHr="border w-full m-1" />
       <!-- <div class="text-sm break-words"><b>{$t.aboutMe.openTo}</b></div> -->
     </div>
   </div>
