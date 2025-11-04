@@ -23,7 +23,7 @@
                     group-hover:scale-150 group-hover:bg-neo-orange" aria-hidden="true"></div>
         
         <div class="mb-1">
-          <strong class="group-hover:text-neo-orange text-sm">{company.name}</strong>
+          <strong class="group-hover:text-neo-orange dark:text-neo-orange text-sm">{company.name}</strong>
         </div>
         <div class="break-words">
           <span class="break-words">{company.techStack}</span>
