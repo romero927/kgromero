@@ -1,0 +1,157 @@
+{
+  "basics": {
+    "name": "Kyle Romero",
+    "label": "Director of Software Development",
+    "email": "kgromero@gmail.com",
+    "phone": "(281) 857-9006",
+    "website": "https://kgromero.com",
+    "summary": "Hands-on and results-driven software engineering leader specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of delivering scalable, business-aligned solutions, optimizing development operations, and mentoring high-performing teams.",
+    "location": {
+      "city": "Jersey City",
+      "region": "New Jersey",
+      "countryCode": "US",
+      "address": "",
+      "postalCode": "07311"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "kyleromero",
+        "url": "https://www.linkedin.com/in/kyleromero"
+      },
+      {
+        "network": "GitHub",
+        "username": "romero927",
+        "url": "https://github.com/romero927"
+      }
+    ]
+  },
+  "work": [
+    {
+      "company": "Tenna",
+      "position": "Team Lead",
+      "website": "https://www.tenna.com",
+      "startDate": "2025-10-01",
+      "summary": "Construction B2B SaaS Startup | 150 Employees",
+      "highlights": [
+        "Led software development team focused on product development, enhancement, and release management.",
+        "Tenna Online is a construction-industry SaaS platform offering real-time GPS, BLE, and IoT asset tracking to manage fleets, schedule maintenance, and improve utilization across mixed equipment operations.",
+        "Tech Stack: AWS, GitHub, Kubernetes, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Grafana, Confluence."
+      ]
+    },
+    {
+      "company": "Dexian",
+      "position": "Technical Lead (Contractor for Deloitte Consulting)",
+      "website": "https://www.dexian.com",
+      "startDate": "2025-03-01",
+      "endDate": "2025-10-01",
+      "summary": "Staffing, IT Services, and Workforce Solutions | 12k Employees",
+      "highlights": [
+        "Short-term contract focused on API development, data integration, and cloud architecture for Deloitte Consulting.",
+        "Client: Deloitte Consulting (Energy Industry client in Chicago).",
+        "Tech Stack: Azure Cloud, Containerized Node Express API (Azure App Services), .NET Microservices (Azure Functions), Angular front end, SAP/CC&B backend, Tibco + Boomi data integrations, Redis cache, CosmosDB, MS SQL (Azure), Azure DevOps, Confluence."
+      ]
+    },
+    {
+      "company": "Raymour & Flanigan",
+      "position": "Director of Software Development",
+      "website": "https://www.raymourflanigan.com",
+      "startDate": "2023-03-01",
+      "endDate": "2024-05-01",
+      "summary": "Retail Industry | 5,000 Employees",
+      "highlights": [
+        "Led software development organization overseeing architectural strategy and implementation of modern UI, API, and data integration architecture.",
+        "Managed 3 Managers (AppDev, Oracle, Data Integrations/API Teams), 4 Architects, and 30 Developers (internal, near-shore, offshore).",
+        "Tech Stack: React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake.",
+        "Major initiatives included ERP migration to NetSuite, WMS migration to Körber, omnichannel e-commerce integration, and 3rd-party API integrations (ChargeAfter, Bringg).",
+        "Defined and implemented organizational strategy (1- and 5-year), goals (OKRs), Agile and DevOps processes, 24/7 support strategy, and coding/review standards.",
+        "Aligned cross-functional teams within matrixed IT organization and coordinated with infrastructure, product management, BI, design, and e-commerce teams.",
+        "Negotiated and managed vendor contracts and budgets, achieving 40% YoY cost reduction."
+      ]
+    },
+    {
+      "company": "MEARS Group, A Quanta Services Company",
+      "position": "Director of Software Development",
+      "website": "https://www.mears.net",
+      "startDate": "2017-10-01",
+      "endDate": "2023-03-01",
+      "summary": "Energy Industry | 2,500 Employees",
+      "highlights": [
+        "Managed software development team as hands-on technical lead overseeing requirements discovery, architecture, full-stack development, QA, DevOps, and production support.",
+        "Administered systems including on-prem Windows Servers, Azure DevOps, and Azure subscriptions.",
+        "Team Size: 4 Developers, 1 PM, 7 Offshore (100% remote).",
+        "Tech Stack: .NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).",
+        "Developed mission-critical SOX-compliant, high-availability internal revenue/time/equipment capture solution used by 700+ field crews nationwide, reducing closing process time by 75%.",
+        "Promotions: Manager (2017–2020), Senior Manager (2020–2021), Director (2021–2023).",
+        "Implemented DevOps, CICD, Agile Scrum, Kanban, and GitFlow, increasing delivery speed by 50%.",
+        "Traveled to multiple U.S. locations to roll out applications and lead change management (25% travel)."
+      ]
+    },
+    {
+      "company": "Worldwide Machinery",
+      "position": "Team Lead / Senior Software Developer",
+      "website": "https://www.wwmach.com",
+      "startDate": "2016-04-01",
+      "endDate": "2017-10-01",
+      "summary": "Construction Industry | 60 Employees",
+      "highlights": [
+        "Led internal software development team of 3 internal and 5 contract developers, reporting directly to company co-owner.",
+        "Developed mission-critical asset management software (desktop, mobile, and web) managing $300M in heavy machinery assets.",
+        "Built mobile-first SPA to provide real-time telemetry data on equipment.",
+        "Implemented Agile Scrum and DevOps practices to optimize team delivery."
+      ]
+    },
+    {
+      "company": "HP Inc.",
+      "position": "Technical Lead / Senior Developer",
+      "website": "https://www.hp.com",
+      "startDate": "2011-12-01",
+      "endDate": "2016-02-01",
+      "summary": "Consumer Electronics Industry | 50,000 Employees",
+      "highlights": [
+        "Designated technical lead over mission-critical 3rd-level support tool used by 10k+ global users.",
+        "Delivered enterprise 3-tier web applications using .NET, MS SQL, and JavaScript.",
+        "Led system split and cloning during HP’s corporate division into HP Inc. and HPE.",
+        "Titles: Senior Developer (2011–2013), Technical Lead (2013–2016)."
+      ]
+    },
+    {
+      "company": "X-Fab Texas, Inc.",
+      "position": "Software / Systems Engineer",
+      "website": "https://www.xfab.com/en/about-x-fab/corporate-overview/locations/usa-texas-single/",
+      "startDate": "2010-01-01",
+      "endDate": "2011-11-30",
+      "summary": "Semiconductor Manufacturing | 400 Employees",
+      "highlights": [
+        "Developed ASP.NET/C# web applications for MSSQL backends and designed WinForms / Console apps.",
+        "Handled database design, server administration (Windows/Linux), and scripting (Shell/Batch/C++).",
+        "Built machine monitoring and inventory tracking systems deployed globally."
+      ]
+    },
+    {
+      "company": "X-Fab Texas, Inc.",
+      "position": "IT Intern",
+      "website": "https://www.xfab.com/en/about-x-fab/corporate-overview/locations/usa-texas-single/",
+      "startDate": "2007-05-15",
+      "endDate": "2009-12-31",
+      "summary": "Internship between TTU EE Department and X-Fab, Texas",
+      "highlights": [
+        "Developed internal software projects including statistical analysis tools, format converters, and .NET web applications."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Texas Tech University",
+      "area": "Computer Engineering",
+      "studyType": "Bachelor of Science",
+      "location": "Lubbock, TX",
+      "endDate": "2009-12-19"
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}
