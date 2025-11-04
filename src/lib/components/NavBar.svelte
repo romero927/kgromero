@@ -67,7 +67,8 @@
   };
   
   // Function to toggle dropdowns
-  const toggleDropdown = (dropdownName) => {
+  const toggleDropdown = (dropdownName, event) => {
+    event?.stopPropagation();
     if (activeDropdown === dropdownName) {
       activeDropdown = null;
       activeSubDropdown = null;
@@ -78,7 +79,8 @@
   };
   
   // Function to toggle sub-dropdowns
-  const toggleSubDropdown = (dropdownName) => {
+  const toggleSubDropdown = (dropdownName, event) => {
+    event?.stopPropagation();
     if (activeSubDropdown === dropdownName) {
       activeSubDropdown = null;
     } else {
@@ -90,8 +92,10 @@
   let navRef = $state();
   const handleClickOutside = (event) => {
     if (navRef && !navRef.contains(event.target)) {
-      activeDropdown = null;
-      activeSubDropdown = null;
+      if (activeDropdown !== null || activeSubDropdown !== null) {
+        activeDropdown = null;
+        activeSubDropdown = null;
+      }
     }
   };
   </script>
@@ -118,7 +122,7 @@
         <!-- Resume Button -->
         <div class="relative">
         <button class="neo-button dropdown-trigger flex items-center justify-center h-8 py-0"
-            onclick={() => toggleDropdown('resume')}
+            onclick={(e) => toggleDropdown('resume', e)}
             aria-haspopup="true"
             aria-expanded={activeDropdown === 'resume'}
             aria-label="Resume menu"
@@ -129,7 +133,7 @@
             </svg>
           </button>
           {#if activeDropdown === 'resume'}
-            <div class="dropdown-menu absolute z-50 w-48 mt-2" role="menu" aria-label="Resume options">
+            <div class="dropdown-menu absolute z-50 w-48 mt-2 text-sm" role="menu" aria-label="Resume options">
               <div class="neo-card space-y-2 bg-white">
                 <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - PDF</a>
                 <hr/>
@@ -145,7 +149,7 @@
         <div class="relative">
           <button
             class="neo-button dropdown-trigger flex items-center h-8 py-0"
-            onclick={() => toggleDropdown('docs')}
+            onclick={(e) => toggleDropdown('docs', e)}
             aria-haspopup="true"
             aria-expanded={activeDropdown === 'docs'}
             aria-label="Supporting documents menu"
@@ -156,14 +160,14 @@
             </svg>
           </button>
           {#if activeDropdown === 'docs'}
-            <div class="dropdown-menu absolute z-50 w-64 mt-2 right-0" role="menu" aria-label="Supporting documents">
+            <div class="dropdown-menu absolute z-50 w-64 mt-2 right-0 text-sm" role="menu" aria-label="Supporting documents">
               <div class="neo-card max-h-[80vh] overflow-y-auto bg-white">
                 <div class="space-y-4 p-4">
                   <!-- Raymour & Flanigan -->
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between "
-                      onclick={() => toggleSubDropdown('raymour')}
+                      onclick={(e) => toggleSubDropdown('raymour', e)}
                       aria-expanded={activeSubDropdown === 'raymour'}
                       aria-label="Raymour & Flanigan documents"
                     >
@@ -187,7 +191,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={() => toggleSubDropdown('mears')}
+                      onclick={(e) => toggleSubDropdown('mears', e)}
                       aria-expanded={activeSubDropdown === 'mears'}
                       aria-label="MEARS Group documents"
                     >
@@ -213,7 +217,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={() => toggleSubDropdown('worldwide')}
+                      onclick={(e) => toggleSubDropdown('worldwide', e)}
                       aria-expanded={activeSubDropdown === 'worldwide'}
                       aria-label="Worldwide Machinery documents"
                     >
@@ -237,7 +241,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={() => toggleSubDropdown('hp')}
+                      onclick={(e) => toggleSubDropdown('hp', e)}
                       aria-expanded={activeSubDropdown === 'hp'}
                       aria-label="HP documents"
                     >
@@ -261,7 +265,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={() => toggleSubDropdown('xfab')}
+                      onclick={(e) => toggleSubDropdown('xfab', e)}
                       aria-expanded={activeSubDropdown === 'xfab'}
                       aria-label="X-Fab documents"
                     >
@@ -293,7 +297,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={() => toggleSubDropdown('texastech')}
+                      onclick={(e) => toggleSubDropdown('texastech', e)}
                       aria-expanded={activeSubDropdown === 'texastech'}
                       aria-label="Texas Tech documents"
                     >
@@ -335,7 +339,7 @@
                   <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
                     <button
                       class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={() => toggleSubDropdown('other')}
+                      onclick={(e) => toggleSubDropdown('other', e)}
                       aria-expanded={activeSubDropdown === 'other'}
                       aria-label="Other documents"
                     >
@@ -445,7 +449,7 @@
     </div>
   </div>
     <!-- Resume Links -->
-    <div class="neo-card mb-4">
+    <div class="neo-card mb-4 text-sm">
       <h3 class="font-bold mb-2">Resume</h3>
       <div class="space-y-2">
         <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline">Resume - PDF</a>
@@ -459,14 +463,14 @@
     </div>
 
     <!-- Supporting Documents -->
-    <div class="neo-card mb-4">
+    <div class="neo-card mb-4 text-sm">
       <h3 class="font-bold mb-4">Supporting Documents</h3>
       <div class="space-y-6">
         <!-- Raymour & Flanigan -->
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            onclick={() => toggleDropdown('raymourMobile')}
+            onclick={(e) => toggleDropdown('raymourMobile', e)}
             aria-expanded={activeDropdown === 'raymourMobile'}
             aria-label="Raymour & Flanigan documents"
           >
@@ -488,7 +492,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            onclick={() => toggleDropdown('mearsMobile')}
+            onclick={(e) => toggleDropdown('mearsMobile', e)}
             aria-expanded={activeDropdown === 'mearsMobile'}
             aria-label="MEARS Group documents"
           >
@@ -511,7 +515,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            onclick={() => toggleDropdown('worldwideMobile')}
+            onclick={(e) => toggleDropdown('worldwideMobile', e)}
             aria-expanded={activeDropdown === 'worldwideMobile'}
             aria-label="Worldwide Machinery documents"
           >
@@ -533,7 +537,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            onclick={() => toggleDropdown('hpMobile')}
+            onclick={(e) => toggleDropdown('hpMobile', e)}
             aria-expanded={activeDropdown === 'hpMobile'}
             aria-label="HP documents"
           >
@@ -555,7 +559,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            onclick={() => toggleDropdown('xfabMobile')}
+            onclick={(e) => toggleDropdown('xfabMobile', e)}
             aria-expanded={activeDropdown === 'xfabMobile'}
             aria-label="X-Fab documents"
           >
@@ -581,7 +585,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            onclick={() => toggleDropdown('texastechMobile')}
+            onclick={(e) => toggleDropdown('texastechMobile', e)}
             aria-expanded={activeDropdown === 'texastechMobile'}
             aria-label="Texas Tech documents"
           >
@@ -612,7 +616,7 @@
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
             class="w-full text-left mb-2 flex items-center justify-between"
-            onclick={() => toggleDropdown('otherMobile')}
+            onclick={(e) => toggleDropdown('otherMobile', e)}
             aria-expanded={activeDropdown === 'otherMobile'}
             aria-label="Other documents"
           >

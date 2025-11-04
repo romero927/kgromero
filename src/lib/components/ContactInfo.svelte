@@ -94,7 +94,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
       </ul>
       <Hr classHr="border dark:border-gray-700 w-full my-2" />
       <button 
-        class="neo-button p-2 flex items-center w-full justify-center text-sm" 
+        class="neo-button p-2 flex items-center w-full justify-center"
         onclick={() => showQRModal = true}
         aria-label="Show contact QR code"
       >

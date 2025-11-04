@@ -73,7 +73,7 @@
               <a 
                 href={blog.href} 
                 target="_blank" 
-                class="neo-button text-center text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all w-full"
+                class="neo-button text-center w-full"
               >
                 {blog.name}
               </a>
