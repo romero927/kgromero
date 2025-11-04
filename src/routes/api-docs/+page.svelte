@@ -60,9 +60,16 @@
       <h1 class="text-4xl font-bold mb-4">Resume API Documentation</h1>
       {#if apiSpec}
         <p class="text-lg mb-2">{apiSpec.info.description}</p>
-        <div class="flex gap-4 text-sm">
+        <div class="flex flex-wrap gap-4 text-sm items-center">
           <span><strong>Version:</strong> {apiSpec.info.version}</span>
           <span><strong>Contact:</strong> {apiSpec.info.contact.email}</span>
+          <a 
+            href="/api/openapi.json" 
+            target="_blank"
+            class="px-3 py-1 bg-neo-orange text-neo-cream font-bold rounded hover:bg-opacity-80 transition-colors dark:bg-dark-accent dark:text-neo-black"
+          >
+            View OpenAPI Spec
+          </a>
         </div>
       {/if}
     </div>
