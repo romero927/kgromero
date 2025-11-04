@@ -36,10 +36,10 @@
     <Hr classHr="border dark:border-gray-700 w-full my-4" />
   </ul>
   
-  <div class="flex justify-center mt-6 mb-4">
+  <div class="mt-6 mb-4 w-full px-4">
     <button
       on:click={openModal}
-      class="neo-button"
+      class="neo-button w-full"
       aria-label="View all skills"
     >
       View All Skills

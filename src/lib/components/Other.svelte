@@ -66,14 +66,14 @@
       </li>
     </ul>
     <Hr classHr="border dark:border-gray-700 w-full m-2" />
-    <ul class="space-y-4 text-sm">
+    <ul class="space-y-4 text-sm w-full px-4">
       <li>
-          <div class="flex flex-col gap-2">
+          <div class="flex flex-col gap-2 w-full">
             {#each $t.other.blogs as blog}
               <a 
                 href={blog.href} 
                 target="_blank" 
-                class="neo-button text-center text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+                class="neo-button text-center text-sm hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all w-full"
               >
                 {blog.name}
               </a>

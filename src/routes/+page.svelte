@@ -22,7 +22,7 @@
   </header>
 
   <main id="main-content">
-    <div class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 neo-bold-card my-2 text-center rounded-lg">
+    <div class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 neo-bold-card my-2 text-center">
       <h1 class="text-3xl font-bold">{$t.name}</h1>
     </div>
 
@@ -45,7 +45,7 @@
     </section>
   </main>
 
-  <footer class="neo-bold-card p-0 mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 mb-2 rounded-lg">
+  <footer class="neo-bold-card p-0 mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 mb-2">
     <div class="text-center justify-center items-center flex flex-wrap w-full gap-1 sm:gap-2 py-1 px-2 text-xs sm:text-sm">
       <span class="whitespace-nowrap"><b>© {new Date().getFullYear()} Kyle Romero</b></span>
       <span class="hidden sm:inline">|</span>
