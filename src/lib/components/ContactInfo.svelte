@@ -100,6 +100,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
       >
         <Fa icon={faQrcode} class="mr-2" aria-hidden="true" />Contact QR Code
       </button>
+      <br/>
       <!-- <div class="text-sm break-words"><b>{$t.aboutMe.openTo}</b></div> -->
     </div>
   </div>
