@@ -4,8 +4,17 @@
 - Recently completed comprehensive accessibility improvements across the entire website
 - Enhanced keyboard navigation, ARIA labels, focus management, and semantic HTML
 - Improved user experience for assistive technology users
+- Performance optimization: Fixed render-blocking Google Fonts requests
 
 ## Recent Changes (January 2025)
+- **Performance Optimization - Font Loading** (January 2025):
+  - Fixed render-blocking Google Fonts requests (estimated savings of 690ms)
+  - Consolidated duplicate font imports from app.html and +layout.svelte
+  - Implemented non-blocking font loading using media="print" with onload technique
+  - Reduced from 2 blocking requests to 1 non-blocking request
+  - All required font weights (400, 500, 600, 700) now loaded from single source
+  - Added noscript fallback for JavaScript-disabled users
+
 - **Comprehensive Accessibility Audit & Fixes** (targeting 100% PageSpeed score):
   - Enhanced HTML document with better title and meta description
   - Fixed image alt text (profile image, QR code)

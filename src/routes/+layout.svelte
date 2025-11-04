@@ -35,7 +35,6 @@
   <meta name="theme-color" content={$theme === 'dark' ? '#1a1a1a' : '#fff5e9'}>
   <meta name="description" content={description} />
   <link rel="canonical" href={$page.url.href} />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <meta property="og:title" content={title} />
   <meta property="og:description" content={description} />
