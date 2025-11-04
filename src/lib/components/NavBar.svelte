@@ -98,12 +98,29 @@
       }
     }
   };
+  
+  // Click inside navbar handler (closes dropdowns when clicking elsewhere in navbar)
+  const handleNavbarClick = () => {
+    if (activeDropdown !== null || activeSubDropdown !== null) {
+      activeDropdown = null;
+      activeSubDropdown = null;
+    }
+  };
+  
+  // Keyboard handler for accessibility
+  const handleNavbarKeydown = (event) => {
+    // Close dropdowns on Escape key
+    if (event.key === 'Escape' && (activeDropdown !== null || activeSubDropdown !== null)) {
+      activeDropdown = null;
+      activeSubDropdown = null;
+    }
+  };
   </script>
   
   <svelte:window onclick={handleClickOutside}/>
   
   <nav bind:this={navRef} class="neo-card-square" aria-label="Main navigation">
-    <div class="flex items-center justify-between py-0.5 px-1">
+    <div class="flex items-center justify-between py-0.5 px-1" onclick={handleNavbarClick} onkeydown={handleNavbarKeydown} role="none">
       <!-- Logo and Terminal -->
       <div class="flex items-center space-x-4">
         <div>
