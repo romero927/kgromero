@@ -150,7 +150,7 @@
             </svg>
           </button>
           {#if activeDropdown === 'resume'}
-            <div class="dropdown-menu absolute z-50 w-48 mt-2 text-sm" role="menu" aria-label="Resume options">
+            <div class="dropdown-menu absolute z-50 w-48 mt-2 text-sm" role="menu" aria-label="Resume options" tabindex="0" onclick={(e) => e.stopPropagation()} onkeydown={(e) => e.stopPropagation()}>
               <div class="neo-card space-y-2 bg-white">
                 <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - PDF</a>
                 <hr/>
@@ -181,7 +181,7 @@
             </svg>
           </button>
           {#if activeDropdown === 'docs'}
-            <div class="dropdown-menu absolute z-50 w-64 mt-2 right-0 text-sm" role="menu" aria-label="Supporting documents">
+            <div class="dropdown-menu absolute z-50 w-64 mt-2 right-0 text-sm" role="menu" aria-label="Supporting documents" tabindex="0" onclick={(e) => e.stopPropagation()} onkeydown={(e) => e.stopPropagation()}>
               <div class="neo-card max-h-[80vh] overflow-y-auto bg-white">
                 <div class="space-y-4 p-4">
                   <!-- Raymour & Flanigan -->
