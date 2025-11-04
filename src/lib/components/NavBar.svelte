@@ -123,15 +123,15 @@
     <div class="flex items-center justify-between py-0.5 px-1" onclick={handleNavbarClick} onkeydown={handleNavbarKeydown} role="none">
       <!-- Logo and Terminal -->
       <div class="flex items-center space-x-4">
-        <div>
+        <a href="/">
           <img
-            class="w-9 mr-2"
+            class="w-9 mr-2 cursor-pointer hover:opacity-80 transition-opacity"
             alt="Kyle Romero Logo"
             src={logo}
             width="63"
             height="61"
           />
-        </div>
+        </a>
       </div>
   
       <!-- Desktop Navigation -->
@@ -155,6 +155,10 @@
                 <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - PDF</a>
                 <hr/>
                 <a href="/Kyle_Romero-Resume.docx" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - DOCX</a>
+                <hr/>
+                <a href="/api/resume?format=json" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - JSON</a>
+                <hr/>
+                <a href="/kgromero.md" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - MD</a>
                 <hr/>
                 <a href="/Kyle_Romero-Coverletter.pdf" target="_blank" class="block hover:underline p-2" role="menuitem">Cover Letter</a>
               </div>
@@ -386,6 +390,11 @@
           {/if}
         </div>
   
+        <!-- API Docs -->
+        <a href="/api-docs" class="neo-button flex items-center h-8 py-0" aria-label="API documentation">
+          API Docs
+        </a>
+
         <!-- Business Card -->
         <a href={BusinessCard} target="_blank" class="neo-button flex items-center h-8 py-0" aria-label="View business card">
           Business Card
@@ -421,68 +430,77 @@
         </div> -->
       </div>
   
-      <!-- Mobile Menu Button -->
-      <button
-        class="md:hidden neo-button"
-        onclick={toggleMobileMenu}
-        aria-label="Toggle mobile menu"
-        aria-expanded={isOpen}
-      >
-        <svg
-          class="w-6 h-6"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
+      <!-- Mobile Menu Button and Theme Toggle -->
+      <div class="md:hidden flex items-center space-x-2">
+        <ThemeToggle class="neo-button flex items-center h-8 py-0" />
+        <button
+          class="neo-button"
+          onclick={toggleMobileMenu}
+          aria-label="Toggle mobile menu"
+          aria-expanded={isOpen}
         >
-          {#if !isOpen}
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-          {:else}
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-          {/if}
-        </svg>
-      </button>
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            {#if !isOpen}
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            {:else}
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+            {/if}
+          </svg>
+        </button>
+      </div>
     </div>
   
     <!-- Mobile Menu -->
     {#if isOpen}
-  <div class="md:hidden p-4 space-y-4 pl-0">
-    <!-- Top Mobile Actions -->
-    <div class="flex space-x-3 block">
-      <a href={BusinessCard} target="_blank" class="neo-button block text-center">
-        Business Card
-      </a>
-      <a
-        href="https://github.com/romero927/kgromero"
-        target="_blank"
-        class="neo-button p-2 flex items-center justify-center"
-        aria-label="View source code on GitHub"
-      >
-        <Fa icon={faCode} class="mr-2 pl-2" aria-hidden="true" />
-        <span class="sr-only">View Source Code</span>
-      </a>
-      <div class="mr-2 pl-2">
-        <ThemeToggle />
-      </div>
-    </div>
-  </div>
-    <!-- Resume Links -->
-    <div class="neo-card mb-4 text-sm">
-      <h3 class="font-bold mb-2">Resume</h3>
-      <div class="space-y-2">
-        <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline">Resume - PDF</a>
-        <hr/>
-        <a href="/Kyle_Romero-Resume.docx" target="_blank" class="block hover:underline">Resume - DOCX</a>
-        <hr/>
-        <a href="/Kyle_Romero-Resume.md" target="_blank" class="block hover:underline">Resume - MD</a>
-        <hr/>
-        <a href="/Kyle_Romero-Coverletter.pdf" target="_blank" class="block hover:underline">Cover Letter</a>
-      </div>
-    </div>
+      <div class="md:hidden p-4 space-y-4">
+        <!-- Top Mobile Actions -->
+        <div class="flex flex-wrap gap-2">
+          <a href="/api-docs" class="neo-button block text-center">
+            API Docs
+          </a>
+          <a href={BusinessCard} target="_blank" class="neo-button block text-center">
+            Business Card
+          </a>
+          <a
+            href="https://github.com/romero927/kgromero"
+            target="_blank"
+            class="neo-button p-2 flex items-center justify-center"
+            aria-label="View source code on GitHub"
+          >
+            <Fa icon={faCode} class="mr-2 pl-2" aria-hidden="true" />
+            <span class="sr-only">View Source Code</span>
+          </a>
+          <ResumeShellWrapper class="neo-button p-2 flex items-center justify-center" aria-label="Open resume in terminal">
+            <Terminal size={18} class="mr-2" aria-hidden="true" />
+            <span class="sr-only">Open Resume Terminal</span>
+          </ResumeShellWrapper>
+        </div>
 
-    <!-- Supporting Documents -->
-    <div class="neo-card mb-4 text-sm">
-      <h3 class="font-bold mb-4">Supporting Documents</h3>
-      <div class="space-y-6">
+        <!-- Resume Links -->
+        <div class="neo-card mb-4 text-sm">
+          <h3 class="font-bold mb-2">Resume</h3>
+          <div class="space-y-2">
+            <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline">Resume - PDF</a>
+            <hr/>
+            <a href="/Kyle_Romero-Resume.docx" target="_blank" class="block hover:underline">Resume - DOCX</a>
+            <hr/>
+            <a href="/api/resume?format=json" target="_blank" class="block hover:underline">Resume - JSON</a>
+            <hr/>
+            <a href="/kgromero.md" target="_blank" class="block hover:underline">Resume - MD</a>
+            <hr/>
+            <a href="/Kyle_Romero-Coverletter.pdf" target="_blank" class="block hover:underline">Cover Letter</a>
+          </div>
+        </div>
+
+        <!-- Supporting Documents -->
+        <div class="neo-card mb-4 text-sm">
+          <h3 class="font-bold mb-4">Supporting Documents</h3>
+          <div class="space-y-6">
         <!-- Raymour & Flanigan -->
         <div class="border-b border-neo-black pb-4 last:border-b-0 last:pb-0">
           <button
@@ -644,18 +662,23 @@
           </button>
           {#if activeDropdown === 'otherMobile'}
             <div class="ml-4 space-y-2 border-l-2 border-neo-black pl-4">
+              <a href={AISetup} target="_blank" class="block hover:underline">AI Development Process</a>
               <a href={Sentiment} target="_blank" class="block hover:underline">Twitter Sentiment Analysis</a>
+              <hr/>
               <a href={RTL} target="_blank" class="block hover:underline">RTL-SDR</a>
+              <hr/>
               <a href={RedditListener} target="_blank" class="block hover:underline">RedditListener</a>
+              <hr/>
               <a href={RPi} target="_blank" class="block hover:underline">RPi LED Display</a>
+              <hr/>
               <a href="https://kgromero-react.netlify.app/" target="_blank" class="block hover:underline">Old Site (React)</a>
             </div>
           {/if}
         </div>
+          </div>
+        </div>
       </div>
-    </div>
-
-{/if}
+    {/if}
   </nav>
   
   <style>
