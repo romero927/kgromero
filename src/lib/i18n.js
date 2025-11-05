@@ -64,7 +64,7 @@ const translations = {
         },
         {
           name: "Worldwide Machinery (Construction Industry)",
-          url: "https://www.wwinc.com",
+          url: "https://www.wwmach.com",
           techStack: "Angular, .NET (C#, ASP.NET Core), Node.js, Electron, Java (Spring Boot), SQL Server, Git, PowerBI, PowerAutomate."
         },
         {
