@@ -66,7 +66,9 @@
       </li>
     </ul>
     <Hr classHr="border dark:border-gray-700 w-full m-2" />
+
     <ul class="space-y-4 text-sm w-full px-4 mb-4 ">
+      <b>{$t.other.favoriteBlogs}:</b>
       <li>
           <div class="flex flex-col gap-2 w-full">
             {#each $t.other.blogs as blog}

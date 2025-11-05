@@ -23,7 +23,29 @@
                     group-hover:scale-150 group-hover:bg-neo-orange" aria-hidden="true"></div>
         
         <div class="mb-1">
-          <strong class="group-hover:text-neo-orange dark:text-neo-orange text-sm">{company.name}</strong>
+          <a 
+            href={company.url} 
+            target="_blank" 
+            rel="noopener noreferrer"
+            class="group-hover:text-neo-orange dark:text-neo-orange text-sm font-bold hover:underline"
+            aria-label={`Visit ${company.name} website`}
+          >
+            {company.name}
+          </a>
+          {#if company.client && company.client_url}
+            <div class="mt-1 text-xs">
+              <span class="text-gray-600 dark:text-gray-400">Client: </span>
+              <a 
+                href={company.client_url} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                class="hover:underline"
+                aria-label={`Visit ${company.client} website`}
+              >
+                {company.client}
+              </a>
+            </div>
+          {/if}
         </div>
         <div class="break-words">
           <span class="break-words">{company.techStack}</span>
