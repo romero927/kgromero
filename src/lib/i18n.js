@@ -43,39 +43,39 @@ const translations = {
         {
           name: "Tenna (Construction Technology Industry)",
           url: "https://tenna.com",
-          techStack: "React, Redux, SingleSpa (Micro-UI), Hapi (Node.js), Postgres, Elasticsearch, Redis, RabbitMQ, AWS, Docker, K8s, Helm, FluxCD (GitOps), Grafana, GitHub, Confluence."
+          techStack: "AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Grafana, Confluence."
         },
         {
           name: "Dexian (Staffing, IT Services, and Workforce Solutions)",
           url: "https://dexian.com",
           client: "Deloitte Consulting",
           client_url: "https://deloitte.com",
-          techStack: ".NET (C#, Azure Functions, WebAPI), MS SQL Server, Azure, Azure DevOps, Confluence."
+          techStack: "Azure Cloud, Containerized Node Express API (Azure App Services), .NET Microservices (Azure Functions), Angular F.E., SAP / CC&B B.E., Tibco + Boomi Data Integrations, Redis Cache, CosmosDB, MS-SQL DB (Azure), Azure DevOps, Confluence."
         },
         {
           name: "Raymour & Flanigan (Retail Industry)",
           url: "https://www.raymourflanigan.com",
-          techStack: "React, .NET (C#, ASP.NET Core, UWP), SQL Server, Oracle, Snowflake, Azure, AWS, Windows Server, Boomi, Git (Azure DevOps)."
+          techStack: "React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake."
         },
         {
           name: "MEARS Group (Energy Industry)",
           url: "https://www.mearsgroup.com",
-          techStack: "Angular, Blazor, .NET (C#, ASP.NET Core), Node.js, Electron, Java (Spring Boot), Python, SQL Server, Sqlite3, Azure, Windows Server, Git, PowerBI, PowerAutomate, Raspberry Pi."
+          techStack: ".NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot), Python, Raspberry Pi."
         },
         {
           name: "Worldwide Machinery (Construction Industry)",
           url: "https://www.wwmach.com",
-          techStack: "Angular, .NET (C#, ASP.NET Core), Node.js, Electron, Java (Spring Boot), SQL Server, Git, PowerBI, PowerAutomate."
+          techStack: ".NET (C#, ASP.NET MVC API, WinForms), React, Redux, Typescript (ES6), Node.js, Express, SASS, Sql Server, DigitalOcean, Docker, JIRA, TeamCity, Bitbucket, Ubuntu, Windows Server."
         },
         {
           name: "HP Inc. (Consumer Electronics Industry)",
           url: "https://www.hp.com",
-          techStack: "Angular, .NET (C#, ASP.NET Core), Node.js, Electron, Java (Spring Boot), SQL Server, Sqlite3, Azure, Windows Server, Git, PowerBI, PowerAutomate."
+          techStack: ".NET (VB.NET, C#, ASP.NET), jQueryUI, jQuery, SQL Server, Tableau, Hadoop, Hive, HP Vertica, TFS, Subeversion, Visual Studio, Windows Server."
         },
         {
           name: "X-Fab, Texas (Semiconductor Manufacturing Industry)",
           url: "https://www.xfab.com",
-          techStack: ".NET (C#, ASP.NET MVC WebAPI), C++, SQL Server, Windows Server, Linux."
+          techStack: ".NET (C#, ASP.NET, WinForms), C++, Perle, SQL Server, Subversion, Windows Server, RedHat."
         }
       ],
       allSkills: {
