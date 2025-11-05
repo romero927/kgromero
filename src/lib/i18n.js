@@ -43,7 +43,7 @@ const translations = {
         {
           name: "Tenna (Construction Technology Industry)",
           url: "https://tenna.com",
-          techStack: "AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Grafana, Confluence."
+          techStack: "AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Grafana, JIRA, Confluence."
         },
         {
           name: "Dexian (Staffing, IT Services, and Workforce Solutions)",
@@ -60,7 +60,7 @@ const translations = {
         {
           name: "MEARS Group (Energy Industry)",
           url: "https://www.mearsgroup.com",
-          techStack: ".NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot), Python, Raspberry Pi."
+          techStack: ".NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git (Azure DevOps), PowerBI, PowerAutomate, Java (Spring Boot), Python, Raspberry Pi."
         },
         {
           name: "Worldwide Machinery (Construction Industry)",
