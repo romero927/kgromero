@@ -43,7 +43,7 @@ const translations = {
         {
           name: "Tenna (Construction Technology Industry)",
           url: "https://tenna.com",
-          techStack: "AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Grafana, JIRA, Confluence."
+          techStack: "AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Sequelize, Grafana, JIRA, Confluence."
         },
         {
           name: "Dexian (Staffing, IT Services, and Workforce Solutions)",
@@ -111,7 +111,11 @@ const translations = {
           },
           {
             name: "DB",
-            skills: "SQL Server, Sqlite3, Oracle"
+            skills: "SQL Server, Postgres, Sqlite3, Oracle"
+          },
+          {
+            name: "ORM",
+            skills: "Sequelize, Entity Framework"
           },
           {
             name: "JavaScript",
@@ -147,7 +151,7 @@ const translations = {
           },
           {
             name: "Message Queue",
-            skills: "Azure Service Bus"
+            skills: "Azure Service Bus, RabbitMQ"
           },
           {
             name: "Caching",
