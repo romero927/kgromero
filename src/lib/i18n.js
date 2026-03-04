@@ -43,7 +43,7 @@ const translations = {
         {
           name: "Tenna (Construction Technology Industry)",
           url: "https://tenna.com",
-          techStack: "AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Sequelize, Grafana, JIRA, Confluence."
+          techStack: "AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Sequelize, Grafana, JIRA, Confluence, Claude."
         },
         {
           name: "Dexian (Staffing, IT Services, and Workforce Solutions)",
