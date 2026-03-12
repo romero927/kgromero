@@ -1,11 +1,11 @@
 <script>
   import { Terminal } from 'lucide-svelte';
-  let { onClick } = $props();
+  let { onClick, class: className = '' } = $props();
 </script>
 
 <button
   onclick={onClick}
-  class="neo-button px-2 flex items-center justify-center"
+  class="neo-button flex items-center justify-center {className}"
 >
   <Terminal size={20} />
 </button>

@@ -2,14 +2,16 @@
   import { theme } from '$lib/store';
   import { Moon, Sun } from 'lucide-svelte';
 
+  let { class: className = '' } = $props();
+
   const toggleTheme = () => {
     $theme = $theme === 'dark' ? 'light' : 'dark';
   };
 </script>
 
-<button 
-  onclick={toggleTheme} 
-  class="neo-button px-2 flex items-center justify-center"
+<button
+  onclick={toggleTheme}
+  class="neo-button flex items-center justify-center {className}"
   aria-label="Toggle theme"
 >
   {#if $theme === 'dark'}

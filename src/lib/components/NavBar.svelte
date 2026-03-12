@@ -1,7 +1,6 @@
 <script>
   import { Terminal } from 'lucide-svelte';
-  import Fa from "svelte-fa";
-  import { faCode } from "@fortawesome/free-solid-svg-icons";
+  import { Code2 } from 'lucide-svelte';
   import ResumeShellWrapper from './ResumeShellWrapper.svelte';
   import ThemeToggle from './ThemeToggle.svelte';
   
@@ -169,7 +168,7 @@
         <!-- Supporting Documents Button -->
         <div class="relative">
           <button
-            class="neo-button dropdown-trigger flex items-center h-8 py-0"
+            class="neo-button dropdown-trigger flex items-center justify-center h-8 py-0"
             onclick={(e) => toggleDropdown('docs', e)}
             aria-haspopup="true"
             aria-expanded={activeDropdown === 'docs'}
@@ -391,12 +390,12 @@
         </div>
   
         <!-- API Docs -->
-        <a href="/api-docs" class="neo-button flex items-center h-8 py-0" aria-label="API documentation">
+        <a href="/api-docs" class="neo-button flex items-center justify-center h-8 py-0" aria-label="API documentation">
           API Docs
         </a>
 
         <!-- Business Card -->
-        <a href={BusinessCard} target="_blank" class="neo-button flex items-center h-8 py-0" aria-label="View business card">
+        <a href={BusinessCard} target="_blank" class="neo-button flex items-center justify-center h-8 py-0" aria-label="View business card">
           Business Card
         </a>
 
@@ -404,20 +403,20 @@
         <a
           href="https://github.com/romero927/kgromero"
           target="_blank"
-          class="neo-button flex items-center h-8 py-0"
+          class="neo-button flex items-center justify-center h-8 py-0"
           aria-label="View source code on GitHub"
         >
-          <Fa icon={faCode} />
+          <Code2 size={20} />
           <span class="sr-only">View Source Code</span>
         </a>
-  
-        <ResumeShellWrapper class="neo-button flex items-center h-8 py-0" aria-label="Open resume in terminal">
+
+        <ResumeShellWrapper class="h-8 py-0" aria-label="Open resume in terminal">
           <Terminal size={18} aria-hidden="true" />
           <span class="sr-only">Open Resume Terminal</span>
         </ResumeShellWrapper>
 
         <!-- Dark Mode Toggle -->
-        <ThemeToggle class="neo-button flex items-center h-8 py-0" />
+        <ThemeToggle class="h-8 py-0" />
 
         <!-- <div class="flex-shrink-0">
           <img 
@@ -472,7 +471,7 @@
             class="neo-button p-2 flex items-center justify-center"
             aria-label="View source code on GitHub"
           >
-            <Fa icon={faCode} class="mr-2 pl-2" aria-hidden="true" />
+            <Code2 size={20} aria-hidden="true" />
             <span class="sr-only">View Source Code</span>
           </a>
           <ResumeShellWrapper class="neo-button p-2 flex items-center justify-center" aria-label="Open resume in terminal">
