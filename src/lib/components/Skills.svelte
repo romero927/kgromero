@@ -3,8 +3,8 @@
   import { t } from '$lib/i18n';
   import AllSkillsModal from './AllSkillsModal.svelte';
   
-  let showModal = false;
-  
+  let showModal = $state(false);
+
   function openModal() {
     showModal = true;
   }
@@ -60,7 +60,7 @@
   
   <div class="mt-6 mb-4 w-full px-4">
     <button
-      on:click={openModal}
+      onclick={openModal}
       class="neo-button w-full"
       aria-label="View all skills"
     >

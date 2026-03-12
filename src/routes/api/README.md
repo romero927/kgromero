@@ -36,6 +36,7 @@ Retrieves the complete resume data in JSON Resume format.
 ```
 
 **Headers**:
+
 - `Content-Type: application/json`
 - `Access-Control-Allow-Origin: *` (CORS enabled)
 - `Cache-Control: public, max-age=3600`
@@ -69,7 +70,7 @@ curl https://kgromero.com/api/resume | jq '.work'
 
 ```javascript
 // Fetch resume data
-const response = await fetch('https://kgromero.com/api/resume');
+const response = await fetch("https://kgromero.com/api/resume");
 const resume = await response.json();
 
 console.log(resume.basics.name); // "Kyle Romero"
@@ -107,6 +108,7 @@ Responses are cached for 1 hour (3600 seconds) to improve performance. If you ne
 ## Support
 
 For questions or issues, please contact:
+
 - Email: kgromero@gmail.com
 - GitHub: https://github.com/romero927
 

@@ -54,7 +54,7 @@
     <ul class="space-y-4 text-sm">
       <li>
         <b>{$t.other.interests}:</b>
-        <button on:click={() => { clickOutsideModal = true; }} aria-label="View family photos">
+        <button onclick={() => { clickOutsideModal = true; }} aria-label="View family photos">
           {$t.other.family}
         </button>
         , {$t.other.interestList}
@@ -81,5 +81,6 @@
               </a>
             {/each}
           </div>
+      </li>
     </ul>
   </div>

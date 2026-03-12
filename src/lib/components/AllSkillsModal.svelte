@@ -1,12 +1,12 @@
 <script>
   import { t } from '$lib/i18n';
-  
-  export let showModal = false;
-  
+
+  let { showModal = $bindable(false) } = $props();
+
   function closeModal() {
     showModal = false;
   }
-  
+
   function handleKeyDown(event) {
     if (event.key === 'Escape') {
       closeModal();
@@ -14,24 +14,24 @@
   }
 </script>
 
-<svelte:window on:keydown={handleKeyDown} />
+<svelte:window onkeydown={handleKeyDown} />
 
 {#if showModal}
   <!-- Modal Backdrop -->
-  <div 
+  <div
     class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
-    on:click={closeModal}
-    on:keydown={(e) => e.key === 'Enter' && closeModal()}
+    onclick={closeModal}
+    onkeydown={(e) => e.key === 'Enter' && closeModal()}
     role="button"
     tabindex="-1"
     aria-label="Close modal by clicking backdrop"
   >
     <!-- Modal Content -->
-    <!-- svelte-ignore a11y-no-noninteractive-element-interactions -->
-    <div 
+    <!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
+    <div
       class="neo-card bg-white dark:bg-dark-card max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col rounded-lg"
-      on:click|stopPropagation
-      on:keydown|stopPropagation
+      onclick={(e) => e.stopPropagation()}
+      onkeydown={(e) => e.stopPropagation()}
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-title"
@@ -42,7 +42,7 @@
           {$t.skills.allSkills.title}
         </h2>
         <button
-          on:click={closeModal}
+          onclick={closeModal}
           class="text-gray-500 hover:text-neo-orange dark:text-gray-400 dark:hover:text-neo-orange 
                  text-2xl sm:text-3xl font-bold transition-colors duration-200 leading-none p-2 min-w-[44px] min-h-[44px] 
                  flex items-center justify-center flex-shrink-0"

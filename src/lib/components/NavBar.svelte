@@ -1,5 +1,4 @@
 <script>
-  import { Terminal } from 'lucide-svelte';
   import { Code2 } from 'lucide-svelte';
   import ResumeShellWrapper from './ResumeShellWrapper.svelte';
   import ThemeToggle from './ThemeToggle.svelte';
@@ -410,10 +409,7 @@
           <span class="sr-only">View Source Code</span>
         </a>
 
-        <ResumeShellWrapper class="h-8 py-0" aria-label="Open resume in terminal">
-          <Terminal size={18} aria-hidden="true" />
-          <span class="sr-only">Open Resume Terminal</span>
-        </ResumeShellWrapper>
+        <ResumeShellWrapper class="h-8 py-0" />
 
         <!-- Dark Mode Toggle -->
         <ThemeToggle class="h-8 py-0" />

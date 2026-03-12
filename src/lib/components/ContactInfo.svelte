@@ -58,7 +58,7 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
         <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
           <Fa icon={faPhone} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" aria-hidden="true" />
           <span class="font-normal leading-tight min-w-0 break-all">
-            <a href="tel://+12818579006" class="break-all" aria-label="Phone number">{$t.contactInfo.phone}</a>
+            <a href="tel:+12818579006" class="break-all" aria-label="Phone number">{$t.contactInfo.phone}</a>
           </span>
         </li>
         <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
