@@ -133,7 +133,7 @@
       </div>
   
       <!-- Desktop Navigation -->
-      <div class="hidden md:flex items-center space-x-2 lg:space-x-4">
+      <div class="hidden lg:flex items-center space-x-2 lg:space-x-4">
         <!-- Resume Button -->
         <div class="relative">
         <button class="neo-button dropdown-trigger flex items-center justify-center h-8 py-0"
@@ -426,8 +426,8 @@
       </div>
   
       <!-- Mobile Menu Button and Theme Toggle -->
-      <div class="md:hidden flex items-center space-x-2">
-        <ThemeToggle class="neo-button flex items-center h-8 py-0" />
+      <div class="lg:hidden flex items-center space-x-2">
+        <ThemeToggle />
         <button
           class="neo-button"
           onclick={toggleMobileMenu}
@@ -452,7 +452,7 @@
   
     <!-- Mobile Menu -->
     {#if isOpen}
-      <div class="md:hidden p-4 space-y-4">
+      <div class="lg:hidden p-4 space-y-4">
         <!-- Top Mobile Actions -->
         <div class="flex flex-wrap gap-2">
           <a href="/api-docs" class="neo-button block text-center">
