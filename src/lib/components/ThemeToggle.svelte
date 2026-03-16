@@ -15,8 +15,8 @@
   aria-label="Toggle theme"
 >
   {#if $theme === 'dark'}
-    <Sun size={24} />
+    <Sun size={20} />
   {:else}
-    <Moon size={24} />
+    <Moon size={20} />
   {/if}
 </button>

@@ -427,9 +427,9 @@
   
       <!-- Mobile Menu Button and Theme Toggle -->
       <div class="lg:hidden flex items-center space-x-2">
-        <ThemeToggle />
+        <ThemeToggle class="h-9 w-9 p-0" />
         <button
-          class="neo-button"
+          class="neo-button h-9 w-9 p-0 flex items-center justify-center"
           onclick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
           aria-expanded={isOpen}
