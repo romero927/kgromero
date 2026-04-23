@@ -452,7 +452,7 @@
   
     <!-- Mobile Menu -->
     {#if isOpen}
-      <div class="lg:hidden p-4 space-y-4">
+      <div class="lg:hidden p-4 space-y-4 overflow-y-scroll max-h-[calc(100svh-4rem)]" style="-webkit-overflow-scrolling: touch;">
         <!-- Top Mobile Actions -->
         <div class="flex flex-wrap gap-2">
           <a href="/api-docs" class="neo-button block text-center">
