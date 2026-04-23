@@ -54,7 +54,7 @@ Date: *Mar 2023 – May 2024*
 
 ---
 
-### **MEARS Group, A Quanta Services Company** — *Director of Software Development*
+### **MEARS Group, A Quanta Services Company** — *Director of Operations Technology*
 
 Website: [mears.net](https://www.mears.net) • Energy Industry | 2,500 Employees  
 Date: *Oct 2017 – Mar 2023*

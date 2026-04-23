@@ -36,15 +36,15 @@ const translations = {
         },
         {
           date: "Apr 2021 - Mar 2023",
-          title: "Director of Software Development, MEARS Group",
+          title: "Director of Operations Technology, MEARS Group",
         },
         {
           date: "Mar 2020 - Apr 2021",
-          title: "Senior Manager of Software Development, MEARS Group",
+          title: "Senior Manager of Operations Technology, MEARS Group",
         },
         {
           date: "Oct 2017 - Mar 2020",
-          title: "Manager of Software Development, MEARS Group",
+          title: "Manager of Operations Technology, MEARS Group",
         },
         {
           date: "Apr 2016 — Oct 2017",

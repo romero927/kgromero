@@ -55,21 +55,21 @@
       {
         startDate: "2021-04",
         endDate: "2023-03",
-        title: "Director of Software Development",
+        title: "Director of Operations Technology",
         company: "MEARS Group",
         location: "Jersey City, NJ (remote)"
       },
       {
         startDate: "2020-03",
         endDate: "2021-04",
-        title: "Senior Manager of Software Development",
+        title: "Senior Manager of Operations Technology",
         company: "MEARS Group",
         location: "Jersey City, NJ (remote)"
       },
       {
         startDate: "2017-10",
         endDate: "2020-03",
-        title: "Manager of Software Development",
+        title: "Manager of Operations Technology",
         company: "MEARS Group",
         location: "Jersey City, NJ (remote)"
       },
