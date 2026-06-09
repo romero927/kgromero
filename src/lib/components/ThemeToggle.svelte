@@ -11,7 +11,7 @@
 
 <button
   onclick={toggleTheme}
-  class="neo-button flex items-center justify-center {className}"
+  class="neo-button-ghost flex items-center justify-center {className}"
   aria-label="Toggle theme"
 >
   {#if $theme === 'dark'}

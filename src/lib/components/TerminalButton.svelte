@@ -5,7 +5,8 @@
 
 <button
   onclick={onClick}
-  class="neo-button flex items-center justify-center {className}"
+  class="neo-button-ghost flex items-center justify-center {className}"
+  aria-label="Open resume terminal"
 >
   <Terminal size={20} />
 </button>

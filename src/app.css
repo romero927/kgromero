@@ -11,9 +11,43 @@
     dark:active:bg-dark-hover dark:active:shadow-none dark:focus-visible:ring-neo-orange;
   }
 
+  .neo-button-ghost {
+    @apply bg-transparent border-2 border-neo-black text-neo-black shadow-neo
+    active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all px-4 py-2 font-bold text-sm
+    focus:outline-none focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
+    dark:bg-transparent dark:text-gray-200 dark:border-dark-border dark:shadow-neo-dark
+    dark:focus-visible:ring-neo-orange;
+  }
+
+  .neo-cta {
+    @apply inline-flex items-center gap-3 self-start
+           bg-transparent border-2 border-neo-black text-neo-black shadow-neo
+           px-4 py-2.5 font-display font-bold uppercase tracking-wider text-xs sm:text-sm
+           active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all
+           focus:outline-none focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
+           dark:bg-transparent dark:text-gray-200 dark:border-dark-border dark:shadow-neo-dark
+           dark:focus-visible:ring-neo-orange;
+  }
+
+  .neo-cta-arrow {
+    @apply transition-transform duration-200;
+  }
+
+  .neo-cta:hover .neo-cta-arrow {
+    transform: translateX(4px);
+  }
+
+  .card-link {
+    @apply flex items-center justify-between w-full
+           px-3 py-2 text-sm font-medium border-b border-neo-black/10
+           hover:bg-neo-orange hover:text-neo-black hover:pl-4
+           transition-all duration-150 last:border-b-0
+           dark:border-dark-border dark:hover:bg-dark-hover dark:hover:text-neo-orange;
+  }
+
   .neo-card {
-    @apply bg-white border-2 border-neo-black shadow-neo px-4 py-1.5
-           flex flex-col h-auto min-h-0
+    @apply bg-white border-2 border-neo-black shadow-neo px-5 py-4
+           flex flex-col h-full min-h-0 w-full
            dark:bg-dark-card dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
   }
 
@@ -28,10 +62,51 @@
     dark:bg-dark-card dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
   }
 
+  .neo-hero {
+    @apply bg-white border-2 border-neo-black shadow-neo-lg px-6 py-8 sm:px-10 sm:py-12
+           dark:bg-dark-card dark:text-gray-100 dark:border-dark-border dark:shadow-neo-lg-dark;
+  }
+
   .neo-input {
-    @apply bg-white border-2 border-neo-black shadow-neo px-4 py-2 
+    @apply bg-white border-2 border-neo-black shadow-neo px-4 py-2
     focus:outline-none focus:ring-2 focus:ring-neo-black focus:ring-offset-2 focus:shadow-none focus:translate-x-[2px] focus:translate-y-[2px] transition-all
     dark:bg-dark-card dark:text-gray-100 dark:border-dark-border dark:focus:ring-neo-orange;
+  }
+
+  .card-title {
+    @apply font-display font-bold uppercase tracking-wider text-base sm:text-lg
+           text-neo-black dark:text-neo-orange;
+  }
+
+  .card-eyebrow {
+    @apply font-display uppercase tracking-[0.18em] text-[10px] sm:text-xs font-semibold
+           text-neo-black/55 dark:text-gray-400;
+  }
+
+  .dropdown-panel {
+    @apply bg-white border-2 border-neo-black shadow-neo
+           dark:bg-dark-card dark:text-gray-200 dark:border-dark-border dark:shadow-neo-dark;
+  }
+
+  .dropdown-item {
+    @apply block px-3 py-2 text-sm font-medium border-b border-neo-black/10
+           hover:bg-neo-orange hover:text-neo-black hover:pl-4
+           transition-all duration-150 last:border-b-0
+           dark:border-dark-border dark:hover:bg-dark-hover dark:hover:text-neo-orange;
+  }
+
+  .dropdown-section-title {
+    @apply w-full text-left font-display font-bold uppercase tracking-wider text-xs
+           flex items-center justify-between px-4 py-3
+           hover:text-neo-orange transition-colors
+           dark:text-gray-100 dark:hover:text-neo-orange;
+  }
+
+  .dropdown-subitem {
+    @apply block pl-6 pr-4 py-1.5 text-xs font-medium text-neo-black/80
+           hover:bg-neo-orange hover:text-neo-black
+           transition-colors duration-150
+           dark:text-gray-300 dark:hover:bg-dark-hover dark:hover:text-neo-orange;
   }
 
   /* Screen reader only text */
@@ -59,6 +134,35 @@
     background-color: #2D2F33;
     box-shadow: none;
   }
+
+  .neo-button-ghost:hover {
+    background-color: #FD9745;
+    color: #1A1A1A;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
+  .dark .neo-button-ghost:hover {
+    background-color: #2D2F33;
+    color: #FD9745;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
+  .neo-cta:hover {
+    background-color: #FD9745;
+    color: #1A1A1A;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
+  .dark .neo-cta:hover {
+    background-color: #2D2F33;
+    color: #FD9745;
+    transform: translate(2px, 2px);
+    box-shadow: none;
+  }
+
 }
 
 /* Only apply transitions after page load */

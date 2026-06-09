@@ -1,10 +1,9 @@
 <script>
-  import { Card, Hr } from 'flowbite-svelte';
   import { t } from '$lib/i18n';
-  import { lazyLoad } from '$lib/utils';
   import Fa from 'svelte-fa';
-  import { faPhone, faEnvelope, faLink, faChartLine, faTerminal, faWalkieTalkie, faComments, faQrcode } from '@fortawesome/free-solid-svg-icons';
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+  import { faPhone, faEnvelope, faLink, faQrcode } from '@fortawesome/free-solid-svg-icons';
+  import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
+  import { ArrowRight } from 'lucide-svelte';
   
   let showQRModal = $state(false);
   let modalRef = $state();
@@ -50,58 +49,44 @@ import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
   
   <svelte:window onkeydown={handleEscape}/>
   
-  <div class="neo-card items-center flex flex-col max-w-full h-full bg-white " padding="xs" role="region" aria-label="Contact Information">
-    <h2 class="pt-1 pb-1 text-base font-bold">{$t.contactInfo.title}</h2>
-    <Hr classHr="border dark:border-gray-700 w-full my-2" />
-    <div class="space-y-4 text-sm w-full">
-      <ul class="space-y-4 mt-4">
-        <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-          <Fa icon={faPhone} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" aria-hidden="true" />
-          <span class="font-normal leading-tight min-w-0 break-all">
-            <a href="tel:+12818579006" class="break-all" aria-label="Phone number">{$t.contactInfo.phone}</a>
-          </span>
-        </li>
-        <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-          <Fa icon={faEnvelope} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" aria-hidden="true" />
-          <span class="font-normal leading-tight min-w-0 break-all">
-            <a href="mailto:kgromero@gmail.com" target="_top" class="break-all" aria-label="Email address">{$t.contactInfo.email}</a>
-          </span>
-        </li>
-      </ul>
-      <Hr classHr="border dark:border-gray-700 w-full my-2" />
-      <ul class="space-y-4">
-        <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-          <Fa icon={faLinkedin} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" aria-hidden="true"/>
-          <span class="font-normal leading-tight min-w-0 break-all">
-            <a href="https://www.linkedin.com/in/kyleromero/" target="_blank" rel="noopener noreferrer" class="break-all" aria-label="LinkedIn profile">{$t.contactInfo.linkedin}</a>
-          </span>
-        </li>
-        <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-          <Fa icon={faGithub} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" aria-hidden="true" />
-          <span class="font-normal leading-tight min-w-0 break-all">
-            <a href="https://github.com/romero927" target="_blank" rel="noopener noreferrer" class="break-all" aria-label="GitHub profile">{$t.contactInfo.github}</a>
-          </span>
-        </li>
-      </ul>
-      <Hr classHr="border dark:border-gray-700 w-full my-2" />
-      <ul class="space-y-4">
-        <li class="flex items-start space-x-2 transition-all duration-200 origin-left hover:scale-105 cursor-default group">
-          <Fa icon={faLink} class="group-hover:text-neo-orange flex-shrink-0 mt-0.5" aria-hidden="true"/>
-          <span class="font-normal leading-tight min-w-0 break-all">
-            <a href="https://linktr.ee/kgromero" target="_blank" rel="noopener noreferrer" class="break-all" aria-label="Linktree profile">{$t.contactInfo.linktree}</a>
-          </span>
-        </li>
-      </ul>
-      <Hr classHr="border dark:border-gray-700 w-full my-2" />
-      <button 
-        class="neo-button p-2 flex items-center w-full justify-center"
+  <div class="neo-card max-w-full" role="region" aria-label="Contact Information">
+    <h2 class="card-title mb-4">{$t.contactInfo.title}</h2>
+
+    <ul class="space-y-3 text-sm w-full">
+      <li class="flex items-start space-x-3 group">
+        <Fa icon={faPhone} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+        <a href="tel:+12818579006" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="Phone number">{$t.contactInfo.phone}</a>
+      </li>
+      <li class="flex items-start space-x-3 group">
+        <Fa icon={faEnvelope} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+        <a href="mailto:kgromero@gmail.com" target="_top" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="Email address">{$t.contactInfo.email}</a>
+      </li>
+      <li class="flex items-start space-x-3 group">
+        <Fa icon={faLinkedin} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
+        <a href="https://www.linkedin.com/in/kyleromero/" target="_blank" rel="noopener noreferrer" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="LinkedIn profile">LinkedIn</a>
+      </li>
+      <li class="flex items-start space-x-3 group">
+        <Fa icon={faGithub} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+        <a href="https://github.com/romero927" target="_blank" rel="noopener noreferrer" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="GitHub profile">GitHub</a>
+      </li>
+      <li class="flex items-start space-x-3 group">
+        <Fa icon={faLink} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
+        <a href="https://linktr.ee/kgromero" target="_blank" rel="noopener noreferrer" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="Linktree profile">{$t.contactInfo.linktree}</a>
+      </li>
+    </ul>
+
+    <div class="mt-auto pt-5">
+      <button
+        class="neo-cta"
         onclick={() => showQRModal = true}
         aria-label="Show contact QR code"
       >
-        <Fa icon={faQrcode} class="mr-2" aria-hidden="true" />Contact QR Code
+        <span class="flex items-center gap-2">
+          <Fa icon={faQrcode} aria-hidden="true" />
+          Contact QR Code
+        </span>
+        <ArrowRight size={16} class="neo-cta-arrow" aria-hidden="true" />
       </button>
-      <br/>
-      <!-- <div class="text-sm break-words"><b>{$t.aboutMe.openTo}</b></div> -->
     </div>
   </div>
   

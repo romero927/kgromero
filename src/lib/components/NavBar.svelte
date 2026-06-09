@@ -119,7 +119,7 @@
   
   <nav bind:this={navRef} class="neo-card-square" aria-label="Main navigation">
     <div class="flex items-center justify-between py-0.5 px-1" onclick={handleNavbarClick} onkeydown={handleNavbarKeydown} role="none">
-      <!-- Logo and Terminal -->
+      <!-- Logo -->
       <div class="flex items-center space-x-4">
         <a href="/">
           <img
@@ -136,7 +136,7 @@
       <div class="hidden lg:flex items-center space-x-2 lg:space-x-4">
         <!-- Resume Button -->
         <div class="relative">
-        <button class="neo-button dropdown-trigger flex items-center justify-center h-8 py-0"
+        <button class="neo-button-ghost dropdown-trigger flex items-center justify-center h-8 py-0"
             onclick={(e) => toggleDropdown('resume', e)}
             aria-haspopup="true"
             aria-expanded={activeDropdown === 'resume'}
@@ -148,17 +148,13 @@
             </svg>
           </button>
           {#if activeDropdown === 'resume'}
-            <div class="dropdown-menu absolute z-50 w-48 mt-2 text-sm" role="menu" aria-label="Resume options" tabindex="0" onclick={(e) => e.stopPropagation()} onkeydown={(e) => e.stopPropagation()}>
-              <div class="neo-card space-y-2 bg-white">
-                <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - PDF</a>
-                <hr/>
-                <a href="/Kyle_Romero-Resume.docx" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - DOCX</a>
-                <hr/>
-                <a href="/api/resume?format=json" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - JSON</a>
-                <hr/>
-                <a href="/kgromero.md" target="_blank" class="block hover:underline p-2" role="menuitem">Resume - MD</a>
-                <hr/>
-                <a href="/Kyle_Romero-Coverletter.pdf" target="_blank" class="block hover:underline p-2" role="menuitem">Cover Letter</a>
+            <div class="dropdown-menu absolute z-50 w-52 mt-2" role="menu" aria-label="Resume options" tabindex="0" onclick={(e) => e.stopPropagation()} onkeydown={(e) => e.stopPropagation()}>
+              <div class="dropdown-panel">
+                <a href="/Kyle_Romero-Resume.pdf" target="_blank" class="dropdown-item" role="menuitem">Resume — PDF</a>
+                <a href="/Kyle_Romero-Resume.docx" target="_blank" class="dropdown-item" role="menuitem">Resume — DOCX</a>
+                <a href="/api/resume?format=json" target="_blank" class="dropdown-item" role="menuitem">Resume — JSON</a>
+                <a href="/kgromero.md" target="_blank" class="dropdown-item" role="menuitem">Resume — MD</a>
+                <a href="/Kyle_Romero-Coverletter.pdf" target="_blank" class="dropdown-item" role="menuitem">Cover Letter</a>
               </div>
             </div>
           {/if}
@@ -167,7 +163,7 @@
         <!-- Supporting Documents Button -->
         <div class="relative">
           <button
-            class="neo-button dropdown-trigger flex items-center justify-center h-8 py-0"
+            class="neo-button-ghost dropdown-trigger flex items-center justify-center h-8 py-0"
             onclick={(e) => toggleDropdown('docs', e)}
             aria-haspopup="true"
             aria-expanded={activeDropdown === 'docs'}
@@ -179,230 +175,107 @@
             </svg>
           </button>
           {#if activeDropdown === 'docs'}
-            <div class="dropdown-menu absolute z-50 w-64 mt-2 right-0 text-sm" role="menu" aria-label="Supporting documents" tabindex="0" onclick={(e) => e.stopPropagation()} onkeydown={(e) => e.stopPropagation()}>
-              <div class="neo-card max-h-[80vh] overflow-y-auto bg-white">
-                <div class="space-y-4 p-4">
-                  <!-- Raymour & Flanigan -->
-                  <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
+            {@const docSections = [
+              { key: 'raymour', label: 'Raymour & Flanigan', items: [
+                { href: OrgStructure, name: 'Matrix Organization Structure' },
+                { href: SDLC, name: 'SDLC Item Flows' },
+                { href: Release, name: 'Release Process' }
+              ]},
+              { key: 'mears', label: 'MEARS Group', items: [
+                { href: Path, name: 'Developer Progression' },
+                { href: Landscape, name: 'IT Landscape' },
+                { href: Process, name: 'Development Process' },
+                { href: Electron, name: 'Electron Architecture' }
+              ]},
+              { key: 'worldwide', label: 'Worldwide Machinery', items: [
+                { href: Workflow, name: 'Team Workflow' },
+                { href: WWMMobile, name: 'Mobile Architecture' },
+                { href: WWMLandscape, name: 'App Landscape' }
+              ]},
+              { key: 'hp', label: 'HP', items: [
+                { href: SIOverview, name: 'Sudden Impact Overview' },
+                { href: SIAL, name: 'Sudden Impact Architecture' },
+                { href: CSM, name: 'Certified Scrum Master Certificate' }
+              ]},
+              { key: 'xfab', label: 'X-Fab', items: [
+                { href: Internship, name: 'Internship Projects Overview' },
+                { href: PlasmaTraceSystem, name: 'Plasma Trace' },
+                { href: ChemicalTracking, name: 'Chemical Tracking' },
+                { href: MaskToolingManual, name: 'Mask Tooling Manual' },
+                { href: DeviceMTM, name: 'Device MTM' },
+                { href: MiscProjects, name: 'Misc. Projects' },
+                { href: OtherInformationAboutMe, name: 'Other Information' }
+              ]},
+              { key: 'texastech', label: 'Texas Tech', items: [
+                { href: Lab1Project1, name: 'Lab 1 Project 1 PPT' },
+                { href: Lab1Project2Presentation, name: 'Lab 1 Project 2 PPT' },
+                { href: Lab1Project2, name: 'Lab 1 Project 2 DOC' },
+                { href: Lab2TrialVideo, name: 'Lab 1 Project 2 Trial Video' },
+                { href: Lab2FinalPresentation, name: 'Lab 2 PPT' },
+                { href: Lab2FinalReport, name: 'Lab 2 DOC' },
+                { href: Lab3FinalPresentation, name: 'Lab 3 PPT' },
+                { href: Lab3FinalReport, name: 'Lab 3 DOC' },
+                { href: ProjectLabVFinalReport, name: 'Lab 4/5 DOC' },
+                { href: MicroprocessorArchitectureFinalProjectR, name: 'Microprocessor Architecture Final Project' },
+                { href: TrellisDesignforLHUCA, name: 'Misc. Engineering Project DOC' },
+                { href: Transcript_Kromero, name: 'Transcript' }
+              ]},
+              { key: 'other', label: 'Other', items: [
+                { href: AISetup, name: 'AI Development Process' },
+                { href: Sentiment, name: 'Twitter Sentiment Analysis' },
+                { href: RTL, name: 'RTL-SDR' },
+                { href: RedditListener, name: 'RedditListener' },
+                { href: RPi, name: 'RPi LED Display' },
+                { href: 'https://kgromero-react.netlify.app/', name: 'Old Site (React)' }
+              ]}
+            ]}
+            <div class="dropdown-menu absolute z-50 w-72 mt-2 right-0" role="menu" aria-label="Supporting documents" tabindex="0" onclick={(e) => e.stopPropagation()} onkeydown={(e) => e.stopPropagation()}>
+              <div class="dropdown-panel max-h-[80vh] overflow-y-auto">
+                {#each docSections as section}
+                  <div class="border-b border-neo-black/10 dark:border-dark-border last:border-b-0">
                     <button
-                      class="w-full text-left font-bold flex items-center justify-between "
-                      onclick={(e) => toggleSubDropdown('raymour', e)}
-                      aria-expanded={activeSubDropdown === 'raymour'}
-                      aria-label="Raymour & Flanigan documents"
+                      class="dropdown-section-title"
+                      onclick={(e) => toggleSubDropdown(section.key, e)}
+                      aria-expanded={activeSubDropdown === section.key}
+                      aria-label="{section.label} documents"
                     >
-                      Raymour & Flanigan
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+                      {section.label}
+                      <svg class="w-4 h-4 transition-transform duration-200 {activeSubDropdown === section.key ? 'rotate-180' : ''}" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
                         <path d="M6 9l6 6 6-6"/>
                       </svg>
                     </button>
-                    {#if activeSubDropdown === 'raymour'}
-                      <div class="mt-2 ml-4 space-y-2 border-l-2 border-neo-black pl-4">
-                        <a href={OrgStructure} target="_blank" class="block hover:underline">Matrix Organization Structure</a>
-                        <hr/>
-                        <a href={SDLC} target="_blank" class="block hover:underline">SDLC Item Flows</a>
-                        <hr/>
-                        <a href={Release} target="_blank" class="block hover:underline">Release Process</a>
+                    {#if activeSubDropdown === section.key}
+                      <div class="pb-2 bg-neo-cream/50 dark:bg-dark-bg/40">
+                        {#each section.items as item}
+                          <a href={item.href} target="_blank" class="dropdown-subitem" role="menuitem">{item.name}</a>
+                        {/each}
                       </div>
                     {/if}
                   </div>
-                  <hr/>
-                  <!-- MEARS Group -->
-                  <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
-                    <button
-                      class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={(e) => toggleSubDropdown('mears', e)}
-                      aria-expanded={activeSubDropdown === 'mears'}
-                      aria-label="MEARS Group documents"
-                    >
-                      MEARS Group
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                        <path d="M6 9l6 6 6-6"/>
-                      </svg>
-                    </button>
-                    {#if activeSubDropdown === 'mears'}
-                      <div class="mt-2 ml-4 space-y-2 border-l-2 border-neo-black pl-4">
-                        <a href={Path} target="_blank" class="block hover:underline">Developer Progression</a>
-                        <hr/>
-                        <a href={Landscape} target="_blank" class="block hover:underline">IT Landscape</a>
-                        <hr/>
-                        <a href={Process} target="_blank" class="block hover:underline">Development Process</a>
-                        <hr/>
-                        <a href={Electron} target="_blank" class="block hover:underline">Electron Architecture</a>
-                      </div>
-                    {/if}
-                  </div>
-                  <hr/>
-                  <!-- Worldwide Machinery -->
-                  <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
-                    <button
-                      class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={(e) => toggleSubDropdown('worldwide', e)}
-                      aria-expanded={activeSubDropdown === 'worldwide'}
-                      aria-label="Worldwide Machinery documents"
-                    >
-                      Worldwide Machinery
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                        <path d="M6 9l6 6 6-6"/>
-                      </svg>
-                    </button>
-                    {#if activeSubDropdown === 'worldwide'}
-                      <div class="mt-2 ml-4 space-y-2 border-l-2 border-neo-black pl-4">
-                        <a href={Workflow} target="_blank" class="block hover:underline">Team Workflow</a>
-                        <hr/>
-                        <a href={WWMMobile} target="_blank" class="block hover:underline">Mobile Architecture</a>
-                        <hr/>
-                        <a href={WWMLandscape} target="_blank" class="block hover:underline">App Landscape</a>
-                      </div>
-                    {/if}
-                  </div>
-                  <hr/>
-                  <!-- HP -->
-                  <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
-                    <button
-                      class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={(e) => toggleSubDropdown('hp', e)}
-                      aria-expanded={activeSubDropdown === 'hp'}
-                      aria-label="HP documents"
-                    >
-                      HP
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                        <path d="M6 9l6 6 6-6"/>
-                      </svg>
-                    </button>
-                    {#if activeSubDropdown === 'hp'}
-                      <div class="mt-2 ml-4 space-y-2 border-l-2 border-neo-black pl-4">
-                        <a href={SIOverview} target="_blank" class="block hover:underline">Sudden Impact Overview</a>
-                        <hr/>
-                        <a href={SIAL} target="_blank" class="block hover:underline">Sudden Impact Architecture</a>
-                        <hr/>
-                        <a href={CSM} target="_blank" class="block hover:underline">Certified Scrum Master Certificate</a>
-                      </div>
-                    {/if}
-                  </div>
-                  <hr/>
-                  <!-- X-Fab -->
-                  <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
-                    <button
-                      class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={(e) => toggleSubDropdown('xfab', e)}
-                      aria-expanded={activeSubDropdown === 'xfab'}
-                      aria-label="X-Fab documents"
-                    >
-                      X-Fab
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                        <path d="M6 9l6 6 6-6"/>
-                      </svg>
-                    </button>
-                    {#if activeSubDropdown === 'xfab'}
-                      <div class="mt-2 ml-4 space-y-2 border-l-2 border-neo-black pl-4">
-                        <a href={Internship} target="_blank" class="block hover:underline">Internship Projects Overview</a>
-                        <hr/>
-                        <a href={PlasmaTraceSystem} target="_blank" class="block hover:underline">Plasma Trace</a>
-                        <hr/>
-                        <a href={ChemicalTracking} target="_blank" class="block hover:underline">Chemical Tracking</a>
-                        <hr/>
-                        <a href={MaskToolingManual} target="_blank" class="block hover:underline">Mask Tooling Manual</a>
-                        <hr/>
-                        <a href={DeviceMTM} target="_blank" class="block hover:underline">Device MTM</a>
-                        <hr/>
-                        <a href={MiscProjects} target="_blank" class="block hover:underline">Misc. Projects</a>
-                        <hr/>
-                        <a href={OtherInformationAboutMe} target="_blank" class="block hover:underline">Other Information</a>
-                      </div>
-                    {/if}
-                  </div>
-                  <hr/>
-                  <!-- Texas Tech -->
-                  <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
-                    <button
-                      class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={(e) => toggleSubDropdown('texastech', e)}
-                      aria-expanded={activeSubDropdown === 'texastech'}
-                      aria-label="Texas Tech documents"
-                    >
-                      Texas Tech
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                        <path d="M6 9l6 6 6-6"/>
-                      </svg>
-                    </button>
-                    {#if activeSubDropdown === 'texastech'}
-                      <div class="mt-2 ml-4 space-y-2 border-l-2 border-neo-black pl-4">
-                        <a href={Lab1Project1} target="_blank" class="block hover:underline">Lab 1 Project 1 PPT</a>
-                        <hr/>
-                        <a href={Lab1Project2Presentation} target="_blank" class="block hover:underline">Lab 1 Project 2 PPT</a>
-                        <hr/>
-                        <a href={Lab1Project2} target="_blank" class="block hover:underline">Lab 1 Project 2 DOC</a>
-                        <hr/>
-                        <a href={Lab2TrialVideo} target="_blank" class="block hover:underline">Lab 1 Project 2 Trial Video</a>
-                        <hr/>
-                        <a href={Lab2FinalPresentation} target="_blank" class="block hover:underline">Lab 2 PPT</a>
-                        <hr/>
-                        <a href={Lab2FinalReport} target="_blank" class="block hover:underline">Lab 2 DOC</a>
-                        <hr/>
-                        <a href={Lab3FinalPresentation} target="_blank" class="block hover:underline">Lab 3 PPT</a>
-                        <hr/>
-                        <a href={Lab3FinalReport} target="_blank" class="block hover:underline">Lab 3 DOC</a>
-                        <hr/>
-                        <a href={ProjectLabVFinalReport} target="_blank" class="block hover:underline">Lab 4/5 DOC</a>
-                        <hr/>
-                        <a href={MicroprocessorArchitectureFinalProjectR} target="_blank" class="block hover:underline">Microprocessor Architecture Final Project</a>
-                        <hr/>
-                        <a href={TrellisDesignforLHUCA} target="_blank" class="block hover:underline">Misc. Engineering Project DOC</a>
-                        <hr/>
-                        <a href={Transcript_Kromero} target="_blank" class="block hover:underline">Transcript</a>
-                      </div>
-                    {/if}
-                  </div>
-                  <hr/>
-                  <!-- Other -->
-                  <div class="hover:bg-neo-orange/10 rounded-lg p-2 transition-colors">
-                    <button
-                      class="w-full text-left font-bold flex items-center justify-between"
-                      onclick={(e) => toggleSubDropdown('other', e)}
-                      aria-expanded={activeSubDropdown === 'other'}
-                      aria-label="Other documents"
-                    >
-                      Other
-                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-                        <path d="M6 9l6 6 6-6"/>
-                      </svg>
-                    </button>
-                    {#if activeSubDropdown === 'other'}
-                      <div class="mt-2 ml-4 space-y-2 border-l-2 border-neo-black pl-4">
-                        <a href={AISetup} target="_blank" class="block hover:underline">AI Development Process</a>
-                        <a href={Sentiment} target="_blank" class="block hover:underline">Twitter Sentiment Analysis</a>
-                        <hr/>
-                        <a href={RTL} target="_blank" class="block hover:underline">RTL-SDR</a>
-                        <hr/>
-                        <a href={RedditListener} target="_blank" class="block hover:underline">RedditListener</a>
-                        <hr/>
-                        <a href={RPi} target="_blank" class="block hover:underline">RPi LED Display</a>
-                        <hr/>
-                        <a href="https://kgromero-react.netlify.app/" target="_blank" class="block hover:underline">Old Site (React)</a>
-                      </div>
-                    {/if}
-                  </div>
-                </div>
+                {/each}
               </div>
             </div>
           {/if}
         </div>
   
         <!-- API Docs -->
-        <a href="/api-docs" class="neo-button flex items-center justify-center h-8 py-0" aria-label="API documentation">
+        <a href="/api-docs" class="neo-button-ghost flex items-center justify-center h-8 py-0" aria-label="API documentation">
           API Docs
         </a>
 
         <!-- Business Card -->
-        <a href={BusinessCard} target="_blank" class="neo-button flex items-center justify-center h-8 py-0" aria-label="View business card">
+        <a href={BusinessCard} target="_blank" class="neo-button-ghost flex items-center justify-center h-8 py-0" aria-label="View business card">
           Business Card
         </a>
+
+        <!-- Divider between primary actions and utility icons -->
+        <div class="h-6 w-px bg-neo-black/20 dark:bg-dark-border mx-1" aria-hidden="true"></div>
 
         <!-- GitHub -->
         <a
           href="https://github.com/romero927/kgromero"
           target="_blank"
-          class="neo-button flex items-center justify-center h-8 py-0"
+          class="neo-button-ghost flex items-center justify-center h-8 py-0"
           aria-label="View source code on GitHub"
         >
           <Code2 size={20} />
@@ -429,7 +302,7 @@
       <div class="lg:hidden flex items-center space-x-2">
         <ThemeToggle class="h-9 w-9 p-0" />
         <button
-          class="neo-button h-9 w-9 p-0 flex items-center justify-center"
+          class="neo-button-ghost h-9 w-9 p-0 flex items-center justify-center"
           onclick={toggleMobileMenu}
           aria-label="Toggle mobile menu"
           aria-expanded={isOpen}
@@ -455,22 +328,22 @@
       <div class="lg:hidden p-4 space-y-4 overflow-y-scroll max-h-[calc(100svh-4rem)]" style="-webkit-overflow-scrolling: touch;">
         <!-- Top Mobile Actions -->
         <div class="flex flex-wrap gap-2">
-          <a href="/api-docs" class="neo-button block text-center">
+          <a href="/api-docs" class="neo-button-ghost block text-center">
             API Docs
           </a>
-          <a href={BusinessCard} target="_blank" class="neo-button block text-center">
+          <a href={BusinessCard} target="_blank" class="neo-button-ghost block text-center">
             Business Card
           </a>
           <a
             href="https://github.com/romero927/kgromero"
             target="_blank"
-            class="neo-button p-2 flex items-center justify-center"
+            class="neo-button-ghost p-2 flex items-center justify-center"
             aria-label="View source code on GitHub"
           >
             <Code2 size={20} aria-hidden="true" />
             <span class="sr-only">View Source Code</span>
           </a>
-          <ResumeShellWrapper class="neo-button p-2 flex items-center justify-center" aria-label="Open resume in terminal">
+          <ResumeShellWrapper class="p-2" aria-label="Open resume in terminal">
             <Terminal size={18} class="mr-2" aria-hidden="true" />
             <span class="sr-only">Open Resume Terminal</span>
           </ResumeShellWrapper>

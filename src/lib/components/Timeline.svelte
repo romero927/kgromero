@@ -4,20 +4,20 @@
   
   <div class="relative pl-6">
     <!-- Vertical line -->
-    <div class="absolute left-[7px] top-2 bottom-2 w-[1px] bg-gray-500 dark:bg-gray-500"></div>
-   
+    <div class="absolute left-[7px] top-2 bottom-2 w-[2px] bg-neo-black/15 dark:bg-gray-700"></div>
+
     <!-- Timeline items -->
     {#each items as item}
-      <div class="relative mb-3 last:mb-0 group">
+      <div class="relative mb-4 last:mb-0 group">
         <!-- Dot -->
-        <div class="absolute left-[-22px] top-[6px] h-3 w-3 rounded-full border border-neo-white 
-                    dark:border-gray-500 bg-dark-card transition-transform duration-200 
-                    group-hover:scale-150 group-hover:bg-neo-orange"></div>
-       
+        <div class="absolute left-[-22px] top-[5px] h-3 w-3 rounded-full border-2 border-neo-black
+                    dark:border-neo-orange bg-neo-cream dark:bg-dark-card transition-all duration-200
+                    group-hover:bg-neo-orange group-hover:scale-110"></div>
+
         <!-- Content -->
-        <div class="block transition-all duration-200 origin-left hover:scale-105 cursor-default">
-          <span class="text-xs text-gray-500 dark:text-gray-300">{item.date}</span>
-          <div class="mt-1 text-xs font-bold text-neo-black dark:text-neo-orange">
+        <div class="block transition-transform duration-200 origin-left group-hover:translate-x-0.5 cursor-default">
+          <span class="card-eyebrow">{item.date}</span>
+          <div class="mt-0.5 text-xs sm:text-[13px] font-bold text-neo-black dark:text-gray-100 leading-snug">
             {item.title}
           </div>
         </div>

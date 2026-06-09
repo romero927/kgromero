@@ -5,13 +5,11 @@ export const locale = writable("en");
 const translations = {
   en: {
     name: "Kyle Romero",
-    description: `Software Engineering Leader with 18 years experience in IT, living in Jersey City, NJ.`,
+    description: `Software Engineering Leader with 18+ years experience in IT, living in Jersey City, NJ.`,
     aboutMe: {
       title: "About Me",
       content:
         "Hands-on and results-driven technology leader with 18+ years in software engineering, specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.",
-      openTo:
-        "Open To: Developer, Manager, Senior Manager, Director, and VP roles (In-Office, Hybrid, or Remote)",
     },
     contactInfo: {
       title: "Contact Info",
@@ -19,31 +17,30 @@ const translations = {
       email: "kgromero@gmail.com",
       linkedin: "https://www.linkedin.com/in/kyleromero/",
       github: "https://github.com/romero927",
-      leetcode: "https://leetcode.com/u/romero927/",
       linktree: "Linktree",
     },
     experience: {
       title: "Experience",
       timeline: [
-        { date: "Oct 2025 - Current", title: "Team Lead, Tenna" },
+        { date: "Oct 2025 — Current", title: "Team Lead, Tenna" },
         {
-          date: "Mar 2025 - Oct 2025",
+          date: "Mar 2025 — Oct 2025",
           title: "Contractor, Dexian (Client: Deloitte Consulting)",
         },
         {
-          date: "Mar 2023 - May 2024",
+          date: "Mar 2023 — May 2024",
           title: "Director of Software Development, Raymour & Flanigan",
         },
         {
-          date: "Apr 2021 - Mar 2023",
+          date: "Apr 2021 — Mar 2023",
           title: "Director of Operations Technology, MEARS Group",
         },
         {
-          date: "Mar 2020 - Apr 2021",
+          date: "Mar 2020 — Apr 2021",
           title: "Senior Manager of Operations Technology, MEARS Group",
         },
         {
-          date: "Oct 2017 - Mar 2020",
+          date: "Oct 2017 — Mar 2020",
           title: "Manager of Operations Technology, MEARS Group",
         },
         {
@@ -51,13 +48,13 @@ const translations = {
           title: "Team Lead, Worldwide Machinery",
         },
         { date: "Dec 2013 — Feb 2016", title: "Technical Lead, HP" },
-        { date: "Dec 2011 - Dec 2013", title: "Senior Developer, HP" },
+        { date: "Dec 2011 — Dec 2013", title: "Senior Developer, HP" },
         {
-          date: "July 2007 — Dec 2011",
+          date: "Jul 2007 — Dec 2011",
           title: "Software Developer, X-Fab, Texas",
         },
         {
-          date: "May 2007 — July 2007",
+          date: "May 2007 — Jul 2007",
           title: "Software Development Intern, X-Fab, Texas",
         },
         {
@@ -100,19 +97,19 @@ const translations = {
           name: "Worldwide Machinery (Construction Industry)",
           url: "https://www.wwmach.com",
           techStack:
-            ".NET (C#, ASP.NET MVC API, WinForms), React, Redux, Typescript (ES6), Node.js, Express, SASS, Sql Server, DigitalOcean, Docker, JIRA, TeamCity, Bitbucket, Ubuntu, Windows Server.",
+            ".NET (C#, ASP.NET MVC API, WinForms), React, Redux, Typescript (ES6), Node.js, Express, SASS, SQL Server, DigitalOcean, Docker, JIRA, TeamCity, Bitbucket, Ubuntu, Windows Server.",
         },
         {
           name: "HP Inc. (Consumer Electronics Industry)",
           url: "https://www.hp.com",
           techStack:
-            ".NET (VB.NET, C#, ASP.NET), jQueryUI, jQuery, SQL Server, Tableau, Hadoop, Hive, HP Vertica, TFS, Subeversion, Visual Studio, Windows Server.",
+            ".NET (VB.NET, C#, ASP.NET), jQueryUI, jQuery, SQL Server, Tableau, Hadoop, Hive, HP Vertica, TFS, Subversion, Visual Studio, Windows Server.",
         },
         {
           name: "X-Fab, Texas (Semiconductor Manufacturing Industry)",
           url: "https://www.xfab.com",
           techStack:
-            ".NET (C#, ASP.NET, WinForms), C++, Perle, SQL Server, Subversion, Windows Server, RedHat.",
+            ".NET (C#, ASP.NET, WinForms), C++, Perl, SQL Server, Subversion, Windows Server, RedHat.",
         },
       ],
       allSkills: {
@@ -269,33 +266,21 @@ const translations = {
           link: "https://github.com/romero927/Phoenix_Chat-Room",
         },
       ],
-      wantToLearn: "Want To Learn",
-      learningList:
-        " Apache Kafka, RabbitMQ, Terraform, Vue, Kotlin, GraphQL, MongoDB, Numpy, Pandas, Jupyter, Anaconda",
       interests: "Interests",
       family: "My Family",
       interestList:
         "Spin Class, PC Gaming, Reading (SFF), Nature / National Parks, Broadway, Theme Parks",
       favoriteBlogs: "Favorite Tech Resources",
       blogs: [
-        {
-          name: "Hacker News (YCombinator)",
-          href: "https://news.ycombinator.com/",
-          attrs: { target: "_blank" },
-        },
-        {
-          name: "Dev.to",
-          href: "https://dev.to/",
-          attrs: { target: "_blank" },
-        },
-        {
-          name: "/r/programming",
-          href: "https://www.reddit.com/r/programming/",
-          attrs: { target: "_blank" },
-        },
+        { name: "Hacker News (YCombinator)", href: "https://news.ycombinator.com/" },
+        { name: "Lobste.rs", href: "https://lobste.rs/" },
+        { name: "Dev.to", href: "https://dev.to/" },
+        { name: "/r/programming", href: "https://www.reddit.com/r/programming/" },
+        { name: "The Pragmatic Engineer", href: "https://newsletter.pragmaticengineer.com/" },
+        { name: "LeadDev", href: "https://leaddev.com/" },
       ],
     },
-    footerMessage: " | Site built in SvelteKit | ",
+    footerMessage: "Site built in SvelteKit",
   },
   // Add other languages here as needed
 };
