@@ -4,6 +4,7 @@
   import { onMount } from 'svelte';
   import { Terminal } from 'lucide-svelte';
   import { fade } from 'svelte/transition';
+  import { portal } from '$lib/utils.js';
 
   /**
    * @typedef {Object} Props
@@ -22,101 +23,48 @@
   let inputElement = $state();
   let outputElement = $state();
 
-  const resumeData = {
-    name: "Kyle Romero",
-    location: "Jersey City, NJ",
-    email: "kgromero@gmail.com",
-    phone: "(281) 857-9006",
-    linkedin: "in/kyleromero",
-    website: "kgromero.com",
-    summary: "Hands-on and results-driven technology leader with 18+ years in software engineering, specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.\n\nOpen To: Developer, Manager, Senior Manager, Director, and VP roles (In-Office, Hybrid, or Remote)",
-    experience: [
-      {
-        startDate: "2025-10",
-        endDate: "present",
-        title: "Team Lead",
-        company: "Tenna",
-        location: "Jersey City, NJ (remote)"
-      },
-      {
-        startDate: "2025-03",
-        endDate: "2025-10",
-        title: "Contractor",
-        company: "Dexian (Client: Deloitte Consulting)",
-        location: "Jersey City, NJ (remote)"
-      },
-      {
-        startDate: "2023-03",
-        endDate: "2024-05",
-        title: "Director of Software Development",
-        company: "Raymour & Flanigan",
-        location: "Jersey City, NJ (remote)"
-      },
-      {
-        startDate: "2021-04",
-        endDate: "2023-03",
-        title: "Director of Operations Technology",
-        company: "MEARS Group",
-        location: "Jersey City, NJ (remote)"
-      },
-      {
-        startDate: "2020-03",
-        endDate: "2021-04",
-        title: "Senior Manager of Operations Technology",
-        company: "MEARS Group",
-        location: "Jersey City, NJ (remote)"
-      },
-      {
-        startDate: "2017-10",
-        endDate: "2020-03",
-        title: "Manager of Operations Technology",
-        company: "MEARS Group",
-        location: "Jersey City, NJ (remote)"
-      },
-      {
-        startDate: "2016-04",
-        endDate: "2017-10",
-        title: "Team Lead",
-        company: "Worldwide Machinery",
-        location: "Houston, TX"
-      },
-      {
-        startDate: "2013-12",
-        endDate: "2016-02",
-        title: "Technical Lead",
-        company: "HP",
-        location: "Houston, TX"
-      },
-      {
-        startDate: "2011-12",
-        endDate: "2013-12",
-        title: "Senior Developer",
-        company: "HP",
-        location: "Houston, TX"
-      },
-      {
-        startDate: "2007-07",
-        endDate: "2011-12",
-        title: "Software Developer",
-        company: "X-Fab, Texas",
-        location: "Lubbock, TX"
-      },
-      {
-        startDate: "2007-05",
-        endDate: "2007-07",
-        title: "Software Development Intern",
-        company: "X-Fab, Texas",
-        location: "Lubbock, TX"
-      }
-    ],
-    education: {
-      startDate: "2005-08",
-      endDate: "2009-12",
-      degree: "Bachelor of Science in Computer Engineering",
-      school: "Texas Tech University",
-      location: "Lubbock, TX"
+  // Sourced at runtime from the canonical JSON Resume served at /kgromero.json
+  // (same file the /api/resume endpoint serves) so the terminal never drifts
+  // from the rest of the site. Files in static/ can't be imported into client
+  // JS, so we fetch instead.
+  let resumeData = $state({
+    name: '', location: '', email: '', phone: '', linkedin: '', website: '',
+    summary: '', experience: [], education: []
+  });
+
+  onMount(async () => {
+    try {
+      const res = await fetch('/kgromero.json');
+      if (!res.ok) return;
+      const resume = await res.json();
+      const linkedinProfile = (resume.basics?.profiles || []).find((p) => p.network === 'LinkedIn');
+      resumeData = {
+        name: resume.basics?.name ?? '',
+        location: [resume.basics?.location?.city, resume.basics?.location?.region].filter(Boolean).join(', '),
+        email: resume.basics?.email ?? '',
+        phone: resume.basics?.phone ?? '',
+        linkedin: linkedinProfile ? linkedinProfile.url.replace(/^https?:\/\/(www\.)?linkedin\.com\//, '') : '',
+        website: (resume.basics?.website || '').replace(/^https?:\/\//, '').replace(/\/$/, ''),
+        summary: resume.basics?.summary ?? '',
+        experience: (resume.work || []).map((w) => ({
+          startDate: w.startDate,
+          endDate: w.endDate || 'present',
+          title: w.position,
+          company: w.company,
+          location: w.location || ''
+        })),
+        education: (resume.education || []).map((e) => ({
+          startDate: e.startDate,
+          endDate: e.endDate,
+          degree: [e.studyType, e.area].filter(Boolean).join(' in '),
+          school: e.institution,
+          location: e.location || ''
+        }))
+      };
+    } catch (err) {
+      console.error('Failed to load resume data', err);
     }
-  };
+  });
 
   run(() => {
     if (isOpen && inputElement) {
@@ -156,7 +104,13 @@
         response = generateExperienceTimeline();
         break;
       case 'education':
-        response = `${resumeData.education.degree}\n${resumeData.education.school}, ${resumeData.education.location} (${resumeData.education.endDate})\n`;
+        response = resumeData.education
+          .map((e) => {
+            const year = e.endDate ? ` (${new Date(e.endDate).getFullYear()})` : '';
+            const where = e.location ? `, ${e.location}` : '';
+            return `${e.degree}\n${e.school}${where}${year}`;
+          })
+          .join('\n\n');
         break;
       case 'contact':
         response = `Name: ${resumeData.name}\nEmail: ${resumeData.email}\nPhone: ${resumeData.phone}\nLinkedIn: ${resumeData.linkedin}\nWebsite: ${resumeData.website}`;
@@ -176,22 +130,36 @@
 
   function generateExperienceTimeline() {
     let timeline = '╔═══════════════════════ Career Timeline ═════════════════════════════╗\n';
-    const allExperiences = [...resumeData.experience, resumeData.education].sort((a, b) => new Date(b.startDate) - new Date(a.startDate));
-    
+    const yearOf = (d) => {
+      const ms = Date.parse(d);
+      return Number.isNaN(ms) ? null : new Date(ms).getFullYear();
+    };
+
+    const allExperiences = [...resumeData.experience, ...resumeData.education]
+      .sort((a, b) => (Date.parse(b.startDate) || 0) - (Date.parse(a.startDate) || 0));
+
     allExperiences.forEach((exp, index) => {
-      const startDate = new Date(exp.startDate);
-      const endDate = exp.endDate === 'present' ? new Date() : new Date(exp.endDate);
-      const duration = endDate.getFullYear() - startDate.getFullYear();
-      const startYear = startDate.getFullYear();
-      const endYear = endDate.getFullYear();
-      
+      const isPresent = exp.endDate === 'present' || !exp.endDate;
+      const startYear = yearOf(exp.startDate);
+      const endYear = isPresent ? 'present' : yearOf(exp.endDate);
+
+      // Only show a year range/duration when we actually have a start year.
+      let period;
+      if (startYear !== null) {
+        const endNum = isPresent ? new Date().getFullYear() : endYear;
+        const duration = endNum !== null ? endNum - startYear : null;
+        period = `${startYear} - ${endYear}` + (duration !== null ? ` (${duration} years)` : '');
+      } else {
+        period = endYear !== null ? `${endYear}` : '';
+      }
+
       let line1, line2;
       if ('degree' in exp) {
-        line1 = `${startYear} - ${endYear} (${duration} years)`.padEnd(21) + `│ ${exp.degree}`;
-        line2 = ' '.repeat(21) + `│ ${exp.school}, ${exp.location}`;
+        line1 = period.padEnd(21) + `│ ${exp.degree}`;
+        line2 = ' '.repeat(21) + `│ ${[exp.school, exp.location].filter(Boolean).join(', ')}`;
       } else {
-        line1 = `${startYear} - ${endYear} (${duration} years)`.padEnd(21) + `│ ${exp.title}`;
-        line2 = ' '.repeat(21) + `│ ${exp.company}, ${exp.location}`;
+        line1 = period.padEnd(21) + `│ ${exp.title}`;
+        line2 = ' '.repeat(21) + `│ ${[exp.company, exp.location].filter(Boolean).join(', ')}`;
       }
       
       timeline += `║ ${line1.padEnd(70)}\n`;
@@ -221,7 +189,7 @@
 
 {#if isOpen}
   <!-- svelte-ignore a11y_no_static_element_interactions -->
-  <div transition:fade="{{ duration: 200 }}" class="z-50 fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4" onkeydown={handleKeydown}>
+  <div use:portal transition:fade="{{ duration: 200 }}" class="z-50 fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center p-4" onkeydown={handleKeydown}>
     <div class="w-full max-w-3xl bg-black bg-opacity-90 text-green-500 font-mono rounded-lg shadow-lg">
       <div class="flex items-center justify-between p-4 border-b border-green-900">
         <div class="flex items-center">

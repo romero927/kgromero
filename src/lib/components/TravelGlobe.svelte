@@ -77,6 +77,9 @@
     { lat: 20.7984, lng: -156.3319, label: 'Maui', lived: false },
     { lat: 40.3428, lng: -105.6836, label: 'Rocky Mountain N.P.', lived: false },
     { lat: 29.1275, lng: -103.2425, label: 'Big Bend N.P.', lived: false },
+    { lat: 42.3601, lng: -71.0589, label: 'Boston', lived: false },
+    { lat: 36.1627, lng: -86.7816, label: 'Nashville', lived: false },
+    { lat: 35.7954, lng: -83.5304, label: 'Dollywood', lived: false },
   ];
 
   let cleanupGlobe = () => {};
@@ -411,12 +414,14 @@
   .modal {
     display: flex;
     position: fixed;
-    z-index: 1;
+    z-index: 50;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     justify-content: center;
     align-items: center;
   }

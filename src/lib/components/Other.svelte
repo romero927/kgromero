@@ -48,7 +48,7 @@
             {$t.other.family}
           </button>, {$t.other.interestList}, <TravelGlobe />Travel
         </p>
-        <Modal title={$t.other.family} bind:open={clickOutsideModal} autoclose outsideclose {size}>
+        <Modal title={$t.other.family} bind:open={clickOutsideModal} autoclose outsideclose {size} classBackdrop="z-50 bg-black bg-opacity-50 dark:bg-opacity-50 backdrop-blur-sm">
           <Carousel {images} {forward} let:Indicators let:Controls bind:index imgClass="object-contain h-full w-fit rounded-sm" />
           <Thumbnails {images} {forward} bind:index />
         </Modal>
