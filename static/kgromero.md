@@ -23,20 +23,22 @@ Hands-on and results-driven software engineering leader specializing in manageme
 Website: [tenna.com](https://www.tenna.com) • Construction B2B SaaS Startup | 150 Employees  
 Date: *Oct 2025 – Present*
 
-* Led software development team focused on product development, enhancement, and release management.
-* Tenna Online is a construction-industry SaaS platform offering real-time GPS, BLE, and IoT asset tracking to manage fleets, schedule maintenance, and improve utilization across mixed equipment operations.
-* **Tech Stack:** AWS, GitHub, Kubernetes, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Grafana, Confluence.
+* **Role:** Led Software Development Team focused on building new product features for the Tenna Platform.
+* **Projects:** Owner of the integrations domain. Built out integration APIs so that customers could more tightly couple their internal systems with the Tenna platform.
+* **Tech Stack:** AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Grafana, Confluence.
+* **Note:** Was a Tenna employee before, during, and after John Deere acquisition.
 
 ---
 
-### **Dexian** — *Technical Lead (Contractor for Deloitte Consulting)*
+### **Dexian** — *Contractor*
 
 Website: [dexian.com](https://www.dexian.com) • Staffing & IT Services | 12,000 Employees  
 Date: *Mar 2025 – Oct 2025*
 
-* Short-term contract focused on API development, data integration, and cloud architecture for Deloitte Consulting.
-* **Client:** Deloitte Consulting (Energy industry client, Chicago).
-* **Tech Stack:** Azure Cloud, Node/Express (Azure App Services), .NET Microservices (Azure Functions), Angular, SAP/CC&B, Tibco + Boomi integrations, Redis, CosmosDB, MS SQL, Azure DevOps, Confluence.
+* **Client:** Deloitte Consulting | Contract: 03/2025 – 10/2025 | Title: Technical Lead (Back End).
+* **Role:** Short-term contract with focus on API Development, Data Integration, and Cloud Architecture.
+* **Tech Stack:** Azure Cloud, Containerized Node Express API (Azure App Services), .NET Microservices (Azure Functions), Angular F.E., SAP/CC&B B.E., Tibco + Boomi Data Integrations, Redis Cache, CosmosDB, MS SQL (Azure), Azure DevOps, Confluence.
+* **Project:** A mission-critical customer-facing product with 1000's of daily users at a major Energy Industry company headquartered in Chicago.
 
 ---
 
@@ -45,12 +47,13 @@ Date: *Mar 2025 – Oct 2025*
 Website: [raymourflanigan.com](https://www.raymourflanigan.com) • Retail | 5,000 Employees  
 Date: *Mar 2023 – May 2024*
 
-* Directed enterprise software development strategy, architecture, and modernization initiatives.
-* Managed **3 managers, 4 architects, and 30 developers** (onshore/nearshore/offshore).
-* Oversaw ERP migration to NetSuite, WMS migration to Körber, and e-commerce API integrations (ChargeAfter, Bringg).
-* Defined organizational strategy, OKRs, Agile/DevOps standards, and coding/review best practices.
-* Negotiated vendor contracts and budgets achieving **40% YoY cost reduction**.
-* **Tech Stack:** React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle, Azure, AWS, Boomi, Snowflake.
+* **Role:** Led Software Development Organization. Oversaw architectural strategy and decisions, and designed/implemented modern UI, API, and Data Integration architecture.
+* **Org. Size:** 3 Managers (AppDev Team, Oracle Team, Data Integrations/API Team), 4 Architects, 30 Developers (internal, near-shore, offshore). Direct Reports = Managers/Architects.
+* **Tech Stack:** React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake.
+* **Initiatives:** ERP Migration to NetSuite, WMS Migration to Körber, Omnichannel Sales Experience via E-Commerce Site, 3rd Party API Integrations (ChargeAfter, Bringg).
+* Defined and implemented organizational strategy (1 and 5 year), goals (OKRs), processes (Agile, DevOps), 24/7 support strategy, and coding/review standards.
+* Aligned cross-functional teams within matrixed IT organization and coordinated with infrastructure, product management, BI, design, and e-commerce organizations.
+* Negotiated and managed development partner (near-shore/on-shore), vendor contracts/resources, and organizational budget, achieving **40% YoY cost reduction**.
 
 ---
 
@@ -59,11 +62,13 @@ Date: *Mar 2023 – May 2024*
 Website: [mears.net](https://www.mears.net) • Energy Industry | 2,500 Employees  
 Date: *Oct 2017 – Mar 2023*
 
-* Managed software team across architecture, development, QA, DevOps, and support.
-* Directed SOX-compliant, high-availability field revenue/time/equipment capture platform used by **700+ field crews** nationwide — reducing closing process time by 75%.
-* Progressed through **Manager → Senior Manager → Director** roles.
-* Implemented DevOps, CICD, Agile Scrum, and GitFlow, increasing delivery speed by 50%.
-* **Tech Stack:** .NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure, Angular, Node, Electron, Git, PowerBI, Java (Spring Boot).
+* **Role:** Managed Software Development Team. Acted as Hands-on Technical Lead, performing Requirements Discovery (in conjunction with PM), Architecture, Design, Development (Full-Stack Coding), QA, DevOps, and Production Support. Also administered On-Prem Windows Servers, Azure DevOps, and Azure subscription.
+* **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team, Direct Reports = FTE Developers and PM).
+* **Tech Stack:** .NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure/Windows Server, JavaScript (Angular/Node/Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).
+* **Project:** Mission Critical SOX-compliant and high-availability internally developed Revenue/Time/Equipment Field Capture solution, used by **700+** field construction crews across the U.S., speeding up the closing process by **75%**.
+* **Titles:** Manager (2017–2020), Senior Manager (2020–2021), Director (2021–2023).
+* Traveled to various U.S. locations to roll out applications and lead Change Management (25% travel).
+* Implemented and trained organization on DevOps, CICD, Agile Scrum, Kanban, GitFlow, and QA processes, increasing delivery speed by **50%**.
 
 ---
 
@@ -72,22 +77,21 @@ Date: *Oct 2017 – Mar 2023*
 Website: [wwmach.com](https://www.wwmach.com) • Construction | 60 Employees  
 Date: *Apr 2016 – Oct 2017*
 
-* Led internal team of 3 employees + 5 contractors; reported to co-owner.
-* Developed asset management suite managing **$300M** in heavy equipment.
-* Built mobile-first SPA for real-time equipment telemetry.
-* Established Agile and DevOps practices for faster delivery.
+* Led internal software development team (3 internal and 5 contract developers) and reported to co-owner of company.
+* Full-stack development delivering mission-critical asset management software (desktop, mobile, and web) managing **$300M** in heavy machinery assets.
+* Built mobile-first SPA to enable employees to utilize real-time telemetry on machinery assets.
 
 ---
 
-### **HP Inc.** — *Technical Lead / Senior Developer*
+### **HP Inc.** — *Technical Lead*
 
 Website: [hp.com](https://www.hp.com) • Consumer Electronics | 50,000 Employees  
 Date: *Dec 2011 – Feb 2016*
 
-* Technical lead for global 3rd-level support tool used by **10k+ users**.
-* Delivered enterprise web apps (.NET + SQL + JavaScript).
-* Managed system split during HP corporate division into HP Inc. and HPE.
-* **Roles:** Senior Developer (2011–2013), Technical Lead (2013–2016).
+* Designated as technical lead over mission-critical third level support tool with **10k+** global users.
+* Full-stack development delivering 3-tier web applications using .NET, MS SQL, and JavaScript.
+* Led logical split and cloning of system during HP's split into HPE and HP Inc.
+* **Titles:** Senior Developer (2011–2013), Technical Lead (2013–2016).
 
 ---
 
