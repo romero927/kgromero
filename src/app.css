@@ -4,11 +4,11 @@
 
 @layer components {
   .neo-button {
-    @apply bg-neo-orange border-2 border-neo-black shadow-neo
+    @apply bg-neo-accent border-2 border-neo-black shadow-neo
     active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all px-4 py-2 font-bold text-sm
     focus:outline-none focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
-    dark:bg-dark-card dark:text-neo-orange dark:border-dark-border dark:shadow-neo-dark
-    dark:active:bg-dark-hover dark:active:shadow-none dark:focus-visible:ring-neo-orange;
+    dark:bg-dark-card dark:text-neo-accent dark:border-dark-border dark:shadow-neo-dark
+    dark:active:bg-dark-hover dark:active:shadow-none dark:focus-visible:ring-neo-accent;
   }
 
   .neo-button-ghost {
@@ -16,7 +16,7 @@
     active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all px-4 py-2 font-bold text-sm
     focus:outline-none focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
     dark:bg-transparent dark:text-gray-200 dark:border-dark-border dark:shadow-neo-dark
-    dark:focus-visible:ring-neo-orange;
+    dark:focus-visible:ring-neo-accent;
   }
 
   .neo-cta {
@@ -26,7 +26,7 @@
            active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all
            focus:outline-none focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
            dark:bg-transparent dark:text-gray-200 dark:border-dark-border dark:shadow-neo-dark
-           dark:focus-visible:ring-neo-orange;
+           dark:focus-visible:ring-neo-accent;
   }
 
   .neo-cta-arrow {
@@ -37,12 +37,23 @@
     transform: translateX(4px);
   }
 
+  /* Marker-style accent highlight: yellow block behind text on group hover.
+     Keeps text dark and readable instead of recoloring it to low-contrast yellow. */
+  .neo-highlight {
+    @apply box-decoration-clone rounded-[2px] px-1 -mx-1 transition-colors duration-200;
+  }
+
+  .group:hover .neo-highlight,
+  .neo-highlight:hover {
+    @apply bg-neo-accent text-neo-black;
+  }
+
   .card-link {
     @apply flex items-center justify-between w-full
            px-3 py-2 text-sm font-medium border-b border-neo-black/10
-           hover:bg-neo-orange hover:text-neo-black hover:pl-4
+           hover:bg-neo-accent hover:text-neo-black hover:pl-4
            transition-all duration-150 last:border-b-0
-           dark:border-dark-border dark:hover:bg-dark-hover dark:hover:text-neo-orange;
+           dark:border-dark-border dark:hover:bg-dark-hover dark:hover:text-neo-accent;
   }
 
   .neo-card {
@@ -58,7 +69,7 @@
   }
 
   .neo-bold-card {
-    @apply bg-neo-orange border-2 border-neo-black shadow-neo px-4 py-1.5
+    @apply bg-neo-accent border-2 border-neo-black shadow-neo px-4 py-1.5
     dark:bg-dark-card dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
   }
 
@@ -70,12 +81,12 @@
   .neo-input {
     @apply bg-white border-2 border-neo-black shadow-neo px-4 py-2
     focus:outline-none focus:ring-2 focus:ring-neo-black focus:ring-offset-2 focus:shadow-none focus:translate-x-[2px] focus:translate-y-[2px] transition-all
-    dark:bg-dark-card dark:text-gray-100 dark:border-dark-border dark:focus:ring-neo-orange;
+    dark:bg-dark-card dark:text-gray-100 dark:border-dark-border dark:focus:ring-neo-accent;
   }
 
   .card-title {
     @apply font-display font-bold uppercase tracking-wider text-base sm:text-lg
-           text-neo-black dark:text-neo-orange;
+           text-neo-black dark:text-neo-accent;
   }
 
   .card-eyebrow {
@@ -90,23 +101,23 @@
 
   .dropdown-item {
     @apply block px-3 py-2 text-sm font-medium border-b border-neo-black/10
-           hover:bg-neo-orange hover:text-neo-black hover:pl-4
+           hover:bg-neo-accent hover:text-neo-black hover:pl-4
            transition-all duration-150 last:border-b-0
-           dark:border-dark-border dark:hover:bg-dark-hover dark:hover:text-neo-orange;
+           dark:border-dark-border dark:hover:bg-dark-hover dark:hover:text-neo-accent;
   }
 
   .dropdown-section-title {
     @apply w-full text-left font-display font-bold uppercase tracking-wider text-xs
            flex items-center justify-between px-4 py-3
-           hover:text-neo-orange transition-colors
-           dark:text-gray-100 dark:hover:text-neo-orange;
+           hover:text-neo-accent transition-colors
+           dark:text-gray-100 dark:hover:text-neo-accent;
   }
 
   .dropdown-subitem {
     @apply block pl-6 pr-4 py-1.5 text-xs font-medium text-neo-black/80
-           hover:bg-neo-orange hover:text-neo-black
+           hover:bg-neo-accent hover:text-neo-black
            transition-colors duration-150
-           dark:text-gray-300 dark:hover:bg-dark-hover dark:hover:text-neo-orange;
+           dark:text-gray-300 dark:hover:bg-dark-hover dark:hover:text-neo-accent;
   }
 
   /* Screen reader only text */
@@ -118,7 +129,7 @@
   /* Skip to content link */
   .skip-link {
     @apply sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50
-    focus:px-4 focus:py-2 focus:bg-neo-orange focus:border-2 focus:border-neo-black
+    focus:px-4 focus:py-2 focus:bg-neo-accent focus:border-2 focus:border-neo-black
     focus:shadow-neo focus:rounded-lg focus:font-bold;
   }
 }
@@ -136,7 +147,7 @@
   }
 
   .neo-button-ghost:hover {
-    background-color: #FD9745;
+    background-color: #FACC15;
     color: #1A1A1A;
     transform: translate(2px, 2px);
     box-shadow: none;
@@ -144,13 +155,13 @@
 
   .dark .neo-button-ghost:hover {
     background-color: #2D2F33;
-    color: #FD9745;
+    color: #FACC15;
     transform: translate(2px, 2px);
     box-shadow: none;
   }
 
   .neo-cta:hover {
-    background-color: #FD9745;
+    background-color: #FACC15;
     color: #1A1A1A;
     transform: translate(2px, 2px);
     box-shadow: none;
@@ -158,7 +169,7 @@
 
   .dark .neo-cta:hover {
     background-color: #2D2F33;
-    color: #FD9745;
+    color: #FACC15;
     transform: translate(2px, 2px);
     box-shadow: none;
   }

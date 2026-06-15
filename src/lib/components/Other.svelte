@@ -29,9 +29,9 @@
           {#each $t.other.projects as project}
             <li class="break-words group">
               {#if project.link}
-                <a href={project.link} target="_blank" class="inline-flex items-center hover:text-neo-orange transition-colors" aria-label={`View ${project.name} project`}>
-                  <Fa icon={faLink} class="mr-2 text-neo-black/55 dark:text-gray-400 group-hover:text-neo-orange transition-colors text-xs" aria-hidden="true"/>
-                  <span class="break-words">{project.name}</span>
+                <a href={project.link} target="_blank" class="inline-flex items-center" aria-label={`View ${project.name} project`}>
+                  <Fa icon={faLink} class="mr-2 text-neo-black/55 dark:text-gray-400 group-hover:text-neo-accent transition-colors text-xs" aria-hidden="true"/>
+                  <span class="neo-highlight break-words">{project.name}</span>
                 </a>
               {:else}
                 <span class="break-words">{project.name}</span>
@@ -44,7 +44,7 @@
       <div>
         <h3 class="card-eyebrow mb-2">{$t.other.interests}</h3>
         <p class="break-words leading-relaxed">
-          <button class="hover:text-neo-orange transition-colors underline-offset-2 hover:underline" onclick={() => { clickOutsideModal = true; }} aria-label="View family photos">
+          <button class="neo-highlight underline underline-offset-2 decoration-dotted" onclick={() => { clickOutsideModal = true; }} aria-label="View family photos">
             {$t.other.family}
           </button>, {$t.other.interestList}, <TravelGlobe />Travel
         </p>

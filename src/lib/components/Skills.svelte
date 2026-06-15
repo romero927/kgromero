@@ -21,15 +21,15 @@
       <li class="relative block group break-words">
         <!-- Bullet dot -->
         <div class="absolute left-[-22px] top-[5px] h-3 w-3 rounded-full border-2 border-neo-black
-                    dark:border-neo-orange bg-neo-cream dark:bg-dark-card transition-all duration-200
-                    group-hover:bg-neo-orange group-hover:scale-110" aria-hidden="true"></div>
+                    dark:border-neo-accent bg-neo-cream dark:bg-dark-card transition-all duration-200
+                    group-hover:bg-neo-accent group-hover:scale-110" aria-hidden="true"></div>
 
         <div class="transition-transform duration-200 origin-left group-hover:translate-x-0.5">
           <a
             href={company.url}
             target="_blank"
             rel="noopener noreferrer"
-            class="text-sm font-bold text-neo-black dark:text-gray-100 group-hover:text-neo-orange dark:group-hover:text-neo-orange transition-colors"
+            class="neo-highlight text-sm font-bold text-neo-black dark:text-gray-100"
             aria-label={`Visit ${company.name} website`}
           >
             {company.name}

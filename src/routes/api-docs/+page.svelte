@@ -66,7 +66,7 @@
           <a 
             href="/api/openapi.json" 
             target="_blank"
-            class="px-3 py-1 bg-neo-orange text-neo-cream font-bold rounded hover:bg-opacity-80 transition-colors dark:bg-dark-accent dark:text-neo-black"
+            class="px-3 py-1 bg-neo-accent text-neo-cream font-bold rounded hover:bg-opacity-80 transition-colors dark:bg-dark-accent dark:text-neo-black"
           >
             View OpenAPI Spec
           </a>
@@ -164,13 +164,13 @@
         
         {#if apiSpec.components?.schemas?.Resume}
           <div class="space-y-4">
-            <p class="mb-4">The API follows the <a href="https://jsonresume.org/schema/" target="_blank" class="underline text-neo-orange">JSON Resume</a> standard schema.</p>
+            <p class="mb-4">The API follows the <a href="https://jsonresume.org/schema/" target="_blank" class="underline text-neo-accent">JSON Resume</a> standard schema.</p>
             
             <div>
               <h3 class="font-bold text-xl mb-2">Resume Object</h3>
               <div class="space-y-2">
                 {#each Object.entries(apiSpec.components.schemas.Resume.properties) as [key, value]}
-                  <div class="border-l-4 border-neo-orange pl-4 py-2 dark:border-dark-border">
+                  <div class="border-l-4 border-neo-accent pl-4 py-2 dark:border-dark-border">
                     <code class="font-bold">{key}</code>
                     <span class="text-sm ml-2 text-gray-600 dark:text-gray-400">({value.type})</span>
                     {#if value.description}

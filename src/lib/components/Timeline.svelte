@@ -11,8 +11,8 @@
       <div class="relative mb-4 last:mb-0 group">
         <!-- Dot -->
         <div class="absolute left-[-22px] top-[5px] h-3 w-3 rounded-full border-2 border-neo-black
-                    dark:border-neo-orange bg-neo-cream dark:bg-dark-card transition-all duration-200
-                    group-hover:bg-neo-orange group-hover:scale-110"></div>
+                    dark:border-neo-accent bg-neo-cream dark:bg-dark-card transition-all duration-200
+                    group-hover:bg-neo-accent group-hover:scale-110"></div>
 
         <!-- Content -->
         <div class="block transition-transform duration-200 origin-left group-hover:translate-x-0.5 cursor-default">

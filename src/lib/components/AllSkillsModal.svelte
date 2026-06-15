@@ -43,7 +43,7 @@
         </h2>
         <button
           onclick={closeModal}
-          class="text-gray-500 hover:text-neo-orange dark:text-gray-400 dark:hover:text-neo-orange 
+          class="text-gray-500 hover:text-neo-black dark:text-gray-400 dark:hover:text-white
                  text-2xl sm:text-3xl font-bold transition-colors duration-200 leading-none p-2 min-w-[44px] min-h-[44px] 
                  flex items-center justify-center flex-shrink-0"
           aria-label="Close modal"
@@ -61,12 +61,12 @@
                 <!-- Bullet dot -->
                 <div class="flex-shrink-0 mt-[6px] mr-2 sm:mr-3 h-2.5 w-2.5 sm:h-3 sm:w-3 rounded-full border border-neo-white 
                             dark:border-gray-500 bg-dark-card transition-transform duration-200 
-                            group-hover:scale-125 sm:group-hover:scale-150 group-hover:bg-neo-orange" aria-hidden="true">
+                            group-hover:scale-125 sm:group-hover:scale-150 group-hover:bg-neo-accent" aria-hidden="true">
                 </div>
                 
                 <div class="flex-1 min-w-0">
                   <div class="mb-1 sm:mb-2">
-                    <strong class="group-hover:text-neo-orange text-sm sm:text-base transition-colors duration-200 block">
+                    <strong class="neo-highlight inline-block text-sm sm:text-base">
                       {category.name}
                     </strong>
                   </div>

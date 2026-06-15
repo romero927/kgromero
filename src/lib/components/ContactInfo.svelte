@@ -54,24 +54,24 @@
 
     <ul class="space-y-3 text-sm w-full">
       <li class="flex items-start space-x-3 group">
-        <Fa icon={faPhone} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
-        <a href="tel:+12818579006" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="Phone number">{$t.contactInfo.phone}</a>
+        <Fa icon={faPhone} class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+        <a href="tel:+12818579006" class="neo-highlight break-all leading-tight" aria-label="Phone number">{$t.contactInfo.phone}</a>
       </li>
       <li class="flex items-start space-x-3 group">
-        <Fa icon={faEnvelope} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
-        <a href="mailto:kgromero@gmail.com" target="_top" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="Email address">{$t.contactInfo.email}</a>
+        <Fa icon={faEnvelope} class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+        <a href="mailto:kgromero@gmail.com" target="_top" class="neo-highlight break-all leading-tight" aria-label="Email address">{$t.contactInfo.email}</a>
       </li>
       <li class="flex items-start space-x-3 group">
-        <Fa icon={faLinkedin} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
-        <a href="https://www.linkedin.com/in/kyleromero/" target="_blank" rel="noopener noreferrer" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="LinkedIn profile">LinkedIn</a>
+        <Fa icon={faLinkedin} class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
+        <a href="https://www.linkedin.com/in/kyleromero/" target="_blank" rel="noopener noreferrer" class="neo-highlight break-all leading-tight" aria-label="LinkedIn profile">LinkedIn</a>
       </li>
       <li class="flex items-start space-x-3 group">
-        <Fa icon={faGithub} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
-        <a href="https://github.com/romero927" target="_blank" rel="noopener noreferrer" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="GitHub profile">GitHub</a>
+        <Fa icon={faGithub} class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+        <a href="https://github.com/romero927" target="_blank" rel="noopener noreferrer" class="neo-highlight break-all leading-tight" aria-label="GitHub profile">GitHub</a>
       </li>
       <li class="flex items-start space-x-3 group">
-        <Fa icon={faLink} class="group-hover:text-neo-orange transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
-        <a href="https://linktr.ee/kgromero" target="_blank" rel="noopener noreferrer" class="break-all leading-tight hover:text-neo-orange transition-colors" aria-label="Linktree profile">{$t.contactInfo.linktree}</a>
+        <Fa icon={faLink} class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
+        <a href="https://linktr.ee/kgromero" target="_blank" rel="noopener noreferrer" class="neo-highlight break-all leading-tight" aria-label="Linktree profile">{$t.contactInfo.linktree}</a>
       </li>
     </ul>
 
