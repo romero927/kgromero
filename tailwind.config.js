@@ -6,7 +6,7 @@ const config = {
   theme: {
     extend: {
       colors: {
-        'neo-accent': '#FACC15',
+        'neo-accent': '#FD9745',
         'neo-black': '#1A1A1A',
         'neo-cream': '#F5F5F4',
         // Add dark mode specific colors
@@ -17,9 +17,9 @@ const config = {
       },
       boxShadow: {
         'neo': '4px 4px 0 0 #1A1A1A',
-        'neo-dark': '4px 4px 0 0 #FACC15',
+        'neo-dark': '4px 4px 0 0 #FD9745',
         'neo-lg': '6px 6px 0 0 #1A1A1A',
-        'neo-lg-dark': '6px 6px 0 0 #FACC15'
+        'neo-lg-dark': '6px 6px 0 0 #FD9745'
       },
       fontFamily: {
         display: ['"Space Grotesk"', '"Inter"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif']

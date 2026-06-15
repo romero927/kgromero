@@ -32,7 +32,7 @@
 
 <svelte:head>
   <title>{title}</title>
-  <meta name="theme-color" content={$theme === 'dark' ? '#1a1a1a' : '#F5F5F4'}>
+  <meta name="theme-color" content={$theme === 'dark' ? '#212121' : '#F5F5F4'}>
   <meta name="description" content={description} />
   <link rel="canonical" href={$page.url.href} />
 

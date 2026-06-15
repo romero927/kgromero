@@ -147,7 +147,7 @@
   }
 
   .neo-button-ghost:hover {
-    background-color: #FACC15;
+    background-color: #FD9745;
     color: #1A1A1A;
     transform: translate(2px, 2px);
     box-shadow: none;
@@ -155,13 +155,13 @@
 
   .dark .neo-button-ghost:hover {
     background-color: #2D2F33;
-    color: #FACC15;
+    color: #FD9745;
     transform: translate(2px, 2px);
     box-shadow: none;
   }
 
   .neo-cta:hover {
-    background-color: #FACC15;
+    background-color: #FD9745;
     color: #1A1A1A;
     transform: translate(2px, 2px);
     box-shadow: none;
@@ -169,7 +169,7 @@
 
   .dark .neo-cta:hover {
     background-color: #2D2F33;
-    color: #FACC15;
+    color: #FD9745;
     transform: translate(2px, 2px);
     box-shadow: none;
   }

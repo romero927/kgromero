@@ -15,8 +15,8 @@
   Skip to main content
 </a>
 
-<div class="min-h-screen bg-neo-cream dark:bg-gray-900 flex flex-col">
-  <header class="sticky top-0 z-50 bg-neo-cream/80 dark:bg-gray-900/80 backdrop-blur-md">
+<div class="min-h-screen bg-neo-cream dark:bg-dark-bg flex flex-col">
+  <header class="sticky top-0 z-50 bg-neo-cream/80 dark:bg-dark-bg/80 backdrop-blur-md">
     <div class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 pt-2 pb-2">
       <NavBar />
     </div>
