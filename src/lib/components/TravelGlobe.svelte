@@ -338,7 +338,7 @@
 
 <Modal bind:open={showModal} title="My Travels" theme="night" size="max-w-3xl" bodyClass="p-0 flex">
   {#snippet headerActions()}
-    <button type="button" class="neo-button-ghost h-9 px-3 py-0 !text-gray-200 !border-dark-border !shadow-neo-dark" onclick={toggleSpin}>
+    <button type="button" class="neo-button-ghost h-9 px-3 py-0 text-gray-200! border-dark-border! shadow-neo-dark!" onclick={toggleSpin}>
       {autoRotate ? 'Stop Spin' : 'Start Spin'}
     </button>
   {/snippet}

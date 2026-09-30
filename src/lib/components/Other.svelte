@@ -30,14 +30,14 @@
         <h3 class="card-eyebrow mb-2">{$t.other.recentProjects}</h3>
         <ul class="space-y-1.5">
           {#each $t.other.projects as project}
-            <li class="break-words group">
+            <li class="wrap-break-word group">
               {#if project.link}
                 <a href={project.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center" aria-label={`View ${project.name} project`}>
-                  <Link size="1em" class="flex-shrink-0 mr-2 text-neo-black/55 dark:text-gray-400 group-hover:text-neo-accent transition-colors text-xs" aria-hidden="true"/>
-                  <span class="neo-highlight break-words">{project.name}</span>
+                  <Link size="1em" class="shrink-0 mr-2 text-neo-black/55 dark:text-gray-400 group-hover:text-neo-accent transition-colors text-xs" aria-hidden="true"/>
+                  <span class="neo-highlight wrap-break-word">{project.name}</span>
                 </a>
               {:else}
-                <span class="break-words">{project.name}</span>
+                <span class="wrap-break-word">{project.name}</span>
               {/if}
             </li>
           {/each}
@@ -46,7 +46,7 @@
 
       <div>
         <h3 class="card-eyebrow mb-2">{$t.other.interests}</h3>
-        <p class="break-words leading-relaxed">
+        <p class="wrap-break-word leading-relaxed">
           <button class="neo-highlight underline underline-offset-2 decoration-dotted" onclick={() => { index = 0; showFamily = true; }} aria-label="View family photos">
             {$t.other.family}
           </button>, {$t.other.interestList}, <TravelGlobe />Travel
@@ -92,7 +92,7 @@
               class="card-link group"
             >
               <span class="truncate pr-2">{blog.name}</span>
-              <ArrowUpRight size={14} class="flex-shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
+              <ArrowUpRight size={14} class="shrink-0 opacity-50 group-hover:opacity-100 transition-opacity" aria-hidden="true" />
             </a>
           {/each}
         </div>

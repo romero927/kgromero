@@ -186,7 +186,7 @@
       autocapitalize="off"
       spellcheck="false"
       aria-label="Terminal command"
-      class="flex-grow bg-transparent text-green-500 focus:outline-none placeholder-green-700"
+      class="grow bg-transparent text-green-500 focus:outline-hidden placeholder:text-green-700"
     />
   </form>
 </Modal>

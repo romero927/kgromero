@@ -11,24 +11,24 @@
     <h2 class="card-title mb-4">{$t.contactInfo.title}</h2>
 
     <ul class="space-y-3 text-sm w-full">
-      <li class="flex items-start space-x-3 group">
-        <Phone size="1em" class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+      <li class="flex items-start space-x-4 group">
+        <Phone size="1em" class="group-hover:text-neo-accent transition-colors shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
         <a href="tel:+12818579006" class="neo-highlight break-all leading-tight" aria-label="Phone number">{$t.contactInfo.phone}</a>
       </li>
-      <li class="flex items-start space-x-3 group">
-        <Mail size="1em" class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+      <li class="flex items-start space-x-4 group">
+        <Mail size="1em" class="group-hover:text-neo-accent transition-colors shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
         <a href="mailto:kgromero@gmail.com" target="_top" class="neo-highlight break-all leading-tight" aria-label="Email address">{$t.contactInfo.email}</a>
       </li>
-      <li class="flex items-start space-x-3 group">
-        <BrandIcon name="linkedin" class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
+      <li class="flex items-start space-x-4 group">
+        <BrandIcon name="linkedin" class="group-hover:text-neo-accent transition-colors shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
         <a href="https://www.linkedin.com/in/kyleromero/" target="_blank" rel="noopener noreferrer" class="neo-highlight break-all leading-tight" aria-label="LinkedIn profile">LinkedIn</a>
       </li>
-      <li class="flex items-start space-x-3 group">
-        <BrandIcon name="github" class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+      <li class="flex items-start space-x-4 group">
+        <BrandIcon name="github" class="group-hover:text-neo-accent transition-colors shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
         <a href="https://github.com/romero927" target="_blank" rel="noopener noreferrer" class="neo-highlight break-all leading-tight" aria-label="GitHub profile">GitHub</a>
       </li>
-      <li class="flex items-start space-x-3 group">
-        <Link size="1em" class="group-hover:text-neo-accent transition-colors flex-shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
+      <li class="flex items-start space-x-4 group">
+        <Link size="1em" class="group-hover:text-neo-accent transition-colors shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>
         <a href="https://linktr.ee/kgromero" target="_blank" rel="noopener noreferrer" class="neo-highlight break-all leading-tight" aria-label="Linktree profile">{$t.contactInfo.linktree}</a>
       </li>
     </ul>

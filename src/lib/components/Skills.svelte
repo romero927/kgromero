@@ -18,7 +18,7 @@
     <div class="absolute left-[7px] top-2 bottom-2 w-[2px] bg-neo-black/15 dark:bg-gray-700" aria-hidden="true"></div>
 
     {#each $t.skills.companies as company}
-      <li class="relative block group break-words">
+      <li class="relative block group wrap-break-word">
         <!-- Bullet dot -->
         <div class="absolute left-[-22px] top-[5px] h-3 w-3 rounded-full border-2 border-neo-black
                     dark:border-neo-accent bg-neo-cream dark:bg-dark-card transition-all duration-200
@@ -48,7 +48,7 @@
               </a>
             </div>
           {/if}
-          <div class="mt-1 text-[11px] leading-relaxed text-neo-black/70 dark:text-gray-400 break-words">
+          <div class="mt-1 text-[11px] leading-relaxed text-neo-black/70 dark:text-gray-400 wrap-break-word">
             {company.techStack}
           </div>
         </div>

@@ -51,7 +51,7 @@
     <NavBar />
   </header>
 
-  <main id="main-content" class="flex-grow">
+  <main id="main-content" class="grow">
     <div class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 py-4">
   <!-- Header -->
   <div class="neo-card mb-8">
@@ -65,7 +65,7 @@
           <a 
             href="/api/openapi.json" 
             target="_blank"
-            class="px-3 py-1 bg-neo-accent text-neo-cream font-bold rounded hover:bg-opacity-80 transition-colors dark:bg-dark-accent dark:text-neo-black"
+            class="px-3 py-1 bg-neo-accent text-neo-cream font-bold rounded-sm hover:bg-neo-accent/80 transition-colors dark:bg-dark-accent dark:text-neo-black"
           >
             View OpenAPI Spec
           </a>
@@ -83,7 +83,7 @@
         {#each Object.entries(apiSpec.paths) as [path, methods]}
           <div class="mb-6 border-2 border-neo-black rounded-lg p-4 dark:border-dark-border">
             <div class="flex items-center gap-4 mb-2">
-              <span class="px-3 py-1 bg-green-500 text-white font-bold rounded">GET</span>
+              <span class="px-3 py-1 bg-green-500 text-white font-bold rounded-sm">GET</span>
               <code class="text-lg font-mono">{path}</code>
             </div>
             
@@ -142,7 +142,7 @@
         </button>
 
         {#if error}
-          <div class="p-4 bg-red-100 border-2 border-red-500 rounded mb-4 dark:bg-red-900 dark:border-red-600">
+          <div class="p-4 bg-red-100 border-2 border-red-500 rounded-sm mb-4 dark:bg-red-900 dark:border-red-600">
             <p class="text-red-700 dark:text-red-200">{error}</p>
           </div>
         {/if}
@@ -150,7 +150,7 @@
         {#if responseData}
           <div>
             <h3 class="font-bold mb-2">Response:</h3>
-            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>{JSON.stringify(responseData, null, 2)}</code></pre>
+            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>{JSON.stringify(responseData, null, 2)}</code></pre>
           </div>
         {/if}
       </div>
@@ -193,13 +193,13 @@
           <!-- cURL -->
           <div>
             <h3 class="font-bold mb-2">cURL</h3>
-            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>curl {apiSpec.servers[0].url}/api/resume</code></pre>
+            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>curl {apiSpec.servers[0].url}/api/resume</code></pre>
           </div>
 
           <!-- JavaScript -->
           <div>
             <h3 class="font-bold mb-2">JavaScript / Fetch</h3>
-            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>const response = await fetch('{apiSpec.servers[0].url}/api/resume');
+            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>const response = await fetch('{apiSpec.servers[0].url}/api/resume');
 const resume = await response.json();
 console.log(resume.basics.name);</code></pre>
           </div>
@@ -207,7 +207,7 @@ console.log(resume.basics.name);</code></pre>
           <!-- Python -->
           <div>
             <h3 class="font-bold mb-2">Python</h3>
-            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>import requests
+            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>import requests
 
 response = requests.get('{apiSpec.servers[0].url}/api/resume')
 resume = response.json()

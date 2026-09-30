@@ -1,12 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-neo-accent: #fd9745;
+  --color-neo-black: #1a1a1a;
+  --color-neo-cream: #f5f5f4;
+  --color-dark-bg: #212121;
+  --color-dark-card: #25272a;
+  --color-dark-hover: #2d2f33;
+  --color-dark-border: #393b3f;
+
+  --shadow-neo: 4px 4px 0 0 #1a1a1a;
+  --shadow-neo-dark: 4px 4px 0 0 #fd9745;
+  --shadow-neo-lg: 6px 6px 0 0 #1a1a1a;
+  --shadow-neo-lg-dark: 6px 6px 0 0 #fd9745;
+
+  --font-display:
+    'Space Grotesk', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
 
 @layer components {
   .neo-button {
     @apply bg-neo-accent border-2 border-neo-black shadow-neo
     active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all px-4 py-2 font-bold text-sm
-    focus:outline-none focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
+    focus:outline-hidden focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
     dark:bg-dark-card dark:text-neo-accent dark:border-dark-border dark:shadow-neo-dark
     dark:active:bg-dark-hover dark:active:shadow-none dark:focus-visible:ring-neo-accent;
   }
@@ -14,7 +50,7 @@
   .neo-button-ghost {
     @apply bg-transparent border-2 border-neo-black text-neo-black shadow-neo
     active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all px-4 py-2 font-bold text-sm
-    focus:outline-none focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
+    focus:outline-hidden focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
     dark:bg-transparent dark:text-gray-200 dark:border-dark-border dark:shadow-neo-dark
     dark:focus-visible:ring-neo-accent;
   }
@@ -24,7 +60,7 @@
            bg-transparent border-2 border-neo-black text-neo-black shadow-neo
            px-4 py-2.5 font-display font-bold uppercase tracking-wider text-xs sm:text-sm
            active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all
-           focus:outline-none focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
+           focus:outline-hidden focus-visible:ring-2 focus-visible:ring-neo-black focus-visible:ring-offset-2
            dark:bg-transparent dark:text-gray-200 dark:border-dark-border dark:shadow-neo-dark
            dark:focus-visible:ring-neo-accent;
   }
@@ -80,7 +116,7 @@
 
   .neo-input {
     @apply bg-white border-2 border-neo-black shadow-neo px-4 py-2
-    focus:outline-none focus:ring-2 focus:ring-neo-black focus:ring-offset-2 focus:shadow-none focus:translate-x-[2px] focus:translate-y-[2px] transition-all
+    focus:outline-hidden focus:ring-2 focus:ring-neo-black focus:ring-offset-2 focus:shadow-none focus:translate-x-[2px] focus:translate-y-[2px] transition-all
     dark:bg-dark-card dark:text-gray-100 dark:border-dark-border dark:focus:ring-neo-accent;
   }
 
@@ -126,11 +162,6 @@
     scrollbar-color: #FD9745 transparent;
   }
 
-  /* Screen reader only text */
-  .sr-only {
-    @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;
-    clip: rect(0, 0, 0, 0);
-  }
 
   /* Skip to content link */
   .skip-link {
@@ -143,7 +174,7 @@
 /* Hover effects only on devices that support true hover (not sticky on mobile) */
 @media (hover: hover) {
   .neo-button:hover {
-    transform: translate(2px, 2px);
+    translate: 2px 2px;
     box-shadow: none;
   }
 
@@ -155,28 +186,28 @@
   .neo-button-ghost:hover {
     background-color: #FD9745;
     color: #1A1A1A;
-    transform: translate(2px, 2px);
+    translate: 2px 2px;
     box-shadow: none;
   }
 
   .dark .neo-button-ghost:hover {
     background-color: #2D2F33;
     color: #FD9745;
-    transform: translate(2px, 2px);
+    translate: 2px 2px;
     box-shadow: none;
   }
 
   .neo-cta:hover {
     background-color: #FD9745;
     color: #1A1A1A;
-    transform: translate(2px, 2px);
+    translate: 2px 2px;
     box-shadow: none;
   }
 
   .dark .neo-cta:hover {
     background-color: #2D2F33;
     color: #FD9745;
-    transform: translate(2px, 2px);
+    translate: 2px 2px;
     box-shadow: none;
   }
 

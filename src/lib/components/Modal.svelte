@@ -37,14 +37,14 @@
     night: {
       panel: 'bg-[#121212] text-gray-100 border-2 border-dark-border shadow-neo-lg-dark',
       header: 'border-b-2 border-dark-border',
-      title: 'card-title !text-neo-accent',
-      close: 'neo-button-ghost h-9 w-9 p-0 !text-gray-200 !border-dark-border !shadow-neo-dark'
+      title: 'card-title text-neo-accent!',
+      close: 'neo-button-ghost h-9 w-9 p-0 text-gray-200! border-dark-border! shadow-neo-dark!'
     },
     terminal: {
       panel: 'bg-black/90 text-green-500 font-mono rounded-lg shadow-lg',
       header: 'border-b border-green-900',
       title: 'text-lg sm:text-xl font-bold text-green-500',
-      close: 'h-9 w-9 text-green-500 hover:text-green-400 focus-visible:ring-2 focus-visible:ring-green-500 rounded'
+      close: 'h-9 w-9 text-green-500 hover:text-green-400 focus-visible:ring-2 focus-visible:ring-green-500 rounded-sm'
     }
   };
   let styles = $derived(themes[theme] ?? themes.neo);
@@ -99,11 +99,11 @@
 <svelte:window onkeydown={handleKeydown} />
 
 {#if open}
-  <div use:portal class="fixed inset-0 z-[60] flex items-center justify-center p-3 sm:p-4">
+  <div use:portal class="fixed inset-0 z-60 flex items-center justify-center p-3 sm:p-4">
     <!-- Keyboard users close with Escape; the backdrop is a pointer-only affordance -->
     <!-- svelte-ignore a11y_click_events_have_key_events, a11y_no_static_element_interactions -->
     <div
-      class="absolute inset-0 bg-black/50 backdrop-blur-sm"
+      class="absolute inset-0 bg-black/50 backdrop-blur-xs"
       onclick={close}
       transition:fade={{ duration: 150 }}
     ></div>
@@ -113,10 +113,10 @@
       aria-modal="true"
       aria-labelledby={titleId}
       tabindex="-1"
-      class="relative flex w-full {size} max-h-[90svh] flex-col outline-none {styles.panel}"
+      class="relative flex w-full {size} max-h-[90svh] flex-col outline-hidden {styles.panel}"
       transition:scale={{ start: 0.96, duration: 150 }}
     >
-      <div class="flex flex-shrink-0 items-center justify-between gap-3 px-4 py-3 sm:px-6 {styles.header}">
+      <div class="flex shrink-0 items-center justify-between gap-3 px-4 py-3 sm:px-6 {styles.header}">
         <h2 id={titleId} class={styles.title}>{title}</h2>
         <div class="flex items-center gap-2">
           {@render headerActions?.()}
