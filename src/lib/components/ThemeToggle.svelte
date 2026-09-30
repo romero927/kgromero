@@ -1,6 +1,6 @@
 <script>
   import { theme } from '$lib/store';
-  import { Moon, Sun } from 'lucide-svelte';
+  import { Moon, Sun } from '@lucide/svelte';
 
   let { class: className = '' } = $props();
 

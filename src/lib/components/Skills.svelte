@@ -1,7 +1,7 @@
 <script>
   import { t } from '$lib/i18n';
   import AllSkillsModal from './AllSkillsModal.svelte';
-  import { ArrowRight } from 'lucide-svelte';
+  import { ArrowRight } from '@lucide/svelte';
 
   let showModal = $state(false);
 

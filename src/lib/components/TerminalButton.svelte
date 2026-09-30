@@ -1,5 +1,5 @@
 <script>
-  import { Terminal } from 'lucide-svelte';
+  import { Terminal } from '@lucide/svelte';
   let { onClick, class: className = '' } = $props();
 </script>
 

@@ -3,20 +3,10 @@
 User-agent: *
 Allow: /
 
-# Disallow any potential admin or private areas
-Disallow: /admin/
-Disallow: /private/
-
-# Disallow any temporary or test pages
-Disallow: /temp/
-Disallow: /test/
-
-# Optional: Disallow specific file types
+# Keep supporting documents out of search results, but let the resume be indexed
+Allow: /Kyle_Romero-Resume.pdf
 Disallow: /*.pdf$
 Disallow: /*.doc$
+Disallow: /*.docx$
 
-# Sitemap location
 Sitemap: https://kgromero.com/sitemap.xml
-
-# Crawl-delay directive (optional, use if you want to limit crawl rate)
-# Crawl-delay: 10

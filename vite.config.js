@@ -3,5 +3,8 @@ import { defineConfig } from 'vite';
 
 export default defineConfig({
 	plugins: [sveltekit()],
-	assetsInclude: ['**/*.docx','**/*.txt','**/*.png','**/*.webm', '**/*.webp','**/*.md','**/*.jpeg', '**/*.pdf']
+	build: {
+		// three.js (~740 kB) is its own lazy-loaded chunk, only fetched when the travel globe opens
+		chunkSizeWarningLimit: 800
+	}
 });

@@ -2,8 +2,7 @@
   import { onMount } from 'svelte';
   import NavBar from '$lib/components/NavBar.svelte';
   import { t } from '$lib/i18n';
-  import { faChartLine } from '@fortawesome/free-solid-svg-icons';
-  import Fa from 'svelte-fa';
+  import { ChartLine } from '@lucide/svelte';
   
   let apiSpec = null;
   let selectedEndpoint = '/api/resume';
@@ -238,7 +237,7 @@ print(resume['basics']['name'])</code></pre>
       <span class="whitespace-nowrap"><b>© {new Date().getFullYear()} Kyle Romero</b></span>
       <span class="hidden sm:inline">|</span>
       <span class="whitespace-nowrap">{$t.footerMessage.replace(/\s*\|\s*/g, '').trim()}</span>
-      <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" rel="noopener noreferrer" aria-label="View PageSpeed Insights" class="ml-1"><Fa icon={faChartLine} /></a>
+      <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" rel="noopener noreferrer" aria-label="View PageSpeed Insights" class="ml-1"><ChartLine size="1em" aria-hidden="true" /></a>
     </div>
   </footer>
 </div>

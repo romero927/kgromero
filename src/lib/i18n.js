@@ -2,14 +2,19 @@ import { writable } from "svelte/store";
 
 export const locale = writable("en");
 
+// Started professionally in mid-2007; computed so the site never goes stale.
+// Pages are prerendered, so this refreshes on every deploy.
+const CAREER_START_YEAR = 2007;
+export const yearsExperience = `${new Date().getFullYear() - CAREER_START_YEAR}+`;
+
 const translations = {
   en: {
     name: "Kyle Romero",
-    description: `Software Engineering Leader with 18+ years experience in IT, living in Jersey City, NJ.`,
+    description: `Software Engineering Leader with ${yearsExperience} years experience in IT, living in Jersey City, NJ.`,
     aboutMe: {
       title: "About Me",
       content:
-        "Hands-on and results-driven technology leader with 18+ years in software engineering, specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.",
+        `Hands-on and results-driven technology leader with ${yearsExperience} years in software engineering, specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.`,
     },
     contactInfo: {
       title: "Contact Info",

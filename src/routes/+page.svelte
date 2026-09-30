@@ -6,9 +6,8 @@
   import Experience from '$lib/components/Experience.svelte';
   import Skills from '$lib/components/Skills.svelte';
   import Other from '$lib/components/Other.svelte';
-  import { t } from '$lib/i18n';
-  import { faChartLine } from '@fortawesome/free-solid-svg-icons';
-  import Fa from 'svelte-fa';
+  import { t, yearsExperience } from '$lib/i18n';
+  import { ChartLine } from '@lucide/svelte';
 </script>
 
 <a href="#main-content" class="skip-link">
@@ -30,12 +29,12 @@
           {$t.name}<span class="text-neo-accent">.</span>
         </h1>
         <p class="mt-4 text-base sm:text-lg leading-relaxed text-neo-black/85 dark:text-gray-300">
-          <b class="text-neo-black dark:text-gray-100">18+ years</b> building software and leading the teams that ship it.
+          <b class="text-neo-black dark:text-gray-100">{yearsExperience} years</b> building software and leading the teams that ship it.
         </p>
         <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
           <div class="border-l-2 border-neo-accent pl-3">
             <div class="card-eyebrow">Currently</div>
-            <div class="text-sm font-bold mt-0.5 text-neo-black dark:text-gray-100">Team Lead, Tenna</div>
+            <div class="text-sm font-bold mt-0.5 text-neo-black dark:text-gray-100">{$t.experience.timeline[0].title}</div>
           </div>
           <div class="border-l-2 border-neo-accent pl-3">
             <div class="card-eyebrow">Based in</div>
@@ -76,7 +75,7 @@
       <span class="whitespace-nowrap"><b class="text-neo-black dark:text-gray-200">© {new Date().getFullYear()} Kyle Romero</b></span>
       <span aria-hidden="true" class="hidden sm:inline text-neo-accent">/</span>
       <span class="whitespace-nowrap">{$t.footerMessage}</span>
-      <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" rel="noopener noreferrer" aria-label="View PageSpeed Insights" class="ml-1 hover:text-neo-accent transition-colors"><Fa icon={faChartLine} /></a>
+      <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" rel="noopener noreferrer" aria-label="View PageSpeed Insights" class="ml-1 hover:text-neo-accent transition-colors"><ChartLine size="1em" aria-hidden="true" /></a>
     </div>
   </footer>
 </div>

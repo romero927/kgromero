@@ -1,12 +1,7 @@
 <script>
-  import { createBubbler, stopPropagation } from 'svelte/legacy';
-
-  const bubble = createBubbler();
-  import { onMount } from 'svelte';
-  import * as THREE from 'three';
-  import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-  import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-  import Fa from 'svelte-fa';
+  import { untrack } from 'svelte';
+  import { Globe } from '@lucide/svelte';
+  import Modal from './Modal.svelte';
 
   let showModal = $state(false);
   let container = $state();
@@ -85,17 +80,23 @@
   let cleanupGlobe = () => {};
   let controls;
   let autoRotate = $state(true);
+  // Bumped on every open/close so a slow three.js load can't attach to a closed modal
+  let globeSession = 0;
 
-  function toggleModal() {
-    if (showModal) {
+  // Build the globe once the modal's container exists; tear it down when the modal closes.
+  $effect(() => {
+    if (!showModal || !container) return;
+    const session = ++globeSession;
+    untrack(() => createGlobe(session));
+    return () => {
+      globeSession++;
       cleanupGlobe();
+      cleanupGlobe = () => {};
       status = 'Loading...';
       fallbackMode = false;
-    } else {
-      setTimeout(createGlobe, 0);
-    }
-    showModal = !showModal;
-  }
+      hoverLabel = '';
+    };
+  });
 
   function toggleSpin() {
     autoRotate = !autoRotate;
@@ -104,12 +105,22 @@
     }
   }
 
-  function createGlobe() {
+  async function createGlobe(session) {
     const timeoutId = setTimeout(() => {
       fallbackMode = true;
     }, 10000); // 10 seconds timeout
 
     try {
+      // three.js is only needed once the globe is opened, so keep it out of the initial bundle
+      const [THREE, { OrbitControls }] = await Promise.all([
+        import('three'),
+        import('three/examples/jsm/controls/OrbitControls.js'),
+      ]);
+      if (session !== globeSession) {
+        clearTimeout(timeoutId);
+        return;
+      }
+
       if (!container) {
         throw new Error('Container not found');
       }
@@ -131,7 +142,7 @@
       // Create Earth
       const geometry = new THREE.SphereGeometry(1, 64, 64);
       const texture = new THREE.TextureLoader().load(
-        'https://threejsfundamentals.org/threejs/resources/images/world.jpg',
+        '/images/world.jpg',
         () => {},
         undefined,
         (err) => {}
@@ -215,77 +226,32 @@
         return line;
       }
 
-      // Add Country Borders
-      fetch('/country_borders.geojson')
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then((data) => {
-          const borderLines = new THREE.Group();
-
-          data.features.forEach((feature) => {
-            const coordinates = feature.geometry.coordinates;
-            const type = feature.geometry.type;
-
-            if (type === 'Polygon') {
-              coordinates.forEach((polygon) => {
-                const line = createBorderLine(polygon, 0x414a4c); // White color
-                borderLines.add(line);
-              });
-            } else if (type === 'MultiPolygon') {
-              coordinates.forEach((multiPolygon) => {
-                multiPolygon.forEach((polygon) => {
-                  const line = createBorderLine(polygon, 0x414a4c); // White color
-                  borderLines.add(line);
-                });
-              });
+      // Add country and US state borders
+      function addBorders(url) {
+        fetch(url)
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
             }
-          });
-
-          earth.add(borderLines);
-        })
-        .catch((error) => {
-          console.error('Error fetching country borders:', error);
-        });
-
-      // Add State Borders
-      fetch('/state_borders.geojson')
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-          }
-          return response.json();
-        })
-        .then((data) => {
-          const stateBorderLines = new THREE.Group();
-
-          data.features.forEach((feature) => {
-            const coordinates = feature.geometry.coordinates;
-            const type = feature.geometry.type;
-
-            if (type === 'Polygon') {
-              coordinates.forEach((polygon) => {
-                const line = createBorderLine(polygon, 0x414a4c); // Green color for states
-                stateBorderLines.add(line);
+            return response.json();
+          })
+          .then((data) => {
+            const borderLines = new THREE.Group();
+            data.features.forEach(({ geometry }) => {
+              if (!geometry) return;
+              const polygons = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates;
+              polygons.forEach((rings) => {
+                rings.forEach((ring) => borderLines.add(createBorderLine(ring, 0x414a4c)));
               });
-            } else if (type === 'MultiPolygon') {
-              coordinates.forEach((multiPolygon) => {
-                multiPolygon.forEach((polygon) => {
-                  const line = createBorderLine(polygon, 0x414a4c); // Green color for states
-                  stateBorderLines.add(line);
-                });
-              });
-            }
+            });
+            earth.add(borderLines);
+          })
+          .catch((error) => {
+            console.error(`Error loading ${url}:`, error);
           });
-
-          earth.add(stateBorderLines);
-        })
-        .catch((error) => {
-          console.error('Error fetching state borders:', error);
-        });
+      }
+      addBorders('/country_borders.geojson');
+      addBorders('/state_borders.geojson');
 
       // Add OrbitControls
       controls = new OrbitControls(camera, renderer.domElement);
@@ -364,117 +330,45 @@
     }
   }
 
-  onMount(() => {
-    return () => {
-      cleanupGlobe();
-    };
-  });
 </script>
 
-<button onclick={toggleModal}>
-  <Fa icon={faGlobe} />
+<button type="button" onclick={() => (showModal = true)} aria-label="Open travel globe" class="hover:text-neo-accent transition-colors">
+  <Globe size="1em" class="inline -mt-0.5" aria-hidden="true" />
 </button>
 
-<!-- svelte-ignore a11y_no_static_element_interactions -->
-<!-- svelte-ignore a11y_click_events_have_key_events -->
-{#if showModal}
-  <div class="modal" onclick={toggleModal}>
-    <div class="modal-content" onclick={stopPropagation(bubble('click'))}>
-      <h2 class="modal-title">My Travels</h2>
-      <button class="toggle-spin" onclick={toggleSpin}>
-        {autoRotate ? 'Stop Spin' : 'Start Spin'}
-      </button>
-      <span class="close" onclick={toggleModal}>&times;</span>
-      <div bind:this={container} class="globe-container">
-        {#if fallbackMode}
-          <div class="fallback-map">
-            <h3>Travel Map (Fallback Mode)</h3>
-            {#each travelLocations as location}
-              <div
-                class="location-pin"
-                style="left: {(location.lng + 180) / 360 * 100}%; top: {(90 - location.lat) / 180 * 100}%;">
-                <span class={location.lived ? 'lived' : ''}>{location.label}</span>
-              </div>
-            {/each}
+<Modal bind:open={showModal} title="My Travels" theme="night" size="max-w-3xl" bodyClass="p-0 flex">
+  {#snippet headerActions()}
+    <button type="button" class="neo-button-ghost h-9 px-3 py-0 !text-gray-200 !border-dark-border !shadow-neo-dark" onclick={toggleSpin}>
+      {autoRotate ? 'Stop Spin' : 'Start Spin'}
+    </button>
+  {/snippet}
+  <div bind:this={container} class="globe-container">
+    {#if fallbackMode}
+      <div class="fallback-map">
+        <h3>Travel Map (Fallback Mode)</h3>
+        {#each travelLocations as location}
+          <div
+            class="location-pin"
+            style="left: {(location.lng + 180) / 360 * 100}%; top: {(90 - location.lat) / 180 * 100}%;">
+            <span class={location.lived ? 'lived' : ''}>{location.label}</span>
           </div>
-        {:else if status}
-          <p>{status}</p>
-        {/if}
-        {#if hoverLabel}
-          <div class="hover-label" style="left: {mouseX}px; top: {mouseY}px;">
-            {hoverLabel}
-          </div>
-        {/if}
+        {/each}
       </div>
-    </div>
+    {:else if status}
+      <p class="text-gray-400">{status}</p>
+    {/if}
+    {#if hoverLabel}
+      <div class="hover-label" style="left: {mouseX}px; top: {mouseY}px;">
+        {hoverLabel}
+      </div>
+    {/if}
   </div>
-{/if}
+</Modal>
 
 <style>
-  .modal {
-    display: flex;
-    position: fixed;
-    z-index: 50;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
-    justify-content: center;
-    align-items: center;
-  }
-
-  .modal-content {
-    background-color: #121212;
-    padding: 20px;
-    border-radius: 10px;
-    width: 90%;
-    max-width: 800px;
-    height: 90%;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .modal-title {
-    color: #ffffff;
-    text-align: center;
-    margin-top: 0;
-    margin-bottom: 10px;
-  }
-
-  .close {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-
-  .toggle-spin {
-    position: absolute;
-    top: 10px;
-    right: 60px;
-    font-size: 16px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 6px 12px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-
-  .toggle-spin:hover {
-    background-color: #444;
-  }
-
   .globe-container {
     width: 100%;
-    height: calc(100% - 40px); /* Adjust for title */
+    height: min(70svh, 640px);
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,6 +1,6 @@
 # **Kyle Romero**
 
-**Director of Software Development**
+**Software Engineering Leader**
 > Location: Jersey City, NJ  
 Phone: (281) 857-9006  
 Email: [kgromero@gmail.com](mailto:kgromero@gmail.com)  

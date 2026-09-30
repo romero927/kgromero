@@ -120,6 +120,12 @@
            dark:text-gray-300 dark:hover:bg-dark-hover dark:hover:text-neo-accent;
   }
 
+  /* Thin accent-colored scrollbar for scrollable panels */
+  .neo-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #FD9745 transparent;
+  }
+
   /* Screen reader only text */
   .sr-only {
     @apply absolute w-px h-px p-0 -m-px overflow-hidden whitespace-nowrap border-0;

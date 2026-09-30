@@ -4,15 +4,7 @@
 
   let { class: className = '' } = $props();
   let isModalOpen = $state(false);
-
-  function openModal() {
-    isModalOpen = true;
-  }
-
-  function closeModal() {
-    isModalOpen = false;
-  }
 </script>
 
-<TerminalButton onClick={openModal} class={className}/>
-<ResumeShellModal isOpen={isModalOpen} onClose={closeModal} />
+<TerminalButton onClick={() => (isModalOpen = true)} class={className}/>
+<ResumeShellModal bind:open={isModalOpen} />
