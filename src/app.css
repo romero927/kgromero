@@ -2,6 +2,16 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* v4's group-hover uses :where(.group), which ties dark:* on specificity and loses.
+   Restore v3 specificity so group-hover:* still wins in dark mode. */
+@custom-variant group-hover {
+  @media (hover: hover) {
+    &:is(.group:hover *) {
+      @slot;
+    }
+  }
+}
+
 @theme {
   --color-neo-accent: #fd9745;
   --color-neo-black: #1a1a1a;
@@ -77,11 +87,6 @@
      Keeps text dark and readable instead of recoloring it to low-contrast yellow. */
   .neo-highlight {
     @apply box-decoration-clone rounded-[2px] px-1 -mx-1 transition-colors duration-200;
-  }
-
-  .group:hover .neo-highlight,
-  .neo-highlight:hover {
-    @apply bg-neo-accent text-neo-black;
   }
 
   .card-link {
@@ -173,6 +178,13 @@
 
 /* Hover effects only on devices that support true hover (not sticky on mobile) */
 @media (hover: hover) {
+  /* Unlayered so it beats dark:text-* utilities on the highlighted element */
+  .group:hover .neo-highlight,
+  .neo-highlight:hover {
+    background-color: var(--color-neo-accent);
+    color: var(--color-neo-black);
+  }
+
   .neo-button:hover {
     translate: 2px 2px;
     box-shadow: none;
