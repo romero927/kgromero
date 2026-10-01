@@ -94,7 +94,7 @@ const translations = {
         },
         {
           name: "MEARS Group (Energy Industry)",
-          url: "https://www.mearsgroup.com",
+          url: "https://www.mears.net",
           techStack:
             ".NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git (Azure DevOps), PowerBI, PowerAutomate, Java (Spring Boot), Python, Raspberry Pi.",
         },
