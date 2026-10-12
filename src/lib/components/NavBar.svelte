@@ -7,6 +7,9 @@
 
   // Shared by the desktop dropdown and the mobile menu
   const docSections = [
+    { key: 'tenna', label: 'Tenna', items: [
+      { href: 'https://www.tenna.com/press_releases/tenna-production-management-virtual-superintendent/', name: 'Production Management & Virtual Superintendent Press Release' }
+    ]},
     { key: 'raymour', label: 'Raymour & Flanigan', items: [
       { href: '/docs/OrgStructure.png', name: 'Matrix Organization Structure' },
       { href: '/docs/SDLC-Items-Flows.png', name: 'SDLC Item Flows' },
