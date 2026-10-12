@@ -17,6 +17,11 @@
 
 - Main page code: `src/routes/+page.svelte`; site copy lives in `src/lib/i18n.js`; supporting documents are served from `static/docs/`.
 
+- Cover letter source: `coverletter/Kyle_Romero-Coverletter.html`. To rebuild the PDF after editing:
+  ```
+  google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=static/Kyle_Romero-Coverletter.pdf coverletter/Kyle_Romero-Coverletter.html
+  ```
+
 ## Built by:
 - Kyle Romero
 - Jersey City, NJ 07311
