@@ -25,7 +25,7 @@ Date: *Oct 2025 – Present*
 
 * **Role:** Led Software Development Team focused on building new product features for the Tenna Platform.
 * **Projects:** Owner of the integrations domain. Built out integration APIs so that customers could more tightly couple their internal systems with the Tenna platform.
-* **Tech Stack:** AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Grafana, Confluence.
+* **Tech Stack:** AWS (EKS, Aurora, ElastiCache, S3, Lambda, SQS, DynamoDB, DMS, Kinesis), K8s, Helm, Docker, FluxCD (GitOps), Istio, GitHub Actions, Hapi, Express, Sequelize, React, Redux (Toolkit), SingleSpa (Micro-UI), RabbitMQ, Postgres, Redis, Elasticsearch, Grafana, Prometheus, Tempo, OpenTelemetry, Papertrail, GitHub, JIRA, Confluence, Claude.
 * **Note:** Was a Tenna employee before, during, and after John Deere acquisition.
 
 ---

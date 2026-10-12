@@ -76,7 +76,7 @@ const translations = {
           name: "Tenna (Construction Technology Industry)",
           url: "https://tenna.com",
           techStack:
-            "AWS, GitHub, K8s, Helm, Docker, FluxCD (GitOps), SingleSpa (Micro-UI), Hapi, React, Redux, RabbitMQ, Redis, Elasticsearch, Postgres, Sequelize, Grafana, JIRA, Confluence, Claude.",
+            "AWS (EKS, Aurora, ElastiCache, S3, Lambda, SQS, DynamoDB, DMS, Kinesis), K8s, Helm, Docker, FluxCD (GitOps), Istio, GitHub Actions, Hapi, Express, Sequelize, React, Redux (Toolkit), SingleSpa (Micro-UI), RabbitMQ, Postgres, Redis, Elasticsearch, Grafana, Prometheus, Tempo, OpenTelemetry, Papertrail, GitHub, JIRA, Confluence, Claude.",
         },
         {
           name: "Dexian (Staffing, IT Services, and Workforce Solutions)",
@@ -128,17 +128,17 @@ const translations = {
           {
             name: "Processes",
             skills:
-              "DevOps, CICD, Agile Scrum, Waterfall, Kanban, GitFlow, Matrixed Organization",
+              "DevOps, CICD, GitOps, Agile Scrum, Waterfall, Kanban, GitFlow, Matrixed Organization",
           },
           {
             name: "Architectures",
             skills:
-              "N-Tier, RESTful API, PWA, SPA, SSR, MVC, Serverless, Offline-First, Event-Driven, Distributed, Microservices, Containerized, Service Oriented",
+              "N-Tier, RESTful API, PWA, SPA, SSR, MVC, Serverless, Offline-First, Event-Driven, Distributed, Microservices, Micro-Frontends, Containerized, Service Oriented, Change Data Capture",
           },
           {
             name: "Tooling",
             skills:
-              "Azure DevOps, GitHub, Visual Studio/VS Code, Postman, SSMS, DBeaver, Jira, Confluence, Lucid, Trello",
+              "Azure DevOps, GitHub, GitHub Actions, Visual Studio/VS Code, Postman, SSMS, DBeaver, Jira, Confluence, Lucid, Trello",
           },
           {
             name: "Cloud",
@@ -155,7 +155,7 @@ const translations = {
           },
           {
             name: "DB",
-            skills: "SQL Server, Postgres, Sqlite3, Oracle",
+            skills: "SQL Server, Postgres (Aurora), Sqlite3, Oracle, DynamoDB",
           },
           {
             name: "ORM",
@@ -164,7 +164,7 @@ const translations = {
           {
             name: "JavaScript",
             skills:
-              "React, Angular, SvelteKit, Node.js, Express API, Electron, TypeScript, JWT",
+              "React, Redux, Angular, SvelteKit, Node.js, Express API, Hapi, Electron, TypeScript, JWT",
           },
           {
             name: ".NET",
@@ -188,7 +188,7 @@ const translations = {
           },
           {
             name: "Containerization",
-            skills: "Docker",
+            skills: "Docker, Kubernetes, Helm, FluxCD, Istio",
           },
           {
             name: "Data Integration",
@@ -196,11 +196,19 @@ const translations = {
           },
           {
             name: "Message Queue",
-            skills: "Azure Service Bus, RabbitMQ",
+            skills: "Azure Service Bus, RabbitMQ, AWS SQS, AWS Kinesis",
           },
           {
             name: "Caching",
             skills: "Redis",
+          },
+          {
+            name: "Search",
+            skills: "Elasticsearch",
+          },
+          {
+            name: "Observability",
+            skills: "Grafana, Prometheus, Papertrail, Tempo, OpenTelemetry",
           },
           {
             name: "Data Warehouse",
