@@ -10,6 +10,7 @@
   let hoverLabel = $state('');
   let mouseX = $state(0);
   let mouseY = $state(0);
+  let labelAbove = $state(false); // touch: show the label above the finger
 
   const travelLocations = [
     { lat: 29.7604, lng: -95.3698, label: 'Houston', lived: true },
@@ -266,28 +267,78 @@
       controls.target.set(0, 0, 0);
       controls.update();
 
-      // Raycaster for mouse interaction
+      // Mouse: show a pin's name on hover. Touch: show it on tap, since
+      // there's no hover and dragging spins the globe.
       const raycaster = new THREE.Raycaster();
-      const mouse = new THREE.Vector2();
+      const pointer = new THREE.Vector2();
+      const TAP_RADIUS = 24; // px; pins are too small to hit exactly with a finger
+      const TAP_SLOP = 8; // px a finger can move and still count as a tap
+      let downX = 0;
+      let downY = 0;
 
-      function onMouseMove(event) {
+      function pinUnderMouse(event) {
         const rect = container.getBoundingClientRect();
-        mouse.x = ((event.clientX - rect.left) / container.clientWidth) * 2 - 1;
-        mouse.y = -((event.clientY - rect.top) / container.clientHeight) * 2 + 1;
+        pointer.x = ((event.clientX - rect.left) / rect.width) * 2 - 1;
+        pointer.y = -((event.clientY - rect.top) / rect.height) * 2 + 1;
+        raycaster.setFromCamera(pointer, camera);
+        const hits = raycaster.intersectObjects(pins);
+        return hits.length > 0 ? hits[0].object : null;
+      }
 
-        raycaster.setFromCamera(mouse, camera);
-        const intersects = raycaster.intersectObjects(pins);
+      // Closest visible pin to the tap point, within TAP_RADIUS.
+      const pinPos = new THREE.Vector3();
+      const toCamera = new THREE.Vector3();
+      function pinNearTap(event) {
+        const rect = container.getBoundingClientRect();
+        let best = null;
+        let bestDist = TAP_RADIUS;
+        for (const pin of pins) {
+          pin.getWorldPosition(pinPos);
+          // Skip pins on the far side of the globe.
+          toCamera.subVectors(camera.position, pinPos);
+          if (pinPos.dot(toCamera) <= 0) continue;
+          pinPos.project(camera);
+          const x = rect.left + ((pinPos.x + 1) / 2) * rect.width;
+          const y = rect.top + ((1 - pinPos.y) / 2) * rect.height;
+          const dist = Math.hypot(x - event.clientX, y - event.clientY);
+          if (dist < bestDist) {
+            bestDist = dist;
+            best = pin;
+          }
+        }
+        return best;
+      }
 
-        if (intersects.length > 0) {
-          hoverLabel = intersects[0].object.userData.label;
+      function showLabel(pin, event, above) {
+        if (pin) {
+          hoverLabel = pin.userData.label;
           mouseX = event.clientX;
           mouseY = event.clientY;
+          labelAbove = above;
         } else {
           hoverLabel = '';
         }
       }
 
-      container.addEventListener('mousemove', onMouseMove);
+      function onPointerMove(event) {
+        if (event.pointerType === 'mouse') showLabel(pinUnderMouse(event), event, false);
+      }
+
+      function onPointerDown(event) {
+        downX = event.clientX;
+        downY = event.clientY;
+      }
+
+      function onPointerUp(event) {
+        if (event.pointerType === 'mouse') return;
+        const moved = Math.hypot(event.clientX - downX, event.clientY - downY);
+        if (moved > TAP_SLOP) return; // a drag, not a tap
+        showLabel(pinNearTap(event), event, true);
+      }
+
+      container.addEventListener('pointermove', onPointerMove);
+      container.addEventListener('pointerdown', onPointerDown);
+      container.addEventListener('pointerup', onPointerUp);
 
       let animationFrameId;
       function animate() {
@@ -310,7 +361,9 @@
       cleanupGlobe = () => {
         cancelAnimationFrame(animationFrameId);
         window.removeEventListener('resize', onWindowResize);
-        container.removeEventListener('mousemove', onMouseMove);
+        container.removeEventListener('pointermove', onPointerMove);
+        container.removeEventListener('pointerdown', onPointerDown);
+        container.removeEventListener('pointerup', onPointerUp);
         controls.dispose();
         renderer.dispose();
         if (container && container.contains(renderer.domElement)) {
@@ -358,7 +411,7 @@
       <p class="text-gray-400">{status}</p>
     {/if}
     {#if hoverLabel}
-      <div class="hover-label" style="left: {mouseX}px; top: {mouseY}px;">
+      <div class="hover-label" class:above={labelAbove} style="left: {mouseX}px; top: {mouseY}px;">
         {hoverLabel}
       </div>
     {/if}
@@ -414,5 +467,10 @@
     z-index: 1000;
     transform: translate(10px, 10px);
     user-select: none;
+  }
+
+  /* On touch, keep the label clear of the finger. */
+  .hover-label.above {
+    transform: translate(-50%, calc(-100% - 16px));
   }
 </style>

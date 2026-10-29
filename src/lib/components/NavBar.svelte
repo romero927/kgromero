@@ -276,7 +276,10 @@
           <a href="/docs/kgromero_businesscard.png" target="_blank" class="neo-button-ghost block text-center">
             Business Card
           </a>
-          <ResumeShellWrapper class="p-2" />
+          <!-- The terminal needs a keyboard, so it's hidden on phone-sized screens. -->
+          <div class="hidden sm:contents">
+            <ResumeShellWrapper class="p-2" />
+          </div>
         </div>
 
         <!-- Resume Links -->
