@@ -273,8 +273,7 @@
 }
 
 .animations-off .site-header {
-  background-color: rgb(245 245 244 / 0.8);
-  backdrop-filter: blur(12px);
+  background-color: var(--color-neo-cream);
 }
 
 .animations-off .site-header > div::before {
@@ -282,7 +281,7 @@
 }
 
 .dark.animations-off .site-header {
-  background-color: rgb(33 33 33 / 0.8);
+  background-color: var(--color-dark-bg);
 }
 
 .animations-off .site-footer {
