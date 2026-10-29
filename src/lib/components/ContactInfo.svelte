@@ -1,10 +1,7 @@
 <script>
   import { t } from '$lib/i18n';
-  import { ArrowRight, Contact, Link, Mail, Phone, QrCode } from '@lucide/svelte';
+  import { ArrowRight, Contact, Link, Mail, Phone } from '@lucide/svelte';
   import BrandIcon from './BrandIcon.svelte';
-  import Modal from './Modal.svelte';
-  
-  let showQRModal = $state(false);
   </script>
   
   <div class="neo-card max-w-full" role="region" aria-label="Contact Information">
@@ -33,10 +30,9 @@
       </li>
     </ul>
 
-    <div class="mt-auto pt-5 @container">
-      <div class="grid grid-cols-1 @xl:grid-cols-2 gap-3">
+    <div class="mt-auto pt-5">
       <a
-        class="neo-cta w-full self-stretch justify-between"
+        class="neo-cta"
         href="/kgromero.vcf"
         download="Kyle_Romero.vcf"
         aria-label="Download contact card (vCard)"
@@ -47,26 +43,5 @@
         </span>
         <ArrowRight size={16} class="neo-cta-arrow" aria-hidden="true" />
       </a>
-      <button
-        class="neo-cta w-full self-stretch justify-between"
-        onclick={() => showQRModal = true}
-        aria-label="Show contact QR code"
-      >
-        <span class="flex items-center gap-2">
-          <QrCode size="1em" aria-hidden="true" />
-          Contact QR Code
-        </span>
-        <ArrowRight size={16} class="neo-cta-arrow" aria-hidden="true" />
-      </button>
-      </div>
     </div>
   </div>
-  
-  <Modal bind:open={showQRModal} title="Contact QR Code" size="max-w-sm">
-    <img
-      alt="QR code to add Kyle Romero's contact information to your phone"
-      src="/images/QR.webp"
-      class="w-full max-w-[220px] mx-auto bg-white p-2 border-2 border-neo-black dark:border-dark-border"
-    />
-    <p class="mt-4 text-sm text-center">Scan (or long press) the QR code to add my contact to your phone.</p>
-  </Modal>
