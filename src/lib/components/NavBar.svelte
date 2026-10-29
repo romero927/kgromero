@@ -1,6 +1,7 @@
 <script>
   import ResumeShellWrapper from './ResumeShellWrapper.svelte';
   import ThemeToggle from './ThemeToggle.svelte';
+  import AnimationToggle from './AnimationToggle.svelte';
   
   import logo from "$lib/assets/logo.webp";
 
@@ -233,12 +234,14 @@
 
         <ResumeShellWrapper class="h-8 py-0" />
 
-        <!-- Dark Mode Toggle -->
+        <!-- Animation and Dark Mode Toggles -->
+        <AnimationToggle class="h-8 py-0" />
         <ThemeToggle class="h-8 py-0" />
       </div>
   
       <!-- Mobile Menu Button and Theme Toggle -->
       <div class="lg:hidden flex items-center space-x-2">
+        <AnimationToggle class="h-9 w-9 p-0" />
         <ThemeToggle class="h-9 w-9 p-0" />
         <button
           class="neo-button-ghost h-9 w-9 p-0 flex items-center justify-center"

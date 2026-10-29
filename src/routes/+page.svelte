@@ -6,7 +6,15 @@
   import Experience from '$lib/components/Experience.svelte';
   import Skills from '$lib/components/Skills.svelte';
   import Other from '$lib/components/Other.svelte';
+  import TerrainBackground from '$lib/components/TerrainBackground.svelte';
+  import { onMount } from 'svelte';
+
+  // The page is prerendered without the background; it's added in the browser
+  // once we know the visitor's animation setting.
+  let mounted = $state(false);
+  onMount(() => (mounted = true));
   import { t, yearsExperience } from '$lib/i18n';
+  import { animations } from '$lib/store';
   import { ChartLine, Code2 } from '@lucide/svelte';
 </script>
 
@@ -14,8 +22,12 @@
   Skip to main content
 </a>
 
-<div class="min-h-screen bg-neo-cream dark:bg-dark-bg flex flex-col">
-  <header class="sticky top-0 z-50 bg-neo-cream/80 dark:bg-dark-bg/80 backdrop-blur-md">
+{#if mounted && $animations}
+  <TerrainBackground />
+{/if}
+
+<div class="min-h-screen flex flex-col">
+  <header class="site-header sticky top-0 z-50">
     <div class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 pt-2 pb-2">
       <NavBar />
     </div>
@@ -70,7 +82,7 @@
     </section>
   </main>
 
-  <footer class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 mb-3 sm:mb-4 border-t-2 border-neo-black dark:border-dark-border pt-3 sm:pt-4">
+  <footer class="site-footer mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 mb-3 sm:mb-4 pt-3 sm:pt-4">
     <div class="flex flex-wrap justify-center items-center w-full gap-2 sm:gap-3 text-xs sm:text-sm text-neo-black/70 dark:text-gray-400">
       <span class="whitespace-nowrap"><b class="text-neo-black dark:text-gray-200">© {new Date().getFullYear()} Kyle Romero</b></span>
       <span aria-hidden="true" class="hidden sm:inline text-neo-accent">/</span>

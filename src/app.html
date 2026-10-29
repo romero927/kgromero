@@ -32,6 +32,13 @@
           ).matches;
           document.documentElement.classList.toggle("dark", prefersDark);
         }
+
+        // Background animation is off unless the visitor turned it on:
+        // show the plain page with solid cards.
+        document.documentElement.classList.toggle(
+          "animations-off",
+          localStorage.getItem("animations") !== "on",
+        );
       })();
     </script>
     %sveltekit.head%

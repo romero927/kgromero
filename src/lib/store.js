@@ -39,3 +39,27 @@ if (typeof window !== "undefined") {
       }
     });
 }
+
+// Background animation on/off. Off by default; a visitor's choice is saved
+// like the theme.
+const getInitialAnimations = () => {
+  if (typeof window !== "undefined") {
+    return localStorage.getItem("animations") === "on";
+  }
+  return false;
+};
+
+export const animations = writable(getInitialAnimations());
+
+if (typeof window !== "undefined") {
+  let first = true;
+  animations.subscribe((value) => {
+    document.documentElement.classList.toggle("animations-off", !value);
+    // Only save an explicit choice, not the default.
+    if (first) {
+      first = false;
+      return;
+    }
+    localStorage.setItem("animations", value ? "on" : "off");
+  });
+}

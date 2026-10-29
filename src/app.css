@@ -97,16 +97,19 @@
            dark:border-dark-border dark:hover:bg-dark-hover dark:hover:text-neo-accent;
   }
 
+  /* Cards are slightly translucent with a light blur so the background shows through. */
   .neo-card {
-    @apply bg-white border-2 border-neo-black shadow-neo px-5 py-4
+    @apply bg-white/75 backdrop-blur-[3px] border-2 border-neo-black shadow-neo px-5 py-4
            flex flex-col h-full min-h-0 w-full
-           dark:bg-dark-card dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
+           dark:bg-dark-card/75 dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
   }
 
+  /* The nav card: frosted more heavily than the other cards, since page
+     content scrolls underneath it. */
   .neo-card-square {
-    @apply bg-white border-2 border-neo-black shadow-neo px-4 py-1.5
+    @apply bg-white/85 backdrop-blur-md border-2 border-neo-black shadow-neo px-4 py-1.5
            flex flex-col h-auto min-h-0
-           dark:bg-dark-card dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
+           dark:bg-dark-card/85 dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
   }
 
   .neo-bold-card {
@@ -115,8 +118,37 @@
   }
 
   .neo-hero {
-    @apply bg-white border-2 border-neo-black shadow-neo-lg px-6 py-8 sm:px-10 sm:py-12
-           dark:bg-dark-card dark:text-gray-100 dark:border-dark-border dark:shadow-neo-lg-dark;
+    @apply bg-white/75 backdrop-blur-[3px] border-2 border-neo-black shadow-neo-lg px-6 py-8 sm:px-10 sm:py-12
+           dark:bg-dark-card/75 dark:text-gray-100 dark:border-dark-border dark:shadow-neo-lg-dark;
+  }
+
+  /* Sticky header band: transparent over the animated background so the
+     frosted nav floats on it; solid again when animation is off (see below). */
+  .site-header {
+    @apply bg-transparent;
+  }
+
+  /* Soft blur band behind the nav (only as wide as the nav itself) that fades
+     out downward, so content scrolling past the gaps above and below the nav
+     is blurred instead of crisp, while the background beside it stays clear. */
+  .site-header > div {
+    position: relative;
+  }
+
+  .site-header > div::before {
+    content: '';
+    position: absolute;
+    inset: 0 0 -1rem;
+    z-index: -1;
+    pointer-events: none;
+    backdrop-filter: blur(10px);
+    mask-image: linear-gradient(to bottom, black 55%, transparent);
+  }
+
+  /* Footer sits in a frosted bar so its small text stays readable over the background. */
+  .site-footer {
+    @apply bg-white/75 backdrop-blur-[3px] border-2 border-neo-black shadow-neo px-4 pb-3 sm:pb-4
+           dark:bg-dark-card/75 dark:border-dark-border dark:shadow-neo-dark;
   }
 
   .neo-input {
@@ -223,6 +255,42 @@
     box-shadow: none;
   }
 
+}
+
+/* Background animation turned off: no background pattern, so the page goes
+   back to its original look (solid cards, solid header band, plain footer). */
+.animations-off .neo-card,
+.animations-off .neo-hero,
+.animations-off .neo-card-square {
+  background-color: #fff;
+  backdrop-filter: none;
+}
+
+.dark.animations-off .neo-card,
+.dark.animations-off .neo-hero,
+.dark.animations-off .neo-card-square {
+  background-color: var(--color-dark-card);
+}
+
+.animations-off .site-header {
+  background-color: rgb(245 245 244 / 0.8);
+  backdrop-filter: blur(12px);
+}
+
+.animations-off .site-header > div::before {
+  display: none;
+}
+
+.dark.animations-off .site-header {
+  background-color: rgb(33 33 33 / 0.8);
+}
+
+.animations-off .site-footer {
+  background: none;
+  backdrop-filter: none;
+  border-width: 2px 0 0;
+  box-shadow: none;
+  padding: 0.75rem 0 0;
 }
 
 /* Only apply transitions after page load */
