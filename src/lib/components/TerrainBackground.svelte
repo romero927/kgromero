@@ -26,13 +26,16 @@
   };
   const HAZE = [900, 2400]; // distance where the haze starts and where it is strongest
   // Scroll parallax: the background scrolls up at this fraction of the page's
-  // speed, so the content seems to float above it. The canvas is made taller
-  // than the window by just enough to cover the full scroll.
+  // speed, so the content seems to float above it. The canvas stays window-
+  // sized; the view slides across a taller virtual image instead. On very long
+  // pages (phones) the travel is capped at MAX_TRAVEL x the window height, so
+  // the view never tips down past the near edge of the terrain.
   const PARALLAX = 0.25;
+  const MAX_TRAVEL = 0.5;
   const CAMERA_HEIGHT = 400;
   const PITCH = 0.6; // radians the camera looks down
   const GRID_X = [-2000, 2000]; // world-space extent of the surface
-  const GRID_Z = [150, 2300];
+  const GRID_Z = [40, 2300];
   const CELL = 132; // world units per grid cell, front to back (bigger = fewer, larger facets)
   const STRETCH = 1.4; // cells are this many times wider than deep, for wider triangles
   const JITTER = 0.35; // random nudge of each grid point (fraction of a cell), for irregular triangles
@@ -43,6 +46,7 @@
     in vec3 aBary; // (1,0,0)/(0,1,0)/(0,0,1) per triangle corner, for drawing edges
     out vec3 vBary;
     uniform float uTime, uYaw, uPitch, uFocal, uSwell;
+    uniform float uCenterY; // px from the top of the window where the view's center sits (moves with scroll)
     uniform vec2 uRes, uCursor;
     out vec3 vWorld;
     out float vDepth;
@@ -75,7 +79,7 @@
       // Swell under the cursor, measured on screen so it sits right under it.
       if (uSwell > 0.01) {
         vec3 c = toCamera(p);
-        vec2 screen = vec2(uRes.x * 0.5 + c.x * uFocal / c.z, uRes.y * 0.5 - c.y * uFocal / c.z);
+        vec2 screen = vec2(uRes.x * 0.5 + c.x * uFocal / c.z, uCenterY - c.y * uFocal / c.z);
         float d = distance(screen, uCursor) / SWELL_RADIUS;
         p.y += SWELL * uSwell * exp(-d * d);
       }
@@ -85,9 +89,11 @@
       vec3 c = toCamera(p);
       vDepth = c.z;
       float near = 1.0, far = 6000.0;
+      // Screen y (px from top) is uCenterY - c.y * uFocal / c.z; this is that,
+      // converted to clip space and pre-multiplied by c.z (the w below).
       gl_Position = vec4(
         c.x * uFocal / (uRes.x * 0.5),
-        c.y * uFocal / (uRes.y * 0.5),
+        (1.0 - 2.0 * uCenterY / uRes.y) * c.z + c.y * uFocal / (uRes.y * 0.5),
         ((c.z - near) / (far - near) * 2.0 - 1.0) * c.z,
         c.z
       );
@@ -137,20 +143,7 @@
 
   onMount(() => {
     const gl = canvas.getContext('webgl2', { antialias: true, alpha: false });
-    if (!gl) return;
-
-    const program = gl.createProgram();
-    const vs = compile(gl, gl.VERTEX_SHADER, VERTEX_SHADER);
-    const fs = compile(gl, gl.FRAGMENT_SHADER, FRAGMENT_SHADER);
-    if (!vs || !fs) return;
-    gl.attachShader(program, vs);
-    gl.attachShader(program, fs);
-    gl.linkProgram(program);
-    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-      console.error(gl.getProgramInfoLog(program));
-      return;
-    }
-    gl.useProgram(program);
+    if (!gl) return; // no WebGL: the canvas stays hidden and the plain page shows
 
     // Static grid of (x, z) points; heights are computed on the GPU each frame.
     // Points are nudged randomly so the triangles come out irregular.
@@ -197,41 +190,64 @@
       }
     }
 
-    const bindAttribute = (name, data, size) => {
-      gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
-      gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
-      const location = gl.getAttribLocation(program, name);
-      gl.enableVertexAttribArray(location);
-      gl.vertexAttribPointer(location, size, gl.FLOAT, false, 0, 0);
-    };
-    bindAttribute('aXZ', corners, 2);
-    bindAttribute('aBary', bary, 3);
-    gl.enable(gl.DEPTH_TEST);
+    // Uploads everything to the GPU. Runs at start, and again if the browser
+    // drops the WebGL context (it can, e.g. on phones after backgrounding)
+    // and later restores it. Returns false if anything fails.
+    let u = {};
+    let ready = false;
+    function setupGL() {
+      const program = gl.createProgram();
+      const vs = compile(gl, gl.VERTEX_SHADER, VERTEX_SHADER);
+      const fs = compile(gl, gl.FRAGMENT_SHADER, FRAGMENT_SHADER);
+      if (!vs || !fs) return false;
+      gl.attachShader(program, vs);
+      gl.attachShader(program, fs);
+      gl.linkProgram(program);
+      if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+        console.error(gl.getProgramInfoLog(program));
+        return false;
+      }
+      gl.useProgram(program);
 
-    const u = Object.fromEntries(
-      ['uTime', 'uYaw', 'uPitch', 'uFocal', 'uSwell', 'uRes', 'uCursor', 'uLow', 'uHigh', 'uGlint', 'uHaze', 'uLight', 'uHazeRange', 'uContrast', 'uHazeAmount', 'uLine', 'uLineAlpha'].map(
-        (name) => [name, gl.getUniformLocation(program, name)]
-      )
-    );
-    const len = Math.hypot(...LIGHT);
-    gl.uniform3f(u.uLight, LIGHT[0] / len, LIGHT[1] / len, LIGHT[2] / len);
-    gl.uniform2f(u.uHazeRange, HAZE[0], HAZE[1]);
-    // The camera is fixed: straight ahead, looking down at PITCH.
-    gl.uniform1f(u.uYaw, 0);
-    gl.uniform1f(u.uPitch, PITCH);
+      const bindAttribute = (name, data, size) => {
+        gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer());
+        gl.bufferData(gl.ARRAY_BUFFER, data, gl.STATIC_DRAW);
+        const location = gl.getAttribLocation(program, name);
+        gl.enableVertexAttribArray(location);
+        gl.vertexAttribPointer(location, size, gl.FLOAT, false, 0, 0);
+      };
+      bindAttribute('aXZ', corners, 2);
+      bindAttribute('aBary', bary, 3);
+      gl.enable(gl.DEPTH_TEST);
+
+      u = Object.fromEntries(
+        ['uTime', 'uYaw', 'uPitch', 'uFocal', 'uSwell', 'uCenterY', 'uRes', 'uCursor', 'uLow', 'uHigh', 'uGlint', 'uHaze', 'uLight', 'uHazeRange', 'uContrast', 'uHazeAmount', 'uLine', 'uLineAlpha'].map(
+          (name) => [name, gl.getUniformLocation(program, name)]
+        )
+      );
+      const len = Math.hypot(...LIGHT);
+      gl.uniform3f(u.uLight, LIGHT[0] / len, LIGHT[1] / len, LIGHT[2] / len);
+      gl.uniform2f(u.uHazeRange, HAZE[0], HAZE[1]);
+      // The camera is fixed: straight ahead, looking down at PITCH.
+      gl.uniform1f(u.uYaw, 0);
+      gl.uniform1f(u.uPitch, PITCH);
+      return true;
+    }
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let animationsOn = true;
     // Animate only when the toggle is on and the system doesn't ask for reduced motion.
     const moving = () => animationsOn && !reducedMotion.matches;
     let width = 0;
-    let height = 0;
+    let viewHeight = 0; // window height, ignoring phone address bars hiding/showing
     let frame = null;
+    let themeName = 'light';
     let pointer = null;
     let pointerTimer = null;
     const view = { swell: 0, x: 0, y: 0 };
     let parallaxOn = !reducedMotion.matches; // parallax motion can bother motion-sensitive visitors
-    let offset = 0; // px the canvas is currently shifted up
+    let travel = 0; // px/px: how fast the view slides with scroll (PARALLAX, or less on long pages)
+    let centerY = 0; // see uCenterY
     const startTime = performance.now();
 
     // Current colors ease toward the theme's palette, so theme switches fade
@@ -242,7 +258,9 @@
     let colors = null;
 
     function setPalette(name) {
+      themeName = name;
       target = PALETTES[name];
+      if (!ready) return;
       gl.uniform1f(u.uContrast, target.contrast);
       gl.uniform1f(u.uHazeAmount, target.hazeAmount);
       gl.uniform1f(u.uLineAlpha, target.lineAlpha);
@@ -259,29 +277,50 @@
     }
 
     function resize() {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const scrollable = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
+      // Phones get a lower resolution: the soft background doesn't need it,
+      // and it saves battery.
+      const dpr = Math.min(window.devicePixelRatio || 1, window.innerWidth < 768 ? 1.5 : 2);
+      // On phones the address bar hides/shows while scrolling, which changes
+      // the window height. Keep the tallest height seen at this width, so the
+      // canvas isn't rebuilt (and doesn't flicker) every time that happens.
+      viewHeight = window.innerWidth === width ? Math.max(viewHeight, window.innerHeight) : window.innerHeight;
       width = window.innerWidth;
-      height = window.innerHeight + (parallaxOn ? Math.ceil(scrollable * PARALLAX) : 0);
-      canvas.style.height = `${height}px`;
-      canvas.width = width * dpr;
-      canvas.height = height * dpr;
+      // Uses viewHeight too, so the address bar doesn't change this either. (With
+      // the bar showing, the extra scroll is still covered by the extra height.)
+      updateParallax();
+      const pixelWidth = Math.round(width * dpr);
+      const pixelHeight = Math.round(viewHeight * dpr);
+      if (canvas.width === pixelWidth && canvas.height === pixelHeight) return;
+
+      canvas.style.height = `${viewHeight}px`;
+      canvas.width = pixelWidth;
+      canvas.height = pixelHeight;
+      if (!ready) return;
       gl.viewport(0, 0, canvas.width, canvas.height);
-      gl.uniform2f(u.uRes, width, height);
+      gl.uniform2f(u.uRes, width, viewHeight);
       // Wide screens see more of the surface sideways; tall ones see more depth.
-      gl.uniform1f(u.uFocal, Math.max(width * 0.6, window.innerHeight * 1.1));
-      onScroll();
+      gl.uniform1f(u.uFocal, Math.max(width * 0.6, viewHeight * 1.1));
       render(performance.now());
     }
 
-    // Moves the canvas up at a fraction of the scroll. This is a cheap
-    // transform, so it runs even between animation frames.
+    // Works out how far the view can slide for this page length. Runs on
+    // resize and when the page's height changes (fonts, images loading).
+    function updateParallax() {
+      // Uses viewHeight, so phone address bars hiding/showing don't change it.
+      const scrollable = Math.max(0, document.documentElement.scrollHeight - viewHeight);
+      travel = parallaxOn && scrollable > 0 ? Math.min(PARALLAX, (MAX_TRAVEL * viewHeight) / scrollable) : 0;
+      onScroll();
+    }
+
+    // The view's center starts in the middle of the virtual image (window plus
+    // the full travel) and slides up as the page scrolls. The next frame uses it.
     function onScroll() {
-      offset = parallaxOn ? window.scrollY * PARALLAX : 0;
-      canvas.style.transform = `translate3d(0, ${-offset}px, 0)`;
+      const scrollable = Math.max(0, document.documentElement.scrollHeight - viewHeight);
+      centerY = (viewHeight + scrollable * travel) / 2 - window.scrollY * travel;
     }
 
     function render(now) {
+      if (!ready) return;
       // Ease the cursor swell toward the pointer.
       view.swell += ((pointer ? 1 : 0) - view.swell) * 0.06;
       if (pointer) {
@@ -292,10 +331,15 @@
       applyColors();
       gl.uniform1f(u.uTime, (now - startTime) / 1000);
       gl.uniform1f(u.uSwell, view.swell);
-      // The cursor is in window coordinates; the canvas is shifted up by `offset`.
-      gl.uniform2f(u.uCursor, view.x, view.y + offset);
+      gl.uniform1f(u.uCenterY, centerY);
+      gl.uniform2f(u.uCursor, view.x, view.y);
+      // Anything past the terrain's edge is filled with the haze color, not black.
+      gl.clearColor(...colors.haze.map((v) => v / 255), 1);
       gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
       gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
+      // The canvas starts hidden, so a failed setup never shows as a black
+      // screen; the first good frame fades it in.
+      canvas.style.opacity = '1';
     }
 
     function loop(now) {
@@ -304,7 +348,7 @@
     }
 
     function start() {
-      if (frame === null && moving() && !document.hidden) {
+      if (ready && frame === null && moving() && !document.hidden) {
         frame = requestAnimationFrame(loop);
       }
     }
@@ -341,6 +385,27 @@
       if (frame === null && width) render(performance.now());
     }
 
+    // If the browser drops the WebGL context, hide the canvas (the plain page
+    // background shows) and rebuild everything once it's restored.
+    function onContextLost(e) {
+      e.preventDefault(); // tells the browser we want the context back
+      ready = false;
+      stop();
+      canvas.style.opacity = '0';
+    }
+
+    function onContextRestored() {
+      ready = setupGL();
+      if (!ready) return;
+      setPalette(themeName);
+      canvas.width = 0; // force resize() to rebuild the drawing surface
+      resize();
+      render(performance.now());
+      start();
+    }
+
+    ready = setupGL();
+
     const unsubscribe = theme.subscribe((value) => {
       setPalette(value === 'dark' ? 'dark' : 'light');
       if (frame === null && width) render(performance.now());
@@ -355,16 +420,18 @@
     start();
 
     // The page can grow after load (fonts, images), which changes how far it scrolls.
-    const pageSize = new ResizeObserver(() => resize());
+    const pageSize = new ResizeObserver(() => updateParallax());
     pageSize.observe(document.body);
 
     function onReducedMotionChange() {
       parallaxOn = !reducedMotion.matches;
-      resize();
+      updateParallax();
     }
 
     window.addEventListener('resize', resize);
     window.addEventListener('scroll', onScroll, { passive: true });
+    canvas.addEventListener('webglcontextlost', onContextLost);
+    canvas.addEventListener('webglcontextrestored', onContextRestored);
     reducedMotion.addEventListener('change', onReducedMotionChange);
     window.addEventListener('pointermove', onPointerMove, { passive: true });
     window.addEventListener('pointerdown', onPointerMove, { passive: true });
@@ -380,6 +447,8 @@
       pageSize.disconnect();
       window.removeEventListener('resize', resize);
       window.removeEventListener('scroll', onScroll);
+      canvas.removeEventListener('webglcontextlost', onContextLost);
+      canvas.removeEventListener('webglcontextrestored', onContextRestored);
       reducedMotion.removeEventListener('change', onReducedMotionChange);
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerdown', onPointerMove);
@@ -391,4 +460,8 @@
   });
 </script>
 
-<canvas bind:this={canvas} class="fixed top-0 left-0 -z-10 w-full pointer-events-none will-change-transform" aria-hidden="true"></canvas>
+<canvas
+  bind:this={canvas}
+  class="fixed top-0 left-0 -z-10 w-full pointer-events-none opacity-0 transition-opacity duration-700"
+  aria-hidden="true"
+></canvas>

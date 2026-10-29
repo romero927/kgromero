@@ -6,13 +6,14 @@
   import Experience from '$lib/components/Experience.svelte';
   import Skills from '$lib/components/Skills.svelte';
   import Other from '$lib/components/Other.svelte';
-  import TerrainBackground from '$lib/components/TerrainBackground.svelte';
-  import { onMount } from 'svelte';
-
-  // The page is prerendered without the background; it's added in the browser
-  // once we know the visitor's animation setting.
-  let mounted = $state(false);
-  onMount(() => (mounted = true));
+  // The animated background is optional (off by default), so its code is
+  // only downloaded the first time animation is turned on.
+  let TerrainBackground = $state(null);
+  $effect(() => {
+    if ($animations && !TerrainBackground) {
+      import('$lib/components/TerrainBackground.svelte').then((m) => (TerrainBackground = m.default));
+    }
+  });
   import { t, yearsExperience } from '$lib/i18n';
   import { animations } from '$lib/store';
   import { ChartLine, Code2 } from '@lucide/svelte';
@@ -22,7 +23,7 @@
   Skip to main content
 </a>
 
-{#if mounted && $animations}
+{#if $animations && TerrainBackground}
   <TerrainBackground />
 {/if}
 
@@ -85,8 +86,6 @@
   <footer class="site-footer mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 mb-3 sm:mb-4 pt-3 sm:pt-4">
     <div class="flex flex-wrap justify-center items-center w-full gap-2 sm:gap-3 text-xs sm:text-sm text-neo-black/70 dark:text-gray-400">
       <span class="whitespace-nowrap"><b class="text-neo-black dark:text-gray-200">© {new Date().getFullYear()} Kyle Romero</b></span>
-      <span aria-hidden="true" class="hidden sm:inline text-neo-accent">/</span>
-      <span class="whitespace-nowrap">{$t.footerMessage}</span>
       <a href="https://github.com/romero927/kgromero" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub" class="ml-1 hover:text-neo-accent transition-colors"><Code2 size="1em" aria-hidden="true" /></a>
       <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" rel="noopener noreferrer" aria-label="View PageSpeed Insights" class="ml-1 hover:text-neo-accent transition-colors"><ChartLine size="1em" aria-hidden="true" /></a>
     </div>

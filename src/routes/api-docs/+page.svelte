@@ -235,8 +235,6 @@ print(resume['basics']['name'])</code></pre>
   <footer class="neo-bold-card p-0 mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 mb-2">
     <div class="text-center justify-center items-center flex flex-wrap w-full gap-1 sm:gap-2 py-1 px-2 text-xs sm:text-sm">
       <span class="whitespace-nowrap"><b>© {new Date().getFullYear()} Kyle Romero</b></span>
-      <span class="hidden sm:inline">|</span>
-      <span class="whitespace-nowrap">{$t.footerMessage.replace(/\s*\|\s*/g, '').trim()}</span>
       <a href="https://github.com/romero927/kgromero" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub" class="ml-1"><Code2 size="1em" aria-hidden="true" /></a>
       <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" rel="noopener noreferrer" aria-label="View PageSpeed Insights" class="ml-1"><ChartLine size="1em" aria-hidden="true" /></a>
     </div>

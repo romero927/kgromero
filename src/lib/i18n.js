@@ -271,7 +271,6 @@ const translations = {
         { name: "LeadDev", href: "https://leaddev.com/" },
       ],
     },
-    footerMessage: "Site built in SvelteKit",
   },
   // Add other languages here as needed
 };
