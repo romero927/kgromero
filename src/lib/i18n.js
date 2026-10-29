@@ -228,55 +228,28 @@ const translations = {
     },
     other: {
       title: "Other",
-      recentProjects: "Recent Projects",
+      recentProjects: "Side Projects",
+      allProjects: "More on GitHub",
       projects: [
         {
-          name: "(C++) AI Prompt Codebase Processor",
-          link: "https://github.com/romero927/CPP_Codebase_Processor",
-        },
-        {
           name: "(C#) Reddit Listener",
+          description: "Tracks top posts and authors across subreddits in near real time, within Reddit's API rate limits.",
           link: "https://github.com/romero927/RedditListener",
         },
         {
-          name: "(Go) Luhn Veri Microservice",
+          name: "(Go) Luhn Verifier Microservice",
+          description: "HTTP microservice that validates card numbers with the Luhn algorithm.",
           link: "https://github.com/romero927/LuhnVerifier",
         },
         {
-          name: "(Django) Scored Wordle",
-          link: "https://github.com/romero927/Django_Wurdle",
-        },
-        {
-          name: "(Next.js / React) Algo Visualizer",
-          link: "https://github.com/romero927/NextJS-AlgoAndDataStructVisualizer/",
-        },
-        {
-          name: "(Ruby on Rails) Desktop Simulator",
-          link: "https://github.com/romero927/RoR_DesktopSimulator",
-        },
-        {
-          name: "(Angular) Markdown Wiki",
-          link: "https://github.com/romero927/Angular_Markdown-Wiki",
-        },
-        {
-          name: "(Flutter) UUID / PWD Utility",
+          name: "(Flutter) UUID / Password Utility",
+          description: "Cross-platform app for bulk UUIDs and configurable passwords with a strength meter.",
           link: "https://github.com/romero927/Flutter_Generator-Utility",
         },
         {
           name: "(C++) JSON to Model Generator",
+          description: "Generates model classes from JSON or JSON Schema for 12 languages.",
           link: "https://github.com/romero927/CPP_JSON-to-Model-Generator",
-        },
-        {
-          name: "(Rust) Simple Blockchain",
-          link: "https://github.com/romero927/rust-simple_blockchain",
-        },
-        {
-          name: "(Java / Spring Boot) Sudoku",
-          link: "https://github.com/romero927/Java-Sudoku",
-        },
-        {
-          name: "(Phoenix) Chat Room",
-          link: "https://github.com/romero927/Phoenix_Chat-Room",
         },
       ],
       interests: "Interests",

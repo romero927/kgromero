@@ -28,20 +28,21 @@
     <div class="space-y-5 text-sm">
       <div>
         <h3 class="card-eyebrow mb-2">{$t.other.recentProjects}</h3>
-        <ul class="space-y-1.5">
+        <ul class="space-y-3">
           {#each $t.other.projects as project}
             <li class="wrap-break-word group">
-              {#if project.link}
-                <a href={project.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center" aria-label={`View ${project.name} project`}>
-                  <Link size="1em" class="shrink-0 mr-2 text-neo-black/55 dark:text-gray-400 group-hover:text-neo-accent transition-colors text-xs" aria-hidden="true"/>
-                  <span class="neo-highlight wrap-break-word">{project.name}</span>
-                </a>
-              {:else}
-                <span class="wrap-break-word">{project.name}</span>
-              {/if}
+              <a href={project.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center" aria-label={`View ${project.name} project`}>
+                <Link size="1em" class="shrink-0 mr-2 text-neo-black/55 dark:text-gray-400 group-hover:text-neo-accent transition-colors text-xs" aria-hidden="true"/>
+                <span class="neo-highlight wrap-break-word font-medium">{project.name}</span>
+              </a>
+              <p class="ml-6 mt-0.5 text-xs leading-snug text-neo-black/70 dark:text-gray-400">{project.description}</p>
             </li>
           {/each}
         </ul>
+        <a href="https://github.com/romero927?tab=repositories" target="_blank" rel="noopener noreferrer" class="mt-3 inline-flex items-center gap-1 text-xs font-medium neo-highlight underline underline-offset-2 decoration-dotted">
+          {$t.other.allProjects}
+          <ArrowUpRight size={12} aria-hidden="true" />
+        </a>
       </div>
 
       <div>
