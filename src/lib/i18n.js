@@ -14,7 +14,7 @@ const translations = {
     aboutMe: {
       title: "About Me",
       content:
-        `Hands-on and results-driven technology leader with ${yearsExperience} years in software engineering, specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of optimizing development operations, mentoring high-performing teams, and delivering scalable, business-aligned solutions.`,
+        `Currently Team Lead at Tenna, a construction B2B SaaS company acquired by John Deere, where I own the integrations domain. Hands-on across cloud architecture, full-stack development, DevOps, and project management.`,
     },
     contactInfo: {
       title: "Contact Info",

@@ -42,7 +42,7 @@
           </div>
           <div class="border-l-2 border-neo-accent pl-3">
             <div class="card-eyebrow">Specialty</div>
-            <div class="text-sm font-bold mt-0.5 text-neo-black dark:text-gray-100">Full-Stack + Leadership</div>
+            <div class="text-sm font-bold mt-0.5 text-neo-black dark:text-gray-100">Full-Stack Development + Architecture + Leadership</div>
           </div>
         </div>
       </div>
