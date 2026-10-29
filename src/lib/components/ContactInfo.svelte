@@ -33,9 +33,10 @@
       </li>
     </ul>
 
-    <div class="mt-auto pt-5 flex flex-wrap gap-3">
+    <div class="mt-auto pt-5 @container">
+      <div class="grid grid-cols-1 @xl:grid-cols-2 gap-3">
       <a
-        class="neo-cta"
+        class="neo-cta w-full self-stretch justify-between"
         href="/kgromero.vcf"
         download="Kyle_Romero.vcf"
         aria-label="Download contact card (vCard)"
@@ -47,7 +48,7 @@
         <ArrowRight size={16} class="neo-cta-arrow" aria-hidden="true" />
       </a>
       <button
-        class="neo-cta"
+        class="neo-cta w-full self-stretch justify-between"
         onclick={() => showQRModal = true}
         aria-label="Show contact QR code"
       >
@@ -57,6 +58,7 @@
         </span>
         <ArrowRight size={16} class="neo-cta-arrow" aria-hidden="true" />
       </button>
+      </div>
     </div>
   </div>
   
