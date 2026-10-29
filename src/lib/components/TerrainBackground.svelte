@@ -4,8 +4,8 @@
 
   // Low-poly 3D terrain behind the page: a flat-shaded field of irregular
   // triangles viewed from above at an angle, drawn with WebGL. The terrain
-  // holds its shape and only bends very slowly over time; the view tilts a
-  // little with the mouse, and the surface swells gently under the cursor.
+  // holds its shape and only bends very slowly over time, and the surface
+  // swells gently under the cursor.
   // If WebGL isn't available, nothing is drawn and the plain page background
   // shows.
   let canvas;
@@ -25,7 +25,10 @@
     }
   };
   const HAZE = [900, 2400]; // distance where the haze starts and where it is strongest
-  const SCROLL_DRIFT = 0.4; // how far the terrain shifts per px of page scroll
+  // Scroll parallax: the background scrolls up at this fraction of the page's
+  // speed, so the content seems to float above it. The canvas is made taller
+  // than the window by just enough to cover the full scroll.
+  const PARALLAX = 0.25;
   const CAMERA_HEIGHT = 400;
   const PITCH = 0.6; // radians the camera looks down
   const GRID_X = [-2000, 2000]; // world-space extent of the surface
@@ -39,14 +42,14 @@
     in vec2 aXZ;
     in vec3 aBary; // (1,0,0)/(0,1,0)/(0,0,1) per triangle corner, for drawing edges
     out vec3 vBary;
-    uniform float uTime, uYaw, uPitch, uFocal, uSwell, uScroll;
+    uniform float uTime, uYaw, uPitch, uFocal, uSwell;
     uniform vec2 uRes, uCursor;
     out vec3 vWorld;
     out float vDepth;
 
     const float CAMERA_HEIGHT = ${CAMERA_HEIGHT.toFixed(1)};
     const float HEIGHT = 30.0;      // terrain height
-    const float SWELL = 45.0;       // extra height under the cursor
+    const float SWELL = 32.0;       // extra height under the cursor
     const float SWELL_RADIUS = 140.0; // px on screen
 
     // Camera space: x right, y up, z = distance ahead.
@@ -62,8 +65,7 @@
     void main() {
       float t = uTime; // seconds
       vec3 p = vec3(aXZ.x, 0.0, aXZ.y);
-      // The terrain pattern shifts toward the viewer as the page scrolls.
-      float z = p.z + uScroll;
+      float z = p.z;
       // Fixed terrain shape, plus two long, slow bends moving through it
       // (roughly 70 and 85 seconds per cycle).
       float shape = sin(p.x * 0.006) + 0.8 * sin(z * 0.009) + 0.5 * sin((p.x + z) * 0.004 + 1.3);
@@ -207,13 +209,16 @@
     gl.enable(gl.DEPTH_TEST);
 
     const u = Object.fromEntries(
-      ['uTime', 'uYaw', 'uPitch', 'uFocal', 'uSwell', 'uScroll', 'uRes', 'uCursor', 'uLow', 'uHigh', 'uGlint', 'uHaze', 'uLight', 'uHazeRange', 'uContrast', 'uHazeAmount', 'uLine', 'uLineAlpha'].map(
+      ['uTime', 'uYaw', 'uPitch', 'uFocal', 'uSwell', 'uRes', 'uCursor', 'uLow', 'uHigh', 'uGlint', 'uHaze', 'uLight', 'uHazeRange', 'uContrast', 'uHazeAmount', 'uLine', 'uLineAlpha'].map(
         (name) => [name, gl.getUniformLocation(program, name)]
       )
     );
     const len = Math.hypot(...LIGHT);
     gl.uniform3f(u.uLight, LIGHT[0] / len, LIGHT[1] / len, LIGHT[2] / len);
     gl.uniform2f(u.uHazeRange, HAZE[0], HAZE[1]);
+    // The camera is fixed: straight ahead, looking down at PITCH.
+    gl.uniform1f(u.uYaw, 0);
+    gl.uniform1f(u.uPitch, PITCH);
 
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
     let animationsOn = true;
@@ -224,7 +229,9 @@
     let frame = null;
     let pointer = null;
     let pointerTimer = null;
-    const view = { yaw: 0, pitch: PITCH, swell: 0, x: 0, y: 0, scroll: window.scrollY * SCROLL_DRIFT };
+    const view = { swell: 0, x: 0, y: 0 };
+    let parallaxOn = !reducedMotion.matches; // parallax motion can bother motion-sensitive visitors
+    let offset = 0; // px the canvas is currently shifted up
     const startTime = performance.now();
 
     // Current colors ease toward the theme's palette, so theme switches fade
@@ -253,38 +260,40 @@
 
     function resize() {
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const scrollable = Math.max(0, document.documentElement.scrollHeight - window.innerHeight);
       width = window.innerWidth;
-      height = window.innerHeight;
+      height = window.innerHeight + (parallaxOn ? Math.ceil(scrollable * PARALLAX) : 0);
+      canvas.style.height = `${height}px`;
       canvas.width = width * dpr;
       canvas.height = height * dpr;
       gl.viewport(0, 0, canvas.width, canvas.height);
       gl.uniform2f(u.uRes, width, height);
       // Wide screens see more of the surface sideways; tall ones see more depth.
-      gl.uniform1f(u.uFocal, Math.max(width * 0.6, height * 1.1));
+      gl.uniform1f(u.uFocal, Math.max(width * 0.6, window.innerHeight * 1.1));
+      onScroll();
       render(performance.now());
     }
 
+    // Moves the canvas up at a fraction of the scroll. This is a cheap
+    // transform, so it runs even between animation frames.
+    function onScroll() {
+      offset = parallaxOn ? window.scrollY * PARALLAX : 0;
+      canvas.style.transform = `translate3d(0, ${-offset}px, 0)`;
+    }
+
     function render(now) {
-      // Ease the camera and the cursor swell toward the pointer.
-      const tx = pointer ? pointer.x / width - 0.5 : 0;
-      const ty = pointer ? pointer.y / height - 0.5 : 0;
-      view.yaw += (tx * 0.12 - view.yaw) * 0.04;
-      view.pitch += (PITCH + ty * 0.06 - view.pitch) * 0.04;
+      // Ease the cursor swell toward the pointer.
       view.swell += ((pointer ? 1 : 0) - view.swell) * 0.06;
       if (pointer) {
         view.x += (pointer.x - view.x) * 0.15;
         view.y += (pointer.y - view.y) * 0.15;
       }
 
-      // Follow page scroll only while animating, so a paused background stays still.
-      if (frame !== null) view.scroll += (window.scrollY * SCROLL_DRIFT - view.scroll) * 0.1;
       applyColors();
-      gl.uniform1f(u.uScroll, view.scroll);
       gl.uniform1f(u.uTime, (now - startTime) / 1000);
-      gl.uniform1f(u.uYaw, view.yaw);
-      gl.uniform1f(u.uPitch, view.pitch);
       gl.uniform1f(u.uSwell, view.swell);
-      gl.uniform2f(u.uCursor, view.x, view.y);
+      // The cursor is in window coordinates; the canvas is shifted up by `offset`.
+      gl.uniform2f(u.uCursor, view.x, view.y + offset);
       gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
       gl.drawArrays(gl.TRIANGLES, 0, vertexCount);
     }
@@ -345,7 +354,18 @@
     resize();
     start();
 
+    // The page can grow after load (fonts, images), which changes how far it scrolls.
+    const pageSize = new ResizeObserver(() => resize());
+    pageSize.observe(document.body);
+
+    function onReducedMotionChange() {
+      parallaxOn = !reducedMotion.matches;
+      resize();
+    }
+
     window.addEventListener('resize', resize);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    reducedMotion.addEventListener('change', onReducedMotionChange);
     window.addEventListener('pointermove', onPointerMove, { passive: true });
     window.addEventListener('pointerdown', onPointerMove, { passive: true });
     document.documentElement.addEventListener('pointerleave', onPointerLeave);
@@ -357,7 +377,10 @@
       clearTimeout(pointerTimer);
       unsubscribe();
       unsubscribeAnimations();
+      pageSize.disconnect();
       window.removeEventListener('resize', resize);
+      window.removeEventListener('scroll', onScroll);
+      reducedMotion.removeEventListener('change', onReducedMotionChange);
       window.removeEventListener('pointermove', onPointerMove);
       window.removeEventListener('pointerdown', onPointerMove);
       document.documentElement.removeEventListener('pointerleave', onPointerLeave);
@@ -368,4 +391,4 @@
   });
 </script>
 
-<canvas bind:this={canvas} class="fixed inset-0 -z-10 h-full w-full pointer-events-none" aria-hidden="true"></canvas>
+<canvas bind:this={canvas} class="fixed top-0 left-0 -z-10 w-full pointer-events-none will-change-transform" aria-hidden="true"></canvas>
