@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Romero;Kyle;;;
+FN:Kyle Romero
+ORG:Tenna
+TITLE:Team Lead
+TEL;TYPE=CELL,VOICE:+1-281-857-9006
+EMAIL;TYPE=INTERNET,PREF:kgromero@gmail.com
+ADR;TYPE=HOME:;;;Jersey City;NJ;;USA
+URL:https://kgromero.com
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/kyleromero/
+X-SOCIALPROFILE;TYPE=github:https://github.com/romero927
+NOTE:Software Engineering Leader
+END:VCARD

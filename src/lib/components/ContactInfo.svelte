@@ -1,6 +1,6 @@
 <script>
   import { t } from '$lib/i18n';
-  import { ArrowRight, Link, Mail, Phone, QrCode } from '@lucide/svelte';
+  import { ArrowRight, Contact, Link, Mail, Phone, QrCode } from '@lucide/svelte';
   import BrandIcon from './BrandIcon.svelte';
   import Modal from './Modal.svelte';
   
@@ -33,7 +33,19 @@
       </li>
     </ul>
 
-    <div class="mt-auto pt-5">
+    <div class="mt-auto pt-5 flex flex-wrap gap-3">
+      <a
+        class="neo-cta"
+        href="/kgromero.vcf"
+        download="Kyle_Romero.vcf"
+        aria-label="Download contact card (vCard)"
+      >
+        <span class="flex items-center gap-2">
+          <Contact size="1em" aria-hidden="true" />
+          Save Contact (vCard)
+        </span>
+        <ArrowRight size={16} class="neo-cta-arrow" aria-hidden="true" />
+      </a>
       <button
         class="neo-cta"
         onclick={() => showQRModal = true}
