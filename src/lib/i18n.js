@@ -232,6 +232,11 @@ const translations = {
       allProjects: "More on GitHub",
       projects: [
         {
+          name: "(SvelteKit) kgromero.com",
+          description: "This site: my personal portfolio and resume site.",
+          link: "https://github.com/romero927/kgromero",
+        },
+        {
           name: "(C#) Reddit Listener",
           description: "Tracks top posts and authors across subreddits in near real time, within Reddit's API rate limits.",
           link: "https://github.com/romero927/RedditListener",

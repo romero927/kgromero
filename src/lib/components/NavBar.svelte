@@ -1,5 +1,4 @@
 <script>
-  import { Code2 } from '@lucide/svelte';
   import ResumeShellWrapper from './ResumeShellWrapper.svelte';
   import ThemeToggle from './ThemeToggle.svelte';
   
@@ -232,17 +231,6 @@
         <!-- Divider between primary actions and utility icons -->
         <div class="h-6 w-px bg-neo-black/20 dark:bg-dark-border mx-1" aria-hidden="true"></div>
 
-        <!-- GitHub -->
-        <a
-          href="https://github.com/romero927/kgromero"
-          target="_blank"
-          class="neo-button-ghost flex items-center justify-center h-8 py-0"
-          aria-label="View source code on GitHub"
-        >
-          <Code2 size={20} />
-          <span class="sr-only">View Source Code</span>
-        </a>
-
         <ResumeShellWrapper class="h-8 py-0" />
 
         <!-- Dark Mode Toggle -->
@@ -284,15 +272,6 @@
           </a>
           <a href="/docs/kgromero_businesscard.png" target="_blank" class="neo-button-ghost block text-center">
             Business Card
-          </a>
-          <a
-            href="https://github.com/romero927/kgromero"
-            target="_blank"
-            class="neo-button-ghost p-2 flex items-center justify-center"
-            aria-label="View source code on GitHub"
-          >
-            <Code2 size={20} aria-hidden="true" />
-            <span class="sr-only">View Source Code</span>
           </a>
           <ResumeShellWrapper class="p-2" />
         </div>

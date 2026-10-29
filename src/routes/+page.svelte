@@ -7,7 +7,7 @@
   import Skills from '$lib/components/Skills.svelte';
   import Other from '$lib/components/Other.svelte';
   import { t, yearsExperience } from '$lib/i18n';
-  import { ChartLine } from '@lucide/svelte';
+  import { ChartLine, Code2 } from '@lucide/svelte';
 </script>
 
 <a href="#main-content" class="skip-link">
@@ -75,6 +75,7 @@
       <span class="whitespace-nowrap"><b class="text-neo-black dark:text-gray-200">© {new Date().getFullYear()} Kyle Romero</b></span>
       <span aria-hidden="true" class="hidden sm:inline text-neo-accent">/</span>
       <span class="whitespace-nowrap">{$t.footerMessage}</span>
+      <a href="https://github.com/romero927/kgromero" target="_blank" rel="noopener noreferrer" aria-label="View source code on GitHub" class="ml-1 hover:text-neo-accent transition-colors"><Code2 size="1em" aria-hidden="true" /></a>
       <a href="https://pagespeed.web.dev/analysis?url=https%3A%2F%2Fkgromero.com%2F" target="_blank" rel="noopener noreferrer" aria-label="View PageSpeed Insights" class="ml-1 hover:text-neo-accent transition-colors"><ChartLine size="1em" aria-hidden="true" /></a>
     </div>
   </footer>
