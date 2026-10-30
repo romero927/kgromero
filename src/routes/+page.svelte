@@ -51,7 +51,7 @@
           </div>
           <div class="border-l-2 border-neo-accent pl-3">
             <div class="card-eyebrow">Based in</div>
-            <div class="text-sm font-bold mt-0.5 text-neo-black dark:text-gray-100">Jersey City, NJ</div>
+            <div class="text-sm font-bold mt-0.5 text-neo-black dark:text-gray-100">{$t.contactInfo.location}</div>
           </div>
           <div class="border-l-2 border-neo-accent pl-3">
             <div class="card-eyebrow">Specialty</div>

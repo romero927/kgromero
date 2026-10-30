@@ -2,6 +2,7 @@
   import ResumeShellWrapper from './ResumeShellWrapper.svelte';
   import ThemeToggle from './ThemeToggle.svelte';
   import AnimationToggle from './AnimationToggle.svelte';
+  import BusinessCard from './BusinessCard.svelte';
   
   import logo from "$lib/assets/logo.webp";
 
@@ -225,9 +226,7 @@
         </a>
 
         <!-- Business Card -->
-        <a href="/docs/kgromero_businesscard.png" target="_blank" class="neo-button-ghost flex items-center justify-center h-8 py-0" aria-label="View business card">
-          Business Card
-        </a>
+        <BusinessCard class="neo-button-ghost flex items-center justify-center h-8 py-0" />
 
         <!-- Divider between primary actions and utility icons -->
         <div class="h-6 w-px bg-neo-black/20 dark:bg-dark-border mx-1" aria-hidden="true"></div>
@@ -273,9 +272,7 @@
           <a href="/api-docs" class="neo-button-ghost block text-center">
             API Docs
           </a>
-          <a href="/docs/kgromero_businesscard.png" target="_blank" class="neo-button-ghost block text-center">
-            Business Card
-          </a>
+          <BusinessCard class="neo-button-ghost block text-center" />
           <!-- The terminal needs a keyboard, so it's hidden on phone-sized screens. -->
           <div class="hidden sm:contents">
             <ResumeShellWrapper class="p-2" />

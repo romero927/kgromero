@@ -23,6 +23,7 @@ const translations = {
       linkedin: "https://www.linkedin.com/in/kyleromero/",
       github: "https://github.com/romero927",
       linktree: "Linktree",
+      location: "Jersey City, NJ",
     },
     experience: {
       title: "Experience",
