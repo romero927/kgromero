@@ -4,8 +4,8 @@
 
   // Low-poly 3D terrain behind the page: a flat-shaded field of irregular
   // triangles viewed from above at an angle, drawn with WebGL. The terrain
-  // holds its shape and only bends very slowly over time, and the surface
-  // swells gently under the cursor.
+  // holds its shape and only bends very slowly over time, and the cursor
+  // gently pulls the nearby facets toward it (or raises a swell; see CURSOR).
   // If WebGL isn't available, nothing is drawn and the plain page background
   // shows.
   let canvas;
@@ -40,6 +40,10 @@
   const STRETCH = 1.4; // cells are this many times wider than deep, for wider triangles
   const JITTER = 0.35; // random nudge of each grid point (fraction of a cell), for irregular triangles
   const LIGHT = [-0.4, 0.8, -0.45]; // from upper left, toward the viewer
+  const SPEED = 1.46; // how fast the terrain bends (1 = original pace)
+  // How the surface reacts to the cursor: 'pull' draws nearby facets in toward
+  // it, like a little gravity; 'push' raises a swell under it.
+  const CURSOR = 'pull';
 
   const VERTEX_SHADER = `#version 300 es
     in vec2 aXZ;
@@ -53,8 +57,14 @@
 
     const float CAMERA_HEIGHT = ${CAMERA_HEIGHT.toFixed(1)};
     const float HEIGHT = 30.0;      // terrain height
-    const float SWELL = 32.0;       // extra height under the cursor
-    const float SWELL_RADIUS = 140.0; // px on screen
+    const bool PULL = ${CURSOR === 'pull'};
+    // Push: extra height under the cursor. Pull: a slight lift, so the pinched
+    // facets still catch the light.
+    const float SWELL = PULL ? 10.0 : 32.0;
+    const float SWELL_RADIUS = PULL ? 190.0 : 140.0; // px on screen
+    // Fraction of the way a point right next to the cursor moves toward it.
+    // Must stay below 1, or facets fold over each other.
+    const float PULL_STRENGTH = 0.45;
 
     // Camera space: x right, y up, z = distance ahead.
     vec3 toCamera(vec3 p) {
@@ -66,22 +76,35 @@
       return vec3(rx, py * cp + rz * sp, max(1.0, -py * sp + rz * cp));
     }
 
+    // The point on the ground (y = 0) under a screen position: the inverse of
+    // the projection in main(), assuming yaw 0 (the camera never turns).
+    vec2 groundUnder(vec2 screen) {
+      float a = (screen.x - uRes.x * 0.5) / uFocal;
+      float b = (uCenterY - screen.y) / uFocal;
+      float cp = cos(uPitch), sp = sin(uPitch);
+      vec3 dir = vec3(a, b * cp - sp, b * sp + cp);
+      float hit = CAMERA_HEIGHT / max(-dir.y, 0.01); // ray from the camera down to the ground
+      return vec2(dir.x, dir.z) * hit;
+    }
+
     void main() {
       float t = uTime; // seconds
       vec3 p = vec3(aXZ.x, 0.0, aXZ.y);
       float z = p.z;
       // Fixed terrain shape, plus two long, slow bends moving through it
-      // (roughly 70 and 85 seconds per cycle).
+      // (roughly 70 and 85 seconds per cycle at SPEED 1).
       float shape = sin(p.x * 0.006) + 0.8 * sin(z * 0.009) + 0.5 * sin((p.x + z) * 0.004 + 1.3);
       p.y = HEIGHT * 1.2 * shape
           + HEIGHT * 0.5 * (sin(p.x * 0.003 + t * 0.09) + sin(z * 0.004 - t * 0.072 + 2.0));
 
-      // Swell under the cursor, measured on screen so it sits right under it.
+      // Cursor effect, measured on screen so it sits right under the cursor.
       if (uSwell > 0.01) {
         vec3 c = toCamera(p);
         vec2 screen = vec2(uRes.x * 0.5 + c.x * uFocal / c.z, uCenterY - c.y * uFocal / c.z);
         float d = distance(screen, uCursor) / SWELL_RADIUS;
-        p.y += SWELL * uSwell * exp(-d * d);
+        float falloff = uSwell * exp(-d * d);
+        p.y += SWELL * falloff;
+        if (PULL) p.xz += (groundUnder(uCursor) - p.xz) * PULL_STRENGTH * falloff;
       }
 
       vWorld = p;
@@ -104,11 +127,15 @@
     in vec3 vWorld;
     in float vDepth;
     in vec3 vBary;
+    uniform float uSwell, uPixelRatio;
+    uniform vec2 uRes, uCursor;
     uniform vec3 uLow, uHigh, uGlint, uLight, uHaze, uLine;
     uniform float uLineAlpha;
     uniform vec2 uHazeRange;
     uniform float uContrast, uHazeAmount;
     out vec4 outColor;
+
+    const float LINE_RADIUS = 80.0; // px on screen: how far the line highlight reaches
 
     void main() {
       // Flat shading: the surface normal from screen-space derivatives is
@@ -122,9 +149,16 @@
       vec3 color = mix(mix(uLow, uHigh, t), uGlint, glint);
       // Thin anti-aliased edge lines: near an edge, one barycentric coordinate
       // approaches 0. fwidth keeps the line about 1px wide at any distance.
-      vec3 edge = smoothstep(vec3(0.0), fwidth(vBary) * 1.2, vBary);
+      // Lines near the cursor get bolder and a little thicker. Measured per
+      // pixel (gl_FragCoord counts device pixels from the bottom), so the
+      // highlight stays tight around the cursor even on big triangles.
+      vec2 px = vec2(gl_FragCoord.x, uRes.y * uPixelRatio - gl_FragCoord.y) / uPixelRatio;
+      float r = distance(px, uCursor) / LINE_RADIUS;
+      float near = uSwell * exp(-r * r);
+      vec3 edge = smoothstep(vec3(0.0), fwidth(vBary) * (1.2 + 0.8 * near), vBary);
       float line = 1.0 - min(min(edge.x, edge.y), edge.z);
-      color = mix(color, uLine, line * uLineAlpha);
+      float lineAlpha = mix(uLineAlpha, min(1.0, uLineAlpha * 3.5), near);
+      color = mix(color, uLine, line * lineAlpha);
       // Fade distant facets into the page color, so the far edge stays calm.
       float haze = smoothstep(uHazeRange.x, uHazeRange.y, vDepth) * uHazeAmount;
       outColor = vec4(mix(color, uHaze, haze), 1.0);
@@ -221,7 +255,7 @@
       gl.enable(gl.DEPTH_TEST);
 
       u = Object.fromEntries(
-        ['uTime', 'uYaw', 'uPitch', 'uFocal', 'uSwell', 'uCenterY', 'uRes', 'uCursor', 'uLow', 'uHigh', 'uGlint', 'uHaze', 'uLight', 'uHazeRange', 'uContrast', 'uHazeAmount', 'uLine', 'uLineAlpha'].map(
+        ['uTime', 'uYaw', 'uPitch', 'uFocal', 'uSwell', 'uCenterY', 'uRes', 'uPixelRatio', 'uCursor', 'uLow', 'uHigh', 'uGlint', 'uHaze', 'uLight', 'uHazeRange', 'uContrast', 'uHazeAmount', 'uLine', 'uLineAlpha'].map(
           (name) => [name, gl.getUniformLocation(program, name)]
         )
       );
@@ -298,6 +332,7 @@
       if (!ready) return;
       gl.viewport(0, 0, canvas.width, canvas.height);
       gl.uniform2f(u.uRes, width, viewHeight);
+      gl.uniform1f(u.uPixelRatio, canvas.height / viewHeight);
       // Wide screens see more of the surface sideways; tall ones see more depth.
       gl.uniform1f(u.uFocal, Math.max(width * 0.6, viewHeight * 1.1));
       render(performance.now());
@@ -329,7 +364,7 @@
       }
 
       applyColors();
-      gl.uniform1f(u.uTime, (now - startTime) / 1000);
+      gl.uniform1f(u.uTime, ((now - startTime) / 1000) * SPEED);
       gl.uniform1f(u.uSwell, view.swell);
       gl.uniform1f(u.uCenterY, centerY);
       gl.uniform2f(u.uCursor, view.x, view.y);

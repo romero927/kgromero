@@ -104,12 +104,12 @@
            dark:bg-dark-card/75 dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
   }
 
-  /* The nav card: frosted more heavily than the other cards, since page
-     content scrolls underneath it. */
+  /* The nav card: lightly frosted so the background reads through it, with
+     just enough blur that page content scrolling underneath stays soft. */
   .neo-card-square {
-    @apply bg-white/85 backdrop-blur-md border-2 border-neo-black shadow-neo px-4 py-1.5
+    @apply bg-white/60 backdrop-blur-[4px] border-2 border-neo-black shadow-neo px-4 py-1.5
            flex flex-col h-auto min-h-0
-           dark:bg-dark-card/85 dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
+           dark:bg-dark-card/60 dark:text-gray-300 dark:border-dark-border dark:shadow-neo-dark;
   }
 
   .neo-bold-card {
@@ -141,7 +141,7 @@
     inset: 0 0 -1rem;
     z-index: -1;
     pointer-events: none;
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(6px);
     mask-image: linear-gradient(to bottom, black 55%, transparent);
   }
 
