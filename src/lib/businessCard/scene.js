@@ -106,9 +106,13 @@ export function createCardScene(container, { front, back, reducedMotion = false,
   shadowCanvas.width = 256;
   shadowCanvas.height = 160;
   const sctx = shadowCanvas.getContext('2d');
-  sctx.filter = 'blur(14px)';
-  sctx.fillStyle = 'rgba(0,0,0,0.45)';
-  sctx.fillRect(40, 36, 176, 88);
+  // Draw the rectangle off-canvas and keep only its blurred shadow.
+  // (shadowBlur instead of ctx.filter, which mobile Safari ignores.)
+  sctx.shadowColor = 'rgba(0,0,0,0.45)';
+  sctx.shadowBlur = 28;
+  sctx.shadowOffsetX = 1000;
+  sctx.fillStyle = '#000';
+  sctx.fillRect(40 - 1000, 36, 176, 88);
   const shadowTex = new CanvasTexture(shadowCanvas);
   const shadowGeo = new PlaneGeometry(W * 1.45, H * 1.6);
   const shadowMat = new MeshBasicMaterial({ map: shadowTex, transparent: true, depthWrite: false });
@@ -118,8 +122,10 @@ export function createCardScene(container, { front, back, reducedMotion = false,
 
   // Motion state. `base` is the face angle (0 = front, PI = back).
   let base = 0;
-  let yaw = reducedMotion ? 0 : -Math.PI * 0.75;
-  let pitch = reducedMotion ? 0 : 0.35;
+  // Opening: a gentle tilt that settles slowly, not a spin
+  let yaw = reducedMotion ? 0 : -0.45;
+  let pitch = reducedMotion ? 0 : 0.18;
+  let settleRate = reducedMotion ? 30 : 2.5; // speeds up to 7 after the opening
   let tiltX = 0; // hover tilt targets
   let tiltY = 0;
   let dragging = false;
@@ -185,7 +191,7 @@ export function createCardScene(container, { front, back, reducedMotion = false,
       targetYaw = base + tiltX * 0.28;
       targetPitch = -tiltY * 0.2;
     }
-    const k = dragging ? 1 - Math.exp(-dt * 30) : 1 - Math.exp(-dt * (reducedMotion ? 30 : 7));
+    const k = dragging ? 1 - Math.exp(-dt * 30) : 1 - Math.exp(-dt * settleRate);
     yaw += (targetYaw - yaw) * k;
     pitch += (targetPitch - pitch) * k;
 
@@ -193,6 +199,7 @@ export function createCardScene(container, { front, back, reducedMotion = false,
     renderer.render(scene, camera);
 
     const settled = Math.abs(targetYaw - yaw) < 1e-4 && Math.abs(targetPitch - pitch) < 1e-4;
+    if (settled && !reducedMotion) settleRate = 7;
     if (!settled || dragging) requestFrame();
   }
 
@@ -200,6 +207,7 @@ export function createCardScene(container, { front, back, reducedMotion = false,
   const el = renderer.domElement;
 
   function onPointerDown(e) {
+    if (!reducedMotion) settleRate = 7;
     dragging = true;
     moved = 0;
     startX = lastX = e.clientX;
@@ -267,6 +275,7 @@ export function createCardScene(container, { front, back, reducedMotion = false,
   fit();
 
   function flip() {
+    if (!reducedMotion) settleRate = 7;
     setFace(base + Math.PI);
     requestFrame();
   }

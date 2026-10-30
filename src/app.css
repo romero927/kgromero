@@ -2,11 +2,31 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Touch screens have no hover, so hover styles show while a finger is pressing
+   instead (and clear when it lifts, so they never get stuck on). */
+@custom-variant hover {
+  @media (hover: hover) {
+    &:hover {
+      @slot;
+    }
+  }
+  @media (hover: none) {
+    &:active {
+      @slot;
+    }
+  }
+}
+
 /* v4's group-hover uses :where(.group), which ties dark:* on specificity and loses.
    Restore v3 specificity so group-hover:* still wins in dark mode. */
 @custom-variant group-hover {
   @media (hover: hover) {
     &:is(.group:hover *) {
+      @slot;
+    }
+  }
+  @media (hover: none) {
+    &:is(.group:active *) {
       @slot;
     }
   }
@@ -262,6 +282,55 @@
   }
 
 }
+
+/* Touch screens: the same styles while a finger is pressing */
+@media (hover: none) {
+  .group:active .neo-highlight,
+  .neo-highlight:active {
+    background-color: var(--color-neo-accent);
+    color: var(--color-neo-black);
+  }
+
+  .neo-button:active {
+    translate: 2px 2px;
+    box-shadow: none;
+  }
+
+  .dark .neo-button:active {
+    background-color: #2D2F33;
+    box-shadow: none;
+  }
+
+  .neo-button-ghost:active {
+    background-color: #FD9745;
+    color: #1A1A1A;
+    translate: 2px 2px;
+    box-shadow: none;
+  }
+
+  .dark .neo-button-ghost:active {
+    background-color: #2D2F33;
+    color: #FD9745;
+    translate: 2px 2px;
+    box-shadow: none;
+  }
+
+  .neo-cta:active {
+    background-color: #FD9745;
+    color: #1A1A1A;
+    translate: 2px 2px;
+    box-shadow: none;
+  }
+
+  .dark .neo-cta:active {
+    background-color: #2D2F33;
+    color: #FD9745;
+    translate: 2px 2px;
+    box-shadow: none;
+  }
+
+}
+
 
 /* Background animation turned off: no background pattern, so the page goes
    back to its original look (solid cards, solid header band, plain footer). */

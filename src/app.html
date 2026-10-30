@@ -42,6 +42,10 @@
           "animations-off",
           localStorage.getItem("animations") !== "on",
         );
+
+        // iOS Safari only applies :active (our tap feedback) when the page
+        // listens for touches.
+        document.addEventListener("touchstart", () => {}, { passive: true });
       })();
     </script>
     %sveltekit.head%

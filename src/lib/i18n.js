@@ -14,7 +14,7 @@ const translations = {
     aboutMe: {
       title: "About Me",
       content:
-        `Currently Team Lead at Tenna, a construction B2B SaaS company acquired by John Deere, where I own the integrations domain. Hands-on across cloud architecture, full-stack development, DevOps, and project management.`,
+        `Currently Team Lead at Tenna, a construction B2B SaaS company acquired by John Deere, where I own the integrations domain. Hands-on across team leadership, cloud architecture, full-stack development, DevOps, and project management.`,
     },
     contactInfo: {
       title: "Contact Info",
