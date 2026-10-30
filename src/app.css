@@ -2,6 +2,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Phones and tablets: touch is the main input */
+@custom-variant touch (@media (hover: none) and (pointer: coarse));
+
 /* Touch screens have no hover, so hover styles show while a finger is pressing
    instead (and clear when it lifts, so they never get stuck on). */
 @custom-variant hover {

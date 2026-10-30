@@ -5,9 +5,10 @@
   let { class: className = '' } = $props();
 </script>
 
+<!-- Hidden on phones and tablets, where the animation is always off -->
 <button
   onclick={() => ($animations = !$animations)}
-  class="neo-button-ghost flex items-center justify-center {className}"
+  class="neo-button-ghost flex items-center justify-center touch:hidden {className}"
   aria-label={$animations ? 'Turn off background animation' : 'Turn on background animation'}
   aria-pressed={!$animations}
   title={$animations ? 'Turn off background animation' : 'Turn on background animation'}

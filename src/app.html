@@ -36,11 +36,12 @@
           document.documentElement.classList.toggle("dark", prefersDark);
         }
 
-        // Background animation is off unless the visitor turned it on:
-        // show the plain page with solid cards.
+        // Background animation is off unless the visitor turned it on, and
+        // always off on phones and tablets: show the plain page with solid cards.
         document.documentElement.classList.toggle(
           "animations-off",
-          localStorage.getItem("animations") !== "on",
+          localStorage.getItem("animations") !== "on" ||
+            window.matchMedia("(hover: none) and (pointer: coarse)").matches,
         );
 
         // iOS Safari only applies :active (our tap feedback) when the page

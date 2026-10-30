@@ -40,10 +40,16 @@ if (typeof window !== "undefined") {
     });
 }
 
+// Phones and tablets (touch is the main input) never get the background
+// animation, to save battery. Keep in sync with the check in app.html and the
+// `touch` variant in app.css.
+const TOUCH_DEVICE = "(hover: none) and (pointer: coarse)";
+
 // Background animation on/off. Off by default; a visitor's choice is saved
 // like the theme.
 const getInitialAnimations = () => {
   if (typeof window !== "undefined") {
+    if (window.matchMedia(TOUCH_DEVICE).matches) return false;
     return localStorage.getItem("animations") === "on";
   }
   return false;
