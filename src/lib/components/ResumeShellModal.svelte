@@ -388,18 +388,30 @@
 
 </script>
 
-<Modal bind:open title="Kyle's Resume Bash Shell" theme="terminal" size="max-w-3xl" bodyClass="flex flex-col">
-  <div bind:this={outputElement} class="h-96 max-h-[60svh] overflow-y-auto p-4 whitespace-pre-wrap">
+{#snippet prompt()}<span class="text-green-300">kyle@resume</span><span class="text-green-700">:</span><span class="text-emerald-500">~</span><span class="text-green-700">$</span>{/snippet}
+
+{#snippet windowDots()}
+  <div class="flex gap-1.5" aria-hidden="true">
+    <span class="h-3 w-3 rounded-full bg-red-500/80"></span>
+    <span class="h-3 w-3 rounded-full bg-yellow-500/80"></span>
+    <span class="h-3 w-3 rounded-full bg-green-500/80"></span>
+  </div>
+{/snippet}
+
+<Modal bind:open title="kyle@resume: ~" label="Kyle's Resume Bash Shell" theme="terminal" size="max-w-6xl" bodyClass="flex flex-col" headerStart={windowDots}>
+  <div bind:this={outputElement} class="terminal-scroll h-[70svh] overflow-y-auto p-4 whitespace-pre-wrap">
     {#each output as line}
       {#if line.type === 'command'}
-        <div class="mb-1 text-green-500">$ {line.content}</div>
+        <div class="mb-1">{@render prompt()} <span class="text-green-200">{line.content}</span></div>
+      {:else if line.type === 'system'}
+        <div class="mb-2 text-green-600">{line.content}</div>
       {:else}
-        <div class="mb-2 text-green-400">{#each linkify(line.content) as part}{#if part.href}<a href={part.href} target={part.href.startsWith('mailto:') ? undefined : '_blank'} rel="noopener noreferrer" class="underline underline-offset-2 hover:text-green-200">{part.text}</a>{:else}{part.text}{/if}{/each}</div>
+        <div class="mb-3 text-green-400">{#each linkify(line.content) as part}{#if part.href}<a href={part.href} target={part.href.startsWith('mailto:') ? undefined : '_blank'} rel="noopener noreferrer" class="text-emerald-300 underline underline-offset-2 hover:text-green-100">{part.text}</a>{:else}{part.text}{/if}{/each}</div>
       {/if}
     {/each}
   </div>
-  <form onsubmit={handleSubmit} class="flex p-4 border-t border-green-900">
-    <label for="resume-shell-input" class="mr-2 text-green-500">$</label>
+  <form onsubmit={handleSubmit} class="flex items-center border-t border-green-900/70 bg-green-950/20 px-4 py-3">
+    <label for="resume-shell-input" class="mr-2 shrink-0">{@render prompt()}</label>
     <input
       id="resume-shell-input"
       data-autofocus
@@ -410,7 +422,8 @@
       autocapitalize="off"
       spellcheck="false"
       aria-label="Terminal command"
-      class="grow bg-transparent text-green-500 focus:outline-hidden placeholder:text-green-700"
+      placeholder="type help"
+      class="grow bg-transparent text-green-200 caret-green-400 focus:outline-hidden placeholder:text-green-800"
     />
   </form>
 </Modal>

@@ -193,6 +193,12 @@
            dark:text-gray-300 dark:hover:bg-dark-hover dark:hover:text-neo-accent;
   }
 
+  /* Thin green scrollbar for the resume terminal */
+  .terminal-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: #166534 transparent;
+  }
+
   /* Thin accent-colored scrollbar for scrollable panels */
   .neo-scroll {
     scrollbar-width: thin;

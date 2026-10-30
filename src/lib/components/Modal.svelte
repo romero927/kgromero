@@ -12,14 +12,17 @@
    * header's backdrop-filter would otherwise trap fixed positioning), closes on
    * Escape / backdrop click, traps Tab focus, locks page scroll, and returns
    * focus to whatever opened it. Put `data-autofocus` on an element inside to
-   * focus it on open instead of the first focusable element.
+   * focus it on open instead of the first focusable element. Pass `label` when
+   * the visible title isn't a good accessible name for the dialog.
    */
   let {
     open = $bindable(false),
     title,
+    label,
     theme = 'neo',
     size = 'max-w-lg',
     bodyClass = 'p-4 sm:p-6',
+    headerStart,
     headerActions,
     children
   } = $props();
@@ -41,10 +44,10 @@
       close: 'neo-button-ghost h-9 w-9 p-0 text-gray-200! border-dark-border! shadow-neo-dark!'
     },
     terminal: {
-      panel: 'bg-black/90 text-green-500 font-mono rounded-lg shadow-lg',
-      header: 'border-b border-green-900',
-      title: 'text-lg sm:text-xl font-bold text-green-500',
-      close: 'h-9 w-9 text-green-500 hover:text-green-400 focus-visible:ring-2 focus-visible:ring-green-500 rounded-sm'
+      panel: 'bg-[#0a0f0b]/95 text-green-400 font-mono rounded-lg border border-green-900/70 shadow-[0_0_40px_rgba(34,197,94,0.12)] [text-shadow:0_0_6px_rgba(74,222,128,0.3)] selection:bg-green-500/30 selection:text-green-100',
+      header: 'border-b border-green-900/70 bg-green-950/40 rounded-t-lg py-2!',
+      title: 'text-sm text-green-700',
+      close: 'h-7 w-7 text-green-500 hover:text-green-400 focus-visible:ring-2 focus-visible:ring-green-500 rounded-sm'
     }
   };
   let styles = $derived(themes[theme] ?? themes.neo);
@@ -111,13 +114,17 @@
       bind:this={panel}
       role="dialog"
       aria-modal="true"
-      aria-labelledby={titleId}
+      aria-labelledby={label ? undefined : titleId}
+      aria-label={label}
       tabindex="-1"
       class="relative flex w-full {size} max-h-[90svh] flex-col outline-hidden {styles.panel}"
       transition:scale={{ start: 0.96, duration: 150 }}
     >
       <div class="flex shrink-0 items-center justify-between gap-3 px-4 py-3 sm:px-6 {styles.header}">
-        <h2 id={titleId} class={styles.title}>{title}</h2>
+        <div class="flex min-w-0 items-center gap-3">
+          {@render headerStart?.()}
+          <h2 id={titleId} class={styles.title}>{title}</h2>
+        </div>
         <div class="flex items-center gap-2">
           {@render headerActions?.()}
           <button type="button" onclick={close} class="{styles.close} flex items-center justify-center" aria-label="Close dialog">
