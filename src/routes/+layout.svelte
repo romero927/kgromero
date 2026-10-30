@@ -20,7 +20,7 @@
 </script>
 
 <svelte:head>
-  <title>{title}</title>
+  <title>{page.data.title || 'kgromero.com'}</title>
   <meta name="theme-color" content={$theme === 'dark' ? '#212121' : '#F5F5F4'}>
   <meta name="description" content={description} />
   <link rel="canonical" href={canonicalUrl} />
