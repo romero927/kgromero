@@ -58,11 +58,29 @@ export function buildVCard(card) {
   ].join('\r\n');
 }
 
-function makeQr(text) {
+/** QR code as a tiny canvas, one pixel per module. Cached per text. */
+let qrCache = { text: '', canvas: null };
+function qrBitmap(text) {
+  if (qrCache.text === text) return qrCache.canvas;
   const qr = qrcode(0, 'M');
   qr.addData(text);
   qr.make();
-  return qr;
+  const n = qr.getModuleCount();
+  const canvas = document.createElement('canvas');
+  canvas.width = canvas.height = n;
+  const ctx = canvas.getContext('2d');
+  const img = ctx.createImageData(n, n);
+  for (let r = 0; r < n; r++) {
+    for (let c = 0; c < n; c++) {
+      const i = (r * n + c) * 4;
+      const v = qr.isDark(r, c) ? 0 : 255;
+      img.data[i] = img.data[i + 1] = img.data[i + 2] = v;
+      img.data[i + 3] = 255;
+    }
+  }
+  ctx.putImageData(img, 0, 0);
+  qrCache = { text, canvas };
+  return canvas;
 }
 
 /** Shrinks the font until the text fits in maxWidth. */
@@ -166,18 +184,15 @@ export function drawBack(ctx, card, bleed = 0) {
   ctx.roundRect(bx, by, box, box, 16);
   ctx.fill();
 
-  const qr = makeQr(buildVCard(card));
-  const count = qr.getModuleCount();
-  const cell = Math.floor((box - 56) / count); // whole units so modules don't seam
+  const qrImage = qrBitmap(buildVCard(card));
+  const count = qrImage.width;
+  const cell = Math.floor((box - 56) / count);
   const qrSize = cell * count;
   const qx = bx + Math.round((box - qrSize) / 2);
   const qy = by + Math.round((box - qrSize) / 2);
-  ctx.fillStyle = '#000000';
-  for (let r = 0; r < count; r++) {
-    for (let c = 0; c < count; c++) {
-      if (qr.isDark(r, c)) ctx.fillRect(qx + c * cell, qy + r * cell, cell, cell);
-    }
-  }
+  ctx.imageSmoothingEnabled = false;
+  ctx.drawImage(qrImage, qx, qy, qrSize, qrSize);
+  ctx.imageSmoothingEnabled = true;
 
   const textMax = bx - 70 - 50;
   ctx.textAlign = 'left';

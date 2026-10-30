@@ -16,7 +16,7 @@ import {
   ShapeGeometry,
   SRGBColorSpace,
   WebGLRenderer
-} from 'three';
+} from '$lib/three.js';
 
 const W = 3.5;
 const H = 2;

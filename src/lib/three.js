@@ -1,0 +1,31 @@
+// The parts of three.js the site uses. Importing through this file (rather
+// than `import('three')`) lets the build drop the rest of the library.
+export {
+  AmbientLight,
+  BufferGeometry,
+  CanvasTexture,
+  Color,
+  DirectionalLight,
+  ExtrudeGeometry,
+  Float32BufferAttribute,
+  Group,
+  HemisphereLight,
+  LineBasicMaterial,
+  LineSegments,
+  Mesh,
+  MeshBasicMaterial,
+  MeshPhongMaterial,
+  MeshStandardMaterial,
+  PerspectiveCamera,
+  PlaneGeometry,
+  Raycaster,
+  Scene,
+  Shape,
+  ShapeGeometry,
+  SphereGeometry,
+  SRGBColorSpace,
+  TextureLoader,
+  Vector2,
+  Vector3,
+  WebGLRenderer
+} from 'three';

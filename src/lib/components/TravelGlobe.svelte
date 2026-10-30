@@ -78,6 +78,45 @@
     { lat: 35.7954, lng: -83.5304, label: 'Dollywood', lived: false },
   ];
 
+
+  // Border vertex pairs per file, kept so reopening the globe skips the fetch and parse
+  const borderCache = new Map();
+  function loadBorderPositions(url) {
+    if (!borderCache.has(url)) {
+      const promise = fetch(url)
+        .then((response) => {
+          if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
+          return response.json();
+        })
+        .then((data) => {
+          const out = [];
+          const r = 1.001; // slightly above the globe surface
+          const toXYZ = ([lng, lat]) => {
+            const phi = ((90 - lat) * Math.PI) / 180;
+            const theta = ((lng + 180) * Math.PI) / 180;
+            return [-r * Math.sin(phi) * Math.cos(theta), r * Math.cos(phi), r * Math.sin(phi) * Math.sin(theta)];
+          };
+          for (const { geometry } of data.features) {
+            if (!geometry) continue;
+            const polygons = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates;
+            for (const rings of polygons) {
+              for (const ring of rings) {
+                if (ring.length < 2) continue;
+                const pts = ring.map(toXYZ);
+                // Each edge (including the closing one) becomes one segment
+                for (let i = 0; i < pts.length; i++) {
+                  out.push(...pts[i], ...pts[(i + 1) % pts.length]);
+                }
+              }
+            }
+          }
+          return new Float32Array(out);
+        });
+      promise.catch(() => borderCache.delete(url)); // allow a retry after a failure
+      borderCache.set(url, promise);
+    }
+    return borderCache.get(url);
+  }
   let cleanupGlobe = () => {};
   let controls;
   let autoRotate = $state(true);
@@ -114,7 +153,7 @@
     try {
       // three.js is only needed once the globe is opened, so keep it out of the initial bundle
       const [THREE, { OrbitControls }] = await Promise.all([
-        import('three'),
+        import('$lib/three.js'),
         import('three/examples/jsm/controls/OrbitControls.js'),
       ]);
       if (session !== globeSession) {
@@ -137,7 +176,7 @@
       );
       const renderer = new THREE.WebGLRenderer({ antialias: true });
       renderer.setSize(container.clientWidth, container.clientHeight);
-      renderer.setPixelRatio(window.devicePixelRatio);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
       container.appendChild(renderer.domElement);
 
       // Create Earth
@@ -176,14 +215,13 @@
       directionalLight.position.set(5, 3, 5);
       scene.add(directionalLight);
 
-      // Add travel pins
+      // Add travel pins. They all share one tiny sphere and two materials.
+      const pinGeometry = new THREE.SphereGeometry(0.01, 12, 8);
+      const livedMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+      const visitedMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
       const pins = [];
       travelLocations.forEach((location) => {
-        const pinGeometry = new THREE.SphereGeometry(0.01, 32, 32);
-        const pinMaterial = new THREE.MeshBasicMaterial({
-          color: location.lived ? 0xffff00 : 0xff0000,
-        });
-        const pin = new THREE.Mesh(pinGeometry, pinMaterial);
+        const pin = new THREE.Mesh(pinGeometry, location.lived ? livedMaterial : visitedMaterial);
 
         const pinPhi = ((90 - location.lat) * Math.PI) / 180;
         const pinTheta = ((location.lng + 180) * Math.PI) / 180;
@@ -197,55 +235,18 @@
         pins.push(pin);
       });
 
-      // Function to create border lines
-      function createBorderLine(polygon, color = 0xffffff) {
-        const lineMaterial = new THREE.LineBasicMaterial({ color: color });
-        const lineGeometry = new THREE.BufferGeometry();
-        const points = [];
-
-        const globeRadius = 1; // Radius of the globe
-        const altitude = 0.001; // Slightly above the globe surface
-
-        polygon.forEach(([lng, lat]) => {
-          const phi = ((90 - lat) * Math.PI) / 180;
-          const theta = ((lng + 180) * Math.PI) / 180;
-
-          const x = -(globeRadius + altitude) * Math.sin(phi) * Math.cos(theta);
-          const y = (globeRadius + altitude) * Math.cos(phi);
-          const z = (globeRadius + altitude) * Math.sin(phi) * Math.sin(theta);
-
-          points.push(new THREE.Vector3(x, y, z));
-        });
-
-        // Close the loop
-        if (points.length > 0) {
-          points.push(points[0]);
-        }
-
-        lineGeometry.setFromPoints(points);
-        const line = new THREE.Line(lineGeometry, lineMaterial);
-        return line;
-      }
-
-      // Add country and US state borders
+      // Country and US state borders, drawn as one set of line segments
+      // (a single draw call instead of one per border ring).
+      const borderMaterial = new THREE.LineBasicMaterial({ color: 0x414a4c });
+      const borderGeometries = [];
       function addBorders(url) {
-        fetch(url)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            return response.json();
-          })
-          .then((data) => {
-            const borderLines = new THREE.Group();
-            data.features.forEach(({ geometry }) => {
-              if (!geometry) return;
-              const polygons = geometry.type === 'Polygon' ? [geometry.coordinates] : geometry.coordinates;
-              polygons.forEach((rings) => {
-                rings.forEach((ring) => borderLines.add(createBorderLine(ring, 0x414a4c)));
-              });
-            });
-            earth.add(borderLines);
+        loadBorderPositions(url)
+          .then((positions) => {
+            if (session !== globeSession) return; // globe was closed meanwhile
+            const borderGeometry = new THREE.BufferGeometry();
+            borderGeometry.setAttribute('position', new THREE.Float32BufferAttribute(positions, 3));
+            borderGeometries.push(borderGeometry);
+            earth.add(new THREE.LineSegments(borderGeometry, borderMaterial));
           })
           .catch((error) => {
             console.error(`Error loading ${url}:`, error);
@@ -372,6 +373,11 @@
         geometry.dispose();
         material.dispose();
         texture.dispose();
+        pinGeometry.dispose();
+        livedMaterial.dispose();
+        visitedMaterial.dispose();
+        borderMaterial.dispose();
+        borderGeometries.forEach((g) => g.dispose());
       };
 
       clearTimeout(timeoutId);

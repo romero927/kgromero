@@ -44,6 +44,7 @@
 
   let scene;
   let assets;
+  let faceCache; // drawn faces, reused when the card is reopened
   let session = 0; // ignores a slow load that finishes after the modal closed
 
   $effect(() => {
@@ -66,8 +67,19 @@
       assets ??= await faces.loadAssets(logo);
       if (id !== session) return;
       const data = $state.snapshot(card);
-      const front = faces.renderFace('front', data, assets, 2);
-      const back = faces.renderFace('back', data, assets, 2);
+      // Texture just big enough for how wide the card shows on this screen
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      const needed = (container.clientWidth * 0.9 * dpr) / faces.CARD_W;
+      const scale = Math.min(2, Math.max(1, Math.ceil(needed * 4) / 4));
+      const key = JSON.stringify(data) + scale;
+      if (faceCache?.key !== key) {
+        faceCache = {
+          key,
+          front: faces.renderFace('front', data, assets, scale),
+          back: faces.renderFace('back', data, assets, scale)
+        };
+      }
+      const { front, back } = faceCache;
       try {
         scene = createCardScene(container, {
           front,
