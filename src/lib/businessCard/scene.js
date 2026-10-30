@@ -50,6 +50,9 @@ export function createCardScene(container, { front, back, reducedMotion = false,
   renderer.domElement.style.display = 'block';
   renderer.domElement.style.touchAction = 'none';
   renderer.domElement.style.cursor = 'grab';
+  renderer.domElement.style.userSelect = 'none';
+  renderer.domElement.style.webkitUserSelect = 'none';
+  renderer.domElement.style.webkitTouchCallout = 'none';
   renderer.domElement.setAttribute('aria-hidden', 'true');
   container.appendChild(renderer.domElement);
 

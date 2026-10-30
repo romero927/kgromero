@@ -111,8 +111,11 @@
       const a = document.createElement('a');
       a.href = url;
       a.download = `${card.name.replace(/\s+/g, '_')}-BusinessCard.png`;
+      document.body.appendChild(a);
       a.click();
-      setTimeout(() => URL.revokeObjectURL(url), 1000);
+      a.remove();
+      // Some mobile browsers read the file after click() returns, so free it later
+      setTimeout(() => URL.revokeObjectURL(url), 60_000);
     } catch (err) {
       console.error('Business card export failed', err);
     } finally {
@@ -134,23 +137,24 @@
 
 <Modal bind:open title="Business Card" size="max-w-3xl" bodyClass="p-0 flex flex-col">
   {#snippet headerStart()}
-    <IdCard size={20} aria-hidden="true" class="shrink-0" />
+    <IdCard size={20} aria-hidden="true" class="shrink-0 hidden sm:block" />
   {/snippet}
   {#snippet headerActions()}
+    <!-- On phones, tapping the card flips it, so this button is hidden there -->
     {#if status === 'ready'}
       <button
         type="button"
-        class="neo-button-ghost h-9 px-3 py-0 flex items-center gap-1.5"
+        class="neo-button-ghost h-9 px-3 py-0 hidden sm:flex items-center justify-center gap-1.5"
         onclick={() => scene?.flip()}
         aria-label={showingBack ? 'Show front of card' : 'Show back of card'}
       >
         <RefreshCw size={16} aria-hidden="true" />
-        <span class="hidden sm:inline">Flip</span>
+        Flip
       </button>
     {/if}
     <button
       type="button"
-      class="neo-button-ghost h-9 px-3 py-0 flex items-center gap-1.5"
+      class="neo-button-ghost h-9 w-9 px-0 sm:w-auto sm:px-3 py-0 flex items-center justify-center gap-1.5"
       onclick={downloadPng}
       disabled={exporting}
       aria-label="Download printable PNG"

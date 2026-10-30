@@ -94,6 +94,17 @@ function fitText(ctx, text, weight, size, family, maxWidth) {
   return s;
 }
 
+/** Rounded rectangle path; ctx.roundRect is missing before Safari 16. */
+function roundRect(ctx, x, y, w, h, r) {
+  if (ctx.roundRect) return ctx.roundRect(x, y, w, h, r);
+  ctx.moveTo(x + r, y);
+  ctx.arcTo(x + w, y, x + w, y + h, r);
+  ctx.arcTo(x + w, y + h, x, y + h, r);
+  ctx.arcTo(x, y + h, x, y, r);
+  ctx.arcTo(x, y, x + w, y, r);
+  ctx.closePath();
+}
+
 function spaced(ctx, px) {
   if ('letterSpacing' in ctx) ctx.letterSpacing = `${px}px`;
 }
@@ -177,11 +188,11 @@ export function drawBack(ctx, card, bleed = 0) {
   const by = (560 - box) / 2;
   ctx.fillStyle = ACCENT;
   ctx.beginPath();
-  ctx.roundRect(bx + 10, by + 10, box, box, 16);
+  roundRect(ctx, bx + 10, by + 10, box, box, 16);
   ctx.fill();
   ctx.fillStyle = '#ffffff';
   ctx.beginPath();
-  ctx.roundRect(bx, by, box, box, 16);
+  roundRect(ctx, bx, by, box, box, 16);
   ctx.fill();
 
   const qrImage = qrBitmap(buildVCard(card));
