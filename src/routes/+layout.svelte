@@ -3,6 +3,7 @@
   import { theme } from '$lib/store';
   import { page } from '$app/state';
   import { seoData } from '$lib/seoData';
+  import KonamiEgg from '$lib/components/KonamiEgg.svelte';
 
   let { children } = $props();
 
@@ -43,3 +44,5 @@
 </svelte:head>
 
 {@render children?.()}
+
+<KonamiEgg />
