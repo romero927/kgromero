@@ -423,17 +423,17 @@
   <!-- macOS-style window controls; symbols appear on hover/focus like the real thing -->
   <div class="group flex gap-1.5">
     {#each [
-      { label: 'Close terminal', color: 'bg-red-500/80 hover:bg-red-500', symbol: '×', action: () => (open = false) },
-      { label: 'Minimize terminal', color: 'bg-yellow-500/80 hover:bg-yellow-500', symbol: '−', action: minimize },
-      { label: maximized ? 'Restore terminal size' : 'Maximize terminal', color: 'bg-green-500/80 hover:bg-green-500', symbol: maximized ? '↙' : '+', action: toggleMaximize }
+      { label: 'Close terminal', color: 'bg-red-500/80 hover:bg-red-500', path: 'M3 3l6 6M9 3l-6 6', action: () => (open = false) },
+      { label: 'Minimize terminal', color: 'bg-yellow-500/80 hover:bg-yellow-500', path: 'M2.5 6h7', action: minimize },
+      { label: maximized ? 'Restore terminal size' : 'Maximize terminal', color: 'bg-green-500/80 hover:bg-green-500', path: maximized ? 'M8.5 3.5l-5 5M3.5 5v3.5H7' : 'M6 2.5v7M2.5 6h7', action: toggleMaximize }
     ] as dot (dot.color)}
       <button
         type="button"
         onclick={dot.action}
         aria-label={dot.label}
         title={dot.label}
-        class="flex h-3 w-3 items-center justify-center rounded-full text-[9px] leading-none font-bold text-black/0 [text-shadow:none] transition-colors group-hover:text-black/60 group-focus-within:text-black/60 focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:outline-hidden {dot.color}"
-      >{dot.symbol}</button>
+        class="flex h-3 w-3 items-center justify-center rounded-full p-0 text-black/0 transition-colors group-hover:text-black/60 group-focus-within:text-black/60 focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:outline-hidden {dot.color}"
+      ><svg viewBox="0 0 12 12" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={dot.path} /></svg></button>
     {/each}
   </div>
 {/snippet}
