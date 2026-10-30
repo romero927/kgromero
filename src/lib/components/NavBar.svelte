@@ -4,7 +4,7 @@
   import AnimationToggle from './AnimationToggle.svelte';
   import BusinessCard from './BusinessCard.svelte';
   
-  import logo from "$lib/assets/logo.webp";
+  import logo from "$lib/assets/logo.svg";
 
   // Shared by the desktop dropdown and the mobile menu
   const docSections = [
@@ -142,8 +142,8 @@
             class="w-9 mr-2 cursor-pointer hover:opacity-80 transition-opacity"
             alt="Kyle Romero Logo"
             src={logo}
-            width="63"
-            height="61"
+            width="36"
+            height="36"
           />
         </a>
       </div>

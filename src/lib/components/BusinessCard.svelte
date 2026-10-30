@@ -20,7 +20,7 @@
   import Modal from './Modal.svelte';
   import { t } from '$lib/i18n';
   import { seoData } from '$lib/seoData';
-  import logo from '$lib/assets/logo.webp';
+  import logo from '$lib/assets/logo.svg';
 
   let { class: className = '' } = $props();
 
