@@ -1,6 +1,8 @@
 <script>
   import { onMount } from 'svelte';
+  import { fly } from 'svelte/transition';
   import Modal from './Modal.svelte';
+  import { portal } from '$lib/utils.js';
   import { t, yearsExperience } from '$lib/i18n';
 
   let { open = $bindable(false) } = $props();
@@ -380,6 +382,33 @@
     return timeline;
   }
 
+  // Window controls: yellow docks the terminal as a tab in the bottom-right
+  // corner (the popup closes so the page is usable), green fills the viewport.
+  let minimized = $state(false);
+  let maximized = $state(false);
+
+  function minimize() {
+    minimized = true;
+    open = false;
+  }
+
+  function restore() {
+    open = true;
+    scrollToBottom();
+  }
+
+  function toggleMaximize() {
+    maximized = !maximized;
+    scrollToBottom();
+  }
+
+  // Opening by any route clears the dock; a real close (not a minimize) also
+  // resets the size so the next open starts normal.
+  $effect(() => {
+    if (open) minimized = false;
+    else if (!minimized) maximized = false;
+  });
+
   function scrollToBottom() {
     setTimeout(() => {
       if (outputElement) outputElement.scrollTop = outputElement.scrollHeight;
@@ -391,15 +420,34 @@
 {#snippet prompt()}<span class="text-green-300">kyle@resume</span><span class="text-green-700">:</span><span class="text-emerald-500">~</span><span class="text-green-700">$</span>{/snippet}
 
 {#snippet windowDots()}
-  <div class="flex gap-1.5" aria-hidden="true">
-    <span class="h-3 w-3 rounded-full bg-red-500/80"></span>
-    <span class="h-3 w-3 rounded-full bg-yellow-500/80"></span>
-    <span class="h-3 w-3 rounded-full bg-green-500/80"></span>
+  <!-- macOS-style window controls; symbols appear on hover/focus like the real thing -->
+  <div class="group flex gap-1.5">
+    {#each [
+      { label: 'Close terminal', color: 'bg-red-500/80 hover:bg-red-500', symbol: '×', action: () => (open = false) },
+      { label: 'Minimize terminal', color: 'bg-yellow-500/80 hover:bg-yellow-500', symbol: '−', action: minimize },
+      { label: maximized ? 'Restore terminal size' : 'Maximize terminal', color: 'bg-green-500/80 hover:bg-green-500', symbol: maximized ? '↙' : '+', action: toggleMaximize }
+    ] as dot (dot.color)}
+      <button
+        type="button"
+        onclick={dot.action}
+        aria-label={dot.label}
+        title={dot.label}
+        class="flex h-3 w-3 items-center justify-center rounded-full text-[9px] leading-none font-bold text-black/0 [text-shadow:none] transition-colors group-hover:text-black/60 group-focus-within:text-black/60 focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:outline-hidden {dot.color}"
+      >{dot.symbol}</button>
+    {/each}
   </div>
 {/snippet}
 
-<Modal bind:open title="kyle@resume: ~" label="Kyle's Resume Bash Shell" theme="terminal" size="max-w-6xl" bodyClass="flex flex-col" headerStart={windowDots}>
-  <div bind:this={outputElement} class="terminal-scroll h-[70svh] overflow-y-auto p-4 whitespace-pre-wrap">
+<Modal
+  bind:open
+  title="kyle@resume: ~"
+  label="Kyle's Resume Bash Shell"
+  theme="terminal"
+  size={maximized ? 'max-w-none h-[90svh]' : 'max-w-6xl'}
+  bodyClass="flex flex-col"
+  headerStart={windowDots}
+>
+  <div bind:this={outputElement} class="terminal-scroll {maximized ? 'min-h-0 flex-1' : 'h-[70svh]'} overflow-y-auto p-4 whitespace-pre-wrap">
     {#each output as line}
       {#if line.type === 'command'}
         <div class="mb-1">{@render prompt()} <span class="text-green-200">{line.content}</span></div>
@@ -427,3 +475,19 @@
     />
   </form>
 </Modal>
+
+{#if minimized && !open}
+  <!-- Phones don't get the terminal (see NavBar), so neither do they get its dock -->
+  <button
+    use:portal
+    type="button"
+    onclick={restore}
+    aria-label="Restore Kyle's resume terminal"
+    title="Restore terminal"
+    class="fixed right-4 bottom-4 z-50 hidden items-center gap-2 rounded-lg border border-green-900/70 bg-[#0a0f0b]/95 px-3 py-2 font-mono text-sm text-green-400 shadow-[0_0_24px_rgba(34,197,94,0.15)] [text-shadow:0_0_6px_rgba(74,222,128,0.3)] transition-colors hover:border-green-600 hover:text-green-300 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:outline-hidden sm:flex"
+    transition:fly={{ y: 16, duration: 200 }}
+  >
+    <span class="h-2 w-2 animate-pulse rounded-full bg-green-500" aria-hidden="true"></span>
+    kyle@resume: ~
+  </button>
+{/if}

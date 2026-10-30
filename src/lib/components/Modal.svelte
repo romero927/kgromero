@@ -78,7 +78,8 @@
       close();
       return;
     }
-    if (e.key !== 'Tab') return;
+    // Skip Tabs a child already handled (e.g. the terminal's autocomplete)
+    if (e.key !== 'Tab' || e.defaultPrevented) return;
     const items = [...panel.querySelectorAll(FOCUSABLE)];
     if (items.length === 0) {
       e.preventDefault();
