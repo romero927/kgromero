@@ -11,6 +11,7 @@ export {
   Group,
   HemisphereLight,
   LineBasicMaterial,
+  LinearFilter,
   LineSegments,
   Mesh,
   MeshBasicMaterial,

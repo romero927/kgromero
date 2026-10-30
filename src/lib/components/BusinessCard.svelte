@@ -63,14 +63,15 @@
 
   async function build(id) {
     try {
-      const [faces, { createCardScene }] = await loadModules();
+      const [faces, { createCardScene, cardScreenWidth }] = await loadModules();
       assets ??= await faces.loadAssets(logo);
       if (id !== session) return;
       const data = $state.snapshot(card);
-      // Texture just big enough for how wide the card shows on this screen
+      // Draw the face at the size it shows on screen, with a little extra
+      // for tilting toward the viewer
       const dpr = Math.min(window.devicePixelRatio || 1, 2);
-      const needed = (container.clientWidth * 0.9 * dpr) / faces.CARD_W;
-      const scale = Math.min(2, Math.max(1, Math.ceil(needed * 4) / 4));
+      const onScreen = cardScreenWidth(container.clientWidth, container.clientHeight) * dpr;
+      const scale = Math.min(2, Math.max(0.5, Math.ceil((onScreen * 1.1) / faces.CARD_W * 20) / 20));
       const key = JSON.stringify(data) + scale;
       if (faceCache?.key !== key) {
         faceCache = {

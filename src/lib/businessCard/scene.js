@@ -6,6 +6,7 @@ import {
   ExtrudeGeometry,
   Group,
   HemisphereLight,
+  LinearFilter,
   Mesh,
   MeshBasicMaterial,
   MeshStandardMaterial,
@@ -23,6 +24,15 @@ const H = 2;
 const DEPTH = 0.035;
 const RADIUS = 0.12;
 const FOV = 30;
+
+// Camera framing: how much room the view leaves around the card
+const FRAME_H = 0.62;
+const FRAME_W = 0.6;
+
+/** Width in CSS pixels the card face takes up in a w x h view. */
+export function cardScreenWidth(w, h) {
+  return Math.min(w / (FRAME_W * 2), (h / (FRAME_H * 2)) * (W / H));
+}
 
 function roundedRect(w, h, r) {
   const s = new Shape();
@@ -83,6 +93,10 @@ export function createCardScene(container, { front, back, reducedMotion = false,
     const tex = new CanvasTexture(canvas);
     tex.colorSpace = SRGBColorSpace;
     tex.anisotropy = Math.min(8, maxAniso);
+    // The face is drawn at its on-screen size, so sample it directly.
+    // Mipmaps would blend in a half-size copy and soften the text.
+    tex.generateMipmaps = false;
+    tex.minFilter = LinearFilter;
     return tex;
   };
   const frontTex = makeTexture(front);
@@ -160,8 +174,8 @@ export function createCardScene(container, { front, back, reducedMotion = false,
     camera.aspect = w / h;
     // Leave room around the card for tilting
     const halfV = Math.tan((FOV * Math.PI) / 360);
-    const distH = (H * 0.62) / halfV;
-    const distW = (W * 0.6) / (halfV * camera.aspect);
+    const distH = (H * FRAME_H) / halfV;
+    const distW = (W * FRAME_W) / (halfV * camera.aspect);
     camera.position.set(0, 0, Math.max(distH, distW));
     camera.lookAt(0, 0, 0);
     camera.updateProjectionMatrix();
