@@ -4,7 +4,13 @@
   import AnimationToggle from './AnimationToggle.svelte';
   import BusinessCard from './BusinessCard.svelte';
   
+  import { page } from '$app/state';
+
   import logo from "$lib/assets/logo.svg";
+  import logoCrt from "$lib/assets/logo-crt.svg";
+
+  // Animated logo on the home page only
+  const logoSrc = $derived(page.url.pathname === '/' ? logoCrt : logo);
 
   // Shared by the desktop dropdown and the mobile menu
   const docSections = [
@@ -139,11 +145,11 @@
       <div class="flex items-center space-x-4">
         <a href="/">
           <img
-            class="w-9 mr-2 cursor-pointer hover:opacity-80 transition-opacity"
+            class="w-12 mr-2 cursor-pointer hover:opacity-80 transition-opacity"
             alt="Kyle Romero Logo"
-            src={logo}
-            width="36"
-            height="36"
+            src={logoSrc}
+            width="48"
+            height="48"
           />
         </a>
       </div>
