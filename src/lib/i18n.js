@@ -238,6 +238,11 @@ const translations = {
           link: "https://github.com/romero927/kgromero",
         },
         {
+          name: "(React) Scordle",
+          description: "Timed word-guessing game with scoring and stats. Play it at scordle.xyz.",
+          link: "https://github.com/romero927/Scordle",
+        },
+        {
           name: "(C#) Reddit Listener",
           description: "Tracks top posts and authors across subreddits in near real time, within Reddit's API rate limits.",
           link: "https://github.com/romero927/RedditListener",
