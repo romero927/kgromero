@@ -12,7 +12,7 @@ GitHub: https://github.com/romero927
 
 ## **Professional Summary**
 
-Hands-on and results-driven software engineering leader specializing in management, full-stack development, digital transformation, software architecture, DevOps, and Agile methodologies. Proven track record of delivering scalable, business-aligned solutions, optimizing development operations, and mentoring high-performing teams.
+Software engineering leader with nearly 20 years building and scaling teams, from hands-on technical lead to Director of a 37-person organization. Proven record of modernizing platforms, cutting costs (40% YoY), and speeding up delivery (50%), now leading AI-assisted, spec-driven development at Tenna, a John Deere Company.
 
 ---
 
@@ -23,23 +23,22 @@ Hands-on and results-driven software engineering leader specializing in manageme
 Website: [tenna.com](https://www.tenna.com) • Construction B2B SaaS | 200 Employees  
 Date: *Oct 2025 – Present*
 
-* **Role:** Led Software Development Team of 6 Engineers focused on building new product features for the Tenna Platform.
+* **Role:** Led software development team of 6 engineers focused on building new product features for the Tenna platform.
 * **Projects:** Owner of the integrations domain. Built APIs that let customers tightly couple their internal systems with Tenna, and integrated Tenna with Virtual Superintendent.
 * **AI-Assisted SDLC:** Used Claude Enterprise heavily throughout the spec-driven SDLC, from planning and design through development, code review, and testing.
 * **Tech Stack:** AWS (EKS, Aurora, ElastiCache, S3, Lambda, SQS, DynamoDB, DMS, Kinesis), K8s, Helm, Docker, FluxCD (GitOps), Istio, GitHub Actions, Hapi, Express, Sequelize, React, Redux (Toolkit), SingleSpa (Micro-UI), RabbitMQ, Postgres, Redis, Elasticsearch, Grafana, Prometheus, Tempo, OpenTelemetry, Papertrail, GitHub, JIRA, Confluence, Claude.
-* **Acquisition:** Stayed on through John Deere's acquisition, helping scale the organization and processes as the company transitioned from startup to enterprise.
+* **Acquisition:** Stayed on through John Deere’s acquisition, helping scale the organization and processes as the company transitioned from startup to enterprise.
 
 ---
 
-### **Dexian** — *Contractor*
+### **Deloitte Consulting (via Dexian)** — *Technical Lead (Back End)*
 
-Website: [dexian.com](https://www.dexian.com) • Staffing & IT Services | 12,000 Employees  
+Website: [dexian.com](https://www.dexian.com) • Contract via Dexian (Staffing & IT Services | 12,000 Employees)  
 Date: *Mar 2025 – Oct 2025*
 
-* **Client:** Deloitte Consulting | Contract: 03/2025 – 10/2025 | Title: Technical Lead (Back End).
-* **Role:** Short-term contract with focus on API Development, Data Integration, and Cloud Architecture.
-* **Tech Stack:** Azure Cloud, Containerized Node Express API (Azure App Services), .NET Microservices (Azure Functions), Angular F.E., SAP/CC&B B.E., Tibco + Boomi Data Integrations, Redis Cache, CosmosDB, MS SQL (Azure), Azure DevOps, Confluence.
-* **Project:** A mission-critical customer-facing product with 1000's of daily users at a major Energy Industry company headquartered in Chicago.
+* **Role:** Short-term contract focused on API development, data integration, and cloud architecture.
+* **Tech Stack:** Azure, containerized Node/Express API (Azure App Services), .NET microservices (Azure Functions), Angular front end, SAP/CC&B back end, Tibco and Boomi data integrations, Redis, Cosmos DB, SQL Server (Azure), Azure DevOps, Confluence.
+* **Project:** Mission-critical, customer-facing product with thousands of daily users at a major energy company headquartered in Chicago.
 
 ---
 
@@ -48,13 +47,13 @@ Date: *Mar 2025 – Oct 2025*
 Website: [raymourflanigan.com](https://www.raymourflanigan.com) • Retail | 5,000 Employees  
 Date: *Mar 2023 – May 2024*
 
-* **Role:** Led Software Development Organization. Oversaw architectural strategy and decisions, and designed/implemented modern UI, API, and Data Integration architecture.
-* **Org. Size:** 3 Managers (AppDev Team, Oracle Team, Data Integrations/API Team), 4 Architects, 30 Developers (internal, near-shore, offshore). Direct Reports = Managers/Architects.
+* **Role:** Led software development organization; owned architectural strategy and designed modern UI, API, and data integration architecture.
+* **Org. Size:** 3 managers (AppDev, Oracle, Data Integrations/API), 4 architects, 30 developers (internal, near-shore, offshore); direct reports: managers and architects.
+* **Cost Savings:** Negotiated development partner (near-shore/on-shore) and vendor contracts and managed the organizational budget, achieving a **40% YoY cost reduction**.
 * **Tech Stack:** React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake.
-* **Initiatives:** ERP Migration to NetSuite, WMS Migration to Körber, Omnichannel Sales Experience via E-Commerce Site, 3rd Party API Integrations (ChargeAfter, Bringg).
-* Defined and implemented organizational strategy (1 and 5 year), goals (OKRs), processes (Agile, DevOps), 24/7 support strategy, and coding/review standards.
-* Aligned cross-functional teams within matrixed IT organization and coordinated with infrastructure, product management, BI, design, and e-commerce organizations.
-* Negotiated and managed development partner (near-shore/on-shore), vendor contracts/resources, and organizational budget, achieving **40% YoY cost reduction**.
+* **Initiatives:** ERP migration to NetSuite, WMS migration to Körber, omnichannel sales experience via e-commerce site, and third-party API integrations (ChargeAfter, Bringg).
+* Defined and implemented organizational strategy (1- and 5-year), goals (OKRs), processes (Agile, DevOps), 24/7 support strategy, and coding/review standards.
+* Aligned cross-functional teams within a matrixed IT organization, coordinating with infrastructure, product management, BI, design, and e-commerce.
 
 ---
 
@@ -63,13 +62,13 @@ Date: *Mar 2023 – May 2024*
 Website: [mears.net](https://www.mears.net) • Energy Industry | 2,500 Employees  
 Date: *Oct 2017 – Mar 2023*
 
-* **Role:** Managed Software Development Team. Acted as Hands-on Technical Lead, performing Requirements Discovery (in conjunction with PM), Architecture, Design, Development (Full-Stack Coding), QA, DevOps, and Production Support. Also administered On-Prem Windows Servers, Azure DevOps, and Azure subscription.
-* **Team Size:** 4 Developers, 1 PM, 7 Offshore (100% remote team, Direct Reports = FTE Developers and PM).
-* **Tech Stack:** .NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure/Windows Server, JavaScript (Angular/Node/Electron), Git, PowerBI, PowerAutomate, Java (Spring Boot).
-* **Project:** Mission Critical SOX-compliant and high-availability internally developed Revenue/Time/Equipment Field Capture solution, used by **700+** field construction crews across the U.S., speeding up the closing process by **75%**.
+* **Role:** People manager and hands-on technical lead for the Operations Technology software development team, covering requirements, architecture, design, full-stack development, QA, DevOps, and production support. Also administered on-prem Windows servers, Azure DevOps, and the Azure subscription.
+* **Team Size:** 4 developers, 1 PM, and 7 offshore developers (100% remote; direct reports: FTE developers and PM).
+* **Tech Stack:** .NET (C#, ASP.NET Core, Blazor), SQL Server, SQLite, Azure, Windows Server, JavaScript (Angular, Node, Electron), Git, Power BI, Power Automate, Java (Spring Boot).
+* **Project:** Mission-critical, SOX-compliant revenue/time/equipment field capture solution used by **700+** construction crews across the U.S.; sped up the closing process by **75%**.
 * **Titles:** Manager (2017–2020), Senior Manager (2020–2021), Director (2021–2023).
-* Traveled to various U.S. locations to roll out applications and lead Change Management (25% travel).
-* Implemented and trained organization on DevOps, CICD, Agile Scrum, Kanban, GitFlow, and QA processes, increasing delivery speed by **50%**.
+* Traveled to U.S. field locations to roll out applications and lead change management (25% travel).
+* Implemented and trained the organization on DevOps, CI/CD, Agile Scrum, Kanban, GitFlow, and QA processes, increasing delivery speed by **50%**.
 
 ---
 
@@ -78,9 +77,9 @@ Date: *Oct 2017 – Mar 2023*
 Website: [wwmach.com](https://www.wwmach.com) • Construction | 60 Employees  
 Date: *Apr 2016 – Oct 2017*
 
-* Led internal software development team (3 internal and 5 contract developers) and reported to co-owner of company.
-* Full-stack development delivering mission-critical asset management software (desktop, mobile, and web) managing **$300M** in heavy machinery assets.
-* Built mobile-first SPA to enable employees to utilize real-time telemetry on machinery assets.
+* Led internal software development team (3 internal and 5 contract developers), reporting to the company’s co-owner.
+* Full-stack development of mission-critical asset management software (desktop, mobile, and web) managing **$300M** in heavy machinery assets.
+* Built a mobile-first SPA giving employees real-time telemetry on machinery assets.
 
 ---
 
@@ -89,9 +88,9 @@ Date: *Apr 2016 – Oct 2017*
 Website: [hp.com](https://www.hp.com) • Consumer Electronics | 50,000 Employees  
 Date: *Dec 2011 – Feb 2016*
 
-* Designated as technical lead over mission-critical third level support tool with **10k+** global users.
-* Full-stack development delivering 3-tier web applications using .NET, MS SQL, and JavaScript.
-* Led logical split and cloning of system during HP's split into HPE and HP Inc.
+* Designated technical lead over a mission-critical, third-level support tool with **10k+** global users.
+* Full-stack development of 3-tier web applications using .NET, SQL Server, and JavaScript.
+* Led logical split and cloning of the system during HP’s split into HPE and HP Inc.
 * **Titles:** Senior Developer (2011–2013), Technical Lead (2013–2016).
 
 ---
@@ -99,14 +98,14 @@ Date: *Dec 2011 – Feb 2016*
 ### **X-Fab Texas, Inc.** — *Software / Systems Engineer*
 
 Website: [xfab.com](https://www.xfab.com/en/about-x-fab/corporate-overview/locations/usa-texas-single/) • Semiconductor Manufacturing | 400 Employees  
-Date: *Jan 2010 – Nov 2011*
+Date: *Jul 2007 – Nov 2011*
 
 * Built ASP.NET/C# and WinForms applications with MSSQL backends.
 * Designed and administered Windows/Linux servers.
 * Developed machine monitoring and inventory tracking systems deployed globally.
 
 **Earlier:**
-*IT Intern* — X-Fab Texas, Inc. (May 2007 – Dec 2009)
+*IT Intern* — X-Fab Texas, Inc., in conjunction with Texas Tech University (May 2007 – Jul 2007)
 
 * Developed statistical tools, format converters, and internal web applications.
 
