@@ -39,15 +39,15 @@ const translations = {
         },
         {
           date: "Apr 2021 — Mar 2023",
-          title: "Director of Operations Technology, MEARS Group",
+          title: "Director of Operations Technology, MEARS Group (a Quanta Services Company)",
         },
         {
           date: "Mar 2020 — Apr 2021",
-          title: "Senior Manager of Operations Technology, MEARS Group",
+          title: "Senior Manager of Operations Technology, MEARS Group (a Quanta Services Company)",
         },
         {
           date: "Oct 2017 — Mar 2020",
-          title: "Manager of Operations Technology, MEARS Group",
+          title: "Manager of Operations Technology, MEARS Group (a Quanta Services Company)",
         },
         {
           date: "Apr 2016 — Oct 2017",
@@ -92,7 +92,7 @@ const translations = {
             "React, .NET (C#, UWP, ASP.NET Core), SQL Server, Oracle DB, Azure, AWS, Windows Server, Git (Azure DevOps), Boomi, Snowflake.",
         },
         {
-          name: "MEARS Group (Energy Industry)",
+          name: "MEARS Group, a Quanta Services Company (Energy Industry)",
           url: "https://www.mears.net",
           techStack:
             ".NET (C#, ASP.NET Core, Blazor), SQL Server, SQLite, Azure, Windows Server, JavaScript (Angular, Node, Electron), Git (Azure DevOps), Power BI, Power Automate, Java (Spring Boot), Python, Raspberry Pi.",
