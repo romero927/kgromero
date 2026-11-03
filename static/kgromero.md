@@ -23,7 +23,7 @@ Software engineering leader with nearly 20 years building and scaling teams, fro
 Website: [tenna.com](https://www.tenna.com) • Construction B2B SaaS | 200 Employees  
 Date: *Oct 2025 – Present*
 
-* **Role:** Led software development team of 6 engineers focused on building new product features for the Tenna platform.
+* **Role:** Lead software development team of 6 engineers focused on building new product features for the Tenna platform.
 * **Projects:** Owner of the integrations domain. Built APIs that let customers tightly couple their internal systems with Tenna, and integrated Tenna with Virtual Superintendent.
 * **AI-Assisted SDLC:** Used Claude Enterprise heavily throughout the spec-driven SDLC, from planning and design through development, code review, and testing.
 * **Tech Stack:** AWS (EKS, Aurora, ElastiCache, S3, Lambda, SQS, DynamoDB, DMS, Kinesis), K8s, Helm, Docker, FluxCD (GitOps), Istio, GitHub Actions, Hapi, Express, Sequelize, React, Redux (Toolkit), SingleSpa (Micro-UI), RabbitMQ, Postgres, Redis, Elasticsearch, Grafana, Prometheus, Tempo, OpenTelemetry, Papertrail, GitHub, JIRA, Confluence, Claude.
