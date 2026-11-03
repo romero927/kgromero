@@ -114,7 +114,7 @@ Date: *Jul 2007 – Nov 2011*
 ## **Education**
 
 **Texas Tech University** — *Bachelor of Science in Computer Engineering*  
-Location: Lubbock, TX • Graduated: *Dec 2009*
+Location: Lubbock, TX • Dates: *May 2005 – Dec 2009*
 
 ---
 
