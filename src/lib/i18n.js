@@ -56,7 +56,7 @@ const translations = {
         { date: "Dec 2013 — Feb 2016", title: "Technical Lead, HP" },
         { date: "Dec 2011 — Dec 2013", title: "Senior Developer, HP" },
         {
-          date: "Jul 2007 — Nov 2011",
+          date: "Jul 2007 — Dec 2011",
           title: "Software / Systems Engineer, X-Fab, Texas",
         },
         {
@@ -64,7 +64,7 @@ const translations = {
           title: "IT Intern, X-Fab, Texas (with Texas Tech University)",
         },
         {
-          date: "May 2005 — Dec 2009",
+          date: "Aug 2005 — Dec 2009",
           title:
             "Bachelor of Science in Computer Engineering, Texas Tech University",
         },

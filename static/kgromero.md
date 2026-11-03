@@ -98,7 +98,7 @@ Date: *Dec 2011 – Feb 2016*
 ### **X-Fab Texas, Inc.** — *Software / Systems Engineer*
 
 Website: [xfab.com](https://www.xfab.com/en/about-x-fab/corporate-overview/locations/usa-texas-single/) • Semiconductor Manufacturing | 400 Employees  
-Date: *Jul 2007 – Nov 2011*
+Date: *Jul 2007 – Dec 2011*
 
 * Built ASP.NET/C# and WinForms applications with MSSQL backends.
 * Designed and administered Windows/Linux servers.
@@ -114,7 +114,7 @@ Date: *Jul 2007 – Nov 2011*
 ## **Education**
 
 **Texas Tech University** — *Bachelor of Science in Computer Engineering*  
-Location: Lubbock, TX • Dates: *May 2005 – Dec 2009*
+Location: Lubbock, TX • Dates: *Aug 2005 – Dec 2009*
 
 ---
 
