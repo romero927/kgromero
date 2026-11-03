@@ -80,12 +80,10 @@ const translations = {
             "AWS (EKS, Aurora, ElastiCache, S3, Lambda, SQS, DynamoDB, DMS, Kinesis), K8s, Helm, Docker, FluxCD (GitOps), Istio, GitHub Actions, Hapi, Express, Sequelize, React, Redux (Toolkit), SingleSpa (Micro-UI), RabbitMQ, Postgres, Redis, Elasticsearch, Grafana, Prometheus, Tempo, OpenTelemetry, Papertrail, GitHub, JIRA, Confluence, Claude.",
         },
         {
-          name: "Dexian (Staffing, IT Services, and Workforce Solutions)",
-          url: "https://dexian.com",
-          client: "Deloitte Consulting",
-          client_url: "https://deloitte.com",
+          name: "Deloitte Consulting (Contract via Dexian)",
+          url: "https://www.deloitte.com",
           techStack:
-            "Azure Cloud, Containerized Node Express API (Azure App Services), .NET Microservices (Azure Functions), Angular F.E., SAP / CC&B B.E., Tibco + Boomi Data Integrations, Redis Cache, CosmosDB, MS-SQL DB (Azure), Azure DevOps, Confluence.",
+            "Azure, containerized Node/Express API (Azure App Services), .NET microservices (Azure Functions), Angular front end, SAP/CC&B back end, Tibco and Boomi data integrations, Redis, Cosmos DB, SQL Server (Azure), Azure DevOps, Confluence.",
         },
         {
           name: "Raymour & Flanigan (Retail Industry)",
@@ -97,13 +95,13 @@ const translations = {
           name: "MEARS Group (Energy Industry)",
           url: "https://www.mears.net",
           techStack:
-            ".NET (C#, ASP.NET Core, Blazor), SQL Server, Sqlite3, Azure / Windows Server, JavaScript (Angular / Node / Electron), Git (Azure DevOps), PowerBI, PowerAutomate, Java (Spring Boot), Python, Raspberry Pi.",
+            ".NET (C#, ASP.NET Core, Blazor), SQL Server, SQLite, Azure, Windows Server, JavaScript (Angular, Node, Electron), Git (Azure DevOps), Power BI, Power Automate, Java (Spring Boot), Python, Raspberry Pi.",
         },
         {
           name: "Worldwide Machinery (Construction Industry)",
           url: "https://www.wwmach.com",
           techStack:
-            ".NET (C#, ASP.NET MVC API, WinForms), React, Redux, Typescript (ES6), Node.js, Express, SASS, SQL Server, DigitalOcean, Docker, JIRA, TeamCity, Bitbucket, Ubuntu, Windows Server.",
+            ".NET (C#, ASP.NET MVC API, WinForms), React, Redux, TypeScript (ES6), Node.js, Express, SASS, SQL Server, DigitalOcean, Docker, JIRA, TeamCity, Bitbucket, Ubuntu, Windows Server.",
         },
         {
           name: "HP Inc. (Consumer Electronics Industry)",
@@ -129,7 +127,7 @@ const translations = {
           {
             name: "Processes",
             skills:
-              "DevOps, CICD, GitOps, Agile Scrum, Waterfall, Kanban, GitFlow, Matrixed Organization",
+              "DevOps, CI/CD, GitOps, Agile Scrum, Waterfall, Kanban, GitFlow, Matrixed Organization",
           },
           {
             name: "Architectures",
@@ -156,7 +154,7 @@ const translations = {
           },
           {
             name: "DB",
-            skills: "SQL Server, Postgres (Aurora), Sqlite3, Oracle, DynamoDB",
+            skills: "SQL Server, Postgres (Aurora), SQLite, Oracle, DynamoDB",
           },
           {
             name: "ORM",
@@ -217,7 +215,7 @@ const translations = {
           },
           {
             name: "Reporting",
-            skills: "SSRS, PowerBI",
+            skills: "SSRS, Power BI",
           },
           {
             name: "Other",
