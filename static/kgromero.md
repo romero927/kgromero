@@ -12,7 +12,7 @@ GitHub: https://github.com/romero927
 
 ## **Professional Summary**
 
-Software engineering leader with nearly 20 years building and scaling teams, from hands-on technical lead to Director of a 37-person organization. Proven record of modernizing platforms, cutting costs (40% YoY), and speeding up delivery (50%), now leading AI-assisted, spec-driven development at Tenna, a John Deere Company.
+Software engineering leader with 19+ years building and scaling teams, from hands-on technical lead to Director of a 37-person organization. Proven record of modernizing platforms, cutting costs (40% YoY), and speeding up delivery (50%), now leading AI-assisted, spec-driven development at Tenna, a John Deere Company.
 
 ---
 

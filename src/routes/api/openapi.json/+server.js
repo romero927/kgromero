@@ -65,7 +65,7 @@ const openApiSpec = {
               name: { type: "string", example: "Kyle Romero" },
               label: {
                 type: "string",
-                example: "Director of Software Development",
+                example: "Software Engineering Leader",
               },
               email: {
                 type: "string",

@@ -74,7 +74,7 @@ const translations = {
       title: "Skills",
       companies: [
         {
-          name: "Tenna (Construction Technology Industry)",
+          name: "Tenna, a John Deere Company (Construction Technology Industry)",
           url: "https://tenna.com",
           techStack:
             "AWS (EKS, Aurora, ElastiCache, S3, Lambda, SQS, DynamoDB, DMS, Kinesis), K8s, Helm, Docker, FluxCD (GitOps), Istio, GitHub Actions, Hapi, Express, Sequelize, React, Redux (Toolkit), SingleSpa (Micro-UI), RabbitMQ, Postgres, Redis, Elasticsearch, Grafana, Prometheus, Tempo, OpenTelemetry, Papertrail, GitHub, JIRA, Confluence, Claude.",
