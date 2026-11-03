@@ -22,6 +22,12 @@
   google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=static/Kyle_Romero-Coverletter.pdf coverletter/Kyle_Romero-Coverletter.html
   ```
 
+- Resume source: `resume/Kyle_Romero-Resume.html` (fonts are bundled in `resume/`). To rebuild the PDF after editing (must stay one page):
+  ```
+  google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=static/Kyle_Romero-Resume.pdf resume/Kyle_Romero-Resume.html
+  ```
+  Also keep `static/kgromero.md`, `static/kgromero.json`, and `static/Kyle_Romero-Resume.docx` in sync.
+
 ## Built by:
 - Kyle Romero
 - Jersey City, NJ 07311
