@@ -28,10 +28,10 @@ const translations = {
     experience: {
       title: "Experience",
       timeline: [
-        { date: "Oct 2025 — Current", title: "Team Lead, Tenna" },
+        { date: "Oct 2025 — Current", title: "Team Lead, Tenna (a John Deere Company)" },
         {
           date: "Mar 2025 — Oct 2025",
-          title: "Contractor, Dexian (Client: Deloitte Consulting)",
+          title: "Technical Lead (Back End), Deloitte Consulting (via Dexian)",
         },
         {
           date: "Mar 2023 — May 2024",
@@ -56,12 +56,12 @@ const translations = {
         { date: "Dec 2013 — Feb 2016", title: "Technical Lead, HP" },
         { date: "Dec 2011 — Dec 2013", title: "Senior Developer, HP" },
         {
-          date: "Jul 2007 — Dec 2011",
-          title: "Software Developer, X-Fab, Texas",
+          date: "Jul 2007 — Nov 2011",
+          title: "Software / Systems Engineer, X-Fab, Texas",
         },
         {
           date: "May 2007 — Jul 2007",
-          title: "Software Development Intern, X-Fab, Texas",
+          title: "IT Intern, X-Fab, Texas (with Texas Tech University)",
         },
         {
           date: "May 2005 — Dec 2009",
