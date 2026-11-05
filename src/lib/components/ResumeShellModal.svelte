@@ -1,6 +1,7 @@
 <script>
   import { onMount } from 'svelte';
   import { fly } from 'svelte/transition';
+  import { Minus, Maximize2, Minimize2 } from '@lucide/svelte';
   import Modal from './Modal.svelte';
   import { portal } from '$lib/utils.js';
   import { t, yearsExperience } from '$lib/i18n';
@@ -419,23 +420,20 @@
 
 {#snippet prompt()}<span class="text-green-300">kyle@resume</span><span class="text-green-700">:</span><span class="text-emerald-500">~</span><span class="text-green-700">$</span>{/snippet}
 
-{#snippet windowDots()}
-  <!-- macOS-style window controls; symbols appear on hover/focus like the real thing -->
-  <div class="group flex gap-1.5">
-    {#each [
-      { label: 'Close terminal', color: 'bg-red-500/80 hover:bg-red-500', path: 'M3 3l6 6M9 3l-6 6', action: () => (open = false) },
-      { label: 'Minimize terminal', color: 'bg-yellow-500/80 hover:bg-yellow-500', path: 'M2.5 6h7', action: minimize },
-      { label: maximized ? 'Restore terminal size' : 'Maximize terminal', color: 'bg-green-500/80 hover:bg-green-500', path: maximized ? 'M8.5 3.5l-5 5M3.5 5v3.5H7' : 'M6 2.5v7M2.5 6h7', action: toggleMaximize }
-    ] as dot (dot.color)}
-      <button
-        type="button"
-        onclick={dot.action}
-        aria-label={dot.label}
-        title={dot.label}
-        class="flex h-3 w-3 items-center justify-center rounded-full p-0 text-black/0 transition-colors group-hover:text-black/60 group-focus-within:text-black/60 focus-visible:ring-2 focus-visible:ring-green-400 focus-visible:outline-hidden {dot.color}"
-      ><svg viewBox="0 0 12 12" class="h-3 w-3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d={dot.path} /></svg></button>
-    {/each}
-  </div>
+{#snippet windowButtons()}
+  <!-- Sit beside the Modal's own close X and share its terminal styling -->
+  {#each [
+    { label: 'Minimize terminal', icon: Minus, action: minimize },
+    { label: maximized ? 'Restore terminal size' : 'Maximize terminal', icon: maximized ? Minimize2 : Maximize2, action: toggleMaximize }
+  ] as btn (btn.label)}
+    <button
+      type="button"
+      onclick={btn.action}
+      aria-label={btn.label}
+      title={btn.label}
+      class="flex h-7 w-7 items-center justify-center rounded-sm text-green-500 hover:text-green-400 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:outline-hidden"
+    ><btn.icon size={18} aria-hidden="true" /></button>
+  {/each}
 {/snippet}
 
 <Modal
@@ -445,7 +443,7 @@
   theme="terminal"
   size={maximized ? 'max-w-none h-[90svh]' : 'max-w-6xl'}
   bodyClass="flex flex-col"
-  headerStart={windowDots}
+  headerActions={windowButtons}
 >
   <div bind:this={outputElement} class="terminal-scroll {maximized ? 'min-h-0 flex-1' : 'h-[70svh]'} overflow-y-auto p-4 whitespace-pre-wrap">
     {#each output as line}
