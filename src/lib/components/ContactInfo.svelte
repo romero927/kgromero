@@ -1,6 +1,6 @@
 <script>
   import { t } from '$lib/i18n';
-  import { ArrowRight, Contact, Link, Mail, Phone } from '@lucide/svelte';
+  import { ArrowRight, Contact, KeyRound, Link, Mail, Phone } from '@lucide/svelte';
   import BrandIcon from './BrandIcon.svelte';
   </script>
   
@@ -23,6 +23,10 @@
       <li class="flex items-start space-x-4 group">
         <BrandIcon name="github" class="group-hover:text-neo-accent transition-colors shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
         <a href="https://github.com/romero927" target="_blank" rel="noopener noreferrer" class="neo-highlight break-all leading-tight" aria-label="GitHub profile">GitHub</a>
+      </li>
+      <li class="flex items-start space-x-4 group">
+        <KeyRound size="1em" class="group-hover:text-neo-accent transition-colors shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true" />
+        <a href="https://keyoxide.org/F02BD48546CA7C0E5C51F37747EA15F6FE485B62" target="_blank" rel="me noopener noreferrer" class="neo-highlight break-all leading-tight" aria-label="Keyoxide verified identity">Keyoxide</a>
       </li>
       <li class="flex items-start space-x-4 group">
         <Link size="1em" class="group-hover:text-neo-accent transition-colors shrink-0 mt-1 text-neo-black/55 dark:text-gray-400" aria-hidden="true"/>

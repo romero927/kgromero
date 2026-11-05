@@ -16,6 +16,7 @@ export const seoData = {
     sameAs: [
       "https://www.linkedin.com/in/kyleromero/",
       "https://github.com/romero927",
+      "https://keyoxide.org/F02BD48546CA7C0E5C51F37747EA15F6FE485B62",
     ],
   },
 };
