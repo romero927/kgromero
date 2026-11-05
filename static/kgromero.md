@@ -6,7 +6,8 @@ Phone: (281) 857-9006
 Email: [kgromero@gmail.com](mailto:kgromero@gmail.com)  
 Website: [kgromero.com](https://kgromero.com)  
 LinkedIn: https://www.linkedin.com/in/kyleromero  
-GitHub: https://github.com/romero927
+GitHub: https://github.com/romero927  
+Keyoxide: https://keyoxide.org/F02BD48546CA7C0E5C51F37747EA15F6FE485B62
 
 ---
 
