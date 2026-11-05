@@ -88,6 +88,14 @@
     dark:focus-visible:ring-neo-accent;
   }
 
+  /* Terminal title-bar buttons: glow on hover, dip on press */
+  .terminal-button {
+    @apply h-7 w-7 rounded-sm text-green-500 transition duration-150
+    hover:bg-green-500/15 hover:text-green-300 hover:[filter:drop-shadow(0_0_4px_rgba(74,222,128,0.6))]
+    active:bg-green-500/25 motion-safe:active:scale-90
+    focus:outline-hidden focus-visible:ring-2 focus-visible:ring-green-500;
+  }
+
   .neo-cta {
     @apply inline-flex items-center gap-3 self-start
            bg-transparent border-2 border-neo-black text-neo-black shadow-neo

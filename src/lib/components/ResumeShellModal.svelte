@@ -431,7 +431,7 @@
       onclick={btn.action}
       aria-label={btn.label}
       title={btn.label}
-      class="flex h-7 w-7 items-center justify-center rounded-sm text-green-500 hover:text-green-400 focus-visible:ring-2 focus-visible:ring-green-500 focus-visible:outline-hidden"
+      class="terminal-button flex items-center justify-center"
     ><btn.icon size={18} aria-hidden="true" /></button>
   {/each}
 {/snippet}

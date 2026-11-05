@@ -47,7 +47,7 @@
       panel: 'bg-[#0a0f0b]/95 text-green-400 font-mono rounded-lg border border-green-900/70 shadow-[0_0_40px_rgba(34,197,94,0.12)] [text-shadow:0_0_6px_rgba(74,222,128,0.3)] selection:bg-green-500/30 selection:text-green-100',
       header: 'border-b border-green-900/70 bg-green-950/40 rounded-t-lg py-2!',
       title: 'text-sm text-green-700',
-      close: 'h-7 w-7 text-green-500 hover:text-green-400 focus-visible:ring-2 focus-visible:ring-green-500 rounded-sm'
+      close: 'terminal-button hover:bg-red-500/15 hover:text-red-400 hover:[filter:drop-shadow(0_0_4px_rgba(248,113,113,0.6))] active:bg-red-500/25'
     }
   };
   let styles = $derived(themes[theme] ?? themes.neo);
