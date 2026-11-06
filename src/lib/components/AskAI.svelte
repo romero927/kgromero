@@ -28,9 +28,9 @@ Then give me a short summary of his experience, strengths, and the kinds of role
   }
 </script>
 
-<div class="neo-card max-w-full" role="region" aria-label="Ask your AI about me">
+<div class="neo-card max-w-full" role="region" aria-label="Ask your AI">
   <div class="flex items-baseline justify-between gap-3 mb-2">
-    <h2 class="card-title">Ask Your AI About Me</h2>
+    <h2 class="card-title">Ask Your AI</h2>
     <a href="/api-docs#mcp" class="shrink-0 inline-flex items-center gap-1 text-xs font-medium neo-highlight underline underline-offset-2 decoration-dotted">
       MCP setup
       <ArrowUpRight size={12} aria-hidden="true" />
