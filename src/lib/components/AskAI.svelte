@@ -29,15 +29,18 @@ Then give me a short summary of his experience, strengths, and the kinds of role
 </script>
 
 <div class="neo-card max-w-full" role="region" aria-label="Ask your AI about me">
-  <h2 class="card-title mb-2">Ask Your AI About Me</h2>
-  <p class="text-sm text-neo-black/85 dark:text-gray-300 mb-4">
-    Get a quick read on my background from Claude, ChatGPT, Gemini, or any AI assistant.
+  <div class="flex items-baseline justify-between gap-3 mb-2">
+    <h2 class="card-title">Ask Your AI About Me</h2>
+    <a href="/api-docs#mcp" class="shrink-0 text-xs underline text-neo-black/60 hover:text-neo-accent dark:text-gray-400">MCP setup</a>
+  </div>
+  <p class="text-sm text-neo-black/85 dark:text-gray-300 mb-3">
+    Get a quick summary from any AI assistant.
   </p>
 
   <button
     type="button"
     onclick={copy}
-    class="group w-full sm:w-fit xl:w-full flex items-center gap-3 px-2 py-2 rounded-full border-2 border-neo-black dark:border-dark-border
+    class="group w-full sm:w-fit xl:w-full flex items-center gap-3 px-2 py-1.5 rounded-full border-2 border-neo-black dark:border-dark-border
            bg-white dark:bg-dark-card shadow-neo dark:shadow-neo-dark transition-all
            hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none
            focus:outline-hidden focus-visible:ring-2 focus-visible:ring-neo-accent focus-visible:ring-offset-2"
@@ -63,7 +66,4 @@ Then give me a short summary of his experience, strengths, and the kinds of role
   </button>
   <span class="sr-only" aria-live="polite">{copied ? 'Prompt copied to clipboard' : ''}</span>
 
-  <p class="mt-3 text-xs text-neo-black/60 dark:text-gray-400">
-    Using Claude Code or Cursor? <a href="/api-docs#mcp" class="underline hover:text-neo-accent">Connect the MCP server</a>.
-  </p>
 </div>

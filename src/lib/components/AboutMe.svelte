@@ -6,7 +6,7 @@
   let showPhoto = $state(false);
 </script>
 
-<div class="neo-card max-w-full" role="region" aria-label="About Me">
+<div class="neo-card max-w-full justify-center" role="region" aria-label="About Me">
   <h2 class="card-title mb-4">
     <button
       type="button"
