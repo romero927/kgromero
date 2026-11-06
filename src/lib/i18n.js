@@ -236,6 +236,11 @@ const translations = {
           link: "https://github.com/romero927/kgromero",
         },
         {
+          name: "(Python) kgromero.com MCP Server",
+          description: "Lets AI assistants like Claude answer questions about my experience, skills, and projects. Connect at kgromero.com/mcp.",
+          link: "https://github.com/romero927/kgromero-mcp",
+        },
+        {
           name: "(React) Scordle",
           description: "Timed word-guessing game with scoring and stats. Play it at scordle.xyz.",
           link: "https://github.com/romero927/Scordle",

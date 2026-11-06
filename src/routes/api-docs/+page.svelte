@@ -74,6 +74,48 @@
     </div>
   </div>
 
+  <!-- MCP Server -->
+  <div id="mcp" class="neo-card mb-8 scroll-mt-24">
+    <div class="p-6">
+      <h2 class="text-2xl font-bold mb-4">MCP Server (for AI assistants)</h2>
+      <p class="mb-2">
+        Connect Claude, Cursor, or any other <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">MCP</a> client to ask questions about my experience, skills, projects, and documents. Read-only, no sign-in needed.
+      </p>
+      <p class="mb-4">
+        <strong>URL:</strong> <code>https://kgromero.com/mcp</code> (Streamable HTTP) ·
+        <a href="https://github.com/romero927/kgromero-mcp" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">Source on GitHub</a>
+      </p>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="font-bold mb-2">Claude Code</h3>
+          <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>claude mcp add --transport http kgromero https://kgromero.com/mcp</code></pre>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2">Claude (web and desktop)</h3>
+          <p>Settings → Connectors → Add custom connector, then paste <code>https://kgromero.com/mcp</code>.</p>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2">Cursor and other clients (JSON config)</h3>
+          <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>{`{
+  "mcpServers": {
+    "kgromero": { "url": "https://kgromero.com/mcp" }
+  }
+}`}</code></pre>
+        </div>
+        <div>
+          <h3 class="font-bold mb-2">Things to ask</h3>
+          <ul class="list-disc pl-6">
+            <li>"What has Kyle built with AWS, and when?"</li>
+            <li>"Summarize Kyle's leadership experience."</li>
+            <li>"How well does Kyle fit this job description?" (paste a posting)</li>
+            <li>"Show me Kyle's architecture diagrams from MEARS."</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
   {#if apiSpec}
     <!-- Endpoints Section -->
     <div class="neo-card mb-8">

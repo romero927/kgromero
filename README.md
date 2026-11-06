@@ -15,6 +15,8 @@
   -  `npm run check` - svelte-check (types + a11y); runs before every Netlify build
   -  `npm run format` - prettier
 
+- MCP server: `https://kgromero.com/mcp` is proxied (`src/routes/mcp/+server.js`) to the Python server at [romero927/kgromero-mcp](https://github.com/romero927/kgromero-mcp), hosted on Fly.io. It reads `/api/resume` and `/api/site.json`. Setup instructions are on `/api-docs#mcp`.
+
 - Main page code: `src/routes/+page.svelte`; site copy lives in `src/lib/i18n.js`; supporting documents are served from `static/docs/`.
 
 - Cover letter source: `coverletter/Kyle_Romero-Coverletter.html`. To rebuild the PDF after editing:
