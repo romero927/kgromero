@@ -1,4 +1,5 @@
 <script>
+  import { travelLocations } from "$lib/travel.js";
   import { untrack } from 'svelte';
   import { Globe } from '@lucide/svelte';
   import Modal from './Modal.svelte';
@@ -11,72 +12,6 @@
   let mouseX = $state(0);
   let mouseY = $state(0);
   let labelAbove = $state(false); // touch: show the label above the finger
-
-  const travelLocations = [
-    { lat: 29.7604, lng: -95.3698, label: 'Houston', lived: true },
-    { lat: 33.5779, lng: -101.8552, label: 'Lubbock', lived: true },
-    { lat: 29.3013, lng: -94.7977, label: 'Galveston', lived: true },
-    { lat: 40.7178, lng: -74.0431, label: 'Jersey City', lived: true },
-    { lat: 40.7128, lng: -74.0060, label: 'New York City', lived: false },
-    { lat: 47.6062, lng: -122.3321, label: 'Seattle', lived: false },
-    { lat: 37.7749, lng: -122.4194, label: 'San Francisco', lived: false },
-    { lat: 34.0522, lng: -118.2437, label: 'Los Angeles', lived: false },
-    { lat: 39.7392, lng: -104.9903, label: 'Denver', lived: false },
-    { lat: 33.4484, lng: -112.0740, label: 'Phoenix', lived: false },
-    { lat: 29.9511, lng: -90.0715, label: 'New Orleans', lived: false },
-    { lat: 43.6591, lng: -70.2568, label: 'Portland', lived: false },
-    { lat: 36.1699, lng: -115.1398, label: 'Las Vegas', lived: false },
-    { lat: 58.3019, lng: -134.4197, label: 'Juneau', lived: false },
-    { lat: 48.4284, lng: -123.3656, label: 'Victoria', lived: false },
-    { lat: 39.0997, lng: -94.5786, label: 'Kansas City', lived: false },
-    { lat: 25.7617, lng: -80.1918, label: 'Miami', lived: false },
-    { lat: 28.5383, lng: -81.3792, label: 'Orlando', lived: false },
-    { lat: 35.2271, lng: -80.8431, label: 'Charlotte', lived: false },
-    { lat: 36.8508, lng: -76.2859, label: 'Norfolk', lived: false },
-    { lat: 37.2707, lng: -76.7075, label: 'Colonial Williamsburg', lived: false },
-    { lat: 38.9072, lng: -77.0369, label: 'Washington D.C.', lived: false },
-    { lat: 42.3314, lng: -83.0458, label: 'Detroit', lived: false },
-    { lat: 41.8781, lng: -87.6298, label: 'Chicago', lived: false },
-    { lat: 43.0962, lng: -79.0377, label: 'Niagara Falls', lived: false },
-    { lat: 43.6532, lng: -79.3832, label: 'Toronto', lived: false },
-    { lat: 39.9526, lng: -75.1652, label: 'Philadelphia', lived: false },
-    { lat: 44.3876, lng: -68.2039, label: 'Acadia N.P.', lived: false },
-    { lat: 32.3078, lng: -64.7505, label: 'Bermuda', lived: false },
-    { lat: 19.7934, lng: -70.6884, label: 'Puerto Plata', lived: false },
-    { lat: 13.9094, lng: -60.9789, label: 'Saint Lucia', lived: false },
-    { lat: 17.5046, lng: -88.1962, label: 'Belize City', lived: false },
-    { lat: 20.4230, lng: -86.9223, label: 'Cozumel', lived: false },
-    { lat: 16.3067, lng: -86.5496, label: 'Roatan', lived: false },
-    { lat: 53.3498, lng: -6.2603, label: 'Dublin', lived: false },
-    { lat: 51.5074, lng: -0.1278, label: 'London', lived: false },
-    { lat: 41.3851, lng: 2.1734, label: 'Barcelona', lived: false },
-    { lat: 43.2965, lng: 5.3698, label: 'Marseille', lived: false },
-    { lat: 43.5528, lng: 7.0174, label: 'Cannes', lived: false },
-    { lat: 39.5696, lng: 2.6502, label: 'Palma de Mallorca', lived: false },
-    { lat: 38.9067, lng: 1.4206, label: 'Ibiza', lived: false },
-    { lat: 21.3069, lng: -157.8583, label: 'Honolulu', lived: false },
-    { lat: 32.7767, lng: -96.7970, label: 'Dallas', lived: false },
-    { lat: 30.2672, lng: -97.7431, label: 'Austin', lived: false },
-    { lat: 31.5493, lng: -97.1467, label: 'Waco', lived: false },
-    { lat: 35.1495, lng: -90.0490, label: 'Memphis', lived: false },
-    { lat: 39.2904, lng: -76.6122, label: 'Baltimore', lived: false },
-    { lat: 30.3322, lng: -81.6557, label: 'Jacksonville', lived: false },
-    { lat: 30.3935, lng: -86.4958, label: 'Destin', lived: false },
-    { lat: 55.3422, lng: -131.6461, label: 'Ketchikan', lived: false },
-    { lat: 59.4583, lng: -135.3139, label: 'Skagway', lived: false },
-    { lat: 29.9749, lng: -92.1344, label: 'Abbeville', lived: false },
-    { lat: 33.7490, lng: -84.3880, label: 'Atlanta', lived: false },
-    { lat: 36.0544, lng: -112.1401, label: 'Grand Canyon', lived: false },
-    { lat: 34.8697, lng: -111.7610, label: 'Sedona', lived: false },
-    { lat: 36.9981, lng: -110.0953, label: 'Monument Valley', lived: false },
-    { lat: 39.6433, lng: -106.3781, label: 'Vail', lived: false },
-    { lat: 20.7984, lng: -156.3319, label: 'Maui', lived: false },
-    { lat: 40.3428, lng: -105.6836, label: 'Rocky Mountain N.P.', lived: false },
-    { lat: 29.1275, lng: -103.2425, label: 'Big Bend N.P.', lived: false },
-    { lat: 42.3601, lng: -71.0589, label: 'Boston', lived: false },
-    { lat: 36.1627, lng: -86.7816, label: 'Nashville', lived: false },
-    { lat: 35.7954, lng: -83.5304, label: 'Dollywood', lived: false },
-  ];
 
 
   // Border vertex pairs per file, kept so reopening the globe skips the fetch and parse

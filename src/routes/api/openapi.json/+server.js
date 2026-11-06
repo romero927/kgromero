@@ -52,6 +52,21 @@ const openApiSpec = {
         },
       },
     },
+    "/api/site.json": {
+      get: {
+        summary: "Get Site Content",
+        description:
+          "Everything on the home page beyond the resume: title timeline, tech stack by company, skill categories, side projects, interests, favorite tech resources, supporting documents, and travel map locations",
+        operationId: "getSite",
+        tags: ["Site"],
+        responses: {
+          200: {
+            description: "Successful response",
+            content: { "application/json": { schema: { type: "object" } } },
+          },
+        },
+      },
+    },
   },
   components: {
     schemas: {
