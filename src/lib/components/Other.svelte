@@ -35,7 +35,14 @@
                 <Link size="1em" class="shrink-0 mr-2 text-neo-black/55 dark:text-gray-400 group-hover:text-neo-accent transition-colors text-xs" aria-hidden="true"/>
                 <span class="neo-highlight wrap-break-word font-medium">{project.name}</span>
               </a>
-              <p class="ml-6 mt-0.5 text-xs leading-snug text-neo-black/70 dark:text-gray-400">{project.description}</p>
+              <p class="ml-6 mt-0.5 text-xs leading-snug text-neo-black/70 dark:text-gray-400">
+                {#if project.site && project.description.includes(project.site.text)}
+                  {@const [before, after] = project.description.split(project.site.text)}
+                  {before}<a href={project.site.url} target="_blank" rel="noopener noreferrer" class="neo-highlight underline underline-offset-2 decoration-dotted">{project.site.text}</a>{after}
+                {:else}
+                  {project.description}
+                {/if}
+              </p>
             </li>
           {/each}
         </ul>

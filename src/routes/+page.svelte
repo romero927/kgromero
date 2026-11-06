@@ -45,7 +45,7 @@
         <p class="mt-4 text-base sm:text-lg leading-relaxed text-neo-black/85 dark:text-gray-300">
           <b class="text-neo-black dark:text-gray-100">{yearsExperience} years</b> building software and leading the teams that ship it.
         </p>
-        <div class="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div class="mt-6 grid grid-cols-1 sm:grid-cols-[minmax(0,1fr)_auto_minmax(0,1.3fr)] gap-3 sm:gap-x-6">
           <div class="border-l-2 border-neo-accent pl-3">
             <div class="card-eyebrow">Currently</div>
             <div class="text-sm font-bold mt-0.5 text-neo-black dark:text-gray-100">{$t.experience.timeline[0].title}</div>

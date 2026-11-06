@@ -244,6 +244,8 @@ const translations = {
           name: "(React) Scordle",
           description: "Timed word-guessing game with scoring and stats. Play it at scordle.xyz.",
           link: "https://github.com/romero927/Scordle",
+          // Text in the description to turn into a link to the live site
+          site: { text: "scordle.xyz", url: "https://scordle.xyz" },
         },
         {
           name: "(C#) Reddit Listener",
