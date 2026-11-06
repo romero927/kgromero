@@ -1,5 +1,5 @@
 <script>
-  import { Copy, Check } from '@lucide/svelte';
+  import { ArrowUpRight, Copy, Check } from '@lucide/svelte';
   import BrandIcon from './BrandIcon.svelte';
   import { copyText } from '$lib/clipboard.js';
 
@@ -31,7 +31,10 @@ Then give me a short summary of his experience, strengths, and the kinds of role
 <div class="neo-card max-w-full" role="region" aria-label="Ask your AI about me">
   <div class="flex items-baseline justify-between gap-3 mb-2">
     <h2 class="card-title">Ask Your AI About Me</h2>
-    <a href="/api-docs#mcp" class="shrink-0 text-xs underline text-neo-black/60 hover:text-neo-accent dark:text-gray-400">MCP setup</a>
+    <a href="/api-docs#mcp" class="shrink-0 inline-flex items-center gap-1 text-xs font-medium neo-highlight underline underline-offset-2 decoration-dotted">
+      MCP setup
+      <ArrowUpRight size={12} aria-hidden="true" />
+    </a>
   </div>
   <p class="text-sm text-neo-black/85 dark:text-gray-300 mb-3">
     Get a quick summary from any AI assistant.
