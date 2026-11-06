@@ -2,6 +2,7 @@
   import { fade, fly } from 'svelte/transition';
   import NavBar from '$lib/components/NavBar.svelte';
   import AboutMe from '$lib/components/AboutMe.svelte';
+  import AskAI from '$lib/components/AskAI.svelte';
   import ContactInfo from '$lib/components/ContactInfo.svelte';
   import Experience from '$lib/components/Experience.svelte';
   import Skills from '$lib/components/Skills.svelte';
@@ -64,9 +65,13 @@
       </div>
     </section>
 
-    <section aria-label="About Me" class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 mt-4 sm:mt-6">
-      <div class="min-w-0" in:fade="{{ duration: 300, delay: 300 }}">
+    <!-- Side by side only from xl; narrower, the AI card is too cramped next to About Me -->
+    <section aria-label="About Me" class="mx-2 sm:mx-4 md:mx-8 lg:mx-16 xl:mx-24 2xl:mx-32 mt-4 sm:mt-6 grid grid-cols-1 xl:grid-cols-3 gap-4 sm:gap-6">
+      <div class="xl:col-span-2 min-w-0" in:fade="{{ duration: 300, delay: 300 }}">
         <AboutMe />
+      </div>
+      <div class="min-w-0" in:fade="{{ duration: 300, delay: 300 }}">
+        <AskAI />
       </div>
     </section>
 

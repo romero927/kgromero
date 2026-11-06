@@ -1,5 +1,6 @@
 <script>
   import { Copy, Check } from '@lucide/svelte';
+  import { copyText } from '$lib/clipboard.js';
 
   /** @type {{ code: string, label?: string, class?: string }} */
   let { code, label = 'code', class: className = '' } = $props();
@@ -8,27 +9,8 @@
   /** @type {ReturnType<typeof setTimeout> | undefined} */
   let timer;
 
-  // Older browsers, non-secure contexts, or a clipboard call that never settles
-  // (e.g. a pending permission prompt): copy through a hidden textarea instead.
-  function legacyCopy() {
-    const el = document.createElement('textarea');
-    el.value = code;
-    el.setAttribute('readonly', '');
-    el.style.position = 'fixed';
-    el.style.opacity = '0';
-    document.body.appendChild(el);
-    el.select();
-    document.execCommand('copy');
-    el.remove();
-  }
-
   async function copy() {
-    try {
-      const timeout = new Promise((_, reject) => setTimeout(() => reject(new Error('timeout')), 1000));
-      await Promise.race([navigator.clipboard.writeText(code), timeout]);
-    } catch {
-      legacyCopy();
-    }
+    await copyText(code);
     copied = true;
     clearTimeout(timer);
     timer = setTimeout(() => (copied = false), 2000);
