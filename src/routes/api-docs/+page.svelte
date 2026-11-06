@@ -95,11 +95,6 @@
   }
 </script>
 
-<svelte:head>
-  <title>API & MCP Documentation - Kyle Romero</title>
-  <meta name="description" content="Kyle Romero's resume API and MCP server: connect Claude or other AI assistants, or fetch resume and site data as JSON." />
-</svelte:head>
-
 <a href="#main-content" class="skip-link">
   Skip to main content
 </a>
