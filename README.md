@@ -28,7 +28,11 @@
   ```
   google-chrome --headless=new --no-pdf-header-footer --print-to-pdf=static/Kyle_Romero-Resume.pdf resume/Kyle_Romero-Resume.html
   ```
-  Also keep `static/kgromero.md`, `static/kgromero.json`, and `static/Kyle_Romero-Resume.docx` in sync.
+  Then rebuild the Word version from the same HTML, so it matches the PDF (needs ImageMagick for the contact icons):
+  ```
+  python3 resume/build_docx.py
+  ```
+  Also keep `static/kgromero.md` and `static/kgromero.json` in sync.
 
 ## Built by:
 - Kyle Romero
