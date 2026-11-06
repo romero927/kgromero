@@ -15,6 +15,11 @@
       label: 'JSON config',
       code: JSON.stringify({ mcpServers: { kgromero: { url: MCP_URL } } }, null, 2),
     },
+    {
+      name: 'Run it locally instead (stdio, from PyPI)',
+      label: 'local config',
+      code: JSON.stringify({ mcpServers: { kgromero: { command: 'uvx', args: ['kgromero-mcp'] } } }, null, 2),
+    },
   ];
 
   const mcpTools = [
