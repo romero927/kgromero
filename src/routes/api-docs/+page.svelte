@@ -124,7 +124,11 @@
       <h2 class="text-2xl font-bold mb-4">MCP Server (for AI assistants)</h2>
       <p class="mb-4">
         Connect Claude, Cursor, or any other <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">MCP</a> client to ask questions about my experience, skills, projects, and documents. Read-only, no sign-in needed.
-        <a href="https://github.com/romero927/kgromero-mcp" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">Source on GitHub</a>.
+      </p>
+      <p class="mb-4 flex flex-wrap gap-x-4 gap-y-1">
+        <a href="https://github.com/romero927/kgromero-mcp" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">Source on GitHub</a>
+        <a href="https://pypi.org/project/kgromero-mcp/" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">Python package on PyPI</a>
+        <a href="https://registry.modelcontextprotocol.io/v0/servers?search=io.github.romero927/kgromero-mcp" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">MCP Registry listing (JSON)</a>
       </p>
 
       <div class="space-y-6">

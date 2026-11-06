@@ -98,7 +98,7 @@
       </div>
   
       <!-- Desktop Navigation -->
-      <div class="hidden lg:flex items-center space-x-2 lg:space-x-4">
+      <div class="hidden lg:flex items-center space-x-2 xl:space-x-4 whitespace-nowrap">
         <!-- Resume Button -->
         <div class="relative">
         <button class="neo-button-ghost dropdown-trigger flex items-center justify-center h-8 py-0"
