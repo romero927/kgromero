@@ -1,33 +1,75 @@
 <script>
-  import { onMount } from 'svelte';
+  import { tick } from 'svelte';
+  import { openApiSpec as apiSpec } from '$lib/openapi.js';
   import NavBar from '$lib/components/NavBar.svelte';
-  import { t } from '$lib/i18n';
+  import CodeBlock from '$lib/components/CodeBlock.svelte';
   import { ChartLine, Code2 } from '@lucide/svelte';
-  
-  let apiSpec = null;
-  let selectedEndpoint = '/api/resume';
-  let responseData = null;
-  let loading = false;
-  let error = null;
-  
-  onMount(async () => {
-    try {
-      const response = await fetch('/api/openapi.json');
-      apiSpec = await response.json();
-    } catch (e) {
-      error = 'Failed to load API specification';
-      console.error(e);
-    }
-  });
-  
-  async function tryEndpoint(endpoint) {
+
+  const SITE = 'https://kgromero.com';
+  const MCP_URL = `${SITE}/mcp`;
+
+  const mcpClients = [
+    { name: 'Claude Code', label: 'Claude Code command', code: `claude mcp add --transport http kgromero ${MCP_URL}` },
+    {
+      name: 'Cursor, VS Code, and other clients (JSON config)',
+      label: 'JSON config',
+      code: JSON.stringify({ mcpServers: { kgromero: { url: MCP_URL } } }, null, 2),
+    },
+  ];
+
+  const mcpTools = [
+    ['get_profile', 'Title, summary, location, current role, years of experience'],
+    ['list_experience / get_experience', 'Career timeline and full details for each role'],
+    ['get_career_timeline', 'Every title held, including promotions'],
+    ['get_skills', 'Skills by category and by where they were used'],
+    ['list_side_projects', 'Personal projects with GitHub links'],
+    ['list_documents', 'Resume downloads, diagrams, write-ups, and lab reports'],
+    ['get_contact, get_education, get_interests, get_travel', 'Everything else on the site'],
+    ['search', 'Keyword search across all of the above'],
+  ];
+
+  let selectedEndpoint = $state('/api/resume');
+  let responseData = $state(null);
+  let responseMeta = $state(null);
+  let loading = $state(false);
+  let error = $state(null);
+  /** @type {HTMLElement | undefined} */
+  let tryItSection = $state();
+
+  const examples = $derived([
+    { name: 'cURL', code: `curl ${SITE}${selectedEndpoint}` },
+    {
+      name: 'JavaScript / Fetch',
+      code: `const response = await fetch('${SITE}${selectedEndpoint}');\nconst data = await response.json();\nconsole.log(data);`,
+    },
+    {
+      name: 'Python',
+      code: `import requests\n\nresponse = requests.get('${SITE}${selectedEndpoint}')\ndata = response.json()\nprint(data)`,
+    },
+  ]);
+
+  async function tryEndpoint(endpoint, scroll = false) {
+    selectedEndpoint = endpoint;
     loading = true;
     error = null;
     responseData = null;
-    
+    responseMeta = null;
+    if (scroll) {
+      await tick();
+      tryItSection?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    const started = performance.now();
     try {
       const response = await fetch(endpoint);
-      responseData = await response.json();
+      const text = await response.text();
+      responseMeta = {
+        status: response.status,
+        ok: response.ok,
+        ms: Math.round(performance.now() - started),
+        kb: (new Blob([text]).size / 1024).toFixed(1),
+      };
+      responseData = JSON.stringify(JSON.parse(text), null, 2);
     } catch (e) {
       error = 'Failed to fetch data from endpoint';
       console.error(e);
@@ -38,8 +80,8 @@
 </script>
 
 <svelte:head>
-  <title>API Documentation - Kyle Romero</title>
-  <meta name="description" content="Interactive API documentation for Kyle Romero's resume API" />
+  <title>API & MCP Documentation - Kyle Romero</title>
+  <meta name="description" content="Kyle Romero's resume API and MCP server: connect Claude or other AI assistants, or fetch resume and site data as JSON." />
 </svelte:head>
 
 <a href="#main-content" class="skip-link">
@@ -56,132 +98,117 @@
   <!-- Header -->
   <div class="neo-card mb-8">
     <div class="p-6">
-      <h1 class="text-4xl font-bold mb-4">Resume API Documentation</h1>
-      {#if apiSpec}
-        <p class="text-lg mb-2">{apiSpec.info.description}</p>
-        <div class="flex flex-wrap gap-4 text-sm items-center">
-          <span><strong>Version:</strong> {apiSpec.info.version}</span>
-          <span><strong>Contact:</strong> {apiSpec.info.contact.email}</span>
-          <a 
-            href="/api/openapi.json" 
-            target="_blank"
-            class="px-3 py-1 bg-neo-accent text-neo-cream font-bold rounded-sm hover:bg-neo-accent/80 transition-colors dark:bg-dark-accent dark:text-neo-black"
-          >
-            View OpenAPI Spec
-          </a>
-        </div>
-      {/if}
+      <h1 class="text-4xl font-bold mb-4">API & MCP Documentation</h1>
+      <p class="text-lg mb-4">
+        Two ways to use my resume and site data: connect an AI assistant to the <strong>MCP server</strong>, or fetch JSON from the <strong>REST API</strong>.
+      </p>
+      <nav aria-label="On this page" class="flex flex-wrap gap-3 text-sm items-center">
+        <a href="#mcp" class="neo-button">MCP Server</a>
+        <a href="#endpoints" class="neo-button-ghost">REST Endpoints</a>
+        <a href="#try-it" class="neo-button-ghost">Try It Out</a>
+        <a href="#examples" class="neo-button-ghost">Code Examples</a>
+        <a href="/api/openapi.json" target="_blank" class="neo-button-ghost">OpenAPI Spec</a>
+        <span class="text-gray-600 dark:text-gray-400">v{apiSpec.info.version} · {apiSpec.info.contact.email}</span>
+      </nav>
     </div>
   </div>
 
   <!-- MCP Server -->
-  <div id="mcp" class="neo-card mb-8 scroll-mt-24">
+  <section id="mcp" class="neo-card mb-8 scroll-mt-24">
     <div class="p-6">
       <h2 class="text-2xl font-bold mb-4">MCP Server (for AI assistants)</h2>
-      <p class="mb-2">
-        Connect Claude, Cursor, or any other <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">MCP</a> client to ask questions about my experience, skills, projects, and documents. Read-only, no sign-in needed.
-      </p>
       <p class="mb-4">
-        <strong>URL:</strong> <code>https://kgromero.com/mcp</code> (Streamable HTTP) ·
-        <a href="https://github.com/romero927/kgromero-mcp" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">Source on GitHub</a>
+        Connect Claude, Cursor, or any other <a href="https://modelcontextprotocol.io" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">MCP</a> client to ask questions about my experience, skills, projects, and documents. Read-only, no sign-in needed.
+        <a href="https://github.com/romero927/kgromero-mcp" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">Source on GitHub</a>.
       </p>
 
       <div class="space-y-6">
         <div>
-          <h3 class="font-bold mb-2">Claude Code</h3>
-          <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>claude mcp add --transport http kgromero https://kgromero.com/mcp</code></pre>
+          <h3 class="font-bold mb-2">Server URL (Streamable HTTP)</h3>
+          <CodeBlock code={MCP_URL} label="MCP server URL" />
         </div>
         <div>
           <h3 class="font-bold mb-2">Claude (web and desktop)</h3>
-          <p>Settings → Connectors → Add custom connector, then paste <code>https://kgromero.com/mcp</code>.</p>
+          <p>Settings → Connectors → Add custom connector, then paste the URL above.</p>
         </div>
-        <div>
-          <h3 class="font-bold mb-2">Cursor and other clients (JSON config)</h3>
-          <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>{`{
-  "mcpServers": {
-    "kgromero": { "url": "https://kgromero.com/mcp" }
-  }
-}`}</code></pre>
-        </div>
-        <div>
-          <h3 class="font-bold mb-2">Things to ask</h3>
-          <ul class="list-disc pl-6">
-            <li>"What has Kyle built with AWS, and when?"</li>
-            <li>"Summarize Kyle's leadership experience."</li>
-            <li>"How well does Kyle fit this job description?" (paste a posting)</li>
-            <li>"Show me Kyle's architecture diagrams from MEARS."</li>
-          </ul>
+        {#each mcpClients as client}
+          <div>
+            <h3 class="font-bold mb-2">{client.name}</h3>
+            <CodeBlock code={client.code} label={client.label} />
+          </div>
+        {/each}
+
+        <div class="grid gap-6 md:grid-cols-2">
+          <div>
+            <h3 class="font-bold mb-2">Tools</h3>
+            <ul class="space-y-1 text-sm">
+              {#each mcpTools as [name, desc]}
+                <li><code class="font-bold">{name}</code>: {desc}</li>
+              {/each}
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-2">Things to ask</h3>
+            <ul class="list-disc pl-6 space-y-1 text-sm">
+              <li>"What has Kyle built with AWS, and when?"</li>
+              <li>"Summarize Kyle's leadership experience."</li>
+              <li>"How well does Kyle fit this job description?" (paste a posting)</li>
+              <li>"Show me Kyle's architecture diagrams from MEARS."</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </section>
 
-  {#if apiSpec}
     <!-- Endpoints Section -->
-    <div class="neo-card mb-8">
+    <section id="endpoints" class="neo-card mb-8 scroll-mt-24">
       <div class="p-6">
-        <h2 class="text-2xl font-bold mb-4">Available Endpoints</h2>
-        
+        <h2 class="text-2xl font-bold mb-4">REST Endpoints</h2>
+        <p class="mb-4 text-sm">All endpoints are public, CORS-enabled, and return JSON.</p>
+
         {#each Object.entries(apiSpec.paths) as [path, methods]}
           <div class="mb-6 border-2 border-neo-black rounded-lg p-4 dark:border-dark-border">
-            <div class="flex items-center gap-4 mb-2">
+            <div class="flex flex-wrap items-center gap-4 mb-2">
               <span class="px-3 py-1 bg-green-500 text-white font-bold rounded-sm">GET</span>
-              <code class="text-lg font-mono">{path}</code>
+              <code class="text-lg font-mono break-all">{path}</code>
             </div>
-            
+
             {#if methods.get}
               <p class="mb-4">{methods.get.description}</p>
-              
-              <!-- Try It Out Button -->
-              <button
-                class="neo-button mb-4"
-                onclick={() => {
-                  selectedEndpoint = path;
-                  tryEndpoint(path);
-                }}
-              >
+              <CodeBlock code={`${SITE}${path}`} label={`${path} URL`} class="mb-4" />
+              <button class="neo-button" onclick={() => tryEndpoint(path, true)}>
                 Try it out
               </button>
-
-              <!-- Response Schema -->
-              {#if methods.get.responses['200']}
-                <div class="mt-4">
-                  <h4 class="font-bold mb-2">Response: 200 OK</h4>
-                  <p class="text-sm mb-2">{methods.get.responses['200'].description}</p>
-                </div>
-              {/if}
             {/if}
           </div>
         {/each}
       </div>
-    </div>
+    </section>
 
     <!-- Interactive Test Section -->
-    <div class="neo-card mb-8">
+    <section id="try-it" bind:this={tryItSection} class="neo-card mb-8 scroll-mt-24">
       <div class="p-6">
         <h2 class="text-2xl font-bold mb-4">Try It Out</h2>
-        
-        <div class="mb-4">
-          <label for="endpoint-select" class="block font-bold mb-2">Endpoint:</label>
-          <select 
-            id="endpoint-select"
-            bind:value={selectedEndpoint}
-            class="neo-input w-full"
-            onchange={() => tryEndpoint(selectedEndpoint)}
-          >
-            {#each Object.keys(apiSpec.paths) as path}
-              <option value={path}>{path}</option>
-            {/each}
-          </select>
-        </div>
 
-        <button
-          class="neo-button mb-4"
-          onclick={() => tryEndpoint(selectedEndpoint)}
-          disabled={loading}
-        >
-          {loading ? 'Loading...' : 'Execute Request'}
-        </button>
+        <div class="flex flex-wrap gap-4 items-end mb-4">
+          <div class="grow">
+            <label for="endpoint-select" class="block font-bold mb-2">Endpoint:</label>
+            <select
+              id="endpoint-select"
+              bind:value={selectedEndpoint}
+              class="neo-input w-full"
+              onchange={() => tryEndpoint(selectedEndpoint)}
+            >
+              {#each Object.keys(apiSpec.paths) as path}
+                <option value={path}>{path}</option>
+              {/each}
+            </select>
+          </div>
+          <button class="neo-button" onclick={() => tryEndpoint(selectedEndpoint)} disabled={loading}>
+            {loading ? 'Loading...' : 'Execute Request'}
+          </button>
+        </div>
 
         {#if error}
           <div class="p-4 bg-red-100 border-2 border-red-500 rounded-sm mb-4 dark:bg-red-900 dark:border-red-600">
@@ -191,86 +218,59 @@
 
         {#if responseData}
           <div>
-            <h3 class="font-bold mb-2">Response:</h3>
-            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>{JSON.stringify(responseData, null, 2)}</code></pre>
+            <div class="flex flex-wrap items-center gap-3 mb-2">
+              <h3 class="font-bold">Response</h3>
+              {#if responseMeta}
+                <span class="px-2 py-0.5 text-xs font-bold rounded-sm text-white {responseMeta.ok ? 'bg-green-600' : 'bg-red-600'}">
+                  {responseMeta.status}
+                </span>
+                <span class="text-xs text-gray-600 dark:text-gray-400">{responseMeta.ms} ms · {responseMeta.kb} KB</span>
+              {/if}
+            </div>
+            <CodeBlock code={responseData} label="response" />
           </div>
+        {:else if !loading && !error}
+          <p class="text-sm text-gray-600 dark:text-gray-400">Pick an endpoint and run it to see the response here.</p>
         {/if}
       </div>
-    </div>
+    </section>
 
     <!-- Schema Documentation -->
-    <div class="neo-card mb-8">
-      <div class="p-6">
-        <h2 class="text-2xl font-bold mb-4">Data Schema</h2>
-        
-        {#if apiSpec.components?.schemas?.Resume}
-          <div class="space-y-4">
-            <p class="mb-4">The API follows the <a href="https://jsonresume.org/schema/" target="_blank" class="underline text-neo-accent">JSON Resume</a> standard schema.</p>
-            
-            <div>
-              <h3 class="font-bold text-xl mb-2">Resume Object</h3>
-              <div class="space-y-2">
-                {#each Object.entries(apiSpec.components.schemas.Resume.properties) as [key, value]}
-                  <div class="border-l-4 border-neo-accent pl-4 py-2 dark:border-dark-border">
-                    <code class="font-bold">{key}</code>
-                    <span class="text-sm ml-2 text-gray-600 dark:text-gray-400">({value.type})</span>
-                    {#if value.description}
-                      <p class="text-sm mt-1">{value.description}</p>
-                    {/if}
-                  </div>
-                {/each}
+    {#if apiSpec.components?.schemas?.Resume}
+      <section class="neo-card mb-8">
+        <div class="p-6">
+          <h2 class="text-2xl font-bold mb-4">Resume Schema</h2>
+          <p class="mb-4"><code>/api/resume</code> follows the <a href="https://jsonresume.org/schema/" target="_blank" rel="noopener noreferrer" class="underline text-neo-accent">JSON Resume</a> standard schema.</p>
+          <div class="space-y-2">
+            {#each Object.entries(apiSpec.components.schemas.Resume.properties) as [key, value]}
+              <div class="border-l-4 border-neo-accent pl-4 py-2 dark:border-dark-border">
+                <code class="font-bold">{key}</code>
+                <span class="text-sm ml-2 text-gray-600 dark:text-gray-400">({value.type})</span>
+                {#if value.description}
+                  <p class="text-sm mt-1">{value.description}</p>
+                {/if}
               </div>
-            </div>
-          </div>
-        {/if}
-      </div>
-    </div>
-
-    <!-- Usage Examples -->
-    <div class="neo-card">
-      <div class="p-6">
-        <h2 class="text-2xl font-bold mb-4">Code Examples</h2>
-        
-        <div class="space-y-6">
-          <!-- cURL -->
-          <div>
-            <h3 class="font-bold mb-2">cURL</h3>
-            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>curl {apiSpec.servers[0].url}/api/resume</code></pre>
-          </div>
-
-          <!-- JavaScript -->
-          <div>
-            <h3 class="font-bold mb-2">JavaScript / Fetch</h3>
-            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>const response = await fetch('{apiSpec.servers[0].url}/api/resume');
-const resume = await response.json();
-console.log(resume.basics.name);</code></pre>
-          </div>
-
-          <!-- Python -->
-          <div>
-            <h3 class="font-bold mb-2">Python</h3>
-            <pre class="bg-gray-100 dark:bg-gray-800 p-4 rounded-sm border-2 border-neo-black dark:border-dark-border overflow-x-auto"><code>import requests
-
-response = requests.get('{apiSpec.servers[0].url}/api/resume')
-resume = response.json()
-print(resume['basics']['name'])</code></pre>
+            {/each}
           </div>
         </div>
-      </div>
-    </div>
-  {:else if error}
-    <div class="neo-card">
+      </section>
+    {/if}
+
+    <!-- Usage Examples -->
+    <section id="examples" class="neo-card scroll-mt-24">
       <div class="p-6">
-        <p class="text-red-600 dark:text-red-400">{error}</p>
+        <h2 class="text-2xl font-bold mb-2">Code Examples</h2>
+        <p class="mb-4 text-sm">For <code>{selectedEndpoint}</code>. Change the endpoint in Try It Out to update these.</p>
+        <div class="space-y-6">
+          {#each examples as example}
+            <div>
+              <h3 class="font-bold mb-2">{example.name}</h3>
+              <CodeBlock code={example.code} label={`${example.name} example`} />
+            </div>
+          {/each}
+        </div>
       </div>
-    </div>
-  {:else}
-    <div class="neo-card">
-      <div class="p-6">
-        <p>Loading API documentation...</p>
-      </div>
-    </div>
-  {/if}
+    </section>
     </div>
   </main>
 
@@ -286,10 +286,5 @@ print(resume['basics']['name'])</code></pre>
 <style>
   code {
     font-family: 'Courier New', Courier, monospace;
-  }
-  
-  pre {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 0.875rem;
   }
 </style>
