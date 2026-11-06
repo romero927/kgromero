@@ -30,8 +30,8 @@
         <h3 class="card-eyebrow mb-2">{$t.other.recentProjects}</h3>
         <ul class="space-y-3">
           {#each $t.other.projects as project}
-            <li class="wrap-break-word group">
-              <a href={project.link} target="_blank" rel="noopener noreferrer" class="inline-flex items-center" aria-label={`View ${project.name} project`}>
+            <li class="wrap-break-word">
+              <a href={project.link} target="_blank" rel="noopener noreferrer" class="group inline-flex items-center" aria-label={`View ${project.name} project`}>
                 <Link size="1em" class="shrink-0 mr-2 text-neo-black/55 dark:text-gray-400 group-hover:text-neo-accent transition-colors text-xs" aria-hidden="true"/>
                 <span class="neo-highlight wrap-break-word font-medium">{project.name}</span>
               </a>
