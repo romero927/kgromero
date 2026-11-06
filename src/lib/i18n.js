@@ -239,6 +239,7 @@ const translations = {
           name: "(Python) kgromero.com MCP Server",
           description: "Lets AI assistants like Claude answer questions about my experience, skills, and projects. Connect at kgromero.com/mcp.",
           link: "https://github.com/romero927/kgromero-mcp",
+          site: { text: "kgromero.com/mcp", url: "https://kgromero.com/mcp" },
         },
         {
           name: "(React) Scordle",
