@@ -39,6 +39,7 @@
     ['get_skills', 'Skills by category and by where they were used'],
     ['list_side_projects', 'Personal projects with GitHub links'],
     ['list_documents', 'Resume downloads, diagrams, write-ups, and lab reports'],
+    ['get_document', 'Reads a document: PDF text, and diagrams or slides as images'],
     ['get_contact, get_education, get_interests, get_travel', 'Everything else on the site'],
     ['search', 'Keyword search across all of the above'],
   ];
@@ -173,6 +174,7 @@
               <li>"Summarize Kyle's leadership experience."</li>
               <li>"How well does Kyle fit this job description?" (paste a posting)</li>
               <li>"Show me Kyle's architecture diagrams from MEARS."</li>
+              <li>"Read Kyle's RedditListener walkthrough and summarize the design."</li>
             </ul>
           </div>
         </div>
