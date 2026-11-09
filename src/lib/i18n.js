@@ -242,6 +242,11 @@ const translations = {
           site: { text: "kgromero.com/mcp", url: "https://kgromero.com/mcp" },
         },
         {
+          name: "(Go) Lookout",
+          description: "Terminal dashboard that runs beside Claude Code: usage limits and alerts, what Claude did each turn, and every file it changed.",
+          link: "https://github.com/romero927/lookout",
+        },
+        {
           name: "(React) Scordle",
           description: "Timed word-guessing game with scoring and stats. Play it at scordle.xyz.",
           link: "https://github.com/romero927/Scordle",
@@ -252,11 +257,6 @@ const translations = {
           name: "(C#) Reddit Listener",
           description: "Tracks top posts and authors across subreddits in near real time, within Reddit's API rate limits.",
           link: "https://github.com/romero927/RedditListener",
-        },
-        {
-          name: "(Go) Lookout",
-          description: "Terminal dashboard that runs beside Claude Code: usage limits and alerts, what Claude did each turn, and every file it changed.",
-          link: "https://github.com/romero927/lookout",
         },
         {
           name: "(Flutter) UUID / Password Utility",
