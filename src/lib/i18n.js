@@ -254,9 +254,9 @@ const translations = {
           link: "https://github.com/romero927/RedditListener",
         },
         {
-          name: "(Go) Luhn Verifier Microservice",
-          description: "HTTP microservice that validates card numbers with the Luhn algorithm.",
-          link: "https://github.com/romero927/LuhnVerifier",
+          name: "(Go) Lookout",
+          description: "Terminal dashboard that runs beside Claude Code: usage limits and alerts, what Claude did each turn, and every file it changed.",
+          link: "https://github.com/romero927/lookout",
         },
         {
           name: "(Flutter) UUID / Password Utility",
